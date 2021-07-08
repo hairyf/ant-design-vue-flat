@@ -5,7 +5,7 @@
 <script lang="ts" setup>
   import { defineProps } from 'vue-demi'
   const props = defineProps({})
-  import { CalButton } from '../../dist'
+  import { CalButton } from '~/index'
 </script>
 
 <style lang="scss" scoped></style>

@@ -1,4 +1,2 @@
-import CalButton from './components/CalButton/index.vue'
-export const components = [CalButton]
-
-export { CalButton }
+export { default as CalButton } from './components/button/index.vue'
+export { default as CalConfigProvider } from './components/config-provider/index.vue'

@@ -7,10 +7,9 @@
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <a-config-provider :locale="locale">
-    <router-view />
-  </a-config-provider>
+  <cal-config-provider :locale="locale"> asdasds </cal-config-provider>
 </template>
 <script lang="ts" setup>
   import locale from 'ant-design-vue/es/locale/zh_CN'
+  import { CalConfigProvider } from '~/index'
 </script>

@@ -2,21 +2,35 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "baseUrl": "./package",
     "moduleResolution": "node",
     "strict": true,
     "jsx": "preserve",
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "lib": ["esnext", "dom"],
+    "baseUrl": ".",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
     "types": [
-      "@types/node"
+      "vite/client"
     ],
     "paths": {
-      "@/*": [ "src/*" ],
-      "~/*": [ "package/*" ],
+      "@/*": [
+        "./src/*"
+      ],
+      "~/*": [
+        "./package/*"
+      ]
     }
   },
-  "include": ["./**/*.ts", "./**/*.d.ts", "./**/*.tsx", "./**/*.vue", "shims-vue.d.ts"]
+  "include": [
+    "./**/*.ts",
+    "./**/*.d.ts",
+    "./**/*.tsx",
+    "./**/*.vue",
+    "types/**.d.ts",
+    "types/**/**.d.ts",
+  ],
 }
