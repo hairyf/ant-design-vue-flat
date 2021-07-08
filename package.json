@@ -1,0 +1,76 @@
+{
+  "name": "test-bricks-teach",
+  "version": "1.0.0",
+  "description": "",
+  "author": "peiyahui",
+  "types": "package/index.ts",
+  "license": "ISC",
+  "main": "dist/test-bricks-teach.umd.js",
+  "module": "dist/test-bricks-teach.esm.js",
+  "scripts": {
+    "dev": "vite",
+    "serve": "vite preview",
+    "build": "npm run clean && npm run build:esm && npm run build:umd",
+    "build:esm": "rollup --config script/rollup.esm.config.js",
+    "build:umd": "rollup --config script/rollup.umd.config.js",
+    "clean": "rimraf ./dist"
+  },
+  "devDependencies": {
+    "@ant-design-vue/use": "^0.0.1-alpha.10",
+    "@rollup/plugin-node-resolve": "^11.1.1",
+    "@tuimao/eslint-config-preset": "^1.1.0",
+    "@tuimao/tailwind-config-preset": "^1.1.0",
+    "@tuimao/utils": "^1.0.4",
+    "@types/lodash-es": "^4.17.4",
+    "@types/nprogress": "^0.2.0",
+    "@typescript-eslint/parser": "^4.28.2",
+    "@vitejs/plugin-vue": "^1.2.4",
+    "@vitejs/plugin-vue-jsx": "^1.1.6",
+    "@vue/compiler-sfc": "^3.1.4",
+    "animate.css": "^4.1.1",
+    "axios-polling": "^1.0.1",
+    "echarts": "^5.1.2",
+    "element-plus": "^1.0.2-beta.54",
+    "esbuild": "^0.12.15",
+    "eslint": "^7.30.0",
+    "less": "^4.1.1",
+    "mvdir": "^1.0.21",
+    "postcss": "^8.2.8",
+    "postcss-import": "^14.0.0",
+    "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.38.5",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-esbuild": "^4.5.0",
+    "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "rollup-plugin-vue": "6.0.0-beta.6",
+    "sass": "^1.35.1",
+    "tailwindcss": "^1.9.0",
+    "typescript": "^4.3.5",
+    "vite": "^2.4.1",
+    "vite-plugin-components": "^0.12.1",
+    "vue-echarts": "^6.0.0-rc.6",
+    "vue-tsc": "^0.2.0",
+    "vue3-click-away": "^1.2.1",
+    "vue3-perfect-scrollbar": "^1.5.5",
+    "vuex-persistedstate": "^4.0.0-beta.3"
+  },
+  "dependencies": {
+    "ant-design-vue": "^2.2.1",
+    "lodash-es": "^4.17.20",
+    "nprogress": "^0.2.0",
+    "tailwindcss": "^1.9.0",
+    "vanilla-colorful": "^0.6.1",
+    "vue": "^3.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@tuimao/eslint-config-preset/vue3-typescript"
+    ],
+    "rules": {
+      "@typescript-eslint/ban-types": 0,
+      "vue/require-valid-default-prop": 0
+    }
+  }
+}

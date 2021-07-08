@@ -1,0 +1,21 @@
+/* Descriptons 描述列表项 */
+.ant-descriptions-item {
+  .ant-descriptions-item-label {
+    color: #8C8C8C
+  }
+}
+.ant-descriptions-row > th, .ant-descriptions-row > td {
+  padding-bottom: 40px;
+}
+.ant-form-item-label > label::after {
+  content: '';
+}
+// 全局的模态居中问题
+.ant-message .anticon{
+  top: -3px;
+}
+//修改预览图片垂直居中
+.ant-image-preview-img-wrapper {
+  display: flex;
+  align-items: center;
+}
