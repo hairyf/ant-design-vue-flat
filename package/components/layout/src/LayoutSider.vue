@@ -1,13 +1,13 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-05-22 14:18:13
- * @LastEditTime: 2021-07-09 16:23:20
+ * @LastEditTime: 2021-07-09 16:32:58
  * @Description: 按钮
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <layout-sider class="cal-layout-sider bg-LayoutSiderColor" v-bind="props">
+  <layout-sider class="cal-layout-sider bg-layout-sider-color" v-bind="props">
     <slot></slot>
   </layout-sider>
 </template>

@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-09 09:56:47
- * @LastEditTime: 2021-07-09 16:15:41
+ * @LastEditTime: 2021-07-09 16:31:45
  * @Description:
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -19,10 +19,12 @@ exports.transformTheme2CssKeys = (theme) => {
         recursion(v)
         keys = []
       } else {
-        const key = keys
-          .map((v) => v[0].toUpperCase() + v.slice(1))
-          .join('')
-          .trim()
+        const key = _.kebabCase(
+          keys
+            .map((v) => v[0].toUpperCase() + v.slice(1))
+            .join('')
+            .trim()
+        )
         result.push(key)
         keys.splice(keys.length - 1, 1)
       }
