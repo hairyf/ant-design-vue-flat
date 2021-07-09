@@ -1,21 +1,29 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:55:33
- * @LastEditTime: 2021-07-09 14:36:49
+ * @LastEditTime: 2021-07-09 16:22:33
  * @Description:
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
-import { Ref, useCssVars } from 'vue'
+import { computed, inject, ref, Ref, ComputedRef, useCssVars } from 'vue'
 import { cloneDeep, merge } from 'lodash-es'
-export type ThemeOption = ReturnType<typeof defaultTheme>
 import * as option from '../theme/default'
-// 获取默认主题
+
+type DeepPartial<T> = T extends object ? { [P in keyof T]?: DeepPartial<T[P]> } : T
+
+export type ThemeDefaultOption = ReturnType<typeof defaultTheme>
+export type ThemeOverrides = DeepPartial<ThemeDefaultOption>
+export type ThemeAnyOption = { [key: string]: ThemeAnyOption }
+export type MountThemeParame = ComputedRef<ThemeAnyOption> | Ref<ThemeAnyOption>
+
+/** 获取默认配置 */
 export const defaultTheme = () => cloneDeep(merge(option.colors, {}))
+
 /**
  * 将主题转换为 css 变量 key in value
  * @param theme
- * @returns
+ * @returns {Record<string, string>}
  */
 export const transformTheme2CssVars = (theme: Record<string, Object | 'string'>) => {
   const result: Record<string, string> = {}
@@ -46,10 +54,22 @@ export const transformTheme2CssVars = (theme: Record<string, Object | 'string'>)
 /**
  * 通过 useCssVars 挂载主题
  * @param theme
+ * @returns {void}
  */
-export const mountTheme = (theme: Ref<ThemeOption>) => {
+export const mountTheme = (theme: MountThemeParame) => {
   useCssVars(() => transformTheme2CssVars(theme.value))
 }
 
-// 获取当前主题配置
-export const useTheme = () => {}
+/**
+ * 获取当前主题配置
+ * @param identif 主题标识 >> keyof option
+ * @returns {themeMerge}
+ */
+export const useTheme = <K extends keyof ThemeDefaultOption>(identif: K) => {
+  const theme = ref(defaultTheme())
+  const themeOverrides = inject<Ref<ThemeDefaultOption>>('themeOverrides')
+  const themeMerge = computed(() => merge(theme.value, themeOverrides?.value)[identif])
+  const themeMount = computed(() => <ThemeAnyOption>{ [identif]: themeMerge.value })
+  mountTheme(themeMount)
+  return themeMerge
+}
