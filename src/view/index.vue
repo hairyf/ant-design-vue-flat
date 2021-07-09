@@ -1,6 +1,4 @@
-<template>
-  <cal-button>adsads</cal-button>
-</template>
+<template> </template>
 
 <script lang="ts" setup>
   import { defineProps } from 'vue-demi'

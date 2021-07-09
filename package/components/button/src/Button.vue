@@ -1,21 +1,26 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-05-22 14:18:13
- * @LastEditTime: 2021-06-08 16:45:05
+ * @LastEditTime: 2021-07-09 12:04:05
  * @Description: 按钮
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <a-button class="cal-btn" v-bind="{ shape: 'round', ...props }">
+  <a-button class="cal-btn bg-com" v-bind="{ shape: 'round', ...props }">
     <i v-if="iconClass" :class="iconClass" class="mr-6" />
     <slot></slot>
   </a-button>
 </template>
+<script lang="ts">
+  import { defineComponent } from 'vue'
+  export default defineComponent({ name: 'CalButton' })
+</script>
 <script lang="ts" setup>
   import { defineProps } from 'vue-demi'
   import { Button as AButton } from 'ant-design-vue'
   const props = defineProps({
+    ...(AButton.props as {}),
     iconClass: String
   })
 </script>

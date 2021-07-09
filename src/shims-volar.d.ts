@@ -6,10 +6,10 @@
  * @Description:
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
-
+type AntDesignVueFlat = typeof import('../package/components')
 // components.d.ts
 declare module 'vue' {
-  export interface GlobalComponents {
+  export interface GlobalComponents extends AntDesignVueFlat {
     RouterLink: typeof import('vue-router').RouterLink
     RouterView: typeof import('vue-router').RouterView
     AAffix: typeof import('ant-design-vue').Affix

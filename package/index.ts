@@ -18,4 +18,5 @@ export default { install }
 // 导出所有配置
 export * from 'ant-design-vue'
 export * from './components'
+export * from './utils/theme'
 export { install }
