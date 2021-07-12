@@ -2,7 +2,6 @@
   "Common": {
     "baseTextColor": "#000000",
     "primaryColor": "#558BF7",
-
     "primaryColorLight-2":"#77a2f9",
     "primaryColorLight-4":"#99b9fa",
     "primaryColorLight-6":"#bbd1fc",
@@ -30,5 +29,8 @@
     "activeColor": "",
     "hoverColor": "#558BF7",
     "focusColor": "#dde8fd"
+  },
+  "PageSelect":{
+    "solidColor": "#ffffff"
   }
 }
