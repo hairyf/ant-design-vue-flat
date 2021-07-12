@@ -10,7 +10,7 @@
   "Button": {},
   "Input": {
     "activeColor": "",
-    "hoverColor": "#e89026",
-    "focusColor": "rgb(232,144,38,0.2)"
+    "hoverColor": "#558BF7",
+    "focusColor": "rgb(85,139,247,0.2)"
   }
 }
