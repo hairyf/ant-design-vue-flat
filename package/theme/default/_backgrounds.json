@@ -1,7 +1,0 @@
-{
-  "Background": {
-    "image": "url(https://client-static-1254212114.cos.ap-guangzhou.myqcloud.com/images/cherry-blossoms.png)",
-    "color": "#f0f2f5",
-    "blur": "blur(20)"
-  }
-}

@@ -1,10 +1,11 @@
 {
   "Common": {
-    "textColorBase": "#000000",
+    "baseTextColor": "#000000",
     "primaryColor": "#558BF7"
   },
   "Layout": {
     "siderColor": "#001426"
   },
-  "CalMenu": {}
+  "CalMenu": {},
+  "Button": {}
 }
