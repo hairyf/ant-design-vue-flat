@@ -1,9 +1,9 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-12 16:24:33
+ * @LastEditTime: 2021-07-12 16:40:17
  * @Description:
- * @LastEditors: Mr.wang
+ * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
 export { default as CalButton } from './components/button/src/Button.vue'
@@ -21,3 +21,5 @@ export { default as CalInputDate } from './components/input/src/InputDate.vue'
 export { default as CalInputNumber } from './components/input/src/InputNumber.vue'
 export { default as CalIcon } from './components/icon/src/Icon.vue'
 export { default as CalImage } from './components/image/src/Image.vue'
+export { default as CalGrid } from './components/grid/src/Grid.vue'
+
