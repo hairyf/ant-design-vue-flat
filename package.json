@@ -24,7 +24,7 @@
     "@rollup/plugin-node-resolve": "^11.1.1",
     "@tuimao/eslint-config-preset": "^1.1.0",
     "@tuimao/tailwind-config-preset": "^1.1.0",
-    "@tuimao/utils": "^1.0.4",
+    "@tuimao/utils": "^1.0.5",
     "@types/jest": "^26.0.24",
     "@types/lodash-es": "^4.17.4",
     "@types/nprogress": "^0.2.0",
@@ -70,7 +70,8 @@
     "nprogress": "^0.2.0",
     "tailwindcss": "^1.9.0",
     "vanilla-colorful": "^0.6.1",
-    "vue": "^3.0.0"
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.10"
   },
   "eslintConfig": {
     "extends": [

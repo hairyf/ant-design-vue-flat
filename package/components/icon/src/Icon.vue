@@ -1,25 +1,61 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-12 14:04:45
- * @LastEditTime: 2021-07-12 14:59:47
+ * @LastEditTime: 2021-07-12 16:27:36
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <i class="cal-icon" v-html="option[type]"> </i>
+  <i
+    class="cal-icon"
+    v-html="svgTag"
+    :style="{ color, fontSize: analyUnit(size || ''), width, height }"
+  >
+  </i>
 </template>
 <script lang="ts">
-  import { defineComponent } from 'vue'
+  import { computed, defineComponent } from 'vue'
   export default defineComponent({ name: 'CalIcon' })
 </script>
 <script lang="ts" setup>
   import { defineProps } from 'vue-demi'
+  import { analyUnit } from '@tuimao/utils'
   import option from './iconfont.json'
-  defineProps({
+  const props = defineProps({
     type: {
       type: String as () => keyof typeof option,
       required: true
+    },
+    size: String,
+    color: String,
+    // 是否使用 svg 尺寸
+    svgSize: Boolean
+  })
+  const width = computed(() => {
+    const value = option[props.type]?.match(/width="(?<width>\w*%?)"/)?.groups?.width || ''
+    return (props.svgSize && analyUnit(value)) || ''
+  })
+  const height = computed(() => {
+    const value = option[props.type]?.match(/height="(?<height>\w*%?)"/)?.groups?.height || ''
+    return (props.svgSize && analyUnit(value)) || ''
+  })
+  const svgTag = computed(() => {
+    if (props.svgSize) {
+      return option[props.type]
     }
+    return option?.[props.type]?.replace(/width="(\w*%?)"/g, '')?.replace(/height="(\w*%?)"/g, '')
   })
 </script>
+<style lang="scss" scoped>
+  .cal-icon {
+    height: 1em;
+    width: 1em;
+    display: inline-block;
+    position: relative;
+    svg {
+      height: 1em;
+      width: 1em;
+    }
+  }
+</style>

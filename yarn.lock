@@ -1491,10 +1491,10 @@
   dependencies:
     lodash "^4.17.21"
 
-"@tuimao/utils@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.nlark.com/@tuimao/utils/download/@tuimao/utils-1.0.4.tgz#2684162579af7fce1c23a3813a634da1a7acdcfb"
-  integrity sha1-JoQWJXmvf84cI6OBOmNNoaes3Ps=
+"@tuimao/utils@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.nlark.com/@tuimao/utils/download/@tuimao/utils-1.0.5.tgz?cache=0&sync_timestamp=1626074648602&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40tuimao%2Futils%2Fdownload%2F%40tuimao%2Futils-1.0.5.tgz#141e874cd331b78d07070762384b33f387f940bb"
+  integrity sha1-FB6HTNMxt40HBwdiOEsz84f5QLs=
   dependencies:
     "@types/lodash" "^4.14.170"
     "@types/node" "^15.12.5"
