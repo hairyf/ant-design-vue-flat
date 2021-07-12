@@ -7,5 +7,10 @@
     "siderColor": "#001426"
   },
   "CalMenu": {},
-  "Button": {}
+  "Button": {},
+  "Input": {
+    "activeColor": "",
+    "hoverColor": "#e89026",
+    "focusColor": "rgb(232,144,38,0.2)"
+  }
 }

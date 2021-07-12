@@ -1,20 +1,13 @@
 <!--
  * @Author: Mr.wang
- * @Date: 2021-07-12 14:41:34
- * @LastEditTime: 2021-07-12 15:55:09
+ * @Date: 2021-07-12 16:11:30
+ * @LastEditTime: 2021-07-12 16:18:28
  * @Description: 
  * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <a-input-number
-    :class="{ 'cal-input-number-off-handel': !showHandel }"
-    class="cal-input-number"
-    v-bind="props"
-    v-model:value="inputValue"
-    :precision="precision"
-    @change="onChange"
-  >
+  <a-input class="cal-input" v-bind="props" v-model:value="inputValue" @change="inputChange">
     <slot />
     <template #suffix>
       <slot v-if="slots['suffix']" name="suffix" />
@@ -23,46 +16,46 @@
         <span v-if="maxLength">/{{ maxLength }}</span>
       </div>
     </template>
-  </a-input-number>
+  </a-input>
 </template>
 <script lang="ts">
   import { defineComponent } from 'vue'
-  export default defineComponent({ name: 'CalInputNumber' })
+  export default defineComponent({ name: 'CalInput' })
 </script>
 <script lang="ts" setup>
-  import { InputNumber as AInputNumber } from 'ant-design-vue'
-  import { defineEmits, defineProps, ref, useSlots } from 'vue'
+  import { Input as AInput } from 'ant-design-vue'
+  import { defineProps, ref, useSlots, watch } from 'vue'
   import { useModelRef } from '@/hooks/use-modelRef'
   import { useTheme } from '../../../utils/theme'
-  const emit = defineEmits(['change'])
   const slots = useSlots()
   const props = defineProps({
     modelValue: [String, Number],
     showCount: Boolean,
     maxLength: Number,
-    placeholder: String,
-    showHandel: Boolean,
-    /* 数字精度 */
-    precision: {
-      type: Number,
-      default: 0
-    }
+    placeholder: String
   })
   const inputValue = useModelRef(props, 'modelValue')
   // 储存当前字数
   const currentFontNumber = ref(0)
-  // 记录当前字数
-  const onChange = (value: any) => {
-    const { target } = value
-    currentFontNumber.value = target?.value?.length || 0
-    emit('change', value)
+  // 监听字数
+  const inputChange = ({ target: { value } }: any) => {
+    currentFontNumber.value = value?.length || 0
   }
+  // 计算当前字数
+  watch(
+    () => props.modelValue,
+    (value: any) => {
+      currentFontNumber.value = value?.length || 0
+    },
+    { immediate: true }
+  )
   useTheme('Input')
 </script>
 <style lang="scss">
-  .cal-input-number {
-    &.ant-input-number,
-    &.ant-input-number-focused {
+  .cal-input {
+    &.ant-input,
+    &.ant-input-affix-wrapper,
+    &.ant-input-affix-wrapper-focused {
       background: none;
       border-top: none;
       border-left: none;
@@ -80,20 +73,12 @@
         box-shadow: 0 2px 0 0 var(--input-focus-color) !important;
       }
     }
-    &.ant-input-number-focused {
-      border-color: var(--input-hover-color) !important;
-      box-shadow: 0 2px 0 0 var(--input-focus-color) !important;
-    }
     .ant-input {
       background-color: transparent;
     }
     &.ant-input-affix-wrapper-focused {
+      border-color: var(--input-hover-color) !important;
       box-shadow: 0 2px 0 0 var(--input-focus-color) !important;
-    }
-  }
-  .cal-input-number-off-handel {
-    .ant-input-number-handler-wrap {
-      display: none;
     }
   }
 </style>

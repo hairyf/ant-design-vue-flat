@@ -1,9 +1,9 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:55:33
- * @LastEditTime: 2021-07-09 19:55:49
+ * @LastEditTime: 2021-07-12 15:37:50
  * @Description:
- * @LastEditors: Mr.Mao
+ * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
 import { computed, inject, ref, Ref, ComputedRef, useCssVars } from 'vue'
@@ -17,8 +17,7 @@ export type ThemeOverrides = DeepPartial<ThemeDefaultOption>
 export type ThemeAnyOption = { [key: string]: ThemeAnyOption }
 export type MountThemeParame = ComputedRef<ThemeAnyOption> | Ref<ThemeAnyOption>
 /** 获取默认配置 */
-export const defaultTheme = () =>
-  cloneDeep(merge(option.colors, option.sizes, option.backgrounds, option.basics))
+export const defaultTheme = () => cloneDeep(merge(option.colors, option.sizes, option.basics))
 
 /**
  * 将主题转换为 css 变量 key in value
