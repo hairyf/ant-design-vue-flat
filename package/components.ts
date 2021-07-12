@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-12 17:46:10
+ * @LastEditTime: 2021-07-12 19:22:38
  * @Description:
  * @LastEditors: Pan.Yu.Lin
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -25,3 +25,4 @@ export { default as CalCard } from './components/card/src/Card.vue'
 export { default as CalGrid } from './components/grid/src/Grid.vue'
 export { default as CalImageVerif } from './components/image-verif/src/ImageVerif.vue'
 export { default as CalCasCader } from './components/cascader/src/CasCader.vue'
+export { default as CalCasCaderPanel } from './components/cascaderPanel/src/CascaderPanel.vue'
