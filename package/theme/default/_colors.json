@@ -6,6 +6,9 @@
   "Layout": {
     "siderColor": "#001426"
   },
-  "CalMenu": {},
+  "Menu": {
+    "itemTextColor": "#ffffff",
+    "itemActiveTextColor": ""
+  },
   "Button": {}
 }
