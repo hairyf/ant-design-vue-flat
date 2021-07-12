@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-05-18 15:49:53
- * @LastEditTime: 2021-06-08 16:43:45
+ * @LastEditTime: 2021-07-09 20:00:17
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -13,9 +13,7 @@
       <side-bar />
       <app-main />
     </a-layout>
-    <div class="absolute left-0 top-0 bottom-0 right-0 overflow-hidden" style="z-index: -100">
-      <div class="cal-layout-bg absolute -left-14 -top-14 -bottom-14 -right-14"></div>
-    </div>
+    <cal-background />
   </a-layout>
 </template>
 <script lang="ts" setup>

@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-05-22 14:18:13
- * @LastEditTime: 2021-07-09 12:04:05
+ * @LastEditTime: 2021-07-12 14:35:58
  * @Description: 按钮
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -19,10 +19,12 @@
 <script lang="ts" setup>
   import { defineProps } from 'vue-demi'
   import { Button as AButton } from 'ant-design-vue'
+  import { useTheme } from '~/utils/theme'
   const props = defineProps({
     ...(AButton.props as {}),
     iconClass: String
   })
+  useTheme('Common')
 </script>
 <style lang="scss" scoped>
   .cal-btn {
