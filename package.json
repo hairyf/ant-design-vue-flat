@@ -9,6 +9,7 @@
   "module": "dist/test-bricks-teach.esm.js",
   "scripts": {
     "dev": "vite",
+    "start": "vite",
     "serve": "vite preview",
     "build": "npm run clean && npm run build:esm && npm run build:umd",
     "build:esm": "rollup --config script/rollup.esm.config.js",
