@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 14:37:14
- * @LastEditTime: 2021-07-12 14:57:35
+ * @LastEditTime: 2021-07-12 15:52:45
  * @Description: 
  * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -21,6 +21,7 @@
   import moment from 'moment'
   import type { unitOfTime } from 'moment'
   import { computed, defineEmits, defineProps } from 'vue'
+  import { useTheme } from '../../../utils/theme'
   const props = defineProps({
     modelValue: [Number, String],
     placeholder: {
@@ -53,6 +54,7 @@
       }
     }
   })
+  useTheme('Input')
 </script>
 <style lang="scss" scoped>
   :deep(.ant-input) {
@@ -61,16 +63,16 @@
     border-left: none;
     border-right: none;
     @apply rounded-none;
-    @apply border-gray-darkmin;
+    @apply text-gray-500;
     &::-webkit-input-placeholder {
-      @apply text-gray-darkmin;
+      @apply text-gray-500;
     }
     &:focus,
     &:hover {
-      border-color: var(--color-primary) !important;
+      border-color: var(--input-hover-color) !important;
     }
     &:focus {
-      box-shadow: 0 2px 0 0 var(--color-primary-light-opacity-8) !important;
+      box-shadow: 0 2px 0 0 var(--input-focus-color) !important;
     }
   }
 </style>
