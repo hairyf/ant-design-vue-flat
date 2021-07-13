@@ -2,6 +2,7 @@
   "Common": {
     "baseTextColor": "#000000",
     "primaryColor": "#558BF7",
+    "baseColor": "#ffffff",
     "primaryColorLight-2":"#77a2f9",
     "primaryColorLight-4":"#99b9fa",
     "primaryColorLight-5":"#aac5fb",
@@ -23,8 +24,21 @@
     "siderColor": "#001426"
   },
   "Menu": {
-    "itemTextColor": "#ffffff",
-    "itemActiveTextColor": ""
+    "itemTextColor": "#C2DEF8",
+    "itemTextActiveColor": "#FFFFFF",
+    "itemTextHoverColor": "#C2DEF8",
+
+    "itemBodyColor": "#FFFFFF00",
+    "itemBodyActiveColor": "#4474D6",
+    "itemBodyHoverColor": "inherit",
+
+    "itemBtnTextColor": "#001426",
+    "itemBtnTextActiveColor": "#FFFFFF",
+    "itemBtnTextHoverColor": "#558BF7",
+
+    "itemBtnBodyColor": "inherit",
+    "itemBtnBodyActiveColor": "#558BF7",
+    "itemBtnBodyHoverColor": "#DDE8FD"
   },
   "Button": {},
   "Input": {
@@ -38,6 +52,8 @@
   "Tabs":{
     "backgroundColor":"#ffffff",
     "hollowColor":""
-
+},
+  "Card": {
+    "bgColor": "#ffffff"
   }
 }

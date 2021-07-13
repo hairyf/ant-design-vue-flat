@@ -1003,6 +1003,18 @@
   resolved "https://registry.npm.taobao.org/@bcoe/v8-coverage/download/@bcoe/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha1-daLotRy3WKdVPWgEpZMteqznXDk=
 
+"@css-render/plugin-bem@^0.15.4":
+  version "0.15.4"
+  resolved "https://registry.nlark.com/@css-render/plugin-bem/download/@css-render/plugin-bem-0.15.4.tgz#c2d79e7b373ded5283da3d38b7db185ec5da9045"
+  integrity sha1-wteeezc97VKD2j04t9sYXsXakEU=
+  dependencies:
+    css-render "~0.15.4"
+
+"@css-render/vue3-ssr@^0.15.4":
+  version "0.15.4"
+  resolved "https://registry.nlark.com/@css-render/vue3-ssr/download/@css-render/vue3-ssr-0.15.4.tgz#ae29bc76f7eb40830d0ecd8086ce3726a1c6e8e3"
+  integrity sha1-rim8dvfrQIMNDs2Ahs43JqHG6OM=
+
 "@ctrl/tinycolor@^3.3.1":
   version "3.4.0"
   resolved "https://registry.nlark.com/@ctrl/tinycolor/download/@ctrl/tinycolor-3.4.0.tgz#c3c5ae543c897caa9c2a68630bed355be5f9990f"
@@ -1026,6 +1038,11 @@
   version "1.0.0"
   resolved "https://registry.npm.taobao.org/@emmetio/scanner/download/@emmetio/scanner-1.0.0.tgz#065b2af6233fe7474d44823e3deb89724af42b5f"
   integrity sha1-Blsq9iM/50dNRII+PeuJckr0K18=
+
+"@emotion/hash@~0.8.0":
+  version "0.8.0"
+  resolved "https://registry.npm.taobao.org/@emotion/hash/download/@emotion/hash-0.8.0.tgz#bbbff68978fefdbe68ccb533bc8cbe1d1afb5413"
+  integrity sha1-u7/2iXj+/b5ozLUzvIy+HRr7VBM=
 
 "@eslint/eslintrc@^0.4.2":
   version "0.4.2"
@@ -1580,7 +1597,7 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@^26.0.24":
+"@types/jest@^26.0.20", "@types/jest@^26.0.24":
   version "26.0.24"
   resolved "https://registry.nlark.com/@types/jest/download/@types/jest-26.0.24.tgz?cache=0&sync_timestamp=1625610505834&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fjest%2Fdownload%2F%40types%2Fjest-26.0.24.tgz#943d11976b16739185913a1936e0de0c4a7d595a"
   integrity sha1-lD0Rl2sWc5GFkToZNuDeDEp9WVo=
@@ -1610,10 +1627,20 @@
   resolved "https://registry.nlark.com/@types/node/download/@types/node-16.0.0.tgz"
   integrity sha1-BnpsSdx6XCQSpQVijiaQKulnv28=
 
+"@types/node@^14.14.10":
+  version "14.17.5"
+  resolved "https://registry.nlark.com/@types/node/download/@types/node-14.17.5.tgz?cache=0&sync_timestamp=1625868313334&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-14.17.5.tgz#b59daf6a7ffa461b5648456ca59050ba8e40ed54"
+  integrity sha1-tZ2van/6RhtWSEVspZBQuo5A7VQ=
+
 "@types/node@^15.12.5":
   version "15.14.1"
   resolved "https://registry.nlark.com/@types/node/download/@types/node-15.14.1.tgz#4f9d3689532499fdda1c898e19f4593718655e36"
   integrity sha1-T502iVMkmf3aHImOGfRZNxhlXjY=
+
+"@types/node@~14.14.31":
+  version "14.14.45"
+  resolved "https://registry.nlark.com/@types/node/download/@types/node-14.14.45.tgz?cache=0&sync_timestamp=1625868313334&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-14.14.45.tgz#ec2dfb5566ff814d061aef7e141575aedba245cf"
+  integrity sha1-7C37VWb/gU0GGu9+FBV1rtuiRc8=
 
 "@types/nprogress@^0.2.0":
   version "0.2.0"
@@ -2141,7 +2168,7 @@ astral-regex@^2.0.0:
   resolved "https://registry.nlark.com/astral-regex/download/astral-regex-2.0.0.tgz"
   integrity sha1-SDFDxWeu7UeFdZwIZXhtx319LjE=
 
-async-validator@^3.3.0, async-validator@^3.4.0:
+async-validator@^3.3.0, async-validator@^3.4.0, async-validator@^3.5.1:
   version "3.5.2"
   resolved "https://registry.nlark.com/async-validator/download/async-validator-3.5.2.tgz#68e866a96824e8b2694ff7a831c1a25c44d5e500"
   integrity sha1-aOhmqWgk6LJpT/eoMcGiXETV5QA=
@@ -2790,6 +2817,15 @@ css-declaration-sorter@^4.0.1:
     postcss "^7.0.1"
     timsort "^0.3.0"
 
+css-render@^0.15.3, css-render@^0.15.4, css-render@~0.15.4:
+  version "0.15.4"
+  resolved "https://registry.nlark.com/css-render/download/css-render-0.15.4.tgz#0c0fa8cdd52236041e417e31b73a83da4497c6d9"
+  integrity sha1-DA+ozdUiNgQeQX4xtzqD2kSXxtk=
+  dependencies:
+    "@emotion/hash" "~0.8.0"
+    "@types/node" "~14.14.31"
+    csstype "~3.0.5"
+
 css-select-base-adapter@^0.1.1:
   version "0.1.1"
   resolved "https://registry.npm.taobao.org/css-select-base-adapter/download/css-select-base-adapter-0.1.1.tgz"
@@ -2933,6 +2969,11 @@ csstype@^2.6.8:
   resolved "https://registry.nlark.com/csstype/download/csstype-2.6.17.tgz"
   integrity sha1-TPMOuH4dGgBdi2UQ+VKSQT9qHA4=
 
+csstype@~3.0.5:
+  version "3.0.8"
+  resolved "https://registry.nlark.com/csstype/download/csstype-3.0.8.tgz#d2266a792729fb227cd216fb572f43728e1ad340"
+  integrity sha1-0iZqeScp+yJ80hb7Vy9Dco4a00A=
+
 currently-unhandled@^0.4.1:
   version "0.4.1"
   resolved "https://registry.npm.taobao.org/currently-unhandled/download/currently-unhandled-0.4.1.tgz#988df33feab191ef799a61369dd76c17adf957ea"
@@ -2948,6 +2989,11 @@ data-urls@^2.0.0:
     abab "^2.0.3"
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.0.0"
+
+date-fns@^2.19.0:
+  version "2.22.1"
+  resolved "https://registry.nlark.com/date-fns/download/date-fns-2.22.1.tgz#1e5af959831ebb1d82992bf67b765052d8f0efc4"
+  integrity sha1-Hlr5WYMeux2CmSv2e3ZQUtjw78Q=
 
 dayjs@1.x, dayjs@^1.10.5:
   version "1.10.6"
@@ -3514,6 +3560,11 @@ eventemitter3@^4.0.4:
   resolved "https://registry.nlark.com/eventemitter3/download/eventemitter3-4.0.7.tgz"
   integrity sha1-Lem2j2Uo1WRO9cWVJqG0oHMGFp8=
 
+evtd@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.nlark.com/evtd/download/evtd-0.2.2.tgz#bebbe27e15aedc1d5c18bc2620dfc90f260787c3"
+  integrity sha1-vrvifhWu3B1cGLwmIN/JDyYHh8M=
+
 execa@^0.7.0:
   version "0.7.0"
   resolved "https://registry.nlark.com/execa/download/execa-0.7.0.tgz?cache=0&sync_timestamp=1622825396605&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fexeca%2Fdownload%2Fexeca-0.7.0.tgz#944becd34cc41ee32a63a9faf27ad5a65fc59777"
@@ -3933,6 +3984,11 @@ hex-color-regex@^1.1.0:
   version "1.1.0"
   resolved "https://registry.nlark.com/hex-color-regex/download/hex-color-regex-1.1.0.tgz"
   integrity sha1-TAb8y0YC/iYCs8k9+C1+fb8aio4=
+
+highlight.js@^11.0.1:
+  version "11.1.0"
+  resolved "https://registry.nlark.com/highlight.js/download/highlight.js-11.1.0.tgz#0198f7326e64ddfbea5f76b00e84ab542cf24ae8"
+  integrity sha1-AZj3Mm5k3fvqX3awDoSrVCzySug=
 
 hosted-git-info@^2.1.4:
   version "2.8.9"
@@ -5138,7 +5194,7 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
-lodash-es@^4.17.15, lodash-es@^4.17.20:
+lodash-es@^4.17.15, lodash-es@^4.17.20, lodash-es@^4.17.21:
   version "4.17.21"
   resolved "https://registry.npm.taobao.org/lodash-es/download/lodash-es-4.17.21.tgz?cache=0&sync_timestamp=1613835893273&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flodash-es%2Fdownload%2Flodash-es-4.17.21.tgz"
   integrity sha1-Q+YmxG5lkbd1C+srUBFzkMYJ4+4=
@@ -5429,6 +5485,29 @@ mvdir@^1.0.21:
   version "1.0.21"
   resolved "https://registry.npm.taobao.org/mvdir/download/mvdir-1.0.21.tgz#d8de39037c3198a4ab8478c7afa64e99f0e77483"
   integrity sha1-2N45A3wxmKSrhHjHr6ZOmfDndIM=
+
+naive-ui@^2.15.4:
+  version "2.15.4"
+  resolved "https://registry.nlark.com/naive-ui/download/naive-ui-2.15.4.tgz#56c53b03e277ac9e55396bfb85dc2b49293ca6c3"
+  integrity sha1-VsU7A+J3rJ5VOWv7hdwrSSk8psM=
+  dependencies:
+    "@css-render/plugin-bem" "^0.15.4"
+    "@css-render/vue3-ssr" "^0.15.4"
+    "@types/lodash" "^4.14.170"
+    "@types/lodash-es" "^4.17.4"
+    async-validator "^3.5.1"
+    css-render "^0.15.4"
+    date-fns "^2.19.0"
+    evtd "^0.2.2"
+    highlight.js "^11.0.1"
+    lodash "^4.17.21"
+    lodash-es "^4.17.21"
+    seemly "^0.3.1"
+    treemate "^0.2.11"
+    vdirs "^0.1.4"
+    vfonts "^0.1.0"
+    vooks "^0.2.6"
+    vueuc "^0.4.9"
 
 nanoid@^3.1.23:
   version "3.1.23"
@@ -6888,6 +6967,13 @@ scroll-into-view-if-needed@^2.2.25:
   dependencies:
     compute-scroll-into-view "^1.0.17"
 
+seemly@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.nlark.com/seemly/download/seemly-0.3.1.tgz#bcb439d7e399a7cc546ca86c31d24328cc3944ca"
+  integrity sha1-vLQ51+OZp8xUbKhsMdJDKMw5RMo=
+  dependencies:
+    "@types/jest" "^26.0.20"
+
 semver-diff@^2.0.0:
   version "2.1.0"
   resolved "https://registry.nlark.com/semver-diff/download/semver-diff-2.1.0.tgz?cache=0&sync_timestamp=1620044887257&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fsemver-diff%2Fdownload%2Fsemver-diff-2.1.0.tgz#4bbb8437c8d37e4b0cf1a68fd726ec6d645d6d36"
@@ -7414,6 +7500,11 @@ tr46@^2.1.0:
   dependencies:
     punycode "^2.1.1"
 
+treemate@^0.2.11:
+  version "0.2.11"
+  resolved "https://registry.nlark.com/treemate/download/treemate-0.2.11.tgz#cffa37051e613beaa82fd3fce56300e8e4d8328f"
+  integrity sha1-z/o3BR5hO+qoL9P85WMA6OTYMo8=
+
 trim-newlines@^2.0.0:
   version "2.0.0"
   resolved "https://registry.nlark.com/trim-newlines/download/trim-newlines-2.0.0.tgz?cache=0&sync_timestamp=1623341510447&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftrim-newlines%2Fdownload%2Ftrim-newlines-2.0.0.tgz#b403d0b91be50c331dfc4b82eeceb22c3de16d20"
@@ -7768,6 +7859,14 @@ vanilla-colorful@^0.6.1:
   resolved "https://registry.nlark.com/vanilla-colorful/download/vanilla-colorful-0.6.1.tgz#2c21ec2a51a5854932b1231df3ed55ff299b69ce"
   integrity sha1-LCHsKlGlhUkysSMd8+1V/ymbac4=
 
+vdirs@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.nlark.com/vdirs/download/vdirs-0.1.4.tgz#c4c0ff86cf47fed03de5f869e265311ef188ab74"
+  integrity sha1-xMD/hs9H/tA95fhp4mUxHvGIq3Q=
+  dependencies:
+    "@types/node" "^14.14.10"
+    evtd "^0.2.2"
+
 vendors@^1.0.0:
   version "1.0.4"
   resolved "https://registry.nlark.com/vendors/download/vendors-1.0.4.tgz"
@@ -7850,6 +7949,11 @@ vfile@^4.0.0, vfile@^4.0.1:
     unist-util-stringify-position "^2.0.0"
     vfile-message "^2.0.0"
 
+vfonts@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.nlark.com/vfonts/download/vfonts-0.1.0.tgz#c16af37ca044b2725ae55553049280efbe6222a9"
+  integrity sha1-wWrzfKBEsnJa5VVTBJKA775iIqk=
+
 vite-plugin-components@^0.12.1:
   version "0.12.1"
   resolved "https://registry.nlark.com/vite-plugin-components/download/vite-plugin-components-0.12.1.tgz#0937265ee99b3467c1b9aae09213a6c7153aef30"
@@ -7876,6 +7980,13 @@ void-elements@^3.1.0:
   version "3.1.0"
   resolved "https://registry.npm.taobao.org/void-elements/download/void-elements-3.1.0.tgz#614f7fbf8d801f0bb5f0661f5b2f5785750e4f09"
   integrity sha1-YU9/v42AHwu18GYfWy9XhXUOTwk=
+
+vooks@^0.2.4, vooks@^0.2.6:
+  version "0.2.8"
+  resolved "https://registry.nlark.com/vooks/download/vooks-0.2.8.tgz#fad6a78c72e39443e56285337b0843baaeed0f3e"
+  integrity sha1-+tanjHLjlEPlYoUzewhDuq7tDz4=
+  dependencies:
+    evtd "^0.2.2"
 
 vscode-css-languageservice@^5.1.3:
   version "5.1.4"
@@ -8105,6 +8216,18 @@ vue@^3.0.0, vue@^3.1.2:
     "@vue/compiler-dom" "3.1.4"
     "@vue/runtime-dom" "3.1.4"
     "@vue/shared" "3.1.4"
+
+vueuc@^0.4.9:
+  version "0.4.9"
+  resolved "https://registry.nlark.com/vueuc/download/vueuc-0.4.9.tgz#f3fb8ee85ead7d9c08df0d23e7b285c35064e9f2"
+  integrity sha1-8/uO6F6tfZwI3w0j57KFw1Bk6fI=
+  dependencies:
+    css-render "^0.15.3"
+    evtd "^0.2.2"
+    resize-observer-polyfill "^1.5.1"
+    seemly "^0.3.1"
+    vdirs "^0.1.4"
+    vooks "^0.2.4"
 
 vuex-persistedstate@^4.0.0-beta.3:
   version "4.0.0-beta.3"
