@@ -19,7 +19,7 @@
 </script>
 <script lang="ts" setup>
   import { defineProps } from 'vue-demi'
-  import { useTheme } from '~/utils/theme'
+  import { useTheme } from '../../../utils/theme'
   const props = defineProps({
     image: String,
     color: String,

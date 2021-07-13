@@ -42,7 +42,7 @@
   import { defineProps, inject, ref } from 'vue-demi'
   import { defineEmits, provide } from 'vue'
   import type { Ref } from 'vue'
-  import { cloneDeep } from 'lodash'
+  import { cloneDeep } from 'lodash-es'
 
   /** 列表项配置 */
   interface Option {

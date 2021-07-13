@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-05-26 10:05:03
- * @LastEditTime: 2021-07-13 18:00:54
+ * @LastEditTime: 2021-07-13 19:47:44
  * @Description: 表格配置
  * @LastEditors: Zhilong
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
@@ -93,10 +93,10 @@
   export default defineComponent({ name: 'CalTableOption' })
 </script>
 <script lang="ts" setup>
-  import { analyUnit } from '@/utils'
-  import { get } from 'lodash'
-  import { computed, defineProps, inject, useSlots, provide } from 'vue'
-  import { useTheme } from '~/utils/theme'
+  import { analyUnit } from '@tuimao/utils'
+  import { get } from 'lodash-es'
+  import { computed, defineProps, inject, useSlots } from 'vue'
+  import { useTheme } from '../../../utils/theme'
   const slots = useSlots()
   const props = defineProps({
     /** 最小宽度 */

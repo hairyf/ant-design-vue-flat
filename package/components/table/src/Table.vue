@@ -36,8 +36,8 @@
   import TableProvide from './TableProvide.vue'
   import { nanoid } from 'nanoid'
   import { orderBy } from 'lodash'
-  import { analyUnit } from '@/utils'
-  import { useTheme } from '~/utils/theme'
+  import { analyUnit } from '@tuimao/utils'
+  import { useTheme } from '../../../utils/theme'
   const emit = defineEmits(['checkboxChange'])
   const selectList: Record<string, any> = {}
   const onCheckboxChange = (item: typeof fictitiousList.value[0], { target: { checked } }: any) => {
