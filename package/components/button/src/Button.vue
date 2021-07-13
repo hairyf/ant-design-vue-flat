@@ -1,14 +1,13 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-05-22 14:18:13
- * @LastEditTime: 2021-07-13 09:04:19
+ * @LastEditTime: 2021-07-13 11:37:57
  * @Description: 按钮
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
   <a-button class="cal-btn bg-com" v-bind="{ shape: 'round', ...props }">
-    <i v-if="iconClass" :class="iconClass" class="mr-6" />
     <slot></slot>
   </a-button>
 </template>
@@ -21,8 +20,7 @@
   import { Button as AButton } from 'ant-design-vue'
   import { useTheme } from '../../../utils/theme'
   const props = defineProps({
-    ...(AButton.props as {}),
-    iconClass: String
+    ...AButton.props
   })
   useTheme('Common')
 </script>
@@ -31,23 +29,23 @@
     &.ant-btn-sm {
       font-size: 12px !important;
     }
-    color: var(--color-primary);
-    border-color: var(--color-primary-light-3);
+    color: var(--common-primary-color);
+    border-color: var(--common-primary-color-light-2);
     &:hover,
     &:focus {
-      color: var(--color-primary);
+      color: var(--common-primary-color);
       background-color: #fff;
-      border-color: var(--color-primary);
+      border-color: var(--common-primary-color);
     }
     &.ant-btn-primary {
       color: #ffffff;
-      background-color: var(--color-primary);
-      border-color: var(--color-primary);
+      background-color: var(--common-primary-color);
+      border-color: var(--common-primary-color);
       &:hover,
       &:focus {
         color: #ffffff;
-        background-color: var(--color-primary-light-2);
-        border-color: var(--color-primary-light-2);
+        background-color: var(--common-primary-color-light-2);
+        border-color: var(--common-primary-color-light-2);
       }
     }
     &.ant-btn-danger {
@@ -65,7 +63,7 @@
       border-color: transparent;
       &:hover,
       &:focus {
-        color: var(--color-primary);
+        color: var(--common-primary-color);
         background-color: transparent;
         border-color: transparent;
       }

@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.Mao
- * @Date: 2021-05-22 14:18:13
- * @LastEditTime: 2021-07-13 15:16:49
- * @Description: 按钮
- * @LastEditors: Pan.Yu.Lin
+ * @Date: 2021-05-22 10:38:45
+ * @LastEditTime: 2021-07-13 09:46:45
+ * @Description: 下拉收起动画组件
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -13,6 +13,7 @@
 </template>
 <script lang="ts">
   import { defineComponent } from 'vue'
+
   export default defineComponent({
     name: 'CalCollapseTransition',
     setup() {

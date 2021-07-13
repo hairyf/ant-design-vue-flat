@@ -18,7 +18,7 @@
 <style lang="scss" scoped>
   .cal-steps {
     .circular {
-      border: 2px solid var(--color-primary-light-7);
+      border: 2px solid var(--color-primary-light-8);
       border-radius: 50%;
     }
     :deep(.ant-steps-item-wait) {
@@ -49,8 +49,8 @@
       background-color: transparent;
       background-image: linear-gradient(
         to right,
-        var(--color-primary-light-5) 0%,
-        var(--color-primary-light-5) 50%,
+        var(--color-primary-light-4) 0%,
+        var(--color-primary-light-4) 50%,
         transparent 50%
       );
       background-size: 35px 5px;
@@ -66,7 +66,7 @@
         > .ant-steps-item-container
         > .ant-steps-item-content
         > .ant-steps-item-title) {
-      color: var(--color-primary-light-7);
+      color: var(--color-primary-light-8);
       font-weight: 600;
       font-size: 16px;
       line-height: 20px;
