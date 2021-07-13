@@ -1,9 +1,9 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-12 18:09:42
+ * @LastEditTime: 2021-07-13 09:33:00
  * @Description:
- * @LastEditors: Mr.Mao
+ * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
 export { default as CalButton } from './components/button/src/Button.vue'
@@ -32,3 +32,5 @@ export { default as CalRadioGroup } from './components/radio/src/RadioGroup.vue'
 export { default as CalStep } from './components/step/src/Step.vue'
 export { default as CalSteps } from './components/step/src/Steps.vue'
 export { default as CalSwitch } from './components/switch/src/Switch.vue'
+export { default as CalTable } from './components/table/src/Table.vue'
+export { default as CalTableOption } from './components/table/src/TableOption.vue'
