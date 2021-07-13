@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-05-19 16:47:02
- * @LastEditTime: 2021-07-12 20:02:39
+ * @LastEditTime: 2021-07-13 10:11:32
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -30,7 +30,7 @@
         vertical
         indicator
       >
-        <template #icon> Icon </template>
+        <template #prefix> Icon </template>
         <template #default> {{ item.meta?.title }} </template>
       </cal-menu-item>
     </cal-menu>
@@ -50,13 +50,7 @@
       style-type="button"
       class="p-24"
     >
-      <cal-menu-item
-        v-for="(item, index) in routeChildrens"
-        :key="index"
-        :index="item.meta?.completePath"
-      >
-        <template #default> {{ item.meta?.title }} </template>
-      </cal-menu-item>
+      <cal-menu-group-item :routes="routeChildrens" />
     </cal-menu>
   </cal-layout-sider>
 </template>
@@ -65,6 +59,7 @@
   import { computed, ref } from 'vue-demi'
   import { useRoute, useRouter } from 'vue-router'
   import { useTheme } from '~/utils/theme'
+  import CalMenuGroupItem from './MenuGroupItem.vue'
   const route = useRoute()
   const router = useRouter()
 

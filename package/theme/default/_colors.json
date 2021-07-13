@@ -3,11 +3,10 @@
     "baseTextColor": "#000000",
     "primaryColor": "#558BF7",
     "baseColor": "#ffffff",
+    
     "primaryColorLight-2":"#77a2f9",
     "primaryColorLight-4":"#99b9fa",
-    "primaryColorLight-5":"#aac5fb",
     "primaryColorLight-6":"#bbd1fc",
-    "primaryColorLight-7":"#ccdcfd",
     "primaryColorLight-8":"#dde8fd",
 
     "primaryColorDark-2":"#446fc6",
@@ -27,7 +26,6 @@
     "itemTextColor": "#C2DEF8",
     "itemTextActiveColor": "#FFFFFF",
     "itemTextHoverColor": "#C2DEF8",
-
     "itemBodyColor": "#FFFFFF00",
     "itemBodyActiveColor": "#4474D6",
     "itemBodyHoverColor": "inherit",
@@ -35,10 +33,16 @@
     "itemBtnTextColor": "#001426",
     "itemBtnTextActiveColor": "#FFFFFF",
     "itemBtnTextHoverColor": "#558BF7",
-
     "itemBtnBodyColor": "inherit",
     "itemBtnBodyActiveColor": "#558BF7",
-    "itemBtnBodyHoverColor": "#DDE8FD"
+    "itemBtnBodyHoverColor": "#DDE8FD",
+
+    "itemChildTextColor": "#001426",
+    "itemChildTextActiveColor": "#558BF7",
+    "itemChildTextHoverColor": "#558BF7",
+    "itemChildBodyColor": "inherit",
+    "itemChildBodyActiveColor": "#DDE8FD",
+    "itemChildBodyHoverColor": "#DDE8FD"
   },
   "Button": {},
   "Input": {
@@ -48,5 +52,15 @@
   },
   "PageSelect":{
     "solidColor": "#ffffff"
+  },
+  "Tabs":{
+    "backgroundColor":"#ffffff",
+    "hollowColor":""
+},
+  "Card": {
+    "bgColor": "#ffffff"
+  },
+  "upload":{
+    "bgColor": "#ffffff"
   }
 }

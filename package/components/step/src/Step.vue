@@ -1,16 +1,16 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 19:33:54
- * @LastEditTime: 2021-07-12 19:46:00
+ * @LastEditTime: 2021-07-13 11:40:05
  * @Description: 步进器项
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
   <a-step class="cal-step" v-bind="props">
     <template #icon>
       <i class="nr-after text-4xl" />
-      <i class="nr-step-await text-common-primary-color-light-5" style="font-size: 40px" />
+      <i class="nr-step-await text-common-primary-color-light-4" style="font-size: 40px" />
     </template>
     <template #description>
       <slot name="description" />
