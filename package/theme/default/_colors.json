@@ -34,5 +34,10 @@
   },
   "PageSelect":{
     "solidColor": "#ffffff"
+  },
+  "Tabs":{
+    "backgroundColor":"#ffffff",
+    "hollowColor":""
+
   }
 }
