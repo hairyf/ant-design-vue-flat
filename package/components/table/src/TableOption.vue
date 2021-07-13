@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-05-26 10:05:03
- * @LastEditTime: 2021-07-13 16:42:44
+ * @LastEditTime: 2021-07-13 16:51:37
  * @Description: 表格配置
  * @LastEditors: Zhilong
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
@@ -183,7 +183,7 @@
         position: absolute;
         top: -0.5px;
         width: calc(100% + 48px);
-        left: -24px;
+        left: 0;
         height: 1px;
         background-color: var(--table-border-color);
       }
