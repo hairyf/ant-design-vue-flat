@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-05-20 17:54:55
- * @LastEditTime: 2021-07-12 20:01:20
+ * @LastEditTime: 2021-07-13 11:13:46
  * @Description: 菜单项
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -19,20 +19,21 @@
       items-center
     "
     :class="[itemCalss, vertical ? 'flex-col' : '', collapse ? 'cal-menu-item--collapse' : '']"
-    @click="onUpdate?.(index)"
+    @click="!notUpdate && onUpdate?.(index)"
   >
-    <span class="cal-munu-item__icon">
-      <slot name="icon" />
+    <span class="cal-menu-item__prefix">
+      <slot name="prefix" />
     </span>
     <transition
       enter-active-class="animate__bounceIn"
       leave-active-class="animate__bounceOut"
       :duration="{ enter: 400, leave: 100 }"
     >
-      <span class="cal-munu-item__content" v-if="!collapse">
+      <span class="cal-menu-item__content" v-if="!collapse">
         <slot />
       </span>
     </transition>
+    <slot name="suffix" />
   </li>
 </template>
 <script lang="ts">
@@ -51,15 +52,19 @@
       type: Boolean
     },
     // 是否垂直排序
-    vertical: Boolean
+    vertical: Boolean,
+    // 阻止调用更新
+    notUpdate: Boolean
   })
   useTheme('Menu')
   // 当前是否收起
   const collapse = inject('collapse') as Ref<boolean>
   // 当前高亮項
   const defaultActive = inject('defaultActive') as Ref<string[]>
-  // 当前类型
+  // 当前样式类型('default', 'button')
   const styleType = inject<string>('styleType')
+  // 当前组件类型为 children
+  const isChildren = inject<boolean>('isChildren')
   // 调起更新
   const onUpdate = inject<(key?: string) => void>('onUpdate')
   // 当前是否高亮
@@ -68,18 +73,38 @@
   })
   // 当前项样式类名
   const itemCalss = computed(() => {
-    if (styleType === 'button') {
-      return active.value
-        ? [
-            'cal-munu-item__button',
-            ' cal-munu-item__button-active',
-            { 'cal-munu-item__indicator': props.indicator }
-          ]
-        : ['cal-munu-item__button']
+    const buttonClass = ['cal-munu-item__button']
+    const buttonActiveClass = [
+      'cal-munu-item__button__default',
+      'cal-munu-item__button-active',
+      { 'cal-munu-item__indicator': props.indicator }
+    ]
+    const childrenClass = ['cal-munu-item__children']
+    const childrenAcitveClass = [
+      'cal-munu-item__children-active',
+      { 'cal-munu-item__indicator': props.indicator }
+    ]
+    const defaultClass = ['cal-munu-item__default']
+    const defaultActiveClass = [
+      'cal-munu-item__default-active',
+      { 'cal-munu-item__indicator': props.indicator }
+    ]
+    let currentActiveClass = []
+    let currentClass = []
+    if (isChildren) {
+      styleType === 'button' && childrenClass.push('cal-munu-item__button__default')
+      styleType === 'button' && childrenAcitveClass.push('cal-munu-item__button__default')
+      currentClass = childrenClass
+      currentActiveClass = childrenAcitveClass
+    } else if (styleType === 'button') {
+      currentClass = buttonClass
+      currentActiveClass = buttonActiveClass
+    } else {
+      currentClass = defaultClass
+      currentActiveClass = defaultActiveClass
     }
-    return active.value
-      ? ['cal-munu-item__default-active', { 'cal-munu-item__indicator': props.indicator }]
-      : ['cal-munu-item__default']
+
+    return active.value ? currentActiveClass : currentClass
   })
 </script>
 
@@ -115,8 +140,11 @@
   .cal-munu-item__default-active {
     @apply bg-menu-item-body-active-color text-menu-item-text-active-color;
   }
-  .cal-munu-item__button {
+  .cal-munu-item__button__default {
     @apply rounded-full mb-20 py-10;
+  }
+  .cal-munu-item__button {
+    @extend .cal-munu-item__button__default;
     @apply bg-menu-item-btn-body-color text-menu-item-btn-text-color;
     &:hover {
       @apply bg-menu-item-btn-body-hover-color text-menu-item-btn-text-hover-color;
@@ -124,5 +152,14 @@
   }
   .cal-munu-item__button-active {
     @apply bg-menu-item-btn-body-active-color text-menu-item-btn-text-active-color;
+  }
+  .cal-munu-item__children {
+    @apply bg-menu-item-child-body-color text-menu-item-child-text-color;
+    &:hover {
+      @apply bg-menu-item-child-body-hover-color text-menu-item-child-text-hover-color;
+    }
+  }
+  .cal-munu-item__children-active {
+    @apply bg-menu-item-child-body-active-color text-menu-item-child-text-active-color;
   }
 </style>
