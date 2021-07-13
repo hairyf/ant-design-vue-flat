@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-05-26 10:05:03
- * @LastEditTime: 2021-07-13 20:00:13
+ * @LastEditTime: 2021-07-13 20:32:18
  * @Description: 表格配置
  * @LastEditors: Mr.wang
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
@@ -157,7 +157,6 @@
       }
     }
   })
-
   useTheme('Table')
   useCssVars(() => ({ 'table-within-space': analyUnit(option.space) }))
 </script>
