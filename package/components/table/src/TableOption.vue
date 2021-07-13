@@ -1,9 +1,9 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-05-26 10:05:03
- * @LastEditTime: 2021-07-13 11:43:09
+ * @LastEditTime: 2021-07-13 17:10:40
  * @Description: 表格配置
- * @LastEditors: Zhilong
+ * @LastEditors: Mr.Mao
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
 -->
 <template>
@@ -25,7 +25,7 @@
     }"
   >
     <div
-      class="w-full text-gray-darkmin cursor-pointer select-none mb-20"
+      class="w-full text-gray-darkmin cursor-pointer select-none mb-24"
       :class="[option.textAlign === 'left' ? 'text-left' : 'text-center']"
     >
       <span v-if="!sort">{{ title }}</span>
@@ -36,11 +36,25 @@
       </cal-theme-icon>
     </div>
     <div
-      class="flex flex-1 flex-col w-full justify-center"
+      class="flex flex-1 flex-col w-full justify-center list-border"
       ::class='[option.contentAlign === "left" ? "":"items-center"]'
     >
+      <template v-if="listObject">
+        <div class="item-border" v-for="(item, i) in listObject" :key="i.toString()">
+          <slot
+            v-if="slots['default']"
+            :content="item[props.index || props.title || '']"
+            :item="item"
+            :index="i"
+            :list="listObject"
+          />
+          <template v-else>
+            {{ item[props.index || props.title || ''] }}
+          </template>
+        </div>
+      </template>
       <slot
-        v-if="slots['default']"
+        v-else-if="slots['default']"
         :content="showContent"
         :item="item"
         :index="index"
@@ -51,13 +65,25 @@
       </template>
     </div>
   </div>
-  <slot
+  <div
     v-else-if="slots['default']"
-    :content="showContent"
-    :item="item"
-    :index="index"
-    :list="option.list"
-  />
+    class="flex"
+    :style="{
+      maxWidth: option?.syncSpace
+        ? `calc(${analyUnit(maxWidth || '')} + (${analyUnit(option.space)} * 2))`
+        : analyUnit(maxWidth || ''),
+      minWidth: option?.syncSpace
+        ? `calc(${analyUnit(minWidth || '')} + (${analyUnit(option.space)} * 2))`
+        : analyUnit(minWidth || ''),
+      flex: 1,
+      paddingLeft: analyUnit(option.space),
+      paddingRight: analyUnit(option.space),
+      borderLeft: props.borderLeft ? 'solid 1px #F5F5F5' : 'none',
+      borderRight: props.borderRight ? 'solid 1px #F5F5F5' : 'none'
+    }"
+  >
+    <slot :content="showContent" :item="item" :index="index" :list="option.list" />
+  </div>
   <template v-else>
     {{ showContent }}
   </template>
@@ -70,6 +96,7 @@
   import { analyUnit } from '@tuimao/utils'
   import { get } from 'lodash-es'
   import { computed, defineProps, inject, useSlots } from 'vue'
+  import { useTheme } from '../../../utils/theme'
   const slots = useSlots()
   const props = defineProps({
     /** 最小宽度 */
@@ -101,12 +128,16 @@
 
   // 列表数据
   const { item, index } = inject<any>('itemObject')
+  // 小列表数据
+  const listObject = inject<any>('listObject')
   // 配置
   const option = inject<any>('option')
   // 控制器配置
   const controller = inject<any>('controller')
   // 显示内容
   const showContent = computed(() => get(item, props.index || props.title || ''))
+  // 类型list继续向下 增加内容
+  if (props.type === 'list') provide('listObject', showContent.value)
   /* 是否是当前索引值 */
   const isCurrentIndex = () => {
     const isIndex = controller?.value?.order?.index === props.index
@@ -126,6 +157,8 @@
       }
     }
   })
+
+  useTheme('Table')
 </script>
 <style lang="scss" scoped>
   .table-option-container {
@@ -133,5 +166,27 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+  }
+  .list-border {
+    .item-border {
+      padding: 24px 0;
+    }
+    .item-border:not(:last-child) {
+      position: relative;
+      padding: 0 0 24px 0;
+    }
+    .item-border:not(:first-child) {
+      position: relative;
+      padding: 24px 0 0 0;
+      &::after {
+        content: '';
+        position: absolute;
+        top: -0.5px;
+        width: calc(100% + 48px);
+        left: 0;
+        height: 1px;
+        background-color: var(--table-border-color);
+      }
+    }
   }
 </style>

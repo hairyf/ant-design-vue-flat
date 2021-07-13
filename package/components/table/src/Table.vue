@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-05-25 18:04:11
- * @LastEditTime: 2021-07-13 12:00:52
+ * @LastEditTime: 2021-07-13 14:37:37
  * @Description: 表格
  * @LastEditors: Zhilong
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
@@ -116,7 +116,7 @@
   // 虚拟数据列表(显示的数据)
   const fictitiousShowList = ref(updateList())
   // 控制器
-  const controller = ref({ order: { index: '', sort: 0 } })
+  const controller = ref({ order: { index: '', sort: 0 }, renderList: false })
   // 原数据修改
   watch(
     () => props.list,
