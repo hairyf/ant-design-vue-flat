@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 16:32:30
- * @LastEditTime: 2021-07-12 16:39:58
+ * @LastEditTime: 2021-07-13 15:16:32
  * @Description: 图片模块验证 来自https://github.com/javaLuo/vue-puzzle-vcode
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -807,7 +807,6 @@
           position: absolute;
           height: 100%;
           width: 50px;
-          // background-color: rgba(106, 160, 255, 0.8);
           border-radius: 3px;
           .range-btn {
             position: absolute;
@@ -830,7 +829,6 @@
               &:nth-child(2) {
                 margin: 0 5px;
               }
-              // border: solid 1px #6aa0ff;
               border: solid 1px #fff;
             }
             /* &:hover,
