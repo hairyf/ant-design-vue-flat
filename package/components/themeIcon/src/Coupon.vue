@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:48:54
- * @LastEditTime: 2021-07-13 11:15:30
+ * @LastEditTime: 2021-07-13 11:23:13
  * @Description: 折扣券主题图标
  * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -11,7 +11,7 @@
     <div class="coupon-view"> 折扣券 </div>
   </div>
 </template>
-<script lang="ts">
+<script lang="ts" setup>
   import { useTheme } from '../../../utils/theme'
   useTheme('Common')
   useTheme('Tabs')

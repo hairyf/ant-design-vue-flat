@@ -11,7 +11,7 @@
     <div class="offers-view"> 优惠券 </div>
   </div>
 </template>
-<script lang="ts">
+<script lang="ts" setup>
   import { useTheme } from '../../../utils/theme'
   useTheme('Common')
   useTheme('Tabs')

@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-13 11:09:56
+ * @LastEditTime: 2021-07-13 11:20:10
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
  * @LastEditors: Mr.wang
@@ -42,6 +42,6 @@ export { default as CalSwitch } from './components/switch/src/Switch.vue'
 export { default as CalTabPane } from './components/tabs/src/TabPane.vue'
 export { default as CalTabs } from './components/tabs/src/Tabs.vue'
 export { default as CalTextarea } from './components/textarea/src/Textarea.vue'
-export { default as CalThemelcon } from './components/themeIcon/src/index.vue'
+export { default as CalThemeIcon } from './components/themeIcon/src/index.vue'
 export { default as CalTree } from './components/tree/src/Tree.vue'
 export { default as CalUpload } from './components/upload/src/Upload.vue'

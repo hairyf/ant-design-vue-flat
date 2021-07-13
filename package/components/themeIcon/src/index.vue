@@ -13,7 +13,7 @@
 </template>
 <script lang="ts">
   import { defineComponent } from 'vue'
-  export default defineComponent({ name: 'CalThemelcon' })
+  export default defineComponent({ name: 'CalThemeIcon' })
 </script>
 <script lang="ts" setup>
   import { computed, defineAsyncComponent, defineProps } from 'vue-demi'

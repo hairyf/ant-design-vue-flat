@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:48:41
- * @LastEditTime: 2021-07-13 11:16:28
+ * @LastEditTime: 2021-07-13 11:29:01
  * @Description: 添加某个东西
  * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -35,7 +35,7 @@
 </template>
 <script lang="ts" setup>
   import { defineProps } from 'vue'
-
+  import { useTheme } from '../../../utils/theme'
   const porps = defineProps({
     /** 显示插槽内容 */
     showSlot: Boolean,
@@ -54,4 +54,5 @@
       default: 'dashed'
     }
   })
+  useTheme('Common')
 </script>
