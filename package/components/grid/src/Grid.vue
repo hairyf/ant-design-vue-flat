@@ -1,9 +1,9 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-07-12 15:53:35
- * @LastEditTime: 2021-07-12 17:55:13
+ * @LastEditTime: 2021-07-13 15:14:56
  * @Description: 
- * @LastEditors: Zhilong
+ * @LastEditors: Mr.Mao
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
 -->
 <template>
@@ -55,7 +55,6 @@
   .cal-grid__view {
     display: grid;
     grid-template-columns: repeat(auto-fill, var(--width));
-    // grid-template-rows: repeat(auto-fit, var(--height));
     gap: var(--gap);
     justify-content: space-evenly;
     & > * {

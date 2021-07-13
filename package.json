@@ -1,6 +1,6 @@
 {
   "name": "test-bricks-teach",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "author": "peiyahui",
   "types": "package/index.ts",
@@ -21,6 +21,7 @@
     "@babel/preset-env": "^7.14.7",
     "@babel/preset-react": "^7.14.5",
     "@babel/preset-typescript": "^7.14.5",
+    "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^11.1.1",
     "@tuimao/eslint-config-preset": "^1.1.0",
     "@tuimao/tailwind-config-preset": "^1.1.0",
