@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-13 16:58:20
+ * @LastEditTime: 2021-07-13 20:26:25
  * @Description: 
- * @LastEditors: Zhilong
+ * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -30,6 +30,9 @@
     <cal-table-option title="test" index="a"> </cal-table-option>
     <cal-table-option title="测试" index="b"> </cal-table-option>
   </cal-table>
+  <!-- <cal-table class="py-10">
+    <cal-checkbox v-model="value"></cal-checkbox> <div>标签名称名称称</div>
+  </cal-table> -->
   <cal-descriptions label-placement="top" title="描述">
     <cal-descriptions-item label="早午餐">苹果</cal-descriptions-item>
     <cal-descriptions-item label="午餐">苹果</cal-descriptions-item>

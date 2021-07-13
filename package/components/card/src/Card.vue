@@ -1,9 +1,9 @@
 <!--
  * @Author: Pan.Yu.Lin
  * @Date: 2021-07-12 17:02:15
- * @LastEditTime: 2021-07-13 09:01:10
+ * @LastEditTime: 2021-07-13 20:21:46
  * @Description: 
- * @LastEditors: Pan.Yu.Lin
+ * @LastEditors: Mr.wang
 -->
 <template>
   <a-card
@@ -19,7 +19,8 @@
   export default defineComponent({ name: 'CalCard' })
 </script>
 <script lang="ts" setup>
-  import { defineProps } from 'vue-demi'
+  import { defineProps } from 'vue'
+  import { useTheme } from '../../../utils/theme'
   import { analyUnit } from '@tuimao/utils'
   import { Card as ACard } from 'ant-design-vue'
   const props = defineProps({
@@ -28,6 +29,7 @@
       default: true
     }
   })
+  useTheme('Card')
 </script>
 <style lang="scss" scoped>
   .cal-card {

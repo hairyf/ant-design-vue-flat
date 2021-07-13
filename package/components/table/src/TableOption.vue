@@ -1,9 +1,9 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-05-26 10:05:03
- * @LastEditTime: 2021-07-13 19:47:44
+ * @LastEditTime: 2021-07-13 20:00:13
  * @Description: 表格配置
- * @LastEditors: Zhilong
+ * @LastEditors: Mr.wang
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
 -->
 <template>
@@ -95,7 +95,7 @@
 <script lang="ts" setup>
   import { analyUnit } from '@tuimao/utils'
   import { get } from 'lodash-es'
-  import { computed, defineProps, inject, useSlots } from 'vue'
+  import { computed, defineProps, inject, useSlots, provide } from 'vue'
   import { useTheme } from '../../../utils/theme'
   const slots = useSlots()
   const props = defineProps({
