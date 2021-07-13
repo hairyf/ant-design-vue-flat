@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-07 15:17:55
- * @LastEditTime: 2021-07-13 15:13:55
+ * @LastEditTime: 2021-07-13 17:06:53
  * @Description:
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -39,11 +39,11 @@ export default defineConfig({
       plugins: [
         postcssImport(),
         tailwindcss({
-          presets: tailwindConfig.presets,
-          purge: {
-            enabled: true,
-            content: ['**/*.html', '**/*.vue', '**/*.jsx', '**/*.js']
-          }
+          presets: tailwindConfig.presets
+          // purge: {
+          //   enabled: true,
+          //   content: ['**/*.html', '**/*.vue', '**/*.jsx', '**/*.js']
+          // }
         })
       ]
     }),

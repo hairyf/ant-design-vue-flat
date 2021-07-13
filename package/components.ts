@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-13 16:23:48
+ * @LastEditTime: 2021-07-13 16:58:41
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
  * @LastEditors: Mr.Mao
@@ -18,17 +18,17 @@ export { default as CalLayout } from './components/layout/src/Layout.vue'
 export { default as CalLayoutContent } from './components/layout/src/LayoutContent.vue'
 export { default as CalLayoutSider } from './components/layout/src/LayoutSider.vue'
 export { default as CalBackground } from './components/background/src/Background.vue'
+export { default as CalEllipsis } from './components/ellipsis/src/Ellipsis.vue'
+export { default as CalSpace } from './components/space/src/Space.vue'
+export { default as CalGrid } from './components/grid/src/Grid.vue'
 export { default as CalInput } from './components/input/src/Input.vue'
 export { default as CalInputSection } from './components/input/src/InputSection.vue'
 export { default as CalInputPassword } from './components/input/src/InputPassword.vue'
 export { default as CalInputDate } from './components/input/src/InputDate.vue'
 export { default as CalInputNumber } from './components/input/src/InputNumber.vue'
 export { default as CalIcon } from './components/icon/src/Icon.vue'
-export { default as CalEllipsis } from './components/ellipsis/src/Ellipsis.vue'
-export { default as CalSpace } from './components/space/src/Space.vue'
 export { default as CalImage } from './components/image/src/Image.vue'
 export { default as CalCard } from './components/card/src/Card.vue'
-export { default as CalGrid } from './components/grid/src/Grid.vue'
 export { default as CalImageVerif } from './components/image-verif/src/ImageVerif.vue'
 export { default as CalCasCader } from './components/cascader/src/CasCader.vue'
 export { default as CalCheckbox } from './components/checkbox/src/Checkbox.vue'

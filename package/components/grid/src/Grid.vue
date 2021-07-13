@@ -14,7 +14,7 @@
   </div>
 </template>
 <script lang="ts">
-  import { analyUnit } from '@/utils'
+  import { analyUnit } from '@tuimao/utils'
   import { computed, defineComponent, useCssVars } from 'vue'
   export default defineComponent({ name: 'CalGrid' })
 </script>

@@ -1,12 +1,12 @@
 {
-  "name": "test-bricks-teach",
-  "version": "0.0.1",
+  "name": "ant-design-vue-flat",
+  "version": "0.0.11",
   "description": "",
   "author": "peiyahui",
   "types": "package/index.ts",
   "license": "ISC",
-  "main": "dist/test-bricks-teach.umd.js",
-  "module": "dist/test-bricks-teach.esm.js",
+  "main": "dist/ant-design-vue-flat.umd.js",
+  "module": "dist/ant-design-vue-flat.esm.js",
   "scripts": {
     "dev": "vite",
     "start": "vite",
@@ -16,6 +16,10 @@
     "build:umd": "rollup --config script/rollup.umd.config.js",
     "clean": "rimraf ./dist"
   },
+  "files": [
+    "./dist",
+    "./package"
+  ],
   "devDependencies": {
     "@ant-design-vue/use": "^0.0.1-alpha.10",
     "@babel/preset-env": "^7.14.7",

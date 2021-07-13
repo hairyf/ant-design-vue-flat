@@ -20,7 +20,7 @@
 </script>
 <script lang="ts" setup>
   import { defineProps } from 'vue-demi'
-  import { analyUnit } from '@/utils'
+  import { analyUnit } from '@tuimao/utils'
   import { Card as ACard } from 'ant-design-vue'
   const props = defineProps({
     isHidden: {

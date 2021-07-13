@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:49:30
- * @LastEditTime: 2021-07-13 11:24:15
+ * @LastEditTime: 2021-07-13 17:03:59
  * @Description: 选择状态框
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -49,7 +49,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-  import { analyUnit } from '@/utils'
+  import { analyUnit } from '@tuimao/utils'
   import { computed, defineProps } from 'vue-demi'
   import { useTheme } from '../../../utils/theme'
   const props = defineProps({

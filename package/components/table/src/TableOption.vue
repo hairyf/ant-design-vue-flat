@@ -67,8 +67,8 @@
   export default defineComponent({ name: 'CalTableOption' })
 </script>
 <script lang="ts" setup>
-  import { analyUnit } from '@/utils'
-  import { get } from 'lodash'
+  import { analyUnit } from '@tuimao/utils'
+  import { get } from 'lodash-es'
   import { computed, defineProps, inject, useSlots } from 'vue'
   const slots = useSlots()
   const props = defineProps({
