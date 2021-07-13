@@ -9,7 +9,7 @@
 <template>
   <cal-config-provider :locale="locale" :theme-overrides="{}">
     <router-view></router-view>
-    <cal-icon type=""></cal-icon>
+    <cal-global-style />
   </cal-config-provider>
 </template>
 <script lang="ts" setup>

@@ -8,6 +8,8 @@
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
 export { default as CalButton } from './components/button/src/Button.vue'
+export { default as CalGlobalStyle } from './components/global-style/src/GlobalStyle.vue'
+export { default as CalProvide } from './components/_internal/src/Provide.vue'
 export { default as CalDescriptions } from './components/descriptions/src/Descriptions'
 export { default as CalDescriptionsItem } from './components/descriptions/src/DescriptionsItem'
 export { default as CalConfigProvider } from './components/config-provider/src/ConfigProvider.vue'

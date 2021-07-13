@@ -1,15 +1,13 @@
-import { defineComponent, resolveComponent, openBlock, createBlock, mergeProps, renderSlot, withScopeId, pushScopeId, popScopeId, createVNode, Transition, createCommentVNode, withDirectives, vShow, withCtx, resolveDirective, Fragment, renderList, toDisplayString, isRef, ref, onMounted, watch, computed, onUnmounted, reactive, toRefs, withModifiers, createTextVNode, toHandlers, resolveDynamicComponent, useCssVars, inject } from 'vue';
+import { resolveComponent, openBlock, createBlock, mergeProps, renderSlot, withScopeId, ref, inject, computed, defineComponent, toRef, watchEffect, pushScopeId, popScopeId, createVNode, Transition, createCommentVNode, withDirectives, vShow, withCtx, resolveDirective, Fragment, renderList, toDisplayString, isRef, onMounted, watch, onUnmounted, reactive, toRefs, withModifiers, createTextVNode, toHandlers, resolveDynamicComponent } from 'vue';
+import { cloneDeep, merge, kebabCase, debounce as debounce$1 } from 'lodash-es';
 import { NDescriptions, NDescriptionsItem } from 'naive-ui';
 export { NDescriptions as CalDescriptions, NDescriptionsItem as CalDescriptionsItem } from 'naive-ui';
-import { debounce as debounce$1, cloneDeep, merge, kebabCase } from 'lodash-es';
 import antd__default from 'ant-design-vue';
 export * from 'ant-design-vue';
 
-var script$E = defineComponent({ name: "CalButton" });
-
 const _withId$c = /*#__PURE__*/withScopeId("data-v-4090dad8");
 
-const render$E = /*#__PURE__*/_withId$c((_ctx, _cache) => {
+const render$G = /*#__PURE__*/_withId$c((_ctx, _cache) => {
   const _component_a_button = resolveComponent("a-button");
 
   return (openBlock(), createBlock(_component_a_button, mergeProps({ class: "cal-btn bg-com" }, { shape: 'round', ..._ctx.props }), {
@@ -20,9 +18,173 @@ const render$E = /*#__PURE__*/_withId$c((_ctx, _cache) => {
   }, 16 /* FULL_PROPS */))
 });
 
+const script$G = {};
+
+script$G.render = render$G;
+script$G.__scopeId = "data-v-4090dad8";
+script$G.__file = "package/components/button/src/Button.vue";
+
+var Common = {
+	baseTextColor: "#000000",
+	primaryColor: "#558BF7",
+	baseColor: "#ffffff",
+	"primaryColorLight-2": "#77a2f9",
+	"primaryColorLight-4": "#99b9fa",
+	"primaryColorLight-6": "#bbd1fc",
+	"primaryColorLight-8": "#dde8fd",
+	"primaryColorDark-2": "#446fc6",
+	"primaryColorDark-4": "#335394",
+	"primaryColorDark-6": "#223863",
+	"primaryColorDark-8": "#111c31",
+	"primaryColorOpacity-2": "rgba(85,139,247,0.8)",
+	"primaryColorOpacity-4": "rgba(85,139,247,0.6)",
+	"primaryColorOpacity-6": "rgba(85,139,247,0.4)",
+	"primaryColorOpacity-8": "rgba(85,139,247,0.2)"
+};
+var Layout = {
+	siderColor: "#001426"
+};
+var Menu = {
+	itemTextColor: "#C2DEF8",
+	itemTextActiveColor: "#FFFFFF",
+	itemTextHoverColor: "#C2DEF8",
+	itemBodyColor: "#FFFFFF00",
+	itemBodyActiveColor: "#4474D6",
+	itemBodyHoverColor: "inherit",
+	itemBtnTextColor: "#001426",
+	itemBtnTextActiveColor: "#FFFFFF",
+	itemBtnTextHoverColor: "#558BF7",
+	itemBtnBodyColor: "inherit",
+	itemBtnBodyActiveColor: "#558BF7",
+	itemBtnBodyHoverColor: "#DDE8FD",
+	itemChildTextColor: "#001426",
+	itemChildTextActiveColor: "#558BF7",
+	itemChildTextHoverColor: "#558BF7",
+	itemChildBodyColor: "inherit",
+	itemChildBodyActiveColor: "#DDE8FD",
+	itemChildBodyHoverColor: "#DDE8FD"
+};
+var Button = {
+};
+var Input = {
+	activeColor: "",
+	hoverColor: "#558BF7",
+	focusColor: "#dde8fd"
+};
+var PageSelect = {
+	solidColor: "#ffffff"
+};
+var Tabs = {
+	backgroundColor: "#ffffff",
+	hollowColor: ""
+};
+var Card = {
+	bgColor: "#ffffff"
+};
+var upload = {
+	bgColor: "#ffffff"
+};
+var Table = {
+	borderColor: "#f5f5f5"
+};
+var _colors = {
+	Common: Common,
+	Layout: Layout,
+	Menu: Menu,
+	Button: Button,
+	Input: Input,
+	PageSelect: PageSelect,
+	Tabs: Tabs,
+	Card: Card,
+	upload: upload,
+	Table: Table
+};
+
+var _sizes = {
+	
+};
+
+var Background = {
+	image: "",
+	color: "#f0f2f5",
+	blur: "blur(20px)"
+};
+var _basics = {
+	Background: Background
+};
+
+const defaultTheme = () => cloneDeep(merge(_colors, _sizes, _basics));
+const transformTheme2CssVars = (theme) => {
+  const result = {};
+  let keys = [];
+  const recursion = (option2) => {
+    for (const k in option2) {
+      const v = option2[k];
+      const isObject = typeof v === "object";
+      keys.push(k);
+      if (isObject) {
+        recursion(v);
+        keys = [];
+      } else {
+        const key = kebabCase(keys.map((v2) => v2[0].toUpperCase() + v2.slice(1)).join("").trim());
+        const value = v;
+        key && (result[key] = value);
+        keys.splice(keys.length - 1, 1);
+      }
+    }
+  };
+  recursion(theme);
+  return result;
+};
+const useTheme = (identif) => {
+  const theme = ref(defaultTheme());
+  const themeOverrides = inject("themeOverrides");
+  const themeMerge = computed(() => merge(theme.value, themeOverrides?.value)[identif]);
+  return themeMerge;
+};
+const useGlobalTheme = () => {
+  const theme = ref(defaultTheme());
+  const themeOverrides = inject("themeOverrides");
+  const themeMerge = computed(() => merge(theme.value, themeOverrides?.value));
+  return themeMerge;
+};
+
+var script$F = defineComponent({
+  name: "CalGlobalStyle",
+  props: {
+    root: {
+      type: Object,
+      default: document.documentElement
+    }
+  },
+  setup: (props) => {
+    const root = toRef(props, "root");
+    const globalTheme = useGlobalTheme();
+    watchEffect(() => {
+      const cssVars = transformTheme2CssVars(globalTheme.value);
+      for (const key in cssVars) {
+        root.value.style.removeProperty(`--${key}`);
+        root.value.style.setProperty(`--${key}`, cssVars[key]);
+      }
+    });
+  }
+});
+
+function render$F(_ctx, _cache) {
+  return renderSlot(_ctx.$slots, "default")
+}
+
+script$F.render = render$F;
+script$F.__file = "package/components/global-style/src/GlobalStyle.vue";
+
+var script$E = defineComponent({ name: "CalProvide" });
+
+function render$E(_ctx, _cache) {
+  return renderSlot(_ctx.$slots, "default")
+}
+
 script$E.render = render$E;
-script$E.__scopeId = "data-v-4090dad8";
-script$E.__file = "package/components/button/src/Button.vue";
+script$E.__file = "package/components/_internal/src/Provide.vue";
 
 NDescriptions.name = "CalDescriptions";
 
@@ -1500,7 +1662,7 @@ const render$6 = /*#__PURE__*/_withId$1((_ctx, _cache) => {
     }
       }, [
         createVNode("div", {
-          class: ["w-full text-gray-darkmin cursor-pointer select-none mb-20", [_ctx.option.textAlign === 'left' ? 'text-left' : 'text-center']]
+          class: ["w-full text-gray-darkmin cursor-pointer select-none mb-24", [_ctx.option.textAlign === 'left' ? 'text-left' : 'text-center']]
         }, [
           (!_ctx.sort)
             ? (openBlock(), createBlock("span", _hoisted_1$2, toDisplayString(_ctx.title), 1 /* TEXT */))
@@ -1517,30 +1679,66 @@ const render$6 = /*#__PURE__*/_withId$1((_ctx, _cache) => {
               }, 8 /* PROPS */, ["modelValue"]))
         ], 2 /* CLASS */),
         createVNode("div", {
-          class: "flex flex-1 flex-col w-full justify-center",
+          class: "flex flex-1 flex-col w-full justify-center list-border",
           ":class": [_ctx.option.contentAlign === "left" ? "":"items-center"]
         }, [
-          (_ctx.slots['default'])
-            ? renderSlot(_ctx.$slots, "default", {
-                key: 0,
-                content: _ctx.showContent,
-                item: _ctx.item,
-                index: _ctx.index,
-                list: _ctx.option.list
-              })
-            : (openBlock(), createBlock(Fragment, { key: 1 }, [
-                createTextVNode(toDisplayString(_ctx.showContent), 1 /* TEXT */)
-              ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
+          (_ctx.listObject)
+            ? (openBlock(true), createBlock(Fragment, { key: 0 }, renderList(_ctx.listObject, (item, i) => {
+                return (openBlock(), createBlock("div", {
+                  class: "item-border",
+                  key: i.toString()
+                }, [
+                  (_ctx.slots['default'])
+                    ? renderSlot(_ctx.$slots, "default", {
+                        key: 0,
+                        content: item[_ctx.props.index || _ctx.props.title || ''],
+                        item: item,
+                        index: i,
+                        list: _ctx.listObject
+                      })
+                    : (openBlock(), createBlock(Fragment, { key: 1 }, [
+                        createTextVNode(toDisplayString(item[_ctx.props.index || _ctx.props.title || '']), 1 /* TEXT */)
+                      ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
+                ]))
+              }), 128 /* KEYED_FRAGMENT */))
+            : (_ctx.slots['default'])
+              ? renderSlot(_ctx.$slots, "default", {
+                  key: 1,
+                  content: _ctx.showContent,
+                  item: _ctx.item,
+                  index: _ctx.index,
+                  list: _ctx.option.list
+                })
+              : (openBlock(), createBlock(Fragment, { key: 2 }, [
+                  createTextVNode(toDisplayString(_ctx.showContent), 1 /* TEXT */)
+                ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
         ], 8 /* PROPS */, [":class"])
       ], 4 /* STYLE */))
     : (_ctx.slots['default'])
-      ? renderSlot(_ctx.$slots, "default", {
+      ? (openBlock(), createBlock("div", {
           key: 1,
-          content: _ctx.showContent,
-          item: _ctx.item,
-          index: _ctx.index,
-          list: _ctx.option.list
-        })
+          class: "flex border-style-release",
+          style: {
+      maxWidth: _ctx.option?.syncSpace
+        ? `calc(${_ctx.analyUnit(_ctx.maxWidth || '')} + (${_ctx.analyUnit(_ctx.option.space)} * 2))`
+        : _ctx.analyUnit(_ctx.maxWidth || ''),
+      minWidth: _ctx.option?.syncSpace
+        ? `calc(${_ctx.analyUnit(_ctx.minWidth || '')} + (${_ctx.analyUnit(_ctx.option.space)} * 2))`
+        : _ctx.analyUnit(_ctx.minWidth || ''),
+      flex: 1,
+      paddingLeft: _ctx.analyUnit(_ctx.option.space),
+      paddingRight: _ctx.analyUnit(_ctx.option.space),
+      borderLeft: _ctx.props.borderLeft ? 'solid 1px #F5F5F5' : 'none',
+      borderRight: _ctx.props.borderRight ? 'solid 1px #F5F5F5' : 'none'
+    }
+        }, [
+          renderSlot(_ctx.$slots, "default", {
+            content: _ctx.showContent,
+            item: _ctx.item,
+            index: _ctx.index,
+            list: _ctx.option.list
+          })
+        ], 4 /* STYLE */))
       : (openBlock(), createBlock(Fragment, { key: 2 }, [
           createTextVNode(toDisplayString(_ctx.showContent), 1 /* TEXT */)
         ], 2112 /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */))
@@ -1732,7 +1930,9 @@ script.__file = "package/components/upload/src/Upload.vue";
 
 var components = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  CalButton: script$E,
+  CalButton: script$G,
+  CalGlobalStyle: script$F,
+  CalProvide: script$E,
   CalDescriptions: NDescriptions,
   CalDescriptionsItem: NDescriptionsItem,
   CalConfigProvider: script$D,
@@ -1777,126 +1977,6 @@ var components = /*#__PURE__*/Object.freeze({
   CalUpload: script
 });
 
-var Common = {
-	baseTextColor: "#000000",
-	primaryColor: "#558BF7",
-	baseColor: "#ffffff",
-	"primaryColorLight-2": "#77a2f9",
-	"primaryColorLight-4": "#99b9fa",
-	"primaryColorLight-6": "#bbd1fc",
-	"primaryColorLight-8": "#dde8fd",
-	"primaryColorDark-2": "#446fc6",
-	"primaryColorDark-4": "#335394",
-	"primaryColorDark-6": "#223863",
-	"primaryColorDark-8": "#111c31",
-	"primaryColorOpacity-2": "rgba(85,139,247,0.8)",
-	"primaryColorOpacity-4": "rgba(85,139,247,0.6)",
-	"primaryColorOpacity-6": "rgba(85,139,247,0.4)",
-	"primaryColorOpacity-8": "rgba(85,139,247,0.2)"
-};
-var Layout = {
-	siderColor: "#001426"
-};
-var Menu = {
-	itemTextColor: "#C2DEF8",
-	itemTextActiveColor: "#FFFFFF",
-	itemTextHoverColor: "#C2DEF8",
-	itemBodyColor: "#FFFFFF00",
-	itemBodyActiveColor: "#4474D6",
-	itemBodyHoverColor: "inherit",
-	itemBtnTextColor: "#001426",
-	itemBtnTextActiveColor: "#FFFFFF",
-	itemBtnTextHoverColor: "#558BF7",
-	itemBtnBodyColor: "inherit",
-	itemBtnBodyActiveColor: "#558BF7",
-	itemBtnBodyHoverColor: "#DDE8FD",
-	itemChildTextColor: "#001426",
-	itemChildTextActiveColor: "#558BF7",
-	itemChildTextHoverColor: "#558BF7",
-	itemChildBodyColor: "inherit",
-	itemChildBodyActiveColor: "#DDE8FD",
-	itemChildBodyHoverColor: "#DDE8FD"
-};
-var Button = {
-};
-var Input = {
-	activeColor: "",
-	hoverColor: "#558BF7",
-	focusColor: "#dde8fd"
-};
-var PageSelect = {
-	solidColor: "#ffffff"
-};
-var Tabs = {
-	backgroundColor: "#ffffff",
-	hollowColor: ""
-};
-var Card = {
-	bgColor: "#ffffff"
-};
-var upload = {
-	bgColor: "#ffffff"
-};
-var _colors = {
-	Common: Common,
-	Layout: Layout,
-	Menu: Menu,
-	Button: Button,
-	Input: Input,
-	PageSelect: PageSelect,
-	Tabs: Tabs,
-	Card: Card,
-	upload: upload
-};
-
-var _sizes = {
-	
-};
-
-var Background = {
-	image: "",
-	color: "#f0f2f5",
-	blur: "blur(20px)"
-};
-var _basics = {
-	Background: Background
-};
-
-const defaultTheme = () => cloneDeep(merge(_colors, _sizes, _basics));
-const transformTheme2CssVars = (theme) => {
-  const result = {};
-  let keys = [];
-  const recursion = (option2) => {
-    for (const k in option2) {
-      const v = option2[k];
-      const isObject = typeof v === "object";
-      keys.push(k);
-      if (isObject) {
-        recursion(v);
-        keys = [];
-      } else {
-        const key = kebabCase(keys.map((v2) => v2[0].toUpperCase() + v2.slice(1)).join("").trim());
-        const value = v;
-        key && (result[key] = value);
-        keys.splice(keys.length - 1, 1);
-      }
-    }
-  };
-  recursion(theme);
-  return result;
-};
-const mountTheme = (theme) => {
-  useCssVars(() => transformTheme2CssVars(theme.value));
-};
-const useTheme = (identif) => {
-  const theme = ref(defaultTheme());
-  const themeOverrides = inject("themeOverrides");
-  const themeMerge = computed(() => merge(theme.value, themeOverrides?.value)[identif]);
-  const themeMount = computed(() => ({ [identif]: themeMerge.value }));
-  mountTheme(themeMount);
-  return themeMerge;
-};
-
 const install = (app) => {
   Object.values(components).forEach((component) => {
     app.component(component.name, component);
@@ -1906,4 +1986,4 @@ const install = (app) => {
 var index = { install };
 
 export default index;
-export { script$w as CalBackground, script$E as CalButton, script$l as CalCard, script$j as CalCasCader, script$i as CalCheckbox, script$h as CalClassification, script$g as CalCollapseTransition, script$D as CalConfigProvider, script$v as CalEllipsis, script$f as CalEmpty, script$t as CalGrid, script$n as CalIcon, script$m as CalImage, script$k as CalImageVerif, script$s as CalInput, script$p as CalInputDate, script$o as CalInputNumber, script$q as CalInputPassword, script$r as CalInputSection, script$z as CalLayout, script$y as CalLayoutContent, script$x as CalLayoutSider, script$C as CalMenu, script$A as CalMenuGroup, script$B as CalMenuItem, script$e as CalPageSelect, script$d as CalPagination, script$c as CalRadio, script$b as CalRadioGroup, script$u as CalSpace, script$a as CalStep, script$9 as CalSteps, script$8 as CalSwitch, script$5 as CalTabPane, script$7 as CalTable, script$6 as CalTableOption, script$4 as CalTabs, script$3 as CalTextarea, script$2 as CalThemeIcon, script$1 as CalTree, script as CalUpload, defaultTheme, install, mountTheme, transformTheme2CssVars, useTheme };
+export { script$w as CalBackground, script$G as CalButton, script$l as CalCard, script$j as CalCasCader, script$i as CalCheckbox, script$h as CalClassification, script$g as CalCollapseTransition, script$D as CalConfigProvider, script$v as CalEllipsis, script$f as CalEmpty, script$F as CalGlobalStyle, script$t as CalGrid, script$n as CalIcon, script$m as CalImage, script$k as CalImageVerif, script$s as CalInput, script$p as CalInputDate, script$o as CalInputNumber, script$q as CalInputPassword, script$r as CalInputSection, script$z as CalLayout, script$y as CalLayoutContent, script$x as CalLayoutSider, script$C as CalMenu, script$A as CalMenuGroup, script$B as CalMenuItem, script$e as CalPageSelect, script$d as CalPagination, script$E as CalProvide, script$c as CalRadio, script$b as CalRadioGroup, script$u as CalSpace, script$a as CalStep, script$9 as CalSteps, script$8 as CalSwitch, script$5 as CalTabPane, script$7 as CalTable, script$6 as CalTableOption, script$4 as CalTabs, script$3 as CalTextarea, script$2 as CalThemeIcon, script$1 as CalTree, script as CalUpload, defaultTheme, install, transformTheme2CssVars, useGlobalTheme, useTheme };

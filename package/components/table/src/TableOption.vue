@@ -168,19 +168,16 @@
     overflow: hidden;
   }
   .border-style-release {
-    // 小列表第一个边线
     > *:first-child {
       --border-width: calc(100% + var(--table-within-space));
       --border-left: 0;
     }
-    // 小列表中间的边线
     > *:not(:first-child) {
       &:not(:last-child) {
         --border-width: calc(100% + var(--table-within-space) * 2);
         --border-left: calc(var(--table-within-space) * -1);
       }
     }
-    // 小列表最后一个边线
     > *:last-child {
       --border-width: calc(100% + var(--table-within-space));
       --border-left: calc(var(--table-within-space) * -1);
@@ -197,7 +194,6 @@
     .item-border:not(:first-child) {
       position: relative;
       padding: 24px 0;
-      // 显示边线
       &::after {
         content: '';
         position: absolute;

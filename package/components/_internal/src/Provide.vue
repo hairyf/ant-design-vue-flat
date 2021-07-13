@@ -9,7 +9,10 @@
 <template>
   <slot />
 </template>
-
+<script lang="ts">
+  import { defineComponent } from 'vue'
+  export default defineComponent({ name: 'CalProvide' })
+</script>
 <script lang="ts" setup>
   import { defineProps, provide } from 'vue-demi'
   const props = defineProps({
