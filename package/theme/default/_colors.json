@@ -3,10 +3,11 @@
     "baseTextColor": "#000000",
     "primaryColor": "#558BF7",
     "baseColor": "#ffffff",
-
     "primaryColorLight-2":"#77a2f9",
     "primaryColorLight-4":"#99b9fa",
+    "primaryColorLight-5":"#aac5fb",
     "primaryColorLight-6":"#bbd1fc",
+    "primaryColorLight-7":"#ccdcfd",
     "primaryColorLight-8":"#dde8fd",
 
     "primaryColorDark-2":"#446fc6",
@@ -44,5 +45,8 @@
     "activeColor": "",
     "hoverColor": "#558BF7",
     "focusColor": "#dde8fd"
+  },
+  "PageSelect":{
+    "solidColor": "#ffffff"
   }
 }
