@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-05-26 10:05:03
- * @LastEditTime: 2021-07-13 16:51:37
+ * @LastEditTime: 2021-07-13 18:00:54
  * @Description: 表格配置
  * @LastEditors: Zhilong
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
@@ -67,7 +67,7 @@
   </div>
   <div
     v-else-if="slots['default']"
-    class="flex"
+    class="flex border-style-release"
     :style="{
       maxWidth: option?.syncSpace
         ? `calc(${analyUnit(maxWidth || '')} + (${analyUnit(option.space)} * 2))`
@@ -89,7 +89,7 @@
   </template>
 </template>
 <script lang="ts">
-  import { defineComponent } from 'vue'
+  import { defineComponent, useCssVars } from 'vue'
   export default defineComponent({ name: 'CalTableOption' })
 </script>
 <script lang="ts" setup>
@@ -159,6 +159,7 @@
   })
 
   useTheme('Table')
+  useCssVars(() => ({ 'table-within-space': analyUnit(option.space) }))
 </script>
 <style lang="scss" scoped>
   .table-option-container {
@@ -166,6 +167,25 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
+  }
+  .border-style-release {
+    // 小列表第一个边线
+    > *:first-child {
+      --border-width: calc(100% + var(--table-within-space));
+      --border-left: 0;
+    }
+    // 小列表中间的边线
+    > *:not(:first-child) {
+      &:not(:last-child) {
+        --border-width: calc(100% + var(--table-within-space) * 2);
+        --border-left: calc(var(--table-within-space) * -1);
+      }
+    }
+    // 小列表最后一个边线
+    > *:last-child {
+      --border-width: calc(100% + var(--table-within-space));
+      --border-left: calc(var(--table-within-space) * -1);
+    }
   }
   .list-border {
     .item-border {
@@ -177,13 +197,14 @@
     }
     .item-border:not(:first-child) {
       position: relative;
-      padding: 24px 0 0 0;
+      padding: 24px 0;
+      // 显示边线
       &::after {
         content: '';
         position: absolute;
         top: -0.5px;
-        width: calc(100% + 48px);
-        left: 0;
+        width: var(--border-width);
+        left: var(--border-left);
         height: 1px;
         background-color: var(--table-border-color);
       }
