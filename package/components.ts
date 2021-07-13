@@ -4,13 +4,16 @@
  * @LastEditTime: 2021-07-13 11:20:10
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
- * @LastEditors: Mr.wang
+ * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
 export { default as CalButton } from './components/button/src/Button.vue'
+export { default as CalDescriptions } from './components/descriptions/src/Descriptions.vue'
+export { default as CalDescriptionsItem } from './components/descriptions/src/DescriptionsItem.vue'
 export { default as CalConfigProvider } from './components/config-provider/src/ConfigProvider.vue'
 export { default as CalMenu } from './components/menu/src/Menu.vue'
 export { default as CalMenuItem } from './components/menu/src/MenuItem.vue'
+export { default as CalMenuGroup } from './components/menu/src/MenuGroup.vue'
 export { default as CalLayout } from './components/layout/src/Layout.vue'
 export { default as CalLayoutContent } from './components/layout/src/LayoutContent.vue'
 export { default as CalLayoutSider } from './components/layout/src/LayoutSider.vue'
@@ -39,6 +42,8 @@ export { default as CalRadioGroup } from './components/radio/src/RadioGroup.vue'
 export { default as CalStep } from './components/step/src/Step.vue'
 export { default as CalSteps } from './components/step/src/Steps.vue'
 export { default as CalSwitch } from './components/switch/src/Switch.vue'
+export { default as CalTable } from './components/table/src/Table.vue'
+export { default as CalTableOption } from './components/table/src/TableOption.vue'
 export { default as CalTabPane } from './components/tabs/src/TabPane.vue'
 export { default as CalTabs } from './components/tabs/src/Tabs.vue'
 export { default as CalTextarea } from './components/textarea/src/Textarea.vue'

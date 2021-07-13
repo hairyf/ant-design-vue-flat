@@ -10,7 +10,7 @@
   <a-step class="cal-step" v-bind="props">
     <template #icon>
       <i class="nr-after text-4xl" />
-      <i class="nr-step-await text-4xl text-primary-light-5" />
+      <i class="nr-step-await text-4xl text-primary-light-4" />
     </template>
     <template #description>
       <slot name="description" />
