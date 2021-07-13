@@ -1,14 +1,14 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 09:09:40
- * @LastEditTime: 2021-07-13 09:49:12
+ * @LastEditTime: 2021-07-13 09:56:42
  * @Description: 分栏项
  * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
   <div
-    class="cal-tab-pane bg-background p-24 flex flex-col"
+    class="cal-tab-pane bg-tabs-background-color p-24 flex flex-col"
     :style="{ minHeight: analyUnit(minHeight || '') }"
     v-if="alone"
   >
@@ -20,7 +20,7 @@
     </div>
   </div>
   <a-tab-pane
-    class="cal-tab-pane bg-background p-24 flex flex-col"
+    class="cal-tab-pane bg-tabs-background-color p-24 flex flex-col"
     :style="{ minHeight: analyUnit(minHeight || '') }"
     v-bind="props"
     v-else-if="!hide"

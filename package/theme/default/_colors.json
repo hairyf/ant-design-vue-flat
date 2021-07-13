@@ -55,5 +55,8 @@
 },
   "Card": {
     "bgColor": "#ffffff"
+  },
+  "upload":{
+    "bgColor": "#ffffff"
   }
 }
