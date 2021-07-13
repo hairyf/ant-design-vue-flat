@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:29:58
- * @LastEditTime: 2021-07-13 10:36:52
+ * @LastEditTime: 2021-07-13 10:43:56
  * @Description: 上传组件
  * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -117,7 +117,8 @@
     }
     :deep(.anticon-paper-clip) {
       position: relative;
-      background: url('../../assets/img/excel.png') no-repeat;
+      background: url('https://client-static-1254212114.cos.ap-guangzhou.myqcloud.com/images/excel.png')
+        no-repeat;
       width: 24px;
       height: 24px;
       background-size: 24px 24px;
