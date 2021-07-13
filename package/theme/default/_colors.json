@@ -34,5 +34,8 @@
   },
   "PageSelect":{
     "solidColor": "#ffffff"
+  },
+  "Card": {
+    "bgColor": "#ffffff"
   }
 }

@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-12 20:02:28
+ * @LastEditTime: 2021-07-13 08:58:43
  * @Description: 
  * @LastEditors: Pan.Yu.Lin
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -21,6 +21,7 @@
     <div> 5 </div>
     <div> 5 </div>
   </cal-grid> -->
+  <cal-card></cal-card>
 </template>
 
 <script lang="ts" setup>

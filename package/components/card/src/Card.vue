@@ -1,16 +1,15 @@
 <!--
  * @Author: Pan.Yu.Lin
  * @Date: 2021-07-12 17:02:15
- * @LastEditTime: 2021-07-12 17:29:55
+ * @LastEditTime: 2021-07-13 09:01:10
  * @Description: 
  * @LastEditors: Pan.Yu.Lin
 -->
 <template>
   <a-card
-    class="bg-background rounded-3xl"
+    class="bg-card-bg-color rounded-3xl"
     :class="[isHidden ? 'cal-card ' : 'card-style-none']"
     v-bind="props"
-    :style="{ minHeight: analyUnit(minHeight || '') }"
   >
     <slot></slot>
   </a-card>
@@ -24,7 +23,6 @@
   import { analyUnit } from '@/utils'
   import { Card as ACard } from 'ant-design-vue'
   const props = defineProps({
-    minHeight: [Number, String],
     isHidden: {
       type: Boolean,
       default: true
