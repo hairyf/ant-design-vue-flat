@@ -27,7 +27,7 @@
   export default defineComponent({ name: 'CalPageSelect' })
 </script>
 <script lang="ts" setup>
-  import { analyUnit } from '@/utils'
+  import { analyUnit } from '@tuimao/utils'
   import { useTheme } from '../../../utils/theme'
   import { computed, defineProps, defineEmits } from 'vue'
   const props = defineProps({

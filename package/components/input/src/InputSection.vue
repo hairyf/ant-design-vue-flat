@@ -20,7 +20,7 @@
 <script lang="ts" setup>
   import { defineProps, watch } from 'vue'
   import { useShakeDataHandel } from '@/hooks/use-shakeDataHandel'
-  import { analyUnit, filterPrice } from '@/utils'
+  import { analyUnit, filterPrice } from '@tuimao/utils'
   import { useModelRef } from '@/hooks/use-modelRef'
   import { useTheme } from '../../../utils/theme'
   const props = defineProps({

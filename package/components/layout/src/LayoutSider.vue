@@ -18,7 +18,7 @@
 <script lang="ts" setup>
   import { defineProps } from 'vue-demi'
   import { Layout } from 'ant-design-vue'
-  import { useTheme } from '~/utils/theme'
+  import { useTheme } from '../../../utils/theme'
   const LayoutSider = Layout.Sider
   const props = defineProps({
     ...(Layout.props as {}),

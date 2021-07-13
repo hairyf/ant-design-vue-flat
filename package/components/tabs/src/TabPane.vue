@@ -41,7 +41,7 @@
   export default defineComponent({ name: 'CalTabPane' })
 </script>
 <script lang="ts" setup>
-  import { analyUnit } from '@/utils'
+  import { analyUnit } from '@tuimao/utils'
   import { defineProps } from 'vue'
   import { Tabs as ATabs } from 'ant-design-vue'
   const ATabPane = ATabs.TabPane

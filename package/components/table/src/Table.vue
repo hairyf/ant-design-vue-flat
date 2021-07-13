@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-05-25 18:04:11
- * @LastEditTime: 2021-07-13 12:00:52
+ * @LastEditTime: 2021-07-13 14:37:37
  * @Description: 表格
  * @LastEditors: Zhilong
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
@@ -36,8 +36,8 @@
   import TableProvide from './TableProvide.vue'
   import { nanoid } from 'nanoid'
   import { orderBy } from 'lodash'
-  import { analyUnit } from '@/utils'
-  import { useTheme } from '~/utils/theme'
+  import { analyUnit } from '@tuimao/utils'
+  import { useTheme } from '../../../utils/theme'
   const emit = defineEmits(['checkboxChange'])
   const selectList: Record<string, any> = {}
   const onCheckboxChange = (item: typeof fictitiousList.value[0], { target: { checked } }: any) => {
@@ -116,7 +116,7 @@
   // 虚拟数据列表(显示的数据)
   const fictitiousShowList = ref(updateList())
   // 控制器
-  const controller = ref({ order: { index: '', sort: 0 } })
+  const controller = ref({ order: { index: '', sort: 0 }, renderList: false })
   // 原数据修改
   watch(
     () => props.list,
