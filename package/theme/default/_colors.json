@@ -52,5 +52,15 @@
   },
   "PageSelect":{
     "solidColor": "#ffffff"
+  },
+  "Tabs":{
+    "backgroundColor":"#ffffff",
+    "hollowColor":""
+},
+  "Card": {
+    "bgColor": "#ffffff"
+  },
+  "upload":{
+    "bgColor": "#ffffff"
   }
 }
