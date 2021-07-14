@@ -1,10 +1,11 @@
-import { ref, inject, computed, defineComponent, openBlock, createBlock, unref, mergeProps, renderSlot, withScopeId, toRef, watchEffect, provide, getCurrentInstance, watch, withCtx, Fragment, createCommentVNode, createVNode, createTextVNode, toDisplayString, render, h, pushScopeId, popScopeId, Transition, isRef, onMounted, toHandlers, withDirectives, vShow, resolveDirective, renderList, useCssVars, useSlots, resolveComponent, onUnmounted, reactive, toRefs, withModifiers } from 'vue';
+import { ref, inject, computed, defineComponent, openBlock, createBlock, unref, mergeProps, renderSlot, withScopeId, toRef, watchEffect, provide, getCurrentInstance, watch, withCtx, Fragment, createCommentVNode, createVNode, createTextVNode, toDisplayString, render, h, pushScopeId, popScopeId, Transition, isRef, onMounted, toHandlers, withDirectives, vShow, useCssVars, useSlots, resolveComponent, onUnmounted, reactive, toRefs, withModifiers, renderList } from 'vue';
 import antd__default, { Button as Button$1, Modal, ConfigProvider, Layout as Layout$1, Input as Input$1, InputNumber, Image, Card as Card$1, Cascader, Checkbox, Empty, Pagination, Tabs as Tabs$1, message } from 'ant-design-vue';
 export * from 'ant-design-vue';
+export { Layout as CalLayout } from 'ant-design-vue';
 import { cloneDeep, merge, kebabCase, debounce as debounce$1, get } from 'lodash-es';
 import { NDescriptions, NDescriptionsItem, NEllipsis, NSpace } from 'naive-ui';
 export { NDescriptions as CalDescriptions, NDescriptionsItem as CalDescriptionsItem } from 'naive-ui';
-import lodash, { orderBy } from 'lodash';
+import { orderBy } from 'lodash';
 import crypto from 'crypto';
 
 var Common = {
@@ -83,21 +84,6 @@ var _colors = {
 	Table: Table
 };
 
-var _colors$1 = /*#__PURE__*/Object.freeze({
-  __proto__: null,
-  Common: Common,
-  Layout: Layout,
-  Menu: Menu,
-  Button: Button,
-  Input: Input,
-  PageSelect: PageSelect,
-  Tabs: Tabs,
-  Card: Card,
-  upload: upload,
-  Table: Table,
-  'default': _colors
-});
-
 var _sizes = {
 	
 };
@@ -148,9 +134,9 @@ const useGlobalTheme = () => {
 };
 
 const _withId$8 = /* @__PURE__ */ withScopeId("data-v-4090dad8");
-const __default__$H = defineComponent({ name: "CalButton" });
-var script$K = defineComponent({
-  ...__default__$H,
+const __default__$E = defineComponent({ name: "CalButton" });
+var script$H = defineComponent({
+  ...__default__$E,
   props: {
     ...Button$1.props
   },
@@ -168,12 +154,12 @@ var script$K = defineComponent({
   }
 });
 
-script$K.__scopeId = "data-v-4090dad8";
-script$K.__file = "package/components/button/src/Button.vue";
+script$H.__scopeId = "data-v-4090dad8";
+script$H.__file = "package/components/button/src/Button.vue";
 
-const __default__$G = defineComponent({ name: "CalGlobalStyle" });
-var script$J = defineComponent({
-  ...__default__$G,
+const __default__$D = defineComponent({ name: "CalGlobalStyle" });
+var script$G = defineComponent({
+  ...__default__$D,
   props: {
     root: {
       type: Object,
@@ -197,11 +183,11 @@ var script$J = defineComponent({
   }
 });
 
-script$J.__file = "package/components/global-style/src/GlobalStyle.vue";
+script$G.__file = "package/components/global-style/src/GlobalStyle.vue";
 
-const __default__$F = defineComponent({ name: "CalProvide" });
-var script$I = defineComponent({
-  ...__default__$F,
+const __default__$C = defineComponent({ name: "CalProvide" });
+var script$F = defineComponent({
+  ...__default__$C,
   props: {
     id: {
       type: String,
@@ -218,7 +204,7 @@ var script$I = defineComponent({
   }
 });
 
-script$I.__file = "package/components/_internal/src/Provide.vue";
+script$F.__file = "package/components/_internal/src/Provide.vue";
 
 const isClient$1 = typeof window !== 'undefined';
 
@@ -286,7 +272,7 @@ const _hoisted_6$3 = { class: "text-xl font-semibold" };
 const _hoisted_7$1 = { class: "text-center" };
 const _hoisted_8 = /* @__PURE__ */ createTextVNode("\u53D6\u6D88");
 const _hoisted_9 = /* @__PURE__ */ createTextVNode("\u786E\u8BA4");
-var script$H = defineComponent({
+var script$E = defineComponent({
   props: {
     type: {
       type: String,
@@ -350,7 +336,7 @@ var script$H = defineComponent({
         ]),
         footer: withCtx(() => [
           _ctx.$slots["footer"] ? renderSlot(_ctx.$slots, "footer", { key: 0 }) : (openBlock(), createBlock(Fragment, { key: 1 }, [
-            __props.showCancel ? (openBlock(), createBlock(script$K, {
+            __props.showCancel ? (openBlock(), createBlock(script$H, {
               key: 0,
               class: "mr-20 w-96 h-32",
               onClick: onClone
@@ -360,7 +346,7 @@ var script$H = defineComponent({
               ]),
               _: 1
             })) : createCommentVNode("v-if", true),
-            createVNode(script$K, {
+            createVNode(script$H, {
               type: "primary ",
               class: "w-96 h-32",
               onClick: onConfirm
@@ -436,7 +422,7 @@ var script$H = defineComponent({
   }
 });
 
-script$H.__file = "package/components/modal/src/Modal.vue";
+script$E.__file = "package/components/modal/src/Modal.vue";
 
 /*
  * @Author: Mr.Mao
@@ -471,7 +457,7 @@ const renderInstance = (Constructor, props) => {
 
 const CalModel = (props) => {
   return new Promise((resolve, reject) => {
-    renderInstance(script$H, {
+    renderInstance(script$E, {
       ...props,
       modelValue: true,
       onResolve: resolve,
@@ -496,9 +482,9 @@ NDescriptionsItem.name = "CalDescriptionsItem";
 pushScopeId("data-v-2c3c6643");
 const _hoisted_1$f = { class: "cal-config-provider" };
 popScopeId();
-const __default__$E = defineComponent({ name: "CalConfigProvider" });
-var script$G = defineComponent({
-  ...__default__$E,
+const __default__$B = defineComponent({ name: "CalConfigProvider" });
+var script$D = defineComponent({
+  ...__default__$B,
   props: {
     ...ConfigProvider.props,
     themeOverrides: {
@@ -518,13 +504,13 @@ var script$G = defineComponent({
   }
 });
 
-script$G.__scopeId = "data-v-2c3c6643";
-script$G.__file = "package/components/config-provider/src/ConfigProvider.vue";
+script$D.__scopeId = "data-v-2c3c6643";
+script$D.__file = "package/components/config-provider/src/ConfigProvider.vue";
 
 const _hoisted_1$e = { class: "cal-menu transition-all duration-200" };
-const __default__$D = defineComponent({ name: "CalMenu" });
-var script$F = defineComponent({
-  ...__default__$D,
+const __default__$A = defineComponent({ name: "CalMenu" });
+var script$C = defineComponent({
+  ...__default__$A,
   props: {
     collapseWidth: {
       type: [Number, String],
@@ -554,7 +540,7 @@ var script$F = defineComponent({
   }
 });
 
-script$F.__file = "package/components/menu/src/Menu.vue";
+script$C.__file = "package/components/menu/src/Menu.vue";
 
 const _withId$7 = /* @__PURE__ */ withScopeId("data-v-9a2e6faa");
 pushScopeId("data-v-9a2e6faa");
@@ -564,9 +550,9 @@ const _hoisted_2$b = {
   class: "cal-menu-item__content"
 };
 popScopeId();
-const __default__$C = defineComponent({ name: "CalMenuItem" });
-var script$E = defineComponent({
-  ...__default__$C,
+const __default__$z = defineComponent({ name: "CalMenuItem" });
+var script$B = defineComponent({
+  ...__default__$z,
   props: {
     index: String,
     indicator: {
@@ -649,8 +635,8 @@ var script$E = defineComponent({
   }
 });
 
-script$E.__scopeId = "data-v-9a2e6faa";
-script$E.__file = "package/components/menu/src/MenuItem.vue";
+script$B.__scopeId = "data-v-9a2e6faa";
+script$B.__file = "package/components/menu/src/MenuItem.vue";
 
 /*
  * @Author: Mr.Mao
@@ -848,9 +834,9 @@ var option = {
 	"up-arrow": "<svg   viewBox=\"0 0 20 20\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M14.2032 13C15.0439 13 15.5094 12.0257 14.9811 11.3717L11.1667 6.649C10.5663 5.90567 9.43323 5.90567 8.83285 6.649L5.01839 11.3717C4.49016 12.0257 4.95565 13 5.79633 13L14.2032 13Z\" fill=\"currentColor\"/></svg>"
 };
 
-const __default__$B = defineComponent({ name: "CalIcon" });
-var script$D = defineComponent({
-  ...__default__$B,
+const __default__$y = defineComponent({ name: "CalIcon" });
+var script$A = defineComponent({
+  ...__default__$y,
   props: {
     type: {
       type: String,
@@ -887,12 +873,12 @@ var script$D = defineComponent({
   }
 });
 
-script$D.__scopeId = "data-v-677e57b8";
-script$D.__file = "package/components/icon/src/Icon.vue";
+script$A.__scopeId = "data-v-677e57b8";
+script$A.__file = "package/components/icon/src/Icon.vue";
 
-const __default__$A = defineComponent({ name: "CalCollapseTransition" });
-var script$C = defineComponent({
-  ...__default__$A,
+const __default__$x = defineComponent({ name: "CalCollapseTransition" });
+var script$z = defineComponent({
+  ...__default__$x,
   setup(__props) {
     const on = {
       beforeEnter(el) {
@@ -960,16 +946,16 @@ var script$C = defineComponent({
   }
 });
 
-script$C.__file = "package/components/transition/src/CollapseTransition.vue";
+script$z.__file = "package/components/transition/src/CollapseTransition.vue";
 
 const _withId$6 = /* @__PURE__ */ withScopeId("data-v-57e914d2");
 pushScopeId("data-v-57e914d2");
 const _hoisted_1$c = { class: "cal-menu-group" };
 const _hoisted_2$a = { class: "cal-menu-group__contents" };
 popScopeId();
-const __default__$z = defineComponent({ name: "CalMenuGroup" });
-var script$B = defineComponent({
-  ...__default__$z,
+const __default__$w = defineComponent({ name: "CalMenuGroup" });
+var script$y = defineComponent({
+  ...__default__$w,
   props: {
     index: {
       type: [String],
@@ -989,7 +975,7 @@ var script$B = defineComponent({
     };
     return (_ctx, _cache) => {
       return openBlock(), createBlock("ul", _hoisted_1$c, [
-        createVNode(script$E, {
+        createVNode(script$B, {
           index: __props.index,
           onClick: onShowMenuItems,
           "not-update": ""
@@ -1001,7 +987,7 @@ var script$B = defineComponent({
             createVNode("div", {
               class: ["cal-menu-group__icon transform duration-200 absolute", [showMenuItems.value ? "rotate-0" : "-rotate-180"]]
             }, [
-              createVNode(script$D, {
+              createVNode(script$A, {
                 size: "20",
                 type: "up-arrow"
               })
@@ -1012,9 +998,9 @@ var script$B = defineComponent({
           ]),
           _: 3
         }, 8, ["index"]),
-        createVNode(script$C, null, {
+        createVNode(script$z, null, {
           default: _withId$6(() => [
-            createVNode(script$I, {
+            createVNode(script$F, {
               id: "isChildren",
               value: true
             }, {
@@ -1035,78 +1021,16 @@ var script$B = defineComponent({
   }
 });
 
-script$B.__scopeId = "data-v-57e914d2";
-script$B.__file = "package/components/menu/src/MenuGroup.vue";
+script$y.__scopeId = "data-v-57e914d2";
+script$y.__file = "package/components/menu/src/MenuGroup.vue";
 
-const __default__$y = defineComponent({ name: "CalLayout" });
-var script$A = defineComponent({
-  ...__default__$y,
-  props: {
-    ...Layout$1.props,
-    iconClass: String
-  },
-  setup(__props) {
-    return (_ctx, _cache) => {
-      return openBlock(), createBlock(unref(Layout$1), { class: "cal-layout" }, {
-        default: withCtx(() => [
-          renderSlot(_ctx.$slots, "default")
-        ]),
-        _: 3
-      });
-    };
-  }
-});
+Layout$1.name = "CalLayout";
 
-script$A.__file = "package/components/layout/src/Layout.vue";
+Layout$1.Content.name = "CalLayoutContent";
+var LayoutContent = Layout$1.Content;
 
-const __default__$x = defineComponent({ name: "CalLayoutContent" });
-var script$z = defineComponent({
-  ...__default__$x,
-  props: Layout$1.props,
-  setup(__props) {
-    const props = __props;
-    const LayoutContent = Layout$1.Content;
-    return (_ctx, _cache) => {
-      const _directive_bond = resolveDirective("bond");
-      return withDirectives((openBlock(), createBlock(unref(LayoutContent), null, {
-        default: withCtx(() => [
-          (openBlock(true), createBlock(Fragment, null, renderList(_ctx.$slots, (i, k) => {
-            return renderSlot(_ctx.$slots, k, { key: k });
-          }), 128))
-        ]),
-        _: 3
-      }, 512)), [
-        [_directive_bond, props]
-      ]);
-    };
-  }
-});
-
-script$z.__file = "package/components/layout/src/LayoutContent.vue";
-
-const __default__$w = defineComponent({ name: "CalLayoutSider" });
-var script$y = defineComponent({
-  ...__default__$w,
-  props: {
-    ...Layout$1.props,
-    iconClass: String
-  },
-  setup(__props) {
-    const props = __props;
-    const LayoutSider = Layout$1.Sider;
-    useTheme("Layout");
-    return (_ctx, _cache) => {
-      return openBlock(), createBlock(unref(LayoutSider), mergeProps({ class: "cal-layout-sider bg-layout-sider-color" }, props), {
-        default: withCtx(() => [
-          renderSlot(_ctx.$slots, "default")
-        ]),
-        _: 3
-      }, 16);
-    };
-  }
-});
-
-script$y.__file = "package/components/layout/src/LayoutSider.vue";
+Layout$1.Sider.name = "CalLayoutSider";
+var LayoutSider = Layout$1.Sider;
 
 const __default__$v = defineComponent({ name: "CalBackground" });
 var script$x = defineComponent({
@@ -1398,10 +1322,6 @@ function commonjsRequire () {
 
 function createCommonjsModule(fn, module) {
 	return module = { exports: {} }, fn(module, module.exports), module.exports;
-}
-
-function getCjsExportFromNamespace (n) {
-	return n && n['default'] || n;
 }
 
 var moment = createCommonjsModule(function (module, exports) {
@@ -8714,20 +8634,20 @@ script.__file = "package/components/tag/src/Tag.vue";
 
 var components = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  CalButton: script$K,
-  CalGlobalStyle: script$J,
-  CalProvide: script$I,
-  CalDialog: script$H,
+  CalButton: script$H,
+  CalGlobalStyle: script$G,
+  CalProvide: script$F,
+  CalDialog: script$E,
   CalModel: CalModel,
   CalDescriptions: NDescriptions,
   CalDescriptionsItem: NDescriptionsItem,
-  CalConfigProvider: script$G,
-  CalMenu: script$F,
-  CalMenuItem: script$E,
-  CalMenuGroup: script$B,
-  CalLayout: script$A,
-  CalLayoutContent: script$z,
-  CalLayoutSider: script$y,
+  CalConfigProvider: script$D,
+  CalMenu: script$C,
+  CalMenuItem: script$B,
+  CalMenuGroup: script$y,
+  CalLayout: Layout$1,
+  CalLayoutContent: LayoutContent,
+  CalLayoutSider: LayoutSider,
   CalBackground: script$x,
   CalEllipsis: script$w,
   CalSpace: script$v,
@@ -8738,7 +8658,7 @@ var components = /*#__PURE__*/Object.freeze({
   CalInputDate: script$q,
   CalInputNumber: script$p,
   CalInputSearch: script$o,
-  CalIcon: script$D,
+  CalIcon: script$A,
   CalImage: script$n,
   CalCard: script$m,
   CalImageVerif: script$l,
@@ -8764,54 +8684,6 @@ var components = /*#__PURE__*/Object.freeze({
   CalTag: script
 });
 
-var utils = createCommonjsModule(function (module, exports) {
-exports.transformTheme2CssKeys = (theme) => {
-  const result = [];
-  let keys = [];
-  const recursion = (option) => {
-    lodash.forIn(option, (v, k) => {
-      const isObject = typeof v === "object";
-      keys.push(k);
-      if (isObject) {
-        recursion(v);
-        keys = [];
-      } else {
-        const key = lodash.kebabCase(keys.map((v2) => v2[0].toUpperCase() + v2.slice(1)).join("").trim());
-        result.push(key);
-        keys.splice(keys.length - 1, 1);
-      }
-    });
-  };
-  recursion(theme);
-  return result;
-};
-exports.transformTailwindColors = (theme) => {
-  return exports.transformTheme2CssKeys(theme).reduce((total, value) => {
-    total[value] = `var(--${value})`;
-    return total;
-  }, {});
-};
-});
-utils.transformTheme2CssKeys;
-utils.transformTailwindColors;
-
-var colors = getCjsExportFromNamespace(_colors$1);
-
-var themeColor = utils.transformTailwindColors(colors);
-
-var colors_1 = themeColor;
-
-var tailwind = {
-	colors: colors_1
-};
-
-var index$1 = /*#__PURE__*/Object.freeze({
-  __proto__: null,
-  'default': tailwind,
-  __moduleExports: tailwind,
-  colors: colors_1
-});
-
 const install = (app) => {
   Object.values(components).forEach((component) => {
     app.component(component.name, component);
@@ -8821,4 +8693,4 @@ const install = (app) => {
 var index = { install };
 
 export default index;
-export { script$x as CalBackground, script$K as CalButton, script$m as CalCard, script$k as CalCasCader, script$j as CalCheckbox, script$i as CalClassification, script$h as CalCollapseTransition, script$G as CalConfigProvider, script$H as CalDialog, script$w as CalEllipsis, script$g as CalEmpty, script$J as CalGlobalStyle, script$u as CalGrid, script$D as CalIcon, script$n as CalImage, script$l as CalImageVerif, script$t as CalInput, script$q as CalInputDate, script$p as CalInputNumber, script$r as CalInputPassword, script$o as CalInputSearch, script$s as CalInputSection, script$A as CalLayout, script$z as CalLayoutContent, script$y as CalLayoutSider, script$F as CalMenu, script$B as CalMenuGroup, script$E as CalMenuItem, CalModel, script$f as CalPageSelect, script$e as CalPagination, script$I as CalProvide, script$d as CalRadio, script$c as CalRadioGroup, script$v as CalSpace, script$b as CalStep, script$a as CalSteps, script$9 as CalSwitch, script$5 as CalTabPane, script$7 as CalTable, script$6 as CalTableOption, script$4 as CalTabs, script as CalTag, script$3 as CalTextarea, script$2 as CalTree, script$1 as CalUpload, defaultTheme, install, index$1 as tailwindTheme, transformTheme2CssVars, useGlobalTheme, useTheme };
+export { script$x as CalBackground, script$H as CalButton, script$m as CalCard, script$k as CalCasCader, script$j as CalCheckbox, script$i as CalClassification, script$h as CalCollapseTransition, script$D as CalConfigProvider, script$E as CalDialog, script$w as CalEllipsis, script$g as CalEmpty, script$G as CalGlobalStyle, script$u as CalGrid, script$A as CalIcon, script$n as CalImage, script$l as CalImageVerif, script$t as CalInput, script$q as CalInputDate, script$p as CalInputNumber, script$r as CalInputPassword, script$o as CalInputSearch, script$s as CalInputSection, LayoutContent as CalLayoutContent, LayoutSider as CalLayoutSider, script$C as CalMenu, script$y as CalMenuGroup, script$B as CalMenuItem, CalModel, script$f as CalPageSelect, script$e as CalPagination, script$F as CalProvide, script$d as CalRadio, script$c as CalRadioGroup, script$v as CalSpace, script$b as CalStep, script$a as CalSteps, script$9 as CalSwitch, script$5 as CalTabPane, script$7 as CalTable, script$6 as CalTableOption, script$4 as CalTabs, script as CalTag, script$3 as CalTextarea, script$2 as CalTree, script$1 as CalUpload, defaultTheme, install, transformTheme2CssVars, useGlobalTheme, useTheme };
