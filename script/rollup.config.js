@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-07 15:17:55
- * @LastEditTime: 2021-07-14 10:03:01
+ * @LastEditTime: 2021-07-14 20:08:13
  * @Description:
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -50,7 +50,7 @@ export default defineConfig({
       ]
     }),
     commonjs({
-      include: ['node_modules/**', 'node_modules/**/*']
+      include: ['node_modules/**', 'node_modules/**/*', 'package/**', 'package/**/*']
     })
   ],
   external: ['vue', 'echarts', 'lodash-es', 'ant-design-vue', 'naive-ui', 'lodash']

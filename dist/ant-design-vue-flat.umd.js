@@ -1,12 +1,13 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('vue'), require('ant-design-vue'), require('lodash-es'), require('naive-ui'), require('lodash'), require('vue-demi'), require('crypto')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'vue', 'ant-design-vue', 'lodash-es', 'naive-ui', 'lodash', 'vue-demi', 'crypto'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global['ant-design-vue-flat'] = {}, global.Vue, global.antd, global.lodashEs, global.naiveUi, global.lodash, global.vueDemi, global.crypto));
-}(this, (function (exports, vue, antd, lodashEs, naiveUi, lodash, vueDemi, crypto) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('vue'), require('ant-design-vue'), require('lodash-es'), require('naive-ui'), require('lodash'), require('crypto')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'vue', 'ant-design-vue', 'lodash-es', 'naive-ui', 'lodash', 'crypto'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global['ant-design-vue-flat'] = {}, global.Vue, global.antd, global.lodashEs, global.naiveUi, global.lodash, global.crypto));
+}(this, (function (exports, vue, antd, lodashEs, naiveUi, lodash, crypto) { 'use strict';
 
   function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
   var antd__default = /*#__PURE__*/_interopDefaultLegacy(antd);
+  var lodash__default = /*#__PURE__*/_interopDefaultLegacy(lodash);
   var crypto__default = /*#__PURE__*/_interopDefaultLegacy(crypto);
 
   var Common = {
@@ -85,6 +86,21 @@
   	Table: Table
   };
 
+  var _colors$1 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    Common: Common,
+    Layout: Layout,
+    Menu: Menu,
+    Button: Button,
+    Input: Input,
+    PageSelect: PageSelect,
+    Tabs: Tabs,
+    Card: Card,
+    upload: upload,
+    Table: Table,
+    'default': _colors
+  });
+
   var _sizes = {
   	
   };
@@ -136,7 +152,7 @@
 
   const _withId$8 = /* @__PURE__ */ vue.withScopeId("data-v-4090dad8");
   const __default__$H = vue.defineComponent({ name: "CalButton" });
-  var script$J = vue.defineComponent({
+  var script$K = vue.defineComponent({
     ...__default__$H,
     props: {
       ...antd.Button.props
@@ -155,11 +171,11 @@
     }
   });
 
-  script$J.__scopeId = "data-v-4090dad8";
-  script$J.__file = "package/components/button/src/Button.vue";
+  script$K.__scopeId = "data-v-4090dad8";
+  script$K.__file = "package/components/button/src/Button.vue";
 
   const __default__$G = vue.defineComponent({ name: "CalGlobalStyle" });
-  var script$I = vue.defineComponent({
+  var script$J = vue.defineComponent({
     ...__default__$G,
     props: {
       root: {
@@ -184,10 +200,10 @@
     }
   });
 
-  script$I.__file = "package/components/global-style/src/GlobalStyle.vue";
+  script$J.__file = "package/components/global-style/src/GlobalStyle.vue";
 
   const __default__$F = vue.defineComponent({ name: "CalProvide" });
-  var script$H = vue.defineComponent({
+  var script$I = vue.defineComponent({
     ...__default__$F,
     props: {
       id: {
@@ -205,7 +221,276 @@
     }
   });
 
-  script$H.__file = "package/components/_internal/src/Provide.vue";
+  script$I.__file = "package/components/_internal/src/Provide.vue";
+
+  const isClient$1 = typeof window !== 'undefined';
+
+  isClient$1 ? window : undefined;
+  isClient$1 ? window.document : undefined;
+  isClient$1 ? window.navigator : undefined;
+
+  var SwipeDirection;
+  (function (SwipeDirection) {
+      SwipeDirection["UP"] = "UP";
+      SwipeDirection["RIGHT"] = "RIGHT";
+      SwipeDirection["DOWN"] = "DOWN";
+      SwipeDirection["LEFT"] = "LEFT";
+      SwipeDirection["NONE"] = "NONE";
+  })(SwipeDirection || (SwipeDirection = {}));
+
+  /**
+   * Shorthand for v-model binding, props + emit -> ref
+   *
+   * @see https://vueuse.org/useVModel
+   * @param props
+   * @param key (default 'value' in Vue 2 and 'modelValue' in Vue 3)
+   * @param emit
+   */
+  function useVModel(props, key, emit, options = {}) {
+      var _a;
+      const { passive = false, eventName, } = options;
+      const vm = vue.getCurrentInstance();
+      // @ts-expect-error mis-alignment with @vue/composition-api
+      const _emit = emit || (vm === null || vm === void 0 ? void 0 : vm.emit) || ((_a = vm === null || vm === void 0 ? void 0 : vm.$emit) === null || _a === void 0 ? void 0 : _a.bind(vm));
+      let event = eventName;
+      if (!key) {
+          {
+              key = 'modelValue';
+          }
+      }
+      event = eventName || event || `update:${key}`;
+      if (passive) {
+          const proxy = vue.ref(props[key]);
+          vue.watch(() => props[key], v => proxy.value = v);
+          vue.watch(proxy, (v) => {
+              if (v !== props[key])
+                  _emit(event, v);
+          });
+          return proxy;
+      }
+      else {
+          return vue.computed({
+              get() {
+                  return props[key];
+              },
+              set(value) {
+                  _emit(event, value);
+              },
+          });
+      }
+  }
+
+  const _hoisted_1$g = { class: "flex items-center" };
+  const _hoisted_2$c = /* @__PURE__ */ vue.createVNode("i", { class: "nr-warning text-red text-5xl mr-20" }, null, -1);
+  const _hoisted_3$6 = { class: "flex-1" };
+  const _hoisted_4$5 = { class: "flex items-center justify-center" };
+  const _hoisted_5$3 = /* @__PURE__ */ vue.createVNode("i", { class: "nr-after text-green text-4xl mr-10" }, null, -1);
+  const _hoisted_6$3 = { class: "text-xl font-semibold" };
+  const _hoisted_7$1 = { class: "text-center" };
+  const _hoisted_8 = /* @__PURE__ */ vue.createTextVNode("\u53D6\u6D88");
+  const _hoisted_9 = /* @__PURE__ */ vue.createTextVNode("\u786E\u8BA4");
+  var script$H = vue.defineComponent({
+    props: {
+      type: {
+        type: String,
+        default: "confirm"
+      },
+      title: String,
+      content: String,
+      description: String,
+      modelValue: Boolean,
+      customBackground: {
+        type: String
+      },
+      onVanish: Function,
+      onResolve: Function,
+      onReject: Function,
+      closable: {
+        type: Boolean,
+        default: true
+      },
+      showCancel: {
+        type: Boolean,
+        default: true
+      },
+      showFooter: {
+        type: Boolean,
+        default: true
+      },
+      onOk: Function
+    },
+    emits: ["cancel"],
+    setup(__props, { emit }) {
+      const props = __props;
+      const showModal = useVModel(props, "modelValue");
+      vue.watch(showModal, (value) => {
+        if (value)
+          return false;
+        setTimeout(() => props.onVanish?.(), 300);
+      });
+      const onClone = () => {
+        emit("cancel", false);
+        props.onReject?.();
+        showModal.value = false;
+      };
+      const onConfirm = () => {
+        props.onResolve?.();
+        const result = props?.onOk?.();
+        if (result instanceof Promise) {
+          result.then(() => showModal.value = false);
+        } else {
+          showModal.value = false;
+        }
+      };
+      return (_ctx, _cache) => {
+        return vue.openBlock(), vue.createBlock(vue.unref(antd.Modal), vue.mergeProps({
+          "dialog-class": "cal-message-diolog",
+          class: { "hide-footer": !__props.showFooter },
+          visible: vue.unref(showModal)
+        }, props), {
+          title: vue.withCtx(() => [
+            vue.renderSlot(_ctx.$slots, "title")
+          ]),
+          footer: vue.withCtx(() => [
+            _ctx.$slots["footer"] ? vue.renderSlot(_ctx.$slots, "footer", { key: 0 }) : (vue.openBlock(), vue.createBlock(vue.Fragment, { key: 1 }, [
+              __props.showCancel ? (vue.openBlock(), vue.createBlock(script$K, {
+                key: 0,
+                class: "mr-20 w-96 h-32",
+                onClick: onClone
+              }, {
+                default: vue.withCtx(() => [
+                  _hoisted_8
+                ]),
+                _: 1
+              })) : vue.createCommentVNode("v-if", true),
+              vue.createVNode(script$K, {
+                type: "primary ",
+                class: "w-96 h-32",
+                onClick: onConfirm
+              }, {
+                default: vue.withCtx(() => [
+                  _hoisted_9
+                ]),
+                _: 1
+              })
+            ], 64))
+          ]),
+          default: vue.withCtx(() => [
+            __props.closable ? (vue.openBlock(), vue.createBlock("i", {
+              key: 0,
+              class: ["nr-close text-lg cursor-pointer align-middle px-4 absolute right-24 top-20", [_ctx.$slots["title"] || props.title ? "text-white" : "text-primary-hollow"]],
+              onClick: onClone
+            }, null, 2)) : vue.createCommentVNode("v-if", true),
+            _ctx.$slots["default"] || __props.content || _ctx.$slots["description"] || __props.description ? (vue.openBlock(), vue.createBlock("div", {
+              key: 1,
+              class: ["cal-message-diolog__content", [__props.customBackground ? "red" : "bg-white"]],
+              style: { backgroundColor: __props.customBackground }
+            }, [
+              vue.createCommentVNode(" \u8B66\u544A "),
+              __props.type === "warning" ? (vue.openBlock(), vue.createBlock(vue.Fragment, { key: 0 }, [
+                vue.createVNode("div", _hoisted_1$g, [
+                  _hoisted_2$c,
+                  vue.createVNode("div", _hoisted_3$6, [
+                    __props.content ? (vue.openBlock(), vue.createBlock("div", {
+                      key: 0,
+                      innerHTML: __props.content
+                    }, null, 8, ["innerHTML"])) : vue.createCommentVNode("v-if", true),
+                    vue.renderSlot(_ctx.$slots, "default")
+                  ])
+                ]),
+                vue.createVNode("div", null, [
+                  __props.description ? (vue.openBlock(), vue.createBlock("div", {
+                    key: 0,
+                    class: "mt-28 mb-10",
+                    innerHTML: __props.description
+                  }, null, 8, ["innerHTML"])) : vue.createCommentVNode("v-if", true),
+                  vue.renderSlot(_ctx.$slots, "description")
+                ])
+              ], 64)) : __props.type === "success" ? (vue.openBlock(), vue.createBlock(vue.Fragment, { key: 1 }, [
+                vue.createCommentVNode(" \u6210\u529F "),
+                vue.createVNode("div", _hoisted_4$5, [
+                  _hoisted_5$3,
+                  vue.createVNode("div", _hoisted_6$3, [
+                    __props.content ? (vue.openBlock(), vue.createBlock("div", {
+                      key: 0,
+                      innerHTML: __props.content
+                    }, null, 8, ["innerHTML"])) : vue.createCommentVNode("v-if", true),
+                    vue.renderSlot(_ctx.$slots, "default")
+                  ])
+                ]),
+                vue.createVNode("div", _hoisted_7$1, [
+                  __props.description ? (vue.openBlock(), vue.createBlock("div", {
+                    key: 0,
+                    class: "mt-28 mb-10",
+                    innerHTML: __props.description
+                  }, null, 8, ["innerHTML"])) : vue.createCommentVNode("v-if", true),
+                  vue.renderSlot(_ctx.$slots, "description")
+                ])
+              ], 64)) : (vue.openBlock(), vue.createBlock(vue.Fragment, { key: 2 }, [
+                vue.createCommentVNode(" \u5176\u4ED6 "),
+                _ctx.$slots["default"] ? vue.renderSlot(_ctx.$slots, "default", { key: 0 }) : vue.createCommentVNode("v-if", true),
+                vue.createTextVNode(" " + vue.toDisplayString(__props.content), 1)
+              ], 64))
+            ], 6)) : vue.createCommentVNode("v-if", true)
+          ]),
+          _: 3
+        }, 16, ["class", "visible"]);
+      };
+    }
+  });
+
+  script$H.__file = "package/components/modal/src/Modal.vue";
+
+  /*
+   * @Author: Mr.Mao
+   * @Date: 2021-07-14 16:09:31
+   * @LastEditTime: 2021-07-14 16:09:42
+   * @Description:
+   * @LastEditors: Mr.Mao
+   * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
+   */
+  /**
+   * 渲染组件实例
+   * @param Constructor 组件
+   * @param props 组件参数
+   * @returns 组件实例
+   */
+  const renderInstance = (Constructor, props) => {
+      // 组件消失时, 移除当前实例
+      props.onVanish = () => {
+          vue.render(null, container);
+      };
+      // 创建虚拟节点, 渲染组件
+      const container = document.createElement('div');
+      const vnode = vue.h(Constructor, props);
+      vue.render(vnode, container);
+      if (container.firstElementChild) {
+          document.body.appendChild(container.firstElementChild);
+      }
+      // 这里不需要调用 document.body.removeChild(container.firstElementChild)
+      // 因为调用 render(null, container) 为我们完成了这项工作
+      return vnode.component;
+  };
+
+  const CalModel = (props) => {
+    return new Promise((resolve, reject) => {
+      renderInstance(script$H, {
+        ...props,
+        modelValue: true,
+        onResolve: resolve,
+        onReject: reject
+      });
+    });
+  };
+  CalModel.confirm = (props) => {
+    return CalModel({ ...props, type: "confirm" });
+  };
+  CalModel.warning = (props) => {
+    return CalModel({ ...props, type: "warning" });
+  };
+  CalModel.success = (props) => {
+    return CalModel({ ...props, type: "success" });
+  };
 
   naiveUi.NDescriptions.name = "CalDescriptions";
 
@@ -339,7 +624,11 @@
       });
       return (_ctx, _cache) => {
         return vue.openBlock(), vue.createBlock("li", {
-          class: ["\r\n      cal-menu-item\r\n      cursor-pointer\r\n      transition-all\r\n      duration-500\r\n      text-center\r\n      flex\r\n      justify-center\r\n      items-center\r\n    ", [vue.unref(itemCalss), __props.vertical ? "flex-col" : "", vue.unref(collapse) ? "cal-menu-item--collapse" : ""]],
+          class: ["\r\n      cal-menu-item\r\n      cursor-pointer\r\n      transition-all\r\n      duration-500\r\n      text-center\r\n      flex\r\n      justify-center\r\n      items-center\r\n    ", [
+            vue.unref(itemCalss),
+            __props.vertical ? "flex-col cal-menu-item--vertical" : "",
+            vue.unref(collapse) ? "cal-menu-item--collapse" : ""
+          ]],
           onClick: _cache[1] || (_cache[1] = ($event) => !__props.notUpdate && vue.unref(onUpdate)?.(__props.index))
         }, [
           vue.createVNode("span", _hoisted_1$d, [
@@ -368,30 +657,8 @@
 
   /*
    * @Author: Mr.Mao
-   * @Date: 2021-06-28 16:37:00
-   * @LastEditTime: 2021-06-28 16:51:21
-   * @Description: 浏览器工具
-   * @LastEditors: Mr.Mao
-   * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
-   */
-  const isBrowser = typeof window !== 'undefined';
-  const isWeex = typeof WXEnvironment !== 'undefined' && !!WXEnvironment.platform;
-  const weexPlatform = isWeex && WXEnvironment.platform.toLowerCase();
-  const UA = isBrowser && window.navigator.userAgent.toLowerCase();
-  UA && /msie|trident/.test(UA);
-  UA && UA.indexOf('msie 9.0') > 0;
-  navigator.userAgent.indexOf('Trident') > -1 && navigator.userAgent.indexOf('rv:11.0') > -1;
-  const isEdge = UA && UA.indexOf('edge/') > 0;
-  (UA && UA.indexOf('android') > 0) || (weexPlatform === 'android');
-  (UA && /iphone|ipad|ipod|ios/.test(UA)) || (weexPlatform === 'ios');
-  UA && /chrome\/\d+/.test(UA) && !isEdge;
-  UA && /phantomjs/.test(UA);
-  UA && UA.match(/firefox\/(\d+)/);
-
-  /*
-   * @Author: Mr.Mao
    * @Date: 2021-06-28 16:47:04
-   * @LastEditTime: 2021-06-28 16:48:57
+   * @LastEditTime: 2021-07-13 11:47:36
    * @Description:
    * @LastEditors: Mr.Mao
    * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -419,13 +686,35 @@
           .replace(/^(-)*(\d+)\.(\d\d).*$/, '$1$2.$3');
   };
 
+  /*
+   * @Author: Mr.Mao
+   * @Date: 2021-06-28 16:37:00
+   * @LastEditTime: 2021-07-13 11:57:19
+   * @Description: 浏览器工具
+   * @LastEditors: Mr.Mao
+   * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
+   */
+  const isBrowser = typeof window !== 'undefined';
+  const isWeex = typeof WXEnvironment !== 'undefined' && !!WXEnvironment.platform;
+  const weexPlatform = isWeex && WXEnvironment.platform.toLowerCase();
+  const UA = isBrowser && window.navigator.userAgent.toLowerCase();
+  UA && /msie|trident/.test(UA);
+  UA && UA.indexOf('msie 9.0') > 0;
+  navigator.userAgent.indexOf('Trident') > -1 && navigator.userAgent.indexOf('rv:11.0') > -1;
+  const isEdge = UA && UA.indexOf('edge/') > 0;
+  (UA && UA.indexOf('android') > 0) || (weexPlatform === 'android');
+  (UA && /iphone|ipad|ipod|ios/.test(UA)) || (weexPlatform === 'ios');
+  UA && /chrome\/\d+/.test(UA) && !isEdge;
+  UA && /phantomjs/.test(UA);
+  UA && UA.match(/firefox\/(\d+)/);
+
   function wrap(o) {
       return vue.isRef(o) ? o : vue.ref(o); // NOTE in v3 this is not necessary
   }
   const isNumber = (val) => typeof val === "number";
   const NO_OP = () => { };
   const PASSIVE_EV = { passive: true };
-  const isClient$1 = typeof window != "undefined";
+  const isClient = typeof window != "undefined";
   // compact version: https://stackoverflow.com/a/33146982/1209882
   /**
    * returns a random string
@@ -502,7 +791,7 @@
           handler = useDebounce(handler, wait);
       }
       // resize seems only to be fired against the window
-      const remove = isClient$1
+      const remove = isClient
           ? useEvent(window, "resize", handler, eventOptions || PASSIVE_EV)
           : /* istanbul ignore next */ NO_OP;
       if (vue.isRef(el) && !el.value) {
@@ -728,7 +1017,7 @@
           }, 8, ["index"]),
           vue.createVNode(script$C, null, {
             default: _withId$6(() => [
-              vue.createVNode(script$H, {
+              vue.createVNode(script$I, {
                 id: "isChildren",
                 value: true
               }, {
@@ -943,69 +1232,6 @@
 
   script$u.__file = "package/components/grid/src/Grid.vue";
 
-  const isClient = typeof window !== 'undefined';
-
-  isClient ? window : undefined;
-  isClient ? window.document : undefined;
-  isClient ? window.navigator : undefined;
-
-  var SwipeDirection;
-  (function (SwipeDirection) {
-      SwipeDirection["UP"] = "UP";
-      SwipeDirection["RIGHT"] = "RIGHT";
-      SwipeDirection["DOWN"] = "DOWN";
-      SwipeDirection["LEFT"] = "LEFT";
-      SwipeDirection["NONE"] = "NONE";
-  })(SwipeDirection || (SwipeDirection = {}));
-
-  /**
-   * Shorthand for v-model binding, props + emit -> ref
-   *
-   * @see https://vueuse.org/useVModel
-   * @param props
-   * @param key (default 'value' in Vue 2 and 'modelValue' in Vue 3)
-   * @param emit
-   */
-  function useVModel(props, key, emit, options = {}) {
-      var _a, _b, _c;
-      const { passive = false, eventName, } = options;
-      const vm = vueDemi.getCurrentInstance();
-      // @ts-expect-error mis-alignment with @vue/composition-api
-      const _emit = emit || (vm === null || vm === void 0 ? void 0 : vm.emit) || ((_a = vm === null || vm === void 0 ? void 0 : vm.$emit) === null || _a === void 0 ? void 0 : _a.bind(vm));
-      let event = eventName;
-      if (!key) {
-          if (vueDemi.isVue2) {
-              const modelOptions = (_c = (_b = vm === null || vm === void 0 ? void 0 : vm.proxy) === null || _b === void 0 ? void 0 : _b.$options) === null || _c === void 0 ? void 0 : _c.model;
-              key = (modelOptions === null || modelOptions === void 0 ? void 0 : modelOptions.value) || 'value';
-              if (!eventName)
-                  event = (modelOptions === null || modelOptions === void 0 ? void 0 : modelOptions.event) || 'input';
-          }
-          else {
-              key = 'modelValue';
-          }
-      }
-      event = eventName || event || `update:${key}`;
-      if (passive) {
-          const proxy = vueDemi.ref(props[key]);
-          vueDemi.watch(() => props[key], v => proxy.value = v);
-          vueDemi.watch(proxy, (v) => {
-              if (v !== props[key])
-                  _emit(event, v);
-          });
-          return proxy;
-      }
-      else {
-          return vueDemi.computed({
-              get() {
-                  return props[key];
-              },
-              set(value) {
-                  _emit(event, value);
-              },
-          });
-      }
-  }
-
   const _hoisted_1$a = {
     key: 1,
     class: "flex items-center text-gray-darkmin"
@@ -1175,6 +1401,10 @@
 
   function createCommonjsModule(fn, module) {
   	return module = { exports: {} }, fn(module, module.exports), module.exports;
+  }
+
+  function getCjsExportFromNamespace (n) {
+  	return n && n['default'] || n;
   }
 
   var moment = createCommonjsModule(function (module, exports) {
@@ -8487,9 +8717,11 @@
 
   var components = /*#__PURE__*/Object.freeze({
     __proto__: null,
-    CalButton: script$J,
-    CalGlobalStyle: script$I,
-    CalProvide: script$H,
+    CalButton: script$K,
+    CalGlobalStyle: script$J,
+    CalProvide: script$I,
+    CalDialog: script$H,
+    CalModel: CalModel,
     CalDescriptions: naiveUi.NDescriptions,
     CalDescriptionsItem: naiveUi.NDescriptionsItem,
     CalConfigProvider: script$G,
@@ -8535,6 +8767,54 @@
     CalTag: script
   });
 
+  var utils = createCommonjsModule(function (module, exports) {
+  exports.transformTheme2CssKeys = (theme) => {
+    const result = [];
+    let keys = [];
+    const recursion = (option) => {
+      lodash__default['default'].forIn(option, (v, k) => {
+        const isObject = typeof v === "object";
+        keys.push(k);
+        if (isObject) {
+          recursion(v);
+          keys = [];
+        } else {
+          const key = lodash__default['default'].kebabCase(keys.map((v2) => v2[0].toUpperCase() + v2.slice(1)).join("").trim());
+          result.push(key);
+          keys.splice(keys.length - 1, 1);
+        }
+      });
+    };
+    recursion(theme);
+    return result;
+  };
+  exports.transformTailwindColors = (theme) => {
+    return exports.transformTheme2CssKeys(theme).reduce((total, value) => {
+      total[value] = `var(--${value})`;
+      return total;
+    }, {});
+  };
+  });
+  utils.transformTheme2CssKeys;
+  utils.transformTailwindColors;
+
+  var colors = getCjsExportFromNamespace(_colors$1);
+
+  var themeColor = utils.transformTailwindColors(colors);
+
+  var colors_1 = themeColor;
+
+  var tailwind = {
+  	colors: colors_1
+  };
+
+  var index$1 = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    'default': tailwind,
+    __moduleExports: tailwind,
+    colors: colors_1
+  });
+
   const install = (app) => {
     Object.values(components).forEach((component) => {
       app.component(component.name, component);
@@ -8556,16 +8836,17 @@
     }
   });
   exports.CalBackground = script$x;
-  exports.CalButton = script$J;
+  exports.CalButton = script$K;
   exports.CalCard = script$m;
   exports.CalCasCader = script$k;
   exports.CalCheckbox = script$j;
   exports.CalClassification = script$i;
   exports.CalCollapseTransition = script$h;
   exports.CalConfigProvider = script$G;
+  exports.CalDialog = script$H;
   exports.CalEllipsis = script$w;
   exports.CalEmpty = script$g;
-  exports.CalGlobalStyle = script$I;
+  exports.CalGlobalStyle = script$J;
   exports.CalGrid = script$u;
   exports.CalIcon = script$D;
   exports.CalImage = script$n;
@@ -8582,9 +8863,10 @@
   exports.CalMenu = script$F;
   exports.CalMenuGroup = script$B;
   exports.CalMenuItem = script$E;
+  exports.CalModel = CalModel;
   exports.CalPageSelect = script$f;
   exports.CalPagination = script$e;
-  exports.CalProvide = script$H;
+  exports.CalProvide = script$I;
   exports.CalRadio = script$d;
   exports.CalRadioGroup = script$c;
   exports.CalSpace = script$v;
@@ -8602,6 +8884,7 @@
   exports.default = index;
   exports.defaultTheme = defaultTheme;
   exports.install = install;
+  exports.tailwindTheme = index$1;
   exports.transformTheme2CssVars = transformTheme2CssVars;
   exports.useGlobalTheme = useGlobalTheme;
   exports.useTheme = useTheme;

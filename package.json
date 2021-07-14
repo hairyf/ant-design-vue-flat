@@ -1,6 +1,6 @@
 {
   "name": "ant-design-vue-flat",
-  "version": "0.0.19",
+  "version": "0.0.2",
   "description": "",
   "author": "peiyahui",
   "types": "package/index.ts",
@@ -29,7 +29,7 @@
     "@rollup/plugin-node-resolve": "^11.1.1",
     "@tuimao/eslint-config-preset": "^1.1.0",
     "@tuimao/tailwind-config-preset": "^1.1.0",
-    "@tuimao/utils": "^1.0.5",
+    "@tuimao/utils": "^1.0.9",
     "@types/jest": "^26.0.24",
     "@types/lodash-es": "^4.17.4",
     "@types/nprogress": "^0.2.0",

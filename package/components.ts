@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-14 14:16:34
+ * @LastEditTime: 2021-07-14 16:14:25
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
  * @LastEditors: Mr.Mao
@@ -10,6 +10,8 @@
 export { default as CalButton } from './components/button/src/Button.vue'
 export { default as CalGlobalStyle } from './components/global-style/src/GlobalStyle.vue'
 export { default as CalProvide } from './components/_internal/src/Provide.vue'
+export { default as CalDialog } from './components/modal/src/Modal.vue'
+export { default as CalModel } from './components/modal/src/Modal'
 export { default as CalDescriptions } from './components/descriptions/src/Descriptions'
 export { default as CalDescriptionsItem } from './components/descriptions/src/DescriptionsItem'
 export { default as CalConfigProvider } from './components/config-provider/src/ConfigProvider.vue'
