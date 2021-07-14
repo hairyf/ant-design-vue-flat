@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-14 10:09:23
+ * @LastEditTime: 2021-07-14 10:12:59
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
  * @LastEditors: Mr.wang
@@ -32,7 +32,7 @@ export { default as CalInputSearch } from './components/input/src/InputSearch.vu
 export { default as CalIcon } from './components/icon/src/Icon.vue'
 export { default as CalImage } from './components/image/src/Image.vue'
 export { default as CalCard } from './components/card/src/Card.vue'
-// export { default as CalImageVerif } from './components/image-verif/src/ImageVerif.vue'
+export { default as CalImageVerif } from './components/image-verif/src/ImageVerif.vue'
 export { default as CalCasCader } from './components/cascader/src/CasCader.vue'
 export { default as CalCheckbox } from './components/checkbox/src/Checkbox.vue'
 export { default as CalClassification } from './components/classification/src/Classification.vue'
