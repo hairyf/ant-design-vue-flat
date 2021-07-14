@@ -610,7 +610,7 @@
         return vue.openBlock(), vue.createBlock("li", {
           class: ["\r\n      cal-menu-item\r\n      cursor-pointer\r\n      transition-all\r\n      duration-500\r\n      text-center\r\n      flex\r\n      justify-center\r\n      items-center\r\n    ", [
             vue.unref(itemCalss),
-            __props.vertical ? "flex-col cal-menu-item--vertical" : "",
+            __props.vertical ? "flex-col" : "cal-menu-item--vertical",
             vue.unref(collapse) ? "cal-menu-item--collapse" : ""
           ]],
           onClick: _cache[1] || (_cache[1] = ($event) => !__props.notUpdate && vue.unref(onUpdate)?.(__props.index))

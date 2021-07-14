@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-05-20 17:54:55
- * @LastEditTime: 2021-07-14 19:49:22
+ * @LastEditTime: 2021-07-14 20:43:56
  * @Description: 菜单项
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -20,7 +20,7 @@
     "
     :class="[
       itemCalss,
-      vertical ? 'flex-col cal-menu-item--vertical' : '',
+      vertical ? 'flex-col' : 'cal-menu-item--vertical',
       collapse ? 'cal-menu-item--collapse' : ''
     ]"
     @click="!notUpdate && onUpdate?.(index)"
