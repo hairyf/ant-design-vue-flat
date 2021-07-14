@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:55:33
- * @LastEditTime: 2021-07-13 20:32:04
+ * @LastEditTime: 2021-07-14 15:03:28
  * @Description:
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -58,9 +58,9 @@ export const transformTheme2CssVars = (theme: Record<string, Object | 'string'>)
  * @returns {themeMerge}
  */
 export const useTheme = <K extends keyof ThemeDefaultOption>(identif: K) => {
-  const theme = ref(defaultTheme())
+  const themeDefault = ref(defaultTheme())
   const themeOverrides = inject<Ref<ThemeDefaultOption>>('themeOverrides')
-  const themeMerge = computed(() => merge(theme.value, themeOverrides?.value)[identif])
+  const themeMerge = computed(() => merge(themeDefault.value, themeOverrides?.value)[identif])
   return themeMerge
 }
 
