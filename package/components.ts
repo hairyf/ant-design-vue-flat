@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-13 17:10:00
+ * @LastEditTime: 2021-07-14 10:03:22
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
  * @LastEditors: Mr.Mao
@@ -15,7 +15,7 @@ export { default as CalDescriptionsItem } from './components/descriptions/src/De
 export { default as CalConfigProvider } from './components/config-provider/src/ConfigProvider.vue'
 export { default as CalMenu } from './components/menu/src/Menu.vue'
 export { default as CalMenuItem } from './components/menu/src/MenuItem.vue'
-export { default as CalMenuGroup } from './components/menu/src/MenuGroup.vue'
+// export { default as CalMenuGroup } from './components/menu/src/MenuGroup.vue'
 export { default as CalLayout } from './components/layout/src/Layout.vue'
 export { default as CalLayoutContent } from './components/layout/src/LayoutContent.vue'
 export { default as CalLayoutSider } from './components/layout/src/LayoutSider.vue'
@@ -31,7 +31,7 @@ export { default as CalInputNumber } from './components/input/src/InputNumber.vu
 export { default as CalIcon } from './components/icon/src/Icon.vue'
 export { default as CalImage } from './components/image/src/Image.vue'
 export { default as CalCard } from './components/card/src/Card.vue'
-export { default as CalImageVerif } from './components/image-verif/src/ImageVerif.vue'
+// export { default as CalImageVerif } from './components/image-verif/src/ImageVerif.vue'
 export { default as CalCasCader } from './components/cascader/src/CasCader.vue'
 export { default as CalCheckbox } from './components/checkbox/src/Checkbox.vue'
 export { default as CalClassification } from './components/classification/src/Classification.vue'
@@ -49,6 +49,6 @@ export { default as CalTableOption } from './components/table/src/TableOption.vu
 export { default as CalTabPane } from './components/tabs/src/TabPane.vue'
 export { default as CalTabs } from './components/tabs/src/Tabs.vue'
 export { default as CalTextarea } from './components/textarea/src/Textarea.vue'
-export { default as CalThemeIcon } from './components/themeIcon/src/index.vue'
+// export { default as CalThemeIcon } from './components/theme-icon/src/index.vue'
 export { default as CalTree } from './components/tree/src/Tree.vue'
 export { default as CalUpload } from './components/upload/src/Upload.vue'
