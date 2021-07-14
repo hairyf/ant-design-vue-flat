@@ -28,7 +28,6 @@
     }
   })
   const themeOverrides = toRef(props, 'themeOverrides')
-  useCssVars(() => transformTheme2CssVars(themeOverrides.value))
   provide('themeOverrides', themeOverrides)
 </script>
 

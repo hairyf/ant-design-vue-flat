@@ -32,6 +32,6 @@
     "./**/*.tsx",
     "./**/*.vue",
     "types/**.d.ts",
-    "types/**/**.d.ts", "tailwind.config.js",
+    "types/**/**.d.ts",
   ],
 }

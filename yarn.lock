@@ -1331,7 +1331,7 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
-"@rollup/pluginutils@^4.1.0":
+"@rollup/pluginutils@^4.0.0", "@rollup/pluginutils@^4.1.0":
   version "4.1.0"
   resolved "https://registry.npm.taobao.org/@rollup/pluginutils/download/@rollup/pluginutils-4.1.0.tgz?cache=0&sync_timestamp=1603767889260&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40rollup%2Fpluginutils%2Fdownload%2F%40rollup%2Fpluginutils-4.1.0.tgz#0dcc61c780e39257554feb7f77207dceca13c838"
   integrity sha1-Dcxhx4DjkldVT+t/dyB9zsoTyDg=
@@ -6918,10 +6918,17 @@ rollup-plugin-typescript2@^0.29.0:
     resolve "1.17.0"
     tslib "2.0.1"
 
-rollup-plugin-vue@6.0.0-beta.6:
-  version "6.0.0-beta.6"
-  resolved "https://registry.npm.taobao.org/rollup-plugin-vue/download/rollup-plugin-vue-6.0.0-beta.6.tgz#e77dc9cdec9e53778f086259a89fbff36f391ddf"
-  integrity sha1-533JzeyeU3ePCGJZqJ+/8285Hd8=
+rollup-plugin-vue-jsx-compat@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.nlark.com/rollup-plugin-vue-jsx-compat/download/rollup-plugin-vue-jsx-compat-0.0.6.tgz#f5b027827642bbe88469c061b565c9e0bfa98653"
+  integrity sha1-9bAngnZCu+iEacBhtWXJ4L+phlM=
+  dependencies:
+    "@rollup/pluginutils" "^4.0.0"
+
+rollup-plugin-vue@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.npm.taobao.org/rollup-plugin-vue/download/rollup-plugin-vue-6.0.0.tgz#e379e93e5ae9a8648522f698be2e452e8672aaf2"
+  integrity sha1-43npPlrpqGSFIvaYvi5FLoZyqvI=
   dependencies:
     debug "^4.1.1"
     hash-sum "^2.0.0"
