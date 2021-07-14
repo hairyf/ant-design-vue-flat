@@ -53,15 +53,6 @@ export const transformTheme2CssVars = (theme: Record<string, Object | 'string'>)
 }
 
 /**
- * 通过 useCssVars 挂载主题
- * @param theme
- * @returns {void}
- */
-export const mountTheme = (theme: MountThemeParame) => {
-  useCssVars(() => transformTheme2CssVars(theme.value))
-}
-
-/**
  * 获取当前主题配置
  * @param identif 主题标识 >> keyof option
  * @returns {themeMerge}
@@ -70,7 +61,16 @@ export const useTheme = <K extends keyof ThemeDefaultOption>(identif: K) => {
   const theme = ref(defaultTheme())
   const themeOverrides = inject<Ref<ThemeDefaultOption>>('themeOverrides')
   const themeMerge = computed(() => merge(theme.value, themeOverrides?.value)[identif])
-  const themeMount = computed(() => <ThemeAnyOption>{ [identif]: themeMerge.value })
-  mountTheme(themeMount)
+  return themeMerge
+}
+
+/**
+ * 获取全局主题配置
+ * @returns {themeMerge}
+ */
+export const useGlobalTheme = () => {
+  const theme = ref(defaultTheme())
+  const themeOverrides = inject<Ref<ThemeDefaultOption>>('themeOverrides')
+  const themeMerge = computed(() => merge(theme.value, themeOverrides?.value))
   return themeMerge
 }

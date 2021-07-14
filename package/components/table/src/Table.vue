@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-05-25 18:04:11
- * @LastEditTime: 2021-07-13 14:37:37
+ * @LastEditTime: 2021-07-13 16:59:23
  * @Description: 表格
  * @LastEditors: Zhilong
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
@@ -84,7 +84,7 @@
     /** 行内间距 */
     space: {
       type: [Number, String],
-      default: 20
+      default: 24
     },
     /** 自动计算间距 */
     syncSpace: Boolean

@@ -1,9 +1,9 @@
 <!--
  * @Author: Pan.Yu.Lin
  * @Date: 2021-07-12 17:02:15
- * @LastEditTime: 2021-07-12 19:33:17
+ * @LastEditTime: 2021-07-13 20:25:06
  * @Description: 
- * @LastEditors: Pan.Yu.Lin
+ * @LastEditors: Mr.wang
 -->
 <template>
   <a-checkbox v-bind="props">
@@ -15,7 +15,7 @@
   export default defineComponent({ name: 'CalCheckbox' })
 </script>
 <script setup lang="ts">
-  import { defineProps } from 'vue-demi'
+  import { defineProps } from 'vue'
   import { Checkbox as ACheckbox } from 'ant-design-vue'
   import { useTheme } from '../../../utils/theme'
   const props = defineProps({})
@@ -30,7 +30,7 @@
     border-color: var(--common-primary-color) !important;
   }
   .ant-checkbox .ant-checkbox-inner {
-    border-color: #8c8c8c;
+    border-color: #d9d9d9;
   }
   .ant-checkbox-checked::after {
     border-color: var(--common-primary-color) !important;
