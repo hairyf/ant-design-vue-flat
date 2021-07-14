@@ -96,4 +96,9 @@
       display: none;
     }
   }
+  input {
+    &::placeholder {
+      color: #8c8c8c !important;
+    }
+  }
 </style>

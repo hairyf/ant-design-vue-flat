@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 14:37:14
- * @LastEditTime: 2021-07-12 15:52:45
+ * @LastEditTime: 2021-07-14 09:49:41
  * @Description: 
  * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -73,6 +73,11 @@
     }
     &:focus {
       box-shadow: 0 2px 0 0 var(--input-focus-color) !important;
+    }
+  }
+  input {
+    &::placeholder {
+      color: #8c8c8c !important;
     }
   }
 </style>

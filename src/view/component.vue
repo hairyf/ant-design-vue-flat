@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-13 20:26:25
+ * @LastEditTime: 2021-07-14 10:05:35
  * @Description: 
  * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -28,7 +28,11 @@
       <cal-table-option title="我是D" index="d"> </cal-table-option>
     </cal-table-option>
     <cal-table-option title="test" index="a"> </cal-table-option>
-    <cal-table-option title="测试" index="b"> </cal-table-option>
+    <cal-table-option title="测试" index="b">
+      <div>
+        <cal-tag v-for="(item, index) in 3" :key="index"> 爱心会 </cal-tag>
+      </div>
+    </cal-table-option>
   </cal-table>
   <!-- <cal-table class="py-10">
     <cal-checkbox v-model="value"></cal-checkbox> <div>标签名称名称称</div>
@@ -39,7 +43,13 @@
   </cal-descriptions>
 </template>
 <script lang="ts" setup>
+  import { ref } from 'vue'
+
   const props = defineProps({})
+  const value = ref('')
+  const onSearch = () => {
+    console.log(61223)
+  }
 </script>
 
 <style lang="scss" scoped></style>

@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:05:56
- * @LastEditTime: 2021-07-13 18:33:13
+ * @LastEditTime: 2021-07-14 09:49:58
  * @Description: 富文本
- * @LastEditors: Mr.Mao
+ * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -49,5 +49,10 @@
   .ant-input:focus {
     border-color: var(--common-primary-color) !important;
     box-shadow: none !important;
+  }
+  textarea {
+    &::placeholder {
+      color: #8c8c8c !important;
+    }
   }
 </style>

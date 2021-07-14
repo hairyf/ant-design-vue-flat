@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 14:47:41
- * @LastEditTime: 2021-07-12 16:24:55
+ * @LastEditTime: 2021-07-14 09:49:32
  * @Description: 
  * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -55,6 +55,11 @@
   .cal-input-number-off-handel {
     .ant-input-number-handler-wrap {
       display: none;
+    }
+  }
+  input {
+    &::placeholder {
+      color: #8c8c8c !important;
     }
   }
 </style>
