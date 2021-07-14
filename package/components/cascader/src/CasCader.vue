@@ -13,7 +13,7 @@
   export default defineComponent({ name: 'CalCasCader' })
 </script>
 <script lang="ts" setup>
-  import { defineProps } from 'vue-demi'
+  import { defineProps } from 'vue'
   import { useTheme } from '../../../utils/theme'
   import { Cascader as ACascader } from 'ant-design-vue'
   const props = defineProps()

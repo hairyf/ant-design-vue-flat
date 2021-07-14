@@ -14,7 +14,7 @@
   export default defineComponent({ name: 'CalProvide' })
 </script>
 <script lang="ts" setup>
-  import { defineProps, provide } from 'vue-demi'
+  import { defineProps, provide } from 'vue'
   const props = defineProps({
     id: {
       type: String,

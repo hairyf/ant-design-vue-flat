@@ -16,7 +16,7 @@
   export default defineComponent({ name: 'CalEllipsis' })
 </script>
 <script lang="ts" setup>
-  import { defineProps } from 'vue-demi'
+  import { defineProps } from 'vue'
   import { NEllipsis } from 'naive-ui'
   import { inheritNaiveUiProps } from '../../../utils/common'
 

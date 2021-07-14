@@ -19,7 +19,7 @@
   export default defineComponent({ name: 'CalIcon' })
 </script>
 <script lang="ts" setup>
-  import { defineProps } from 'vue-demi'
+  import { defineProps } from 'vue'
   import { analyUnit } from '@tuimao/utils'
   import option from './iconfont.json'
   const props = defineProps({

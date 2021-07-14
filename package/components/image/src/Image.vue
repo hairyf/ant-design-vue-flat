@@ -1,16 +1,15 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 16:23:04
- * @LastEditTime: 2021-07-12 16:24:48
+ * @LastEditTime: 2021-07-14 10:22:04
  * @Description: 
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
   <a-image
     class="cal-image rounded-lg overflow-hidden object-cover block"
     v-bind="props"
-    :fallback="fallbackImage"
     :preview="false"
   />
 </template>
@@ -21,7 +20,6 @@
 <script lang="ts" setup>
   import { defineProps } from 'vue'
   import { Image as AImage } from 'ant-design-vue'
-  import fallbackImage from '@/assets/img/common/error.png'
   const props = defineProps()
 </script>
 <style lang="scss">

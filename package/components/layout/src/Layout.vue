@@ -16,7 +16,7 @@
   export default defineComponent({ name: 'CalLayout' })
 </script>
 <script lang="ts" setup>
-  import { defineProps } from 'vue-demi'
+  import { defineProps } from 'vue'
   import { Layout } from 'ant-design-vue'
   const props = defineProps({
     ...(Layout.props as {}),

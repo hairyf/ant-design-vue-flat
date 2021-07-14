@@ -16,7 +16,7 @@
   export default defineComponent({ name: 'CalSpace' })
 </script>
 <script lang="ts" setup>
-  import { defineProps } from 'vue-demi'
+  import { defineProps } from 'vue'
   import { NSpace } from 'naive-ui'
   import { inheritNaiveUiProps } from '../../../utils/common'
   const props = defineProps({

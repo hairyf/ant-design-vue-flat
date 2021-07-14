@@ -1,9 +1,9 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-05-25 18:04:11
- * @LastEditTime: 2021-07-13 16:59:23
+ * @LastEditTime: 2021-07-14 10:22:18
  * @Description: 表格
- * @LastEditors: Zhilong
+ * @LastEditors: Mr.Mao
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
 -->
 <template>
@@ -24,7 +24,7 @@
         </table-provide>
       </div>
     </div>
-    <cal-empty class="mt-160" v-if="!fictitiousList.length" image="@/assets/img/common/empty.png" />
+    <cal-empty class="mt-160" v-if="!fictitiousList.length" />
   </div>
 </template>
 <script lang="ts">

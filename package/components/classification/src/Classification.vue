@@ -39,7 +39,7 @@
   export default defineComponent({ name: 'CalClassification' })
 </script>
 <script lang="ts" setup>
-  import { defineProps, inject, ref } from 'vue-demi'
+  import { defineProps, inject, ref } from 'vue'
   import { defineEmits, provide } from 'vue'
   import type { Ref } from 'vue'
   import { cloneDeep } from 'lodash-es'
