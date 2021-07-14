@@ -16,7 +16,7 @@
   export default defineComponent({ name: 'CalLayoutSider' })
 </script>
 <script lang="ts" setup>
-  import { defineProps } from 'vue-demi'
+  import { defineProps } from 'vue'
   import { Layout } from 'ant-design-vue'
   import { useTheme } from '../../../utils/theme'
   const LayoutSider = Layout.Sider

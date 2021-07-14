@@ -1,13 +1,12 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('vue'), require('ant-design-vue'), require('lodash-es'), require('vue-demi'), require('naive-ui'), require('lodash'), require('@/assets/img/common/error.png'), require('crypto')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'vue', 'ant-design-vue', 'lodash-es', 'vue-demi', 'naive-ui', 'lodash', '@/assets/img/common/error.png', 'crypto'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global['ant-design-vue-flat'] = {}, global.Vue, global.antd, global.lodashEs, global.vueDemi, global.naiveUi, global.lodash, global.fallbackImage, global.crypto));
-}(this, (function (exports, vue, antd, lodashEs, vueDemi, naiveUi, lodash, fallbackImage, crypto) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('vue'), require('ant-design-vue'), require('lodash-es'), require('naive-ui'), require('lodash'), require('vue-demi'), require('crypto')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'vue', 'ant-design-vue', 'lodash-es', 'naive-ui', 'lodash', 'vue-demi', 'crypto'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global['ant-design-vue-flat'] = {}, global.Vue, global.antd, global.lodashEs, global.naiveUi, global.lodash, global.vueDemi, global.crypto));
+}(this, (function (exports, vue, antd, lodashEs, naiveUi, lodash, vueDemi, crypto) { 'use strict';
 
   function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
   var antd__default = /*#__PURE__*/_interopDefaultLegacy(antd);
-  var fallbackImage__default = /*#__PURE__*/_interopDefaultLegacy(fallbackImage);
   var crypto__default = /*#__PURE__*/_interopDefaultLegacy(crypto);
 
   var Common = {
@@ -170,9 +169,9 @@
     },
     setup(__props) {
       const props = __props;
-      const root = vueDemi.toRef(props, "root");
+      const root = vue.toRef(props, "root");
       const globalTheme = useGlobalTheme();
-      vueDemi.watchEffect(() => {
+      vue.watchEffect(() => {
         const cssVars = transformTheme2CssVars(globalTheme.value);
         for (const key in cssVars) {
           root.value.style.removeProperty(`--${key}`);
@@ -199,7 +198,7 @@
     },
     setup(__props) {
       const props = __props;
-      vueDemi.provide(props.id, props.value);
+      vue.provide(props.id, props.value);
       return (_ctx, _cache) => {
         return vue.renderSlot(_ctx.$slots, "default");
       };
@@ -736,10 +735,10 @@
 
   const defaultOption = { wait: 300 };
   const useShakeDataHandel = (handelFun, option = defaultOption) => {
-    const cache = vueDemi.ref("");
+    const cache = vue.ref("");
     const debounceHandel = lodashEs.debounce(handelFun, option.wait);
     return {
-      virtualValue: vueDemi.computed({
+      virtualValue: vue.computed({
         get: () => cache.value,
         set(value) {
           cache.value = value;
@@ -6694,10 +6693,7 @@
     setup(__props) {
       const props = __props;
       return (_ctx, _cache) => {
-        return vue.openBlock(), vue.createBlock(vue.unref(antd.Image), vue.mergeProps({ class: "cal-image rounded-lg overflow-hidden object-cover block" }, props, {
-          fallback: vue.unref(fallbackImage__default['default']),
-          preview: false
-        }), null, 16, ["fallback"]);
+        return vue.openBlock(), vue.createBlock(vue.unref(antd.Image), vue.mergeProps({ class: "cal-image rounded-lg overflow-hidden object-cover block" }, props, { preview: false }), null, 16);
       };
     }
   });
@@ -6793,7 +6789,7 @@
     emits: ["change"],
     setup(__props, { emit }) {
       const props = __props;
-      const selectList = vueDemi.inject("selectList") || vueDemi.ref([]);
+      const selectList = vue.inject("selectList") || vue.ref([]);
       if (props.nestedIndex === 0)
         vue.provide("selectList", selectList);
       const onClickItem = async (optionItem) => {
@@ -6812,7 +6808,7 @@
         }
         emit("change", selectList.value);
       };
-      const currentChildren = vueDemi.ref();
+      const currentChildren = vue.ref();
       return (_ctx, _cache) => {
         const _component_cal_button = vue.resolveComponent("cal-button");
         const _component_index = vue.resolveComponent("index");
@@ -7370,8 +7366,7 @@
           }), 128)),
           !fictitiousList.value.length ? (vue.openBlock(), vue.createBlock(_component_cal_empty, {
             key: 0,
-            class: "mt-160",
-            image: "@/assets/img/common/empty.png"
+            class: "mt-160"
           })) : vue.createCommentVNode("v-if", true)
         ]);
       };
@@ -7649,7 +7644,7 @@
     ...__default__$1,
     emits: ["uploadFile", "downloadTemplate"],
     setup(__props, { emit }) {
-      const fileList = vueDemi.ref([]);
+      const fileList = vue.ref([]);
       const handleChange = (info) => {
         let newFileList = [...info.fileList];
         newFileList = newFileList.slice(-5);

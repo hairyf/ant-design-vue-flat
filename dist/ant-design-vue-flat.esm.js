@@ -1,12 +1,11 @@
-import { ref, inject, computed, defineComponent, openBlock, createBlock, unref, mergeProps, renderSlot, withScopeId, pushScopeId, popScopeId, toRef as toRef$1, provide as provide$1, createVNode, Transition, createCommentVNode, withCtx, resolveDirective, withDirectives, Fragment, renderList, useCssVars, useSlots, watch as watch$1, isRef, toDisplayString, resolveComponent, createTextVNode, toHandlers } from 'vue';
+import { ref, inject, computed, defineComponent, openBlock, createBlock, unref, mergeProps, renderSlot, withScopeId, toRef, watchEffect, provide, pushScopeId, popScopeId, createVNode, Transition, createCommentVNode, withCtx, resolveDirective, withDirectives, Fragment, renderList, useCssVars, useSlots, watch as watch$1, isRef, toDisplayString, resolveComponent, createTextVNode, toHandlers } from 'vue';
 import antd__default, { Button as Button$1, ConfigProvider, Layout as Layout$1, Input as Input$1, InputNumber, Image, Card as Card$1, Cascader, Checkbox, Empty, Pagination, Tabs as Tabs$1, message } from 'ant-design-vue';
 export * from 'ant-design-vue';
 import { cloneDeep, merge, kebabCase, debounce, get } from 'lodash-es';
-import { toRef, watchEffect, provide, getCurrentInstance, isVue2, ref as ref$1, watch, computed as computed$1, inject as inject$1 } from 'vue-demi';
 import { NDescriptions, NDescriptionsItem, NEllipsis, NSpace } from 'naive-ui';
 export { NDescriptions as CalDescriptions, NDescriptionsItem as CalDescriptionsItem } from 'naive-ui';
 import { orderBy } from 'lodash';
-import fallbackImage from '@/assets/img/common/error.png';
+import { getCurrentInstance, isVue2, ref as ref$1, watch, computed as computed$1 } from 'vue-demi';
 import crypto from 'crypto';
 
 var Common = {
@@ -226,8 +225,8 @@ var script$D = defineComponent({
   },
   setup(__props) {
     const props = __props;
-    const themeOverrides = toRef$1(props, "themeOverrides");
-    provide$1("themeOverrides", themeOverrides);
+    const themeOverrides = toRef(props, "themeOverrides");
+    provide("themeOverrides", themeOverrides);
     return (_ctx, _cache) => {
       return openBlock(), createBlock("div", _hoisted_1$d, [
         renderSlot(_ctx.$slots, "default")
@@ -260,10 +259,10 @@ var script$C = defineComponent({
   },
   setup(__props) {
     const props = __props;
-    provide$1("collapse", toRef$1(props, "collapse"));
-    provide$1("defaultActive", toRef$1(props, "defaultActive"));
-    provide$1("onUpdate", props.onUpdate);
-    provide$1("styleType", props.styleType);
+    provide("collapse", toRef(props, "collapse"));
+    provide("defaultActive", toRef(props, "defaultActive"));
+    provide("onUpdate", props.onUpdate);
+    provide("styleType", props.styleType);
     return (_ctx, _cache) => {
       return openBlock(), createBlock("ul", _hoisted_1$c, [
         renderSlot(_ctx.$slots, "default")
@@ -735,10 +734,10 @@ script$t.__file = "package/components/input/src/Input.vue";
 
 const defaultOption = { wait: 300 };
 const useShakeDataHandel = (handelFun, option = defaultOption) => {
-  const cache = ref$1("");
+  const cache = ref("");
   const debounceHandel = debounce(handelFun, option.wait);
   return {
-    virtualValue: computed$1({
+    virtualValue: computed({
       get: () => cache.value,
       set(value) {
         cache.value = value;
@@ -6693,10 +6692,7 @@ var script$m = defineComponent({
   setup(__props) {
     const props = __props;
     return (_ctx, _cache) => {
-      return openBlock(), createBlock(unref(Image), mergeProps({ class: "cal-image rounded-lg overflow-hidden object-cover block" }, props, {
-        fallback: unref(fallbackImage),
-        preview: false
-      }), null, 16, ["fallback"]);
+      return openBlock(), createBlock(unref(Image), mergeProps({ class: "cal-image rounded-lg overflow-hidden object-cover block" }, props, { preview: false }), null, 16);
     };
   }
 });
@@ -6792,9 +6788,9 @@ var script$i = defineComponent({
   emits: ["change"],
   setup(__props, { emit }) {
     const props = __props;
-    const selectList = inject$1("selectList") || ref$1([]);
+    const selectList = inject("selectList") || ref([]);
     if (props.nestedIndex === 0)
-      provide$1("selectList", selectList);
+      provide("selectList", selectList);
     const onClickItem = async (optionItem) => {
       const currentState = !optionItem.state;
       props.option?.children?.forEach((v) => delete v.state);
@@ -6811,7 +6807,7 @@ var script$i = defineComponent({
       }
       emit("change", selectList.value);
     };
-    const currentChildren = ref$1();
+    const currentChildren = ref();
     return (_ctx, _cache) => {
       const _component_cal_button = resolveComponent("cal-button");
       const _component_index = resolveComponent("index");
@@ -7198,7 +7194,7 @@ var script$8 = defineComponent({
   },
   setup(__props) {
     const props = __props;
-    provide$1("itemObject", { item: props.item, index: props.index });
+    provide("itemObject", { item: props.item, index: props.index });
     return (_ctx, _cache) => {
       return renderSlot(_ctx.$slots, "default");
     };
@@ -7332,8 +7328,8 @@ var script$7 = defineComponent({
       deep: true
     });
     watch$1(() => controller.value.order.sort, () => fictitiousList.value = listOrder());
-    provide$1("controller", controller);
-    provide$1("option", props);
+    provide("controller", controller);
+    provide("option", props);
     useTheme("Common");
     return (_ctx, _cache) => {
       const _component_cal_checkbox = resolveComponent("cal-checkbox");
@@ -7369,8 +7365,7 @@ var script$7 = defineComponent({
         }), 128)),
         !fictitiousList.value.length ? (openBlock(), createBlock(_component_cal_empty, {
           key: 0,
-          class: "mt-160",
-          image: "@/assets/img/common/empty.png"
+          class: "mt-160"
         })) : createCommentVNode("v-if", true)
       ]);
     };
@@ -7415,7 +7410,7 @@ var script$6 = defineComponent({
     const controller = inject("controller");
     const showContent = computed(() => get(item, props.index || props.title || ""));
     if (props.type === "list")
-      provide$1("listObject", showContent.value);
+      provide("listObject", showContent.value);
     const isCurrentIndex = () => {
       const isIndex = controller?.value?.order?.index === props.index;
       const isTitle = controller?.value?.order?.index === props.title;
@@ -7648,7 +7643,7 @@ var script$1 = defineComponent({
   ...__default__$1,
   emits: ["uploadFile", "downloadTemplate"],
   setup(__props, { emit }) {
-    const fileList = ref$1([]);
+    const fileList = ref([]);
     const handleChange = (info) => {
       let newFileList = [...info.fileList];
       newFileList = newFileList.slice(-5);

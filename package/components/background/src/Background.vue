@@ -18,7 +18,7 @@
   export default defineComponent({ name: 'CalBackground' })
 </script>
 <script lang="ts" setup>
-  import { defineProps } from 'vue-demi'
+  import { defineProps } from 'vue'
   import { useTheme } from '../../../utils/theme'
   const props = defineProps({
     image: String,

@@ -39,7 +39,7 @@
 <script setup lang="ts">
   import { useTheme } from '../../../utils/theme'
   import { message } from 'ant-design-vue'
-  import { ref, watch, defineEmits } from 'vue-demi'
+  import { ref, watch, defineEmits } from 'vue'
   const fileList = ref<any>([])
   const emit = defineEmits(['uploadFile', 'downloadTemplate'])
   // const show = ref(false)

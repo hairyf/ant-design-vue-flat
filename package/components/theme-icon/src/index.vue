@@ -16,7 +16,7 @@
   export default defineComponent({ name: 'CalThemeIcon' })
 </script>
 <script lang="ts" setup>
-  import { computed, defineAsyncComponent, defineProps } from 'vue-demi'
+  import { computed, defineAsyncComponent, defineProps } from 'vue'
   type TThemeIcon = 'coupon' | 'offers' | 'sortArrow' | 'numberTag' | 'selectStateBox' | 'addItem'
   const props = defineProps({
     type: {

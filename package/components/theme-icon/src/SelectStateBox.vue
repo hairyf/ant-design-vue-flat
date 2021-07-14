@@ -50,7 +50,7 @@
 </template>
 <script lang="ts" setup>
   import { analyUnit } from '@tuimao/utils'
-  import { computed, defineProps } from 'vue-demi'
+  import { computed, defineProps } from 'vue'
   import { useTheme } from '../../../utils/theme'
   const props = defineProps({
     // 是否展示状态

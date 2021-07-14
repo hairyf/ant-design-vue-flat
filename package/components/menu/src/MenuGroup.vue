@@ -37,7 +37,7 @@
   import CalMenuItem from './MenuItem.vue'
   import CalIcon from '../../icon/src/Icon.vue'
   import * as vt from 'vue'
-  import { computed, defineProps, inject, ref } from 'vue-demi'
+  import { computed, defineProps, inject, ref } from 'vue'
   import CalCollapseTransition from '../../transition/src/CollapseTransition.vue'
   import CalProvide from '../../_internal/src/Provide.vue'
   const props = defineProps({

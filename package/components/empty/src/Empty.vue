@@ -15,6 +15,6 @@
 </script>
 <script lang="ts" setup>
   import { Empty as AEmpty } from 'ant-design-vue'
-  import { defineProps } from 'vue-demi'
+  import { defineProps } from 'vue'
   const props = defineProps()
 </script>

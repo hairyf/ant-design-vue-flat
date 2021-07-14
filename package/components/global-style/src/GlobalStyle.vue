@@ -3,8 +3,7 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent } from 'vue'
-  import { defineProps, toRef, watchEffect } from 'vue-demi'
+  import { defineComponent, defineProps, toRef, watchEffect } from 'vue'
   import { transformTheme2CssVars, useGlobalTheme } from '../../../utils/theme'
   export default defineComponent({ name: 'CalGlobalStyle' })
 </script>

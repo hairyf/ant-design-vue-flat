@@ -41,7 +41,7 @@
   export default defineComponent({ name: 'CalMenuItem' })
 </script>
 <script lang="ts" setup>
-  import { defineProps } from 'vue-demi'
+  import { defineProps } from 'vue'
   import type { Ref } from 'vue'
   import { useTheme } from '../../../utils/theme'
   const props = defineProps({

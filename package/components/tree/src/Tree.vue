@@ -15,7 +15,7 @@
 </script>
 <script lang="ts" setup>
   import { useTheme } from '../../../utils/theme'
-  import { defineProps } from 'vue-demi'
+  import { defineProps } from 'vue'
   const props = defineProps()
   useTheme('Common')
 </script>
