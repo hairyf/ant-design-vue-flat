@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:49:36
- * @LastEditTime: 2021-07-13 11:23:56
+ * @LastEditTime: 2021-07-13 18:33:21
  * @Description: 排序箭头
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -27,7 +27,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { useModelRef } from '@/hooks/use-modelRef'
+  import { useVModel } from '@vueuse/core'
   import { defineProps, ref } from 'vue'
   import { useTheme } from '../../../utils/theme'
   const props = defineProps({
@@ -41,7 +41,7 @@
     },
     text: String
   })
-  const status = useModelRef(props, 'modelValue')
+  const status = useVModel(props, 'modelValue')
   const onClick = () => {
     let index = status.value
     ++index > 2 ? (status.value = 0) : ++status.value

@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-05-22 14:18:13
- * @LastEditTime: 2021-07-13 17:53:10
+ * @LastEditTime: 2021-07-13 19:50:49
  * @Description: 配置注入
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -12,13 +12,14 @@
   </div>
 </template>
 <script lang="ts">
-  import { defineComponent } from 'vue'
+  import { defineComponent, useCssVars } from 'vue'
   export default defineComponent({ name: 'CalConfigProvider' })
 </script>
 <script lang="ts" setup>
   import { defineProps, provide, toRef } from 'vue'
   import { ConfigProvider } from 'ant-design-vue'
   import type { ThemeOverrides } from '../../../utils/theme'
+  import { transformTheme2CssVars } from '../../../utils/theme'
   const props = defineProps({
     ...(ConfigProvider.props as {}),
     themeOverrides: {
@@ -27,6 +28,7 @@
     }
   })
   const themeOverrides = toRef(props, 'themeOverrides')
+  useCssVars(() => transformTheme2CssVars(themeOverrides.value))
   provide('themeOverrides', themeOverrides)
 </script>
 

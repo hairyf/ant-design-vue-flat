@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 16:11:30
- * @LastEditTime: 2021-07-12 16:18:28
+ * @LastEditTime: 2021-07-13 18:24:21
  * @Description: 
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -25,16 +25,17 @@
 <script lang="ts" setup>
   import { Input as AInput } from 'ant-design-vue'
   import { defineProps, ref, useSlots, watch } from 'vue'
-  import { useModelRef } from '@/hooks/use-modelRef'
+  import { useVModel } from '@vueuse/core'
   import { useTheme } from '../../../utils/theme'
   const slots = useSlots()
+  const emit = defineEmits([])
   const props = defineProps({
     modelValue: [String, Number],
     showCount: Boolean,
     maxLength: Number,
     placeholder: String
   })
-  const inputValue = useModelRef(props, 'modelValue')
+  const inputValue = useVModel(props, 'modelValue', emit)
   // 储存当前字数
   const currentFontNumber = ref(0)
   // 监听字数

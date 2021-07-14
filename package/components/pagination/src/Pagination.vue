@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 18:30:28
- * @LastEditTime: 2021-07-12 18:34:38
+ * @LastEditTime: 2021-07-13 18:32:53
  * @Description: 分页选择
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -15,13 +15,13 @@
 </script>
 <script lang="ts" setup>
   import { useTheme } from '../../../utils/theme'
-  import { useModelRef } from '@/hooks/use-modelRef'
+  import { useVModel } from '@vueuse/core'
   import { Pagination as APagination } from 'ant-design-vue'
   import { defineProps } from 'vue'
   const props = defineProps({
     modelValue: Number
   })
-  const modelValue = useModelRef(props, 'modelValue')
+  const modelValue = useVModel(props, 'modelValue')
   useTheme('Common')
 </script>
 <style lang="scss">

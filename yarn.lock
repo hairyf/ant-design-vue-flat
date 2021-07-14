@@ -1960,6 +1960,21 @@
   resolved "https://registry.nlark.com/@vue/shared/download/@vue/shared-3.1.4.tgz"
   integrity sha1-wUxGHsQuosFVbob2CwNUNB2RrcM=
 
+"@vueuse/core@^5.1.3":
+  version "5.1.3"
+  resolved "https://registry.nlark.com/@vueuse/core/download/@vueuse/core-5.1.3.tgz#a9edda9202513423a27fbac896dd7bc918d1ac6c"
+  integrity sha1-qe3akgJRNCOif7rIlt17yRjRrGw=
+  dependencies:
+    "@vueuse/shared" "5.1.3"
+    vue-demi "*"
+
+"@vueuse/shared@5.1.3":
+  version "5.1.3"
+  resolved "https://registry.nlark.com/@vueuse/shared/download/@vueuse/shared-5.1.3.tgz#11faa3a1a2b4d3dc41eac7a825900a8894efe95e"
+  integrity sha1-EfqjoaK009xB6seoJZAKiJTv6V4=
+  dependencies:
+    vue-demi "*"
+
 abab@^2.0.3, abab@^2.0.5:
   version "2.0.5"
   resolved "https://registry.nlark.com/abab/download/abab-2.0.5.tgz#c0b678fb32d60fc1219c784d6a826fe385aeb79a"
@@ -6905,7 +6920,7 @@ rollup-plugin-typescript2@^0.29.0:
 
 rollup-plugin-vue@6.0.0-beta.6:
   version "6.0.0-beta.6"
-  resolved "https://registry.npm.taobao.org/rollup-plugin-vue/download/rollup-plugin-vue-6.0.0-beta.6.tgz"
+  resolved "https://registry.npm.taobao.org/rollup-plugin-vue/download/rollup-plugin-vue-6.0.0-beta.6.tgz#e77dc9cdec9e53778f086259a89fbff36f391ddf"
   integrity sha1-533JzeyeU3ePCGJZqJ+/8285Hd8=
   dependencies:
     debug "^4.1.1"
@@ -8153,6 +8168,11 @@ vue-composable@^1.0.0-beta.23:
   integrity sha1-EIW82DYNntMJ7Fwz6CQmEXkM1cU=
   dependencies:
     "@vue/devtools-api" "^6.0.0-beta.3"
+
+vue-demi@*:
+  version "0.10.1"
+  resolved "https://registry.nlark.com/vue-demi/download/vue-demi-0.10.1.tgz#229b81395510f02f4ee255344557a12cc0120930"
+  integrity sha1-IpuBOVUQ8C9O4lU0RVehLMASCTA=
 
 vue-demi@^0.9.1:
   version "0.9.1"

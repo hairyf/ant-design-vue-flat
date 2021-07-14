@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:05:56
- * @LastEditTime: 2021-07-13 10:07:08
+ * @LastEditTime: 2021-07-13 18:33:13
  * @Description: 富文本
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -18,11 +18,11 @@
   import { defineProps } from 'vue'
   import { Input } from 'ant-design-vue'
   const ATextarea = Input.TextArea
-  import { useModelRef } from '@/hooks/use-modelRef'
+  import { useVModel } from '@vueuse/core'
   const props = defineProps({
     modelValue: [String, Number]
   })
-  const inputValue = useModelRef(props, 'modelValue')
+  const inputValue = useVModel(props, 'modelValue')
   useTheme('Common')
 </script>
 <style lang="scss">
