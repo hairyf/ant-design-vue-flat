@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-15 09:37:48
+ * @LastEditTime: 2021-07-15 15:05:07
  * @Description: 
- * @LastEditors: Mr.Mao
+ * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -42,10 +42,11 @@
     <cal-descriptions-item label="午餐">苹果</cal-descriptions-item>
   </cal-descriptions>
   <cal-qr-code text="asdnasio" :size="50" />
+  <cal-input-search v-model="value" class="w-96 h-32"> </cal-input-search>
+  <a-input-search v-model="value"> </a-input-search>
 </template>
 <script lang="ts" setup>
   import { ref } from 'vue'
-
   const props = defineProps({})
   const value = ref('')
   const onSearch = () => {
