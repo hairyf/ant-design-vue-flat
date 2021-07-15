@@ -1,17 +1,23 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-14 20:20:41
+ * @LastEditTime: 2021-07-15 10:18:38
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
 export { default as CalButton } from './components/button/src/Button.vue'
+export { default as CalQrCode } from './components/qrcode/src/QrCode.vue'
 export { default as CalGlobalStyle } from './components/global-style/src/GlobalStyle.vue'
 export { default as CalProvide } from './components/_internal/src/Provide.vue'
 export { default as CalDialog } from './components/modal/src/Modal.vue'
 export { default as CalModel } from './components/modal/src/Modal'
+export { default as CalBreadcrumb } from './components/breadcrumb/src/Breadcrumb'
+export { default as CalBreadcrumbItem } from './components/breadcrumb/src/BreadcrumbItem'
+export { default as CalColorElPickr } from './components/color-pickr/src/ColorElPickr.vue'
+export { default as CalColorFullPickr } from './components/color-pickr/src/ColorFullPickr.vue'
+export { default as CalColorSimonwepPickr } from './components/color-pickr/src/ColorSimonwepPickr.vue'
 export { default as CalDescriptions } from './components/descriptions/src/Descriptions'
 export { default as CalDescriptionsItem } from './components/descriptions/src/DescriptionsItem'
 export { default as CalConfigProvider } from './components/config-provider/src/ConfigProvider.vue'
@@ -38,7 +44,8 @@ export { default as CalImageVerif } from './components/image-verif/src/ImageVeri
 export { default as CalCasCader } from './components/cascader/src/CasCader.vue'
 export { default as CalCheckbox } from './components/checkbox/src/Checkbox.vue'
 export { default as CalClassification } from './components/classification/src/Classification.vue'
-export { default as CalCollapseTransition } from './components/collapseTransition/src/CollapseTransition.vue'
+export { default as CalNestedSortTable } from './components/nested-sort-table/src/NestedSortTable.vue'
+export { default as CalCollapseTransition } from './components/transition/src/CollapseTransition.vue'
 export { default as CalEmpty } from './components/empty/src/Empty.vue'
 export { default as CalPageSelect } from './components/page-select/src/PageSelect.vue'
 export { default as CalPagination } from './components/pagination/src/Pagination.vue'

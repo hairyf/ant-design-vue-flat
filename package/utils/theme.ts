@@ -7,7 +7,7 @@
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
 import { computed, inject, ref, Ref, ComputedRef, useCssVars, watchEffect } from 'vue'
-import { cloneDeep, kebabCase, merge } from 'lodash-es'
+import { cloneDeep, kebabCase, merge } from 'lodash'
 import * as option from '../theme/default'
 
 type DeepPartial<T> = T extends object ? { [P in keyof T]?: DeepPartial<T[P]> } : T

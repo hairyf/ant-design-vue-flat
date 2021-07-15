@@ -1339,6 +1339,14 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
+"@simonwep/pickr@^1.8.1":
+  version "1.8.1"
+  resolved "https://registry.nlark.com/@simonwep/pickr/download/@simonwep/pickr-1.8.1.tgz?cache=0&sync_timestamp=1620897298440&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40simonwep%2Fpickr%2Fdownload%2F%40simonwep%2Fpickr-1.8.1.tgz#e136cbd9c345ddbb7d71eb14af544c798165d495"
+  integrity sha1-4TbL2cNF3bt9cesUr1RMeYFl1JU=
+  dependencies:
+    core-js "^3.12.1"
+    nanopop "^2.1.0"
+
 "@simonwep/pickr@~1.8.0":
   version "1.8.1"
   resolved "https://registry.nlark.com/@simonwep/pickr/download/@simonwep/pickr-1.8.1.tgz?cache=0&sync_timestamp=1620897298440&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40simonwep%2Fpickr%2Fdownload%2F%40simonwep%2Fpickr-1.8.1.tgz"
@@ -1670,6 +1678,11 @@
   integrity sha1-Ov1q2JZ8d+Q3bFmKgt3Vj0bsRdY=
   dependencies:
     "@types/node" "*"
+
+"@types/sortablejs@^1.10.7":
+  version "1.10.7"
+  resolved "https://registry.nlark.com/@types/sortablejs/download/@types/sortablejs-1.10.7.tgz?cache=0&sync_timestamp=1625594014253&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fsortablejs%2Fdownload%2F%40types%2Fsortablejs-1.10.7.tgz#ab9039c85429f0516955ec6dbc0bb20139417b15"
+  integrity sha1-q5A5yFQp8FFpVextvAuyATlBexU=
 
 "@types/stack-utils@^2.0.0":
   version "2.0.1"
@@ -5528,7 +5541,7 @@ naive-ui@^2.15.4:
 
 nanoid@^3.1.23:
   version "3.1.23"
-  resolved "https://registry.nlark.com/nanoid/download/nanoid-3.1.23.tgz"
+  resolved "https://registry.nlark.com/nanoid/download/nanoid-3.1.23.tgz#f744086ce7c2bc47ee0a8472574d5c78e4183a81"
   integrity sha1-90QIbOfCvEfuCoRyV01ceOQYOoE=
 
 nanopop@^2.1.0:
@@ -6597,6 +6610,11 @@ q@^1.1.2:
   resolved "https://registry.npm.taobao.org/q/download/q-1.5.1.tgz?cache=0&sync_timestamp=1599054212574&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fq%2Fdownload%2Fq-1.5.1.tgz"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
+qrcodejs2-fix@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.nlark.com/qrcodejs2-fix/download/qrcodejs2-fix-0.0.1.tgz#7e355c1facbe74fdf85520bf973d30abb9d79a52"
+  integrity sha1-fjVcH6y+dP34VSC/lz0wq7nXmlI=
+
 queue-microtask@^1.2.2:
   version "1.2.3"
   resolved "https://registry.nlark.com/queue-microtask/download/queue-microtask-1.2.3.tgz"
@@ -7096,6 +7114,11 @@ slice-ansi@^4.0.0:
     ansi-styles "^4.0.0"
     astral-regex "^2.0.0"
     is-fullwidth-code-point "^3.0.0"
+
+sortablejs@^1.14.0:
+  version "1.14.0"
+  resolved "https://registry.nlark.com/sortablejs/download/sortablejs-1.14.0.tgz#6d2e17ccbdb25f464734df621d4f35d4ab35b3d8"
+  integrity sha1-bS4XzL2yX0ZHNN9iHU811Ks1s9g=
 
 source-map-js@^0.6.2:
   version "0.6.2"

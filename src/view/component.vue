@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-14 10:22:51
+ * @LastEditTime: 2021-07-15 09:37:48
  * @Description: 
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -41,6 +41,7 @@
     <cal-descriptions-item label="早午餐">苹果</cal-descriptions-item>
     <cal-descriptions-item label="午餐">苹果</cal-descriptions-item>
   </cal-descriptions>
+  <cal-qr-code text="asdnasio" :size="50" />
 </template>
 <script lang="ts" setup>
   import { ref } from 'vue'

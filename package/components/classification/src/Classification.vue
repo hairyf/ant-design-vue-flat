@@ -1,9 +1,9 @@
 <!--
  * @Author: Pan.Yu.Lin
  * @Date: 2021-07-12 17:02:15
- * @LastEditTime: 2021-07-12 19:46:03
+ * @LastEditTime: 2021-07-15 10:15:23
  * @Description: 
- * @LastEditors: Pan.Yu.Lin
+ * @LastEditors: Mr.Mao
 -->
 <template>
   <div class="cal-class__container">
@@ -24,7 +24,7 @@
         </cal-button>
       </div>
     </div>
-    <index
+    <cal-classification
       v-if="currentChildren?.[fieldNames['children']]?.length"
       :nested-index="nestedIndex + 1"
       :option="currentChildren"
@@ -41,9 +41,10 @@
 <script lang="ts" setup>
   import { defineProps, inject, ref } from 'vue'
   import { defineEmits, provide } from 'vue'
+  import { cloneDeep } from 'lodash'
+  import CalButton from '../../button/src/Button.vue'
   import type { Ref } from 'vue'
-  import { cloneDeep } from 'lodash-es'
-
+  import CalClassification from './_import'
   /** 列表项配置 */
   interface Option {
     state?: boolean
