@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 16:32:30
- * @LastEditTime: 2021-07-15 10:35:36
+ * @LastEditTime: 2021-07-15 16:17:44
  * @Description: 图片模块验证 来自https://github.com/javaLuo/vue-puzzle-vcode
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -106,7 +106,7 @@
     defineEmits,
     useContext
   } from 'vue'
-  import { useOnResize } from 'vue-composable'
+  import { useWindowSize } from '@vueuse/core'
   const context = useContext()
   const props = defineProps({
     // canvasWidth: { type: Number, default: 310 }, // 主canvas的宽
@@ -161,8 +161,7 @@
     // 自动宽度刷新
     reset()
   }, 200)
-  const { width, remove } = useOnResize(document.body)
-  onUnmounted(() => remove)
+  const { width } = useWindowSize()
   watch(width, onlyDebounce)
 
   const state = reactive({

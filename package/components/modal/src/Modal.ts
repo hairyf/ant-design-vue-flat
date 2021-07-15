@@ -1,14 +1,14 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-05-25 09:35:19
- * @LastEditTime: 2021-07-14 19:53:03
+ * @LastEditTime: 2021-07-15 16:20:08
  * @Description:模态框二次封装
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
 
 import { renderInstance } from '@tuimao/utils/package/vue-utils/utils'
-import CalMessageDialogConstructor from './Modal.vue'
+import CalMessageDialogConstructor from './Dialog.vue'
 
 /** 组件中 props 类型 */
 interface CalMessageDialogProps {

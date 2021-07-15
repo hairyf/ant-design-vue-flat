@@ -1,6 +1,7 @@
 .ant-layout-sider {
-  @apply bg-layout-sider-color
-  .ant-layout-sider-children {
-    @apply flex flex-col
+  background-color: var(--layout-sider-color);
+  .ant-layout-sider
+    display: flex;
+    flex-direction: column;
   }
 }
