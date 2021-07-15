@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 16:32:30
- * @LastEditTime: 2021-07-14 10:36:55
+ * @LastEditTime: 2021-07-15 10:35:36
  * @Description: 图片模块验证 来自https://github.com/javaLuo/vue-puzzle-vcode
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -88,8 +88,12 @@
     </div>
   </div>
 </template>
+<script lang="ts">
+  import { defineComponent } from 'vue'
+  export default defineComponent({ name: 'CalGraphicsVerif' })
+</script>
 <script lang="ts" setup>
-  import { debounce } from 'lodash-es'
+  import { debounce } from 'lodash'
   import {
     ref,
     reactive,
@@ -98,13 +102,12 @@
     computed,
     watch,
     toRefs,
-    defineComponent,
-    defineProps
+    defineProps,
+    defineEmits,
+    useContext
   } from 'vue'
   import { useOnResize } from 'vue-composable'
-  // export default defineComponent({
-  // name: 'CalImageVerif',
-  // emits: ['success', 'fail', 'close'],
+  const context = useContext()
   const props = defineProps({
     // canvasWidth: { type: Number, default: 310 }, // 主canvas的宽
     // canvasHeight: { type: Number, default: 160 }, // 主canvas的高
@@ -202,7 +205,7 @@
 
     document.removeEventListener('touchmove', onRangeMouseMove, {
       passive: false
-    })
+    } as any)
     document.removeEventListener('touchend', onRangeMouseUp, false)
   })
 
@@ -262,14 +265,14 @@
   const onRangeMouseDown = (e: any) => {
     if (state.isCanSlide) {
       state.mouseDown = true
-      state.startWidth = rangeSlider.value.clientWidth
+      state.startWidth = rangeSlider?.value?.clientWidth || 0
       state.newX = e.clientX || e.changedTouches[0].clientX
       state.startX = e.clientX || e.changedTouches[0].clientX
     }
   }
 
   // 鼠标移动
-  const onRangeMouseMove = (e) => {
+  const onRangeMouseMove = (e: any) => {
     if (state.mouseDown) {
       e.preventDefault()
       state.newX = e.clientX || e.changedTouches[0].clientX
@@ -291,9 +294,9 @@
   const init = (withCanvas?: boolean) => {
     state.loading = true
     state.isCanSlide = false
-    const c = canvas1.value
-    const c2 = canvas2.value
-    const c3 = canvas3.value
+    const c: any = canvas1.value
+    const c2: any = canvas2.value
+    const c3: any = canvas3.value
     const ctx = c.getContext('2d')
     const ctx2 = c2.getContext('2d')
     const ctx3 = c3.getContext('2d')
@@ -417,9 +420,9 @@
         }
       }
       state.imgIndex = randomNum
-      img.src = props.imgs[randomNum]
+      img.src = props.imgs[randomNum] as any
     } else {
-      img.src = makeImgWithCanvas()
+      img.src = makeImgWithCanvas() as any
     }
   }
 
@@ -451,7 +454,7 @@
   }
 
   // 私有-绘制拼图块的路径
-  const paintBrick = (ctx) => {
+  const paintBrick = (ctx: any) => {
     const moveL = Math.ceil(15 * puzzleScale.value) // 直线移动的基础距离
     ctx.beginPath()
     ctx.moveTo(state.pinX, state.pinY)
@@ -567,7 +570,7 @@
       state.timer1 = setTimeout(() => {
         // 成功的回调
         context.emit('success', x)
-      }, 800)
+      }, 800) as any
     } else {
       // 失败
       state.infoText = props.failText
@@ -579,7 +582,7 @@
       clearTimeout(state.timer1)
       state.timer1 = setTimeout(() => {
         reset()
-      }, 800)
+      }, 800) as any
     }
   }
 
@@ -603,7 +606,7 @@
     pinY,
     loading,
     isCanSlide,
-    Error,
+    error,
     infoBoxShow,
     infoText,
     infoBoxFail,

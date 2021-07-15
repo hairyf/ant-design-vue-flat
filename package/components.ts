@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-15 10:20:17
+ * @LastEditTime: 2021-07-15 10:36:06
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
  * @LastEditors: Mr.Mao
@@ -40,7 +40,7 @@ export { default as CalInputSelect } from './components/input/src/InputSelect.vu
 export { default as CalIcon } from './components/icon/src/Icon.vue'
 export { default as CalImage } from './components/image/src/Image.vue'
 export { default as CalCard } from './components/card/src/Card.vue'
-export { default as CalImageVerif } from './components/image-verif/src/ImageVerif.vue'
+export { default as CalGraphicsVerif } from './components/graphics-verif/src/GraphicsVerif.vue'
 export { default as CalCasCader } from './components/cascader/src/CasCader.vue'
 export { default as CalCheckbox } from './components/checkbox/src/Checkbox.vue'
 export { default as CalClassification } from './components/classification/src/Classification.vue'

@@ -18,7 +18,8 @@
   },
   "files": [
     "dist",
-    "package"
+    "package",
+    "README.md"
   ],
   "devDependencies": {
     "@ant-design-vue/use": "^0.0.1-alpha.10",
