@@ -1,9 +1,9 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-05-26 10:05:03
- * @LastEditTime: 2021-06-09 14:43:27
+ * @LastEditTime: 2021-07-15 09:40:43
  * @Description: 表格配置
- * @LastEditors: Mr.Mao
+ * @LastEditors: Zhilong
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
 -->
 <template>
@@ -52,7 +52,7 @@
   </div>
 </template>
 <script lang="ts" setup>
-  import { analyUnit } from '@/utils'
+  import { analyUnit } from '@tuimao/utils'
   import { get } from 'lodash'
   import { computed, defineProps, inject, useContext } from 'vue-demi'
   const { slots } = useContext()
