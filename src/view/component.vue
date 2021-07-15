@@ -42,6 +42,7 @@
     <cal-descriptions-item label="午餐">苹果</cal-descriptions-item>
   </cal-descriptions>
   <cal-qr-code text="asdnasio" :size="50" />
+  <cal-editor></cal-editor>
 </template>
 <script lang="ts" setup>
   import { ref } from 'vue'

@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-03-18 09:30:25
- * @LastEditTime: 2021-07-15 10:38:05
+ * @LastEditTime: 2021-07-15 15:05:44
  * @Description: 多嵌套表格组件
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -52,7 +52,6 @@
   import { nanoid } from 'nanoid'
   import Sortable from 'sortablejs'
   import CalCard from '../../card/src/Card.vue'
-  import CalNestedSortTable from './_import'
   const props = defineProps({
     // 当前队列
     modelValue: {

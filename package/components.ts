@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-15 10:36:06
+ * @LastEditTime: 2021-07-15 15:13:17
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
  * @LastEditors: Mr.Mao
@@ -13,6 +13,10 @@ export { default as CalGlobalStyle } from './components/global-style/src/GlobalS
 export { default as CalProvide } from './components/_internal/src/Provide.vue'
 export { default as CalDialog } from './components/modal/src/Modal.vue'
 export { default as CalModel } from './components/modal/src/Modal'
+export { default as CalForm } from './components/form/src/Form'
+export { default as CalFormItem } from './components/form/src/FormItem'
+export { default as CalPerfectScrollbar } from './components/perfect-scrollbar/src/PerfectScrollbar'
+export { default as CalEditor } from './components/editor/src/Editor.vue'
 export { default as CalBreadcrumb } from './components/breadcrumb/src/Breadcrumb'
 export { default as CalBreadcrumbItem } from './components/breadcrumb/src/BreadcrumbItem'
 export { default as CalColorElPickr } from './components/color-pickr/src/ColorElPickr.vue'
@@ -59,7 +63,7 @@ export { default as CalTableOption } from './components/table/src/TableOption.vu
 export { default as CalTabPane } from './components/tabs/src/TabPane.vue'
 export { default as CalTabs } from './components/tabs/src/Tabs.vue'
 export { default as CalTextarea } from './components/textarea/src/Textarea.vue'
-// export { default as CalThemeIcon } from './components/theme-icon/src/index.vue'
 export { default as CalTree } from './components/tree/src/Tree.vue'
 export { default as CalUpload } from './components/upload/src/Upload.vue'
 export { default as CalTag } from './components/tag/src/Tag.vue'
+// export { default as CalThemeIcon } from './components/theme-icon/src/index.vue'
