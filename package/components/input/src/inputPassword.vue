@@ -1,13 +1,13 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 14:47:41
- * @LastEditTime: 2021-07-14 09:49:32
+ * @LastEditTime: 2021-07-15 15:02:30
  * @Description: 
  * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <a-input-password v-bind="props" />
+  <a-input-password v-bind="props" class="cal-password" />
 </template>
 <script lang="ts">
   import { defineComponent } from 'vue'
@@ -21,45 +21,48 @@
 </script>
 
 <style lang="scss">
-  .ant-input-password {
-    &.ant-input-affix-wrapper,
-    &.ant-input-affix-wrapper-focused {
-      background: none;
-      border-top: none;
-      border-left: none;
-      border-right: none;
-      @apply rounded-none;
-      @apply text-gray-500;
-      &::-webkit-input-placeholder {
+  .cal-password {
+    &.ant-input-password {
+      &.ant-input-affix-wrapper,
+      &.ant-input-affix-wrapper-focused {
+        background: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-color: #8c8c8c;
+        @apply rounded-none;
         @apply text-gray-500;
+        &::-webkit-input-placeholder {
+          @apply text-gray-500;
+        }
+        &:focus,
+        &:hover {
+          border-color: var(--input-hover-color) !important;
+        }
+        &:focus {
+          box-shadow: 0 2px 0 0 var(--input-focus-color) !important;
+        }
       }
-      &:focus,
-      &:hover {
+      &.ant-input-affix-wrapper-focused {
         border-color: var(--input-hover-color) !important;
+        box-shadow: 0 2px 0 0 var(--input-focus-color) !important;
       }
-      &:focus {
+      .ant-input {
+        background-color: transparent;
+      }
+      &.ant-input-affix-wrapper-focused {
         box-shadow: 0 2px 0 0 var(--input-focus-color) !important;
       }
     }
-    &.ant-input-affix-wrapper-focused {
-      border-color: var(--input-hover-color) !important;
-      box-shadow: 0 2px 0 0 var(--input-focus-color) !important;
+    .cal-input-number-off-handel {
+      .ant-input-number-handler-wrap {
+        display: none;
+      }
     }
-    .ant-input {
-      background-color: transparent;
-    }
-    &.ant-input-affix-wrapper-focused {
-      box-shadow: 0 2px 0 0 var(--input-focus-color) !important;
-    }
-  }
-  .cal-input-number-off-handel {
-    .ant-input-number-handler-wrap {
-      display: none;
-    }
-  }
-  input {
-    &::placeholder {
-      color: #8c8c8c !important;
+    input {
+      &::placeholder {
+        color: #8c8c8c !important;
+      }
     }
   }
 </style>
