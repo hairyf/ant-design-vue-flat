@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-05-20 17:54:55
- * @LastEditTime: 2021-07-14 20:43:56
+ * @LastEditTime: 2021-07-15 19:30:47
  * @Description: 菜单项
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -151,6 +151,9 @@
     @apply bg-menu-item-body-active-color text-menu-item-text-active-color;
   }
   .cal-munu-item__button__default {
+    &.cal-menu-item.cal-menu-item--vertical {
+      padding: 10px 0;
+    }
     @apply rounded-full mb-20 py-10;
   }
   .cal-munu-item__button {
