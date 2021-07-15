@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-15 17:40:10
- * @LastEditTime: 2021-07-15 18:27:48
+ * @LastEditTime: 2021-07-15 18:32:55
  * @Description: 
  * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -29,6 +29,9 @@
     border-left: 1px solid #d9d9d9 !important;
     color: #001426;
     min-width: 76px;
+    height: 24px !important;
+    font-size: 12px !important;
+    line-height: 21px !important;
     text-align: center;
     &.ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
       border-color: var(--common-primary-color) !important;
