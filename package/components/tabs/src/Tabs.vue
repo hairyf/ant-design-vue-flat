@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 09:09:40
- * @LastEditTime: 2021-07-13 09:41:53
+ * @LastEditTime: 2021-07-15 10:35:07
  * @Description: 分栏组
  * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -19,7 +19,7 @@
   import { useTheme } from '../../../utils/theme'
   import { defineProps } from 'vue'
   import { Tabs as ATabs } from 'ant-design-vue'
-  const props = defineProps({})
+  const props = defineProps()
   useTheme('Common')
   useTheme('Tabs')
 </script>
