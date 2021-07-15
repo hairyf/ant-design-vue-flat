@@ -1,7 +1,7 @@
 <!--
  * @Author: Pan.Yu.Lin
  * @Date: 2021-07-12 17:02:15
- * @LastEditTime: 2021-07-13 20:25:06
+ * @LastEditTime: 2021-07-15 14:27:10
  * @Description: 
  * @LastEditors: Mr.wang
 -->
@@ -18,7 +18,7 @@
   import { defineProps } from 'vue'
   import { Checkbox as ACheckbox } from 'ant-design-vue'
   import { useTheme } from '../../../utils/theme'
-  const props = defineProps({})
+  const props = defineProps()
   useTheme('Common')
 </script>
 <style lang="scss">

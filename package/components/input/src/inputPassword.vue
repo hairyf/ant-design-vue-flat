@@ -28,6 +28,7 @@
       border-top: none;
       border-left: none;
       border-right: none;
+      border-color: #8c8c8c;
       @apply rounded-none;
       @apply text-gray-500;
       &::-webkit-input-placeholder {
