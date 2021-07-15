@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-05-25 18:04:11
- * @LastEditTime: 2021-06-26 11:50:01
+ * @LastEditTime: 2021-07-15 09:39:54
  * @Description: 表格
  * @LastEditors: Zhilong
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
@@ -28,12 +28,12 @@
   </div>
 </template>
 <script lang="ts" setup>
-  import { defineEmit, defineProps, provide, watch, ref } from 'vue-demi'
+  import { defineEmits, defineProps, provide, watch, ref } from 'vue-demi'
   import TableProvide from './TableProvide.vue'
-  import { nanoid } from 'nanoid'
-  import { orderBy } from 'lodash'
-  import { analyUnit } from '@/utils'
-  const emit = defineEmit()
+  import nanoid from 'nanoid'
+  import { orderBy } from 'lodash-es'
+  import { analyUnit } from '@tuimao/utils'
+  const emit = defineEmits(['checkboxChange'])
   const selectList: Record<string, any> = {}
   const onCheckboxChange = (item: typeof fictitiousList.value[0], { target: { checked } }: any) => {
     item.CACHE_SELECT_TABLE = checked

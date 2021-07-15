@@ -10,7 +10,7 @@
   <slot />
 </template>
 <script lang="ts" setup>
-  import { defineProps, provide } from 'vue-demi'
+  import { defineProps, provide } from 'vue'
   const props = defineProps({
     item: Object as <T>() => T,
     index: Number

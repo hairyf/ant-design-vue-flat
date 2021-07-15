@@ -11,7 +11,7 @@
 </template>
 <script lang="ts">
   import { defineComponent } from 'vue'
-  export default defineComponent({ name: 'CalInputSearch' })
+  export default defineComponent({ name: 'CalInputSelect' })
 </script>
 <script lang="ts" setup>
   import { defineProps } from 'vue'
