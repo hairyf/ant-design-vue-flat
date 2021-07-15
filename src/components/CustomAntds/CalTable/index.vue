@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-05-25 18:04:11
- * @LastEditTime: 2021-07-15 09:39:54
+ * @LastEditTime: 2021-07-15 09:48:47
  * @Description: 表格
  * @LastEditors: Zhilong
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
@@ -30,7 +30,7 @@
 <script lang="ts" setup>
   import { defineEmits, defineProps, provide, watch, ref } from 'vue-demi'
   import TableProvide from './TableProvide.vue'
-  import nanoid from 'nanoid'
+  import { nanoid } from 'nanoid'
   import { orderBy } from 'lodash-es'
   import { analyUnit } from '@tuimao/utils'
   const emit = defineEmits(['checkboxChange'])
