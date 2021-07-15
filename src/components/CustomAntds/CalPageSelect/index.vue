@@ -1,9 +1,9 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-05-29 08:56:06
- * @LastEditTime: 2021-05-29 10:09:33
+ * @LastEditTime: 2021-07-15 09:18:16
  * @Description: 页选择按钮
- * @LastEditors: Zhilong
+ * @LastEditors: Mr.wang
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
 -->
 <template>
@@ -22,7 +22,7 @@
 </template>
 <script lang="ts" setup>
   import { analyUnit } from '@/utils'
-  import { computed, defineProps, useContext } from 'vue-demi'
+  import { computed, defineProps, defineEmits } from 'vue-demi'
   const props = defineProps({
     modelValue: {
       type: [String, Number],
@@ -33,7 +33,7 @@
       default: 116
     }
   })
-  const { emit } = useContext()
+  const emit = defineEmits(['update:modelValue'])
   const inputValue = computed({
     get: () => (props.modelValue ? props.modelValue : undefined),
     set(value) {
