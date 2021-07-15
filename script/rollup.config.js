@@ -1,9 +1,9 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-07 15:17:55
- * @LastEditTime: 2021-07-15 09:50:21
+ * @LastEditTime: 2021-07-15 11:19:55
  * @Description:
- * @LastEditors: Zhilong
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
 import vue from 'rollup-plugin-vue'
@@ -53,5 +53,5 @@ export default defineConfig({
       include: ['node_modules/**', 'node_modules/**/*', 'package/**', 'package/**/*']
     })
   ],
-  external: ['vue', 'echarts', 'ant-design-vue', 'naive-ui', 'lodash', 'element-plus']
+  external: ['vue', 'echarts', 'ant-design-vue', 'naive-ui', 'lodash', 'element-plus', 'nanoid']
 })
