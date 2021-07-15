@@ -3252,7 +3252,7 @@ duplexer3@^0.1.4:
 
 echarts@^5.1.2:
   version "5.1.2"
-  resolved "https://registry.nlark.com/echarts/download/echarts-5.1.2.tgz"
+  resolved "https://registry.nlark.com/echarts/download/echarts-5.1.2.tgz#aa1ab0cef5b74fa2f7c620261a5f286893d30fd1"
   integrity sha1-qhqwzvW3T6L3xiAmGl8oaJPTD9E=
   dependencies:
     tslib "2.0.3"
@@ -8188,7 +8188,7 @@ vue-demi@*, vue-demi@^0.9.1:
 
 vue-echarts@^6.0.0-rc.6:
   version "6.0.0-rc.6"
-  resolved "https://registry.nlark.com/vue-echarts/download/vue-echarts-6.0.0-rc.6.tgz?cache=0&sync_timestamp=1623260068981&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fvue-echarts%2Fdownload%2Fvue-echarts-6.0.0-rc.6.tgz"
+  resolved "https://registry.nlark.com/vue-echarts/download/vue-echarts-6.0.0-rc.6.tgz?cache=0&sync_timestamp=1623260068981&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fvue-echarts%2Fdownload%2Fvue-echarts-6.0.0-rc.6.tgz#c12afdbe2e858c941d434996e9bb9b7af3c8c631"
   integrity sha1-wSr9vi6FjJQdQ0mW6bubevPIxjE=
   dependencies:
     resize-detector "^0.3.0"
@@ -8235,7 +8235,7 @@ vue3-click-away@^1.2.1:
 
 vue3-perfect-scrollbar@^1.5.5:
   version "1.5.5"
-  resolved "https://registry.nlark.com/vue3-perfect-scrollbar/download/vue3-perfect-scrollbar-1.5.5.tgz"
+  resolved "https://registry.nlark.com/vue3-perfect-scrollbar/download/vue3-perfect-scrollbar-1.5.5.tgz#3557e0fd7f337886171e60fd8a271855e8717db8"
   integrity sha1-NVfg/X8zeIYXHmD9iicYVehxfbg=
   dependencies:
     cssnano "^4.1.3"

@@ -1,10 +1,10 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-15 18:57:33
+ * @LastEditTime: 2021-07-15 19:17:08
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
 export { default as CalButton } from './components/button/src/Button.vue'
@@ -13,6 +13,7 @@ export { default as CalGlobalStyle } from './components/global-style/src/GlobalS
 export { default as CalProvide } from './components/_internal/src/Provide.vue'
 export { default as CalDialog } from './components/modal/src/Dialog.vue'
 export { default as CalModel } from './components/modal/src/Modal'
+export { default as CalEcharts } from './components/echarts/src/Echarts'
 export { default as CalForm } from './components/form/src/Form'
 export { default as CalFormItem } from './components/form/src/FormItem'
 export { default as CalPerfectScrollbar } from './components/perfect-scrollbar/src/PerfectScrollbar'
