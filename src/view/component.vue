@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-15 16:21:47
+ * @LastEditTime: 2021-07-15 18:57:59
  * @Description: 
- * @LastEditors: Mr.Mao
+ * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -43,10 +43,17 @@
   </cal-descriptions>
   <cal-qr-code text="asdnasio" :size="50" />
   <cal-editor></cal-editor>
+  <cal-radio-group v-model:value="value">
+    <cal-radio-button value="a">Hangzhou</cal-radio-button>
+    <cal-radio-button value="b" :disabled="true">六级</cal-radio-button>
+    <cal-radio-button value="c">七级</cal-radio-button>
+    <cal-radio-button value="d">八级</cal-radio-button>
+  </cal-radio-group>
   <cal-dialog v-model="show">adsadaonino</cal-dialog>
 </template>
 <script lang="ts" setup>
   import { ref } from 'vue'
+  const value = ref()
   const props = defineProps({})
   const show = ref(true)
   const onSearch = () => {
