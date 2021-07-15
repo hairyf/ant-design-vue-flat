@@ -1,13 +1,12 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('vue'), require('ant-design-vue'), require('lodash-es'), require('naive-ui'), require('lodash'), require('crypto')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'vue', 'ant-design-vue', 'lodash-es', 'naive-ui', 'lodash', 'crypto'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global['ant-design-vue-flat'] = {}, global.Vue, global.antd, global.lodashEs, global.naiveUi, global.lodash, global.crypto));
-}(this, (function (exports, vue, antd, lodashEs, naiveUi, lodash, crypto) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('vue'), require('ant-design-vue'), require('lodash-es'), require('naive-ui'), require('lodash'), require('nanoid')) :
+  typeof define === 'function' && define.amd ? define(['exports', 'vue', 'ant-design-vue', 'lodash-es', 'naive-ui', 'lodash', 'nanoid'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global['ant-design-vue-flat'] = {}, global.Vue, global.antd, global.lodashEs, global.naiveUi, global.lodash, global.nanoid));
+}(this, (function (exports, vue, antd, lodashEs, naiveUi, lodash, nanoid) { 'use strict';
 
   function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
 
   var antd__default = /*#__PURE__*/_interopDefaultLegacy(antd);
-  var crypto__default = /*#__PURE__*/_interopDefaultLegacy(crypto);
 
   var Common = {
   	baseTextColor: "#000000",
@@ -7094,7 +7093,7 @@
 
   script$p.__file = "package/components/input/src/InputNumber.vue";
 
-  const __default__$m = vue.defineComponent({ name: "CalInputSearch" });
+  const __default__$m = vue.defineComponent({ name: "CalInputSelect" });
   var script$o = vue.defineComponent({
     ...__default__$m,
     props: {},
@@ -7108,7 +7107,7 @@
     }
   });
 
-  script$o.__file = "package/components/input/src/InputSearch.vue";
+  script$o.__file = "package/components/input/src/InputSelect.vue";
 
   const __default__$l = vue.defineComponent({ name: "CalImage" });
   var script$n = vue.defineComponent({
@@ -8078,49 +8077,6 @@
 
   script$8.__file = "package/components/table/src/TableProvide.vue";
 
-  // This alphabet uses `A-Za-z0-9_-` symbols. The genetic algorithm helped
-  // optimize the gzip compression for this alphabet.
-  let urlAlphabet =
-    'ModuleSymbhasOwnPr-0123456789ABCDEFGHNRVfgctiUvz_KqYTJkLxpZXIjQW';
-
-  // It is best to make fewer, larger requests to the crypto module to
-  // avoid system call overhead. So, random numbers are generated in a
-  // pool. The pool is a Buffer that is larger than the initial random
-  // request size by this multiplier. The pool is enlarged if subsequent
-  // requests exceed the maximum buffer size.
-  const POOL_SIZE_MULTIPLIER = 32;
-  let pool, poolOffset;
-
-  let random = bytes => {
-    if (!pool || pool.length < bytes) {
-      pool = Buffer.allocUnsafe(bytes * POOL_SIZE_MULTIPLIER);
-      crypto__default['default'].randomFillSync(pool);
-      poolOffset = 0;
-    } else if (poolOffset + bytes > pool.length) {
-      crypto__default['default'].randomFillSync(pool);
-      poolOffset = 0;
-    }
-
-    let res = pool.subarray(poolOffset, poolOffset + bytes);
-    poolOffset += bytes;
-    return res
-  };
-
-  let nanoid = (size = 21) => {
-    let bytes = random(size);
-    let id = '';
-    // A compact alternative for `for (let i = 0; i < size; i++)`.
-    while (size--) {
-      // It is incorrect to use bytes exceeding the alphabet size.
-      // The following mask reduces the random byte in the 0-255 value
-      // range to the 0-63 value range. Therefore, adding hacks, such
-      // as empty string fallback or magic numbers, is unneccessary because
-      // the bitmask trims bytes down to the alphabet size.
-      id += urlAlphabet[bytes[size] & 63];
-    }
-    return id
-  };
-
   const _withId$2 = /* @__PURE__ */ vue.withScopeId("data-v-489a4e40");
   vue.pushScopeId("data-v-489a4e40");
   const _hoisted_1$3 = { class: "table-container" };
@@ -8181,7 +8137,7 @@
         return props.list.map((item) => {
           return {
             ...item,
-            CACHE_ID_TABLE: item.CACHE_ID_TABLE ? item.CACHE_ID_TABLE : nanoid(5),
+            CACHE_ID_TABLE: item.CACHE_ID_TABLE ? item.CACHE_ID_TABLE : nanoid.nanoid(5),
             CACHE_SELECT_TABLE: !!item.select,
             CACHE_OLD_ITEM_TABLE: item
           };
@@ -8658,7 +8614,7 @@
     CalInputPassword: script$r,
     CalInputDate: script$q,
     CalInputNumber: script$p,
-    CalInputSearch: script$o,
+    CalInputSelect: script$o,
     CalIcon: script$A,
     CalImage: script$n,
     CalCard: script$m,
@@ -8731,8 +8687,8 @@
   exports.CalInputDate = script$q;
   exports.CalInputNumber = script$p;
   exports.CalInputPassword = script$r;
-  exports.CalInputSearch = script$o;
   exports.CalInputSection = script$s;
+  exports.CalInputSelect = script$o;
   exports.CalLayoutContent = LayoutContent;
   exports.CalLayoutSider = LayoutSider;
   exports.CalMenu = script$C;

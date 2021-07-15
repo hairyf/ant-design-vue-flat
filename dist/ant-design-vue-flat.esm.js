@@ -6,7 +6,7 @@ import { cloneDeep, merge, kebabCase, debounce as debounce$1, get } from 'lodash
 import { NDescriptions, NDescriptionsItem, NEllipsis, NSpace } from 'naive-ui';
 export { NDescriptions as CalDescriptions, NDescriptionsItem as CalDescriptionsItem } from 'naive-ui';
 import { orderBy } from 'lodash';
-import crypto from 'crypto';
+import { nanoid } from 'nanoid';
 
 var Common = {
 	baseTextColor: "#000000",
@@ -7093,7 +7093,7 @@ var script$p = defineComponent({
 
 script$p.__file = "package/components/input/src/InputNumber.vue";
 
-const __default__$m = defineComponent({ name: "CalInputSearch" });
+const __default__$m = defineComponent({ name: "CalInputSelect" });
 var script$o = defineComponent({
   ...__default__$m,
   props: {},
@@ -7107,7 +7107,7 @@ var script$o = defineComponent({
   }
 });
 
-script$o.__file = "package/components/input/src/InputSearch.vue";
+script$o.__file = "package/components/input/src/InputSelect.vue";
 
 const __default__$l = defineComponent({ name: "CalImage" });
 var script$n = defineComponent({
@@ -8077,49 +8077,6 @@ var script$8 = defineComponent({
 
 script$8.__file = "package/components/table/src/TableProvide.vue";
 
-// This alphabet uses `A-Za-z0-9_-` symbols. The genetic algorithm helped
-// optimize the gzip compression for this alphabet.
-let urlAlphabet =
-  'ModuleSymbhasOwnPr-0123456789ABCDEFGHNRVfgctiUvz_KqYTJkLxpZXIjQW';
-
-// It is best to make fewer, larger requests to the crypto module to
-// avoid system call overhead. So, random numbers are generated in a
-// pool. The pool is a Buffer that is larger than the initial random
-// request size by this multiplier. The pool is enlarged if subsequent
-// requests exceed the maximum buffer size.
-const POOL_SIZE_MULTIPLIER = 32;
-let pool, poolOffset;
-
-let random = bytes => {
-  if (!pool || pool.length < bytes) {
-    pool = Buffer.allocUnsafe(bytes * POOL_SIZE_MULTIPLIER);
-    crypto.randomFillSync(pool);
-    poolOffset = 0;
-  } else if (poolOffset + bytes > pool.length) {
-    crypto.randomFillSync(pool);
-    poolOffset = 0;
-  }
-
-  let res = pool.subarray(poolOffset, poolOffset + bytes);
-  poolOffset += bytes;
-  return res
-};
-
-let nanoid = (size = 21) => {
-  let bytes = random(size);
-  let id = '';
-  // A compact alternative for `for (let i = 0; i < size; i++)`.
-  while (size--) {
-    // It is incorrect to use bytes exceeding the alphabet size.
-    // The following mask reduces the random byte in the 0-255 value
-    // range to the 0-63 value range. Therefore, adding hacks, such
-    // as empty string fallback or magic numbers, is unneccessary because
-    // the bitmask trims bytes down to the alphabet size.
-    id += urlAlphabet[bytes[size] & 63];
-  }
-  return id
-};
-
 const _withId$2 = /* @__PURE__ */ withScopeId("data-v-489a4e40");
 pushScopeId("data-v-489a4e40");
 const _hoisted_1$3 = { class: "table-container" };
@@ -8657,7 +8614,7 @@ var components = /*#__PURE__*/Object.freeze({
   CalInputPassword: script$r,
   CalInputDate: script$q,
   CalInputNumber: script$p,
-  CalInputSearch: script$o,
+  CalInputSelect: script$o,
   CalIcon: script$A,
   CalImage: script$n,
   CalCard: script$m,
@@ -8693,4 +8650,4 @@ const install = (app) => {
 var index = { install };
 
 export default index;
-export { script$x as CalBackground, script$H as CalButton, script$m as CalCard, script$k as CalCasCader, script$j as CalCheckbox, script$i as CalClassification, script$h as CalCollapseTransition, script$D as CalConfigProvider, script$E as CalDialog, script$w as CalEllipsis, script$g as CalEmpty, script$G as CalGlobalStyle, script$u as CalGrid, script$A as CalIcon, script$n as CalImage, script$l as CalImageVerif, script$t as CalInput, script$q as CalInputDate, script$p as CalInputNumber, script$r as CalInputPassword, script$o as CalInputSearch, script$s as CalInputSection, LayoutContent as CalLayoutContent, LayoutSider as CalLayoutSider, script$C as CalMenu, script$y as CalMenuGroup, script$B as CalMenuItem, CalModel, script$f as CalPageSelect, script$e as CalPagination, script$F as CalProvide, script$d as CalRadio, script$c as CalRadioGroup, script$v as CalSpace, script$b as CalStep, script$a as CalSteps, script$9 as CalSwitch, script$5 as CalTabPane, script$7 as CalTable, script$6 as CalTableOption, script$4 as CalTabs, script as CalTag, script$3 as CalTextarea, script$2 as CalTree, script$1 as CalUpload, defaultTheme, install, transformTheme2CssVars, useGlobalTheme, useTheme };
+export { script$x as CalBackground, script$H as CalButton, script$m as CalCard, script$k as CalCasCader, script$j as CalCheckbox, script$i as CalClassification, script$h as CalCollapseTransition, script$D as CalConfigProvider, script$E as CalDialog, script$w as CalEllipsis, script$g as CalEmpty, script$G as CalGlobalStyle, script$u as CalGrid, script$A as CalIcon, script$n as CalImage, script$l as CalImageVerif, script$t as CalInput, script$q as CalInputDate, script$p as CalInputNumber, script$r as CalInputPassword, script$s as CalInputSection, script$o as CalInputSelect, LayoutContent as CalLayoutContent, LayoutSider as CalLayoutSider, script$C as CalMenu, script$y as CalMenuGroup, script$B as CalMenuItem, CalModel, script$f as CalPageSelect, script$e as CalPagination, script$F as CalProvide, script$d as CalRadio, script$c as CalRadioGroup, script$v as CalSpace, script$b as CalStep, script$a as CalSteps, script$9 as CalSwitch, script$5 as CalTabPane, script$7 as CalTable, script$6 as CalTableOption, script$4 as CalTabs, script as CalTag, script$3 as CalTextarea, script$2 as CalTree, script$1 as CalUpload, defaultTheme, install, transformTheme2CssVars, useGlobalTheme, useTheme };
