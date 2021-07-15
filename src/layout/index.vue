@@ -7,14 +7,14 @@
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <a-layout class="h-screen relative bg-transparent">
+  <cal-layout class="h-screen relative bg-transparent">
     <tab-bar class="relative" />
-    <a-layout class="relative pb-12 bg-transparent">
+    <cal-layout class="relative pb-12 bg-transparent">
       <side-bar />
       <app-main />
-    </a-layout>
+    </cal-layout>
     <cal-background />
-  </a-layout>
+  </cal-layout>
 </template>
 <script lang="ts" setup>
   import TabBar from './components/TabBar.vue'
