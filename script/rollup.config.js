@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-07 15:17:55
- * @LastEditTime: 2021-07-15 15:00:22
+ * @LastEditTime: 2021-07-15 17:16:00
  * @Description:
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -61,6 +61,13 @@ export default defineConfig({
     'lodash',
     'element-plus',
     'nanoid',
-    'tinymce'
+    'qrcodejs2-fix',
+    '@vueuse/core',
+    'vue3-perfect-scrollbar',
+    'sortablejs',
+    'vanilla-colorful',
+    /tinymce/,
+    'moment',
+    /@simonwep\/pickr/
   ]
 })

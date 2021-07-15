@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-05-25 09:35:14
- * @LastEditTime: 2021-07-14 16:05:48
+ * @LastEditTime: 2021-07-15 17:06:30
  * @Description: 模态框二次封装
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -18,11 +18,14 @@
       <slot name="title" />
     </template>
     <!-- 关闭按钮 -->
-    <i
+    <cal-icon
+      class="cursor-pointer align-middle px-4 absolute"
+      style="right: 24px; top: 20px"
+      type="clone"
       v-if="closable"
-      class="nr-close text-lg cursor-pointer align-middle px-4 absolute right-24 top-20"
-      :class="[$slots['title'] || props.title ? 'text-white' : 'text-primary-hollow']"
+      :class="[$slots['title'] || props.title ? 'text-white' : 'text-black']"
       @click="onClone"
+      size="26"
     />
     <!-- 内容区 -->
     <div
@@ -75,11 +78,16 @@
     </template>
   </a-modal>
 </template>
+<script lang="ts">
+  import { defineComponent } from 'vue'
+  export default defineComponent({ name: 'CalDialog' })
+</script>
 <script lang="ts" setup>
   import { Modal as AModal } from 'ant-design-vue'
-  import CalButton from '../../button/src/Button.vue'
   import { watch } from 'vue'
   import { useVModel } from '@vueuse/core'
+  import CalButton from '../../button/src/Button.vue'
+  import CalIcon from '../../icon/src/Icon.vue'
   const emit = defineEmits(['cancel'])
   const props = defineProps({
     type: {
