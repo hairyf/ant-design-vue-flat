@@ -62,7 +62,7 @@
     }
   }
   .ant-tabs-nav .ant-tabs-tab {
-    margin: 0 12px 0 0;
+    margin: 0 12px 0 0 !important;
   }
   .ant-tabs-tab {
     font-size: 16px;
