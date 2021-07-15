@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-15 14:33:10
- * @LastEditTime: 2021-07-15 15:06:59
+ * @LastEditTime: 2021-07-15 17:38:22
  * @Description: 
- * @LastEditors: Mr.Mao
+ * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -24,8 +24,8 @@
 </script>
 <script lang="ts" setup>
   import { computed, defineProps } from 'vue'
-  import type { RawEditorSettings } from 'tinymce'
-  import TinymceEditor from '@tinymce/tinymce-vue'
+  // import type { RawEditorSettings } from 'tinymce'
+  // import TinymceEditor from '@tinymce/tinymce-vue'
   import { useVModel } from '@vueuse/core'
   import { merge } from 'lodash'
   import initOption from './_option'
