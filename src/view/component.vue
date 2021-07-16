@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-16 12:00:13
+ * @LastEditTime: 2021-07-16 15:17:05
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -50,6 +50,9 @@
     <cal-radio-button value="d">八级</cal-radio-button>
   </cal-radio-group>
   <!-- <cal-dialog v-model="show" title="awdnioadnio">adsadaonino</cal-dialog> -->
+  <cal-input-select>
+    <a-select-option value="awdanoi">adas</a-select-option>
+  </cal-input-select>
 </template>
 <script lang="ts" setup>
   import { ref } from 'vue'
@@ -57,7 +60,7 @@
   const value = ref()
   const props = defineProps({})
   const show = ref(true)
-  CalModel({ title: 'adnioasd', content: 'wdnwaodnoiwa' })
+  // CalModel({ title: 'adnioasd', content: 'wdnwaodnoiwa' })
   const onSearch = () => {
     console.log(61223)
   }
