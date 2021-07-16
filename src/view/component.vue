@@ -69,7 +69,7 @@
   const value = ref()
   const props = defineProps({})
   const show = ref(true)
-  CalModel({ title: 'adnioasd', content: 'wdnwaodnoiwa' })
+  // CalModel({ title: 'adnioasd', content: 'wdnwaodnoiwa' })
   const onSearch = () => {
     console.log(61223)
   }

@@ -1,6 +1,6 @@
 {
   "name": "ant-design-vue-flat",
-  "version": "0.0.30-alpha.2",
+  "version": "0.0.30-alpha.3",
   "description": "",
   "author": "peiyahui",
   "types": "package/index.ts",
