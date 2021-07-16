@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 14:37:14
- * @LastEditTime: 2021-07-16 17:25:06
+ * @LastEditTime: 2021-07-16 18:05:21
  * @Description: 
- * @LastEditors: Mr.Mao
+ * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -59,7 +59,7 @@
     border-top: none !important;
     border-left: none !important;
     border-right: none !important;
-    border: 1px solid #8c8c8c !important;
+    border-color: #8c8c8c !important;
     @apply rounded-none;
     @apply text-gray-500;
     &::-webkit-input-placeholder {
