@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-16 14:55:23
+ * @LastEditTime: 2021-07-16 15:43:24
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
  * @LastEditors: Mr.Mao
@@ -38,6 +38,7 @@ export { default as CalBackground } from './components/background/src/Background
 export { default as CalEllipsis } from './components/ellipsis/src/Ellipsis.vue'
 export { default as CalSpace } from './components/space/src/Space.vue'
 export { default as CalGrid } from './components/grid/src/Grid.vue'
+export { default as CalAvatar } from './components/avatar/src/Avatar.vue'
 export { default as CalInput } from './components/input/src/Input.vue'
 export { default as CalInputSection } from './components/input/src/InputSection.vue'
 export { default as CalInputPassword } from './components/input/src/InputPassword.vue'
