@@ -29,7 +29,7 @@
         border-top: none;
         border-left: none;
         border-right: none;
-        border-color: #8c8c8c;
+        border: 1px solid #8c8c8c !important;
         @apply rounded-none;
         @apply text-gray-500;
         &::-webkit-input-placeholder {
