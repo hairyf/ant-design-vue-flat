@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-15 18:57:59
+ * @LastEditTime: 2021-07-16 09:40:00
  * @Description: 
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -49,13 +49,15 @@
     <cal-radio-button value="c">七级</cal-radio-button>
     <cal-radio-button value="d">八级</cal-radio-button>
   </cal-radio-group>
-  <cal-dialog v-model="show">adsadaonino</cal-dialog>
+  <!-- <cal-dialog v-model="show" title="awdnioadnio">adsadaonino</cal-dialog> -->
 </template>
 <script lang="ts" setup>
   import { ref } from 'vue'
+  import { CalModel } from '~/components'
   const value = ref()
   const props = defineProps({})
   const show = ref(true)
+  CalModel({ title: 'adnioasd', content: 'wdnwaodnoiwa' })
   const onSearch = () => {
     console.log(61223)
   }

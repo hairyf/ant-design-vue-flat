@@ -18,9 +18,9 @@
 <script lang="ts" setup>
   import { defineProps } from 'vue'
   import { NSpace } from 'naive-ui'
-  import { inheritNaiveUiProps } from '../../../utils/common'
+  import { inheritProps } from '../../../utils/common'
   const props = defineProps({
-    ...inheritNaiveUiProps(NSpace)
+    ...inheritProps(NSpace)
   })
 </script>
 

@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-05-25 09:35:14
- * @LastEditTime: 2021-07-15 17:06:30
+ * @LastEditTime: 2021-07-16 09:41:53
  * @Description: 模态框二次封装
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -10,8 +10,10 @@
   <a-modal
     dialog-class="cal-message-diolog"
     :class="{ 'hide-footer': !showFooter }"
-    :visible="showModal"
     v-bind="props"
+    :visible="showModal"
+    @ok="onConfirm"
+    @cancel="onClone"
   >
     <!-- 标题插槽传递 -->
     <template #title>
@@ -84,7 +86,7 @@
 </script>
 <script lang="ts" setup>
   import { Modal as AModal } from 'ant-design-vue'
-  import { watch } from 'vue'
+  import { watch, isRef } from 'vue'
   import { useVModel } from '@vueuse/core'
   import CalButton from '../../button/src/Button.vue'
   import CalIcon from '../../icon/src/Icon.vue'
@@ -131,8 +133,8 @@
     onOk: Function
   })
 
-  // 双向数据绑定, 假如该值不存在, 则创建值
-  const showModal = useVModel(props, 'modelValue')
+  // 双向数据绑定
+  const showModal = isRef(props.modelValue) ? props.modelValue : useVModel(props, 'modelValue')
   // 隐藏时, 触发 props 中的组件移除
   watch(showModal, (value) => {
     if (value) return false
@@ -143,6 +145,7 @@
     emit('cancel', false)
     props.onReject?.()
     showModal.value = false
+    console.log(showModal.value)
   }
   // 确定事件
   const onConfirm = () => {
@@ -161,7 +164,7 @@
       padding: 24px;
     }
     .ant-modal-header {
-      background: var(--color-primary);
+      background: var(--common-primary-color);
       padding: 24px;
       .ant-modal-title {
         font-size: 16px;
