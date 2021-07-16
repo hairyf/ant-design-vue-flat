@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-16 09:44:38
- * @LastEditTime: 2021-07-16 10:00:50
+ * @LastEditTime: 2021-07-16 10:35:56
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -15,24 +15,27 @@
   export default defineComponent({ name: 'CalNprogress' })
 </script>
 <script lang="ts" setup>
-  import { useRouter } from 'vue-router'
-  import nProgress from 'nprogress'
   import type { NProgressOptions } from 'nprogress'
+  import type { Router } from 'vue-router'
+  import nProgress from 'nprogress'
   import { watchEffect } from 'vue'
   const props = defineProps({
-    option: Object as () => Partial<nProgress.NProgressOptions>
+    option: Object as () => Partial<nProgress.NProgressOptions>,
+    router: {
+      type: Object as () => Router,
+      required: true
+    }
   })
-  const router = useRouter()
   watchEffect(() => {
     if (!props.option) return undefined
     nProgress.configure(props.option)
   })
-  router.beforeEach((to, from, next) => {
+  props.router.beforeEach((to, from, next) => {
     // 每次切换页面时，调用进度条
     nProgress.start()
     next()
   })
-  router.afterEach(() => {
+  props.router.afterEach(() => {
     // 在即将进入新的页面组件前，关闭掉进度条
     nProgress.done()
   })

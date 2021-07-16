@@ -10,7 +10,7 @@
   <a-select
     class="cal-select"
     v-model:value="inputValue"
-    dropdownClassName="cal-select-option "
+    dropdownClassName="cal-select-option"
     v-bind="props"
     :style="{ width: analyUnit(width) }"
     allowClear
