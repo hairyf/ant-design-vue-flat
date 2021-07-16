@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 19:25:11
- * @LastEditTime: 2021-07-15 10:29:14
+ * @LastEditTime: 2021-07-16 17:27:51
  * @Description: 单选
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -16,8 +16,9 @@
   export default defineComponent({ name: 'CalRadio' })
 </script>
 <script lang="ts" setup>
-  import { useTheme } from '../../../utils/theme'
   import { defineProps } from 'vue'
+  import { useTheme } from '../../../utils/theme'
+  import { Radio as ARadio } from 'ant-design-vue'
   const props = defineProps()
   useTheme('Common')
 </script>

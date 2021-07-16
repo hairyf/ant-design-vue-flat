@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-15 14:48:30
- * @LastEditTime: 2021-07-16 08:57:58
+ * @LastEditTime: 2021-07-16 17:26:45
  * @Description: 选择框
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -25,6 +25,7 @@
 <script lang="ts" setup>
   import { analyUnit } from '@tuimao/utils'
   import { computed, defineProps, defineEmits } from 'vue-demi'
+  import { Select as ASelect } from 'ant-design-vue'
   import { useTheme } from '../../../utils/theme'
   const props = defineProps({
     modelValue: [String, Number],

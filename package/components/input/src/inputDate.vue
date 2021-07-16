@@ -1,17 +1,13 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 14:37:14
- * @LastEditTime: 2021-07-16 15:51:46
+ * @LastEditTime: 2021-07-16 17:25:06
  * @Description: 
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <a-date-picker
-    v-bind="props"
-    :placeholder="placeholder"
-    v-model:value="inputValue"
-  ></a-date-picker>
+  <date-picker v-bind="props" :placeholder="placeholder" v-model:value="inputValue"></date-picker>
 </template>
 <script lang="ts">
   import { defineComponent } from 'vue'
@@ -20,6 +16,7 @@
 <script lang="ts" setup>
   import moment from 'moment'
   import type { unitOfTime } from 'moment'
+  import { DatePicker } from 'ant-design-vue'
   import { computed, defineEmits, defineProps } from 'vue'
   import { useTheme } from '../../../utils/theme'
   const props = defineProps({

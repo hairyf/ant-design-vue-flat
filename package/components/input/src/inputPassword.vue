@@ -1,13 +1,13 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 14:47:41
- * @LastEditTime: 2021-07-16 15:52:05
+ * @LastEditTime: 2021-07-16 17:24:35
  * @Description: 
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <a-input-password v-bind="props" class="cal-password" />
+  <input-password v-bind="props" class="cal-password" />
 </template>
 <script lang="ts">
   import { defineComponent } from 'vue'
@@ -16,6 +16,7 @@
 <script lang="ts" setup>
   import { useTheme } from '../../../utils/theme'
   import { defineProps } from 'vue'
+  import { InputPassword } from 'ant-design-vue'
   const props = defineProps()
   useTheme('Input')
 </script>
