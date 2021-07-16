@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-16 09:01:28
+ * @LastEditTime: 2021-07-16 14:29:02
  * @Description: 
  * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -49,13 +49,19 @@
     <cal-radio-button value="c">七级</cal-radio-button>
     <cal-radio-button value="d">八级</cal-radio-button>
   </cal-radio-group>
-  <cal-dialog v-model="show">adsadaonino</cal-dialog>
+  <cal-dialog v-model="show" title="测试">adsadaonino</cal-dialog>
   <cal-input-search v-model="value"> </cal-input-search>
   <cal-input-select v-model="value">
     <a-select-option value=" ">全部</a-select-option>
     <a-select-option value="0">商家退款 </a-select-option>
     <a-select-option value="1">维权退款 </a-select-option>
   </cal-input-select>
+  <cal-input-special-select v-model="value">
+    <a-select-option value=" ">全部</a-select-option>
+    <a-select-option value="0">商家退款 </a-select-option>
+    <a-select-option value="1">维权退款 </a-select-option>
+  </cal-input-special-select>
+  <cal-textarea></cal-textarea>
 </template>
 <script lang="ts" setup>
   import { ref } from 'vue'

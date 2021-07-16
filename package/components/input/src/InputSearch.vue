@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-14 09:29:24
- * @LastEditTime: 2021-07-15 15:04:55
+ * @LastEditTime: 2021-07-16 14:28:24
  * @Description: 
  * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -23,6 +23,9 @@
   .cal-input-search {
     &.ant-input-search {
       border-radius: 20px !important;
+    }
+    &.ant-input-affix-wrapper > input.ant-input {
+      border: none !important;
     }
     &.ant-input-affix-wrapper:hover {
       border-color: var(--input-hover-color) !important;
