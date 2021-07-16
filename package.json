@@ -1,6 +1,6 @@
 {
   "name": "ant-design-vue-flat",
-  "version": "0.0.30-alpha",
+  "version": "0.0.30-alpha.2",
   "description": "",
   "author": "peiyahui",
   "types": "package/index.ts",
@@ -11,7 +11,8 @@
     "dev": "vite",
     "start": "vite",
     "serve": "vite preview",
-    "build": "yarn clean && yarn build:esm && yarn build:umd && yarn build:cjs",
+    "release": "npm pub",
+    "build": "yarn clean && yarn build:esm && yarn build:umd",
     "build:esm": "rollup --config script/rollup.esm.config.js",
     "build:umd": "rollup --config script/rollup.umd.config.js",
     "build:cjs": "rollup --config script/rollup.cjs.config.js",

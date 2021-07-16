@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-12 14:04:45
- * @LastEditTime: 2021-07-15 17:05:41
+ * @LastEditTime: 2021-07-16 10:21:10
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -22,17 +22,14 @@
   import { analyUnit } from '@tuimao/utils'
   import option from './iconfont.json'
   const props = defineProps({
-    type: {
-      type: String as () => keyof typeof option,
-      required: true
-    },
+    type: String as () => keyof typeof option,
     size: String,
     color: String,
     svgSize: Boolean,
     svgContent: String
   })
   const svgCotnent = computed(() => {
-    return props.svgContent || option[props.type]
+    return props.svgContent || option[props.type!]
   })
   const width = computed(() => {
     const value = svgCotnent.value?.match(/width="(?<width>\w*%?)"/)?.groups?.width || ''

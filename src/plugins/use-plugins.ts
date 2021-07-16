@@ -11,10 +11,6 @@ import router from '@/router'
 import store from '@/store'
 import 'animate.css'
 
-// 引入页面加载条, 加载条样式(动态自定义主题)
-import NProgress from 'nprogress'
-import 'nprogress/nprogress.css'
-
 // 全量引入 ant-design-vue-flat 组件库
 import AntdFlat from '~/index'
 import '~/main.scss'
@@ -23,8 +19,6 @@ import '~/main.scss'
 import 'vanilla-colorful'
 
 export const usePlugins = (app: App<Element>) => {
-  // 配置页面加载条
-  NProgress.configure({})
   // 引入插件
   app.use(router)
   app.use(store)

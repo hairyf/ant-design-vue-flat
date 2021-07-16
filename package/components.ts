@@ -1,10 +1,10 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-16 08:58:19
+ * @LastEditTime: 2021-07-16 14:16:05
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
 export { default as CalButton } from './components/button/src/Button.vue'
@@ -12,6 +12,7 @@ export { default as CalQrCode } from './components/qrcode/src/QrCode.vue'
 export { default as CalGlobalStyle } from './components/global-style/src/GlobalStyle.vue'
 export { default as CalProvide } from './components/_internal/src/Provide.vue'
 export { default as CalDialog } from './components/modal/src/Dialog.vue'
+export { default as CalNprogress } from './components/nprogress/src/Nprogress.vue'
 export { default as CalModel } from './components/modal/src/Modal'
 export { default as CalEcharts } from './components/echarts/src/Echarts'
 export { default as CalForm } from './components/form/src/Form'
@@ -32,11 +33,14 @@ export { default as CalMenuGroup } from './components/menu/src/MenuGroup.vue'
 export { default as CalLayout } from './components/layout/src/Layout'
 export { default as CalLayoutContent } from './components/layout/src/LayoutContent'
 export { default as CalLayoutSider } from './components/layout/src/LayoutSider'
+export { default as CalLayoutSticky } from './components/layout/src/LayoutSticky.vue'
 export { default as CalBackground } from './components/background/src/Background.vue'
 export { default as CalEllipsis } from './components/ellipsis/src/Ellipsis.vue'
 export { default as CalSpace } from './components/space/src/Space.vue'
 export { default as CalGrid } from './components/grid/src/Grid.vue'
 export { default as CalInput } from './components/input/src/Input.vue'
+export { default as Select } from './components/select/src/Select'
+export { default as SelectOption } from './components/select/src/SelectOption'
 export { default as CalInputSection } from './components/input/src/InputSection.vue'
 export { default as CalInputPassword } from './components/input/src/InputPassword.vue'
 export { default as CalInputDate } from './components/input/src/InputDate.vue'
