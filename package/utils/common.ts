@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-12 17:51:26
- * @LastEditTime: 2021-07-16 22:23:01
+ * @LastEditTime: 2021-07-16 22:26:23
  * @Description:
  * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -10,11 +10,11 @@ import { analyUnit } from '@tuimao/utils'
 import { DefineComponent } from 'vue'
 
 /**
- * 继承 NaiveUi Props
+ * 继承 Props
  * @param Component
  * @returns Props
  */
-export const inheritNaiveUiProps = <T>(Component: T) => {
+export const inheritProps = <T>(Component: T) => {
   type Props = T extends DefineComponent<infer V, any, any> ? V : any
   const props: Props = (Component as any)['props']
   return props

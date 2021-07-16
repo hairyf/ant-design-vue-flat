@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 19:33:54
- * @LastEditTime: 2021-07-13 11:40:05
+ * @LastEditTime: 2021-07-16 17:29:41
  * @Description: 步进器项
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -25,7 +25,9 @@
 <script lang="ts" setup>
   import { defineProps } from 'vue'
   const props = defineProps({})
+  import { Steps } from 'ant-design-vue'
   import { useTheme } from '../../../utils/theme'
+  const AStep = Steps.Step
   useTheme('Common')
 </script>
 <style lang="scss">

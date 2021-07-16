@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-14 20:14:26
+ * @LastEditTime: 2021-07-15 15:45:47
  * @Description:
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -15,7 +15,7 @@ import './main.scss'
 // 全局注册
 const install = (app: App) => {
   Object.values(components).forEach((component) => {
-    app.component(component.name, component)
+    app.component(component.name!, component)
   })
   app.use(antd)
 }
@@ -26,6 +26,6 @@ export default { install }
 // 导出所有配置
 export * from 'ant-design-vue'
 export * from './components'
-export * from './utils/theme'
-// export * as tailwindTheme from './tailwind'
+export * from './utils'
+export * from './hooks'
 export { install }

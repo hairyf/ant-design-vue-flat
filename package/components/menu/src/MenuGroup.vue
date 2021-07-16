@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-13 09:10:07
- * @LastEditTime: 2021-07-13 11:08:24
+ * @LastEditTime: 2021-07-15 09:20:09
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -20,13 +20,13 @@
       </template>
       <slot name="title" />
     </cal-menu-item>
-    <cal-collapse-transition>
-      <cal-provide id="isChildren" :value="true">
+    <cal-provide id="isChildren" :value="true">
+      <cal-collapse-transition>
         <ul class="cal-menu-group__contents" v-show="showMenuItems">
           <slot></slot>
         </ul>
-      </cal-provide>
-    </cal-collapse-transition>
+      </cal-collapse-transition>
+    </cal-provide>
   </ul>
 </template>
 <script lang="ts">

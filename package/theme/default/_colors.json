@@ -48,7 +48,8 @@
   "Input": {
     "activeColor": "",
     "hoverColor": "#558BF7",
-    "focusColor": "#dde8fd"
+    "focusColor": "#dde8fd",
+    "solidColor": "#ffffff"
   },
   "PageSelect":{
     "solidColor": "#ffffff"

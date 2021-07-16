@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:23:56
- * @LastEditTime: 2021-07-13 17:14:16
+ * @LastEditTime: 2021-07-16 17:31:23
  * @Description: 树状图
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -16,6 +16,7 @@
 <script lang="ts" setup>
   import { useTheme } from '../../../utils/theme'
   import { defineProps } from 'vue'
+  import { Tree as ATree } from 'ant-design-vue'
   const props = defineProps()
   useTheme('Common')
 </script>

@@ -7,7 +7,7 @@
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <a-button class="cal-btn bg-com" v-bind="{ shape: 'round', ...props }">
+  <a-button class="cal-btn" v-bind="props">
     <slot></slot>
   </a-button>
 </template>
@@ -20,7 +20,11 @@
   import { Button as AButton } from 'ant-design-vue'
   import { useTheme } from '../../../utils/theme'
   const props = defineProps({
-    ...AButton.props
+    ...AButton.props,
+    shape: {
+      type: String,
+      default: 'round'
+    }
   })
   useTheme('Common')
 </script>

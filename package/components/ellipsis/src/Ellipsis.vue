@@ -18,10 +18,10 @@
 <script lang="ts" setup>
   import { defineProps } from 'vue'
   import { NEllipsis } from 'naive-ui'
-  import { inheritNaiveUiProps } from '../../../utils/common'
+  import { inheritProps } from '../../../utils/common'
 
   const props = defineProps({
-    ...inheritNaiveUiProps(NEllipsis)
+    ...inheritProps(NEllipsis)
   })
 </script>
 

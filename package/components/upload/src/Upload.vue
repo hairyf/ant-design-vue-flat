@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:29:58
- * @LastEditTime: 2021-07-13 10:43:56
+ * @LastEditTime: 2021-07-16 17:35:26
  * @Description: 上传组件
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -26,10 +26,12 @@
       </a-upload>
     </div>
     <!-- <div class="tips" v-if="show">请先上传文件在提交</div> -->
-    <cal-button class="w-112 mt-24" type="primary" @click="submitForm" style="border-radius: 26px"
-      >提交</cal-button
-    >
-    <a-button type="link" class="ml-20" @click="emit('downloadTemplate')">下载Excel模板</a-button>
+    <cal-button class="w-112 mt-24" type="primary" @click="submitForm" style="border-radius: 26px">
+      提交
+    </cal-button>
+    <cal-button type="link" class="ml-20" @click="emit('downloadTemplate')">
+      下载Excel模板
+    </cal-button>
   </div>
 </template>
 <script lang="ts">
@@ -40,6 +42,8 @@
   import { useTheme } from '../../../utils/theme'
   import { message } from 'ant-design-vue'
   import { ref, watch, defineEmits } from 'vue'
+  import { Upload as AUpload } from 'ant-design-vue'
+  import CalButton from '../../button/src/Button.vue'
   const fileList = ref<any>([])
   const emit = defineEmits(['uploadFile', 'downloadTemplate'])
   // const show = ref(false)

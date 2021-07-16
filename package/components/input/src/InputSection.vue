@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 16:10:32
- * @LastEditTime: 2021-07-14 09:29:28
+ * @LastEditTime: 2021-07-16 17:26:05
  * @Description: 
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -19,6 +19,7 @@
 </script>
 <script lang="ts" setup>
   import { defineProps, watch } from 'vue'
+  import CalInput from './Input.vue'
   import { useShakeDataHandel } from '../utils/use-shakeDataHandel'
   import { analyUnit, filterPrice } from '@tuimao/utils'
   import { useVModel } from '@vueuse/core'

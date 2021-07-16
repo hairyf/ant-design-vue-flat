@@ -1,9 +1,9 @@
 <!--
  * @Author: Pan.Yu.Lin
  * @Date: 2021-07-12 17:02:15
- * @LastEditTime: 2021-07-13 20:25:06
+ * @LastEditTime: 2021-07-16 17:36:25
  * @Description: 
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
 -->
 <template>
   <a-checkbox v-bind="props">
@@ -18,7 +18,7 @@
   import { defineProps } from 'vue'
   import { Checkbox as ACheckbox } from 'ant-design-vue'
   import { useTheme } from '../../../utils/theme'
-  const props = defineProps({})
+  const props = defineProps()
   useTheme('Common')
 </script>
 <style lang="scss">

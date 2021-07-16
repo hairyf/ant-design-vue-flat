@@ -94,7 +94,7 @@
 </script>
 <script lang="ts" setup>
   import { analyUnit } from '@tuimao/utils'
-  import { get } from 'lodash-es'
+  import { get } from 'lodash'
   import { computed, defineProps, inject, useSlots, provide } from 'vue'
   import { useTheme } from '../../../utils/theme'
   const slots = useSlots()

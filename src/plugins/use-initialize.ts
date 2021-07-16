@@ -1,16 +1,15 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-03-19 16:56:06
- * @LastEditTime: 2021-06-17 09:54:02
+ * @LastEditTime: 2021-07-16 09:53:17
  * @Description: 初始化执行
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
 
 // 全局样式引入
 import { httpConfig } from '@/api/http.config'
 import '@/index.scss'
-import '@/router/nprogress'
 import store from '@/store'
 import { setThemeColor } from '@/utils'
 import { App, watchEffect } from 'vue'
