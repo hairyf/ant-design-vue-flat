@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 14:37:14
- * @LastEditTime: 2021-07-15 14:33:18
+ * @LastEditTime: 2021-07-16 15:51:46
  * @Description: 
  * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -58,10 +58,10 @@
 </script>
 <style lang="scss" scoped>
   :deep(.ant-input) {
-    background: none;
-    border-top: none;
-    border-left: none;
-    border-right: none;
+    background: none !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
     border: 1px solid #8c8c8c !important;
     @apply rounded-none;
     @apply text-gray-500;

@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 16:11:30
- * @LastEditTime: 2021-07-16 14:26:39
+ * @LastEditTime: 2021-07-16 15:25:35
  * @Description: 
  * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -57,12 +57,12 @@
     &.ant-input,
     &.ant-input-affix-wrapper,
     &.ant-input-affix-wrapper-focused {
-      background: none;
-      border-top: none;
-      border-left: none;
-      border-right: none;
+      background: none !important;
+      border-top: none !important;
+      border-left: none !important;
+      border-right: none !important;
       @apply rounded-none;
-      @apply text-gray-500;
+      color: #001426;
       &::-webkit-input-placeholder {
         @apply text-gray-500;
       }
