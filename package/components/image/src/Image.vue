@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 16:23:04
- * @LastEditTime: 2021-07-14 10:22:04
+ * @LastEditTime: 2021-07-16 22:31:52
  * @Description: 
- * @LastEditors: Mr.Mao
+ * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -11,16 +11,30 @@
     class="cal-image rounded-lg overflow-hidden object-cover block"
     v-bind="props"
     :preview="false"
+    :width="handelSize.width"
+    :height="handelSize.height"
   />
 </template>
 <script lang="ts">
-  import { defineComponent } from 'vue'
+  import { computed, defineComponent } from 'vue'
   export default defineComponent({ name: 'CalImage' })
 </script>
 <script lang="ts" setup>
   import { defineProps } from 'vue'
   import { Image as AImage } from 'ant-design-vue'
-  const props = defineProps()
+  import { toSize } from '../../../utils/common'
+  import type { ToSize } from '../../../utils/common'
+
+  const props = defineProps({
+    /** 子元素大小 */
+    size: {
+      type: Object as () => ToSize,
+      required: true
+    }
+  })
+
+  // 宽高
+  const handelSize = computed(() => toSize(props.size))
 </script>
 <style lang="scss">
   .ant-image {
