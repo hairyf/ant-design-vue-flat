@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:49:30
- * @LastEditTime: 2021-07-17 15:17:28
+ * @LastEditTime: 2021-07-17 16:44:37
  * @Description: 选择状态框
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -61,6 +61,7 @@
   import { analyUnit } from '@tuimao/utils'
   import { computed, defineProps } from 'vue'
   import { useTheme } from '../../../utils/theme'
+  import CalIcon from '../../icon/src/Icon.vue'
   const props = defineProps({
     // 是否展示状态
     select: Boolean,
