@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-07-12 15:53:35
- * @LastEditTime: 2021-07-17 17:37:16
+ * @LastEditTime: 2021-07-17 18:06:07
  * @Description: 
  * @LastEditors: Zhilong
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
@@ -46,8 +46,8 @@
   useCssVars(() => ({
     ...handelSize.value,
     gap: analyUnit(props.gap),
-    justifyContent: props.justifyContent,
-    alignItems: props.alignItems
+    'justify-content': props.justifyContent,
+    'align-items': props.alignItems
   }))
 </script>
 <style lang="scss">
