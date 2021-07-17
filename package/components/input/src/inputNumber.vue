@@ -67,7 +67,7 @@
       border-top: none !important;
       border-left: none !important;
       border-right: none !important;
-      border: 1px solid #8c8c8c !important;
+      border-color: #8c8c8c !important;
       @apply rounded-none;
       @apply text-gray-500;
       &::-webkit-input-placeholder {
