@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 16:11:30
- * @LastEditTime: 2021-07-16 15:25:35
+ * @LastEditTime: 2021-07-16 22:26:02
  * @Description: 
  * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -61,6 +61,7 @@
       border-top: none !important;
       border-left: none !important;
       border-right: none !important;
+      border-color: #8c8c8c !important;
       @apply rounded-none;
       color: #001426;
       &::-webkit-input-placeholder {
