@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:48:54
- * @LastEditTime: 2021-07-13 11:23:13
+ * @LastEditTime: 2021-07-17 15:45:50
  * @Description: 折扣券主题图标
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -11,6 +11,10 @@
     <div class="coupon-view"> 折扣券 </div>
   </div>
 </template>
+<script lang="ts">
+  import { defineComponent } from 'vue'
+  export default defineComponent({ name: 'CalTagCoupon' })
+</script>
 <script lang="ts" setup>
   import { useTheme } from '../../../utils/theme'
   useTheme('Common')
@@ -20,14 +24,13 @@
   .coupon-container {
     width: 60px;
     height: 30px;
-
     display: flex;
     align-items: center;
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
     border-radius: 1px;
     box-sizing: border-box;
-    color: var(--tabs-hollow-color, var(--common-primary-color));
+    color: var(--common-primary-color);
     background-color: var(--common-primary-color);
     position: relative;
     // overflow: hidden;

@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-16 15:43:24
+ * @LastEditTime: 2021-07-17 11:22:39
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
  * @LastEditors: Mr.Mao
@@ -73,4 +73,9 @@ export { default as CalTextarea } from './components/textarea/src/Textarea.vue'
 export { default as CalTree } from './components/tree/src/Tree.vue'
 export { default as CalUpload } from './components/upload/src/Upload.vue'
 export { default as CalTag } from './components/tag/src/Tag.vue'
-// export { default as CalThemeIcon } from './components/theme-icon/src/index.vue'
+export { default as CalTagCount } from './components/_special/src/TagCount.vue'
+export { default as CalTagCoupon } from './components/_special/src/TagCoupon.vue'
+export { default as CalTagOffers } from './components/_special/src/TagOffers.vue'
+export { default as CalTagSortArrow } from './components/_special/src/TagSortArrow.vue'
+export { default as CalIncreaseBox } from './components/_special/src/IncreaseBox.vue'
+export { default as CalSelectBox } from './components/_special/src/SelectBox.vue'
