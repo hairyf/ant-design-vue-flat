@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:49:30
- * @LastEditTime: 2021-07-13 17:03:59
+ * @LastEditTime: 2021-07-17 15:17:28
  * @Description: 选择状态框
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -14,7 +14,7 @@
     <slot />
     <!-- 选中状态盒子 -->
     <div
-      v-if="state"
+      v-if="select"
       class="
         absolute
         left-0
@@ -28,15 +28,20 @@
         items-center
         justify-center
       "
-      :style="{ borderWidth: border && state ? '2px' : '0', borderRadius: analyUnit(borderRadius) }"
+      :style="{
+        borderWidth: border && select ? '2px' : '0',
+        borderRadius: analyUnit(borderRadius)
+      }"
     >
-      <slot name="state" />
+      <slot name="select" />
       <div class="absolute text-right" :style="[positionStyle, tagBoxSize]">
-        <div v-if="state" class="absolute border-solid" :style="[triangleStyle]" />
-        <i
-          v-if="state"
-          class="absolute text-white text-lg"
-          :class="[iconClass]"
+        <div v-if="select" class="absolute border-solid" :style="[triangleStyle]" />
+        <cal-icon
+          v-if="select"
+          class="absolute"
+          type="yes"
+          color="#ffffff"
+          size="30"
           style="zoom: 0.5"
           :style="iconStyle"
         />
@@ -48,15 +53,22 @@
     </div>
   </div>
 </template>
+<script lang="ts">
+  import { defineComponent } from 'vue'
+  export default defineComponent({ name: 'CalSelectBox' })
+</script>
 <script lang="ts" setup>
   import { analyUnit } from '@tuimao/utils'
   import { computed, defineProps } from 'vue'
   import { useTheme } from '../../../utils/theme'
   const props = defineProps({
     // 是否展示状态
-    state: Boolean,
+    select: Boolean,
     // 是否开启容器圆角
-    border: Boolean,
+    border: {
+      type: Boolean,
+      default: true
+    },
     // 容器圆角
     borderRadius: {
       type: [Number, String],
@@ -79,11 +91,6 @@
         | 'bottomLeft'
         | 'bottomRight',
       default: 'rightTop'
-    },
-    // icon 类名
-    iconClass: {
-      type: String,
-      default: 'nr-hook'
     }
   })
   // 标签盒子尺寸
@@ -101,10 +108,12 @@
   // 三角形颜色
   const triangleStyle = computed(() => ({
     borderWidth: `calc(${analyUnit(props.tagSize)} / 2)`,
-    borderTopColor: /top/i.test(props.position) ? 'var(--color-primary)' : 'transparent',
-    borderRightColor: /right/i.test(props.position) ? 'var(--color-primary)' : 'transparent',
-    borderBottomColor: /bottom/i.test(props.position) ? 'var(--color-primary)' : 'transparent',
-    borderLeftColor: /left/i.test(props.position) ? 'var(--color-primary)' : 'transparent'
+    borderTopColor: /top/i.test(props.position) ? 'var(--common-primary-color)' : 'transparent',
+    borderRightColor: /right/i.test(props.position) ? 'var(--common-primary-color)' : 'transparent',
+    borderBottomColor: /bottom/i.test(props.position)
+      ? 'var(--common-primary-color)'
+      : 'transparent',
+    borderLeftColor: /left/i.test(props.position) ? 'var(--common-primary-color)' : 'transparent'
   }))
   // icon 样式
   const iconStyle = computed(() => ({

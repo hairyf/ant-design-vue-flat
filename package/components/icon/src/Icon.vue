@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-12 14:04:45
- * @LastEditTime: 2021-07-16 10:21:10
+ * @LastEditTime: 2021-07-17 16:01:09
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -23,7 +23,7 @@
   import option from './iconfont.json'
   const props = defineProps({
     type: String as () => keyof typeof option,
-    size: String,
+    size: [String, Number],
     color: String,
     svgSize: Boolean,
     svgContent: String

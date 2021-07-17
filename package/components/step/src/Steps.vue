@@ -1,15 +1,15 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 19:34:01
- * @LastEditTime: 2021-07-16 17:29:58
+ * @LastEditTime: 2021-07-17 12:02:03
  * @Description: 
- * @LastEditors: Mr.Mao
+ * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <a-steps class="cal-steps" v-bind="props">
+  <steps class="cal-steps" v-bind="props">
     <slot></slot>
-  </a-steps>
+  </steps>
 </template>
 <script lang="ts">
   import { defineComponent } from 'vue'
@@ -17,9 +17,9 @@
 </script>
 <script lang="ts" setup>
   import { defineProps } from 'vue'
-  const props = defineProps({})
+  const props = defineProps()
   import { useTheme } from '../../../utils/theme'
-  import { Steps as ASteps } from 'ant-design-vue'
+  import { Steps } from 'ant-design-vue'
   useTheme('Common')
 </script>
 <style lang="scss" scoped>
@@ -52,7 +52,7 @@
     :deep(.ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-tail::after) {
       height: 4px;
       border-radius: 8px;
-      background-color: var(--common-primary-color-light-8);
+      background-color: var(--common-primary-color-light-2);
     }
 
     :deep(.ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-tail::after),
@@ -92,6 +92,10 @@
     }
     :deep(.ant-steps-item-content) {
       width: 126px;
+    }
+    :deep(.ant-steps-item-icon) {
+      margin-top: -4px;
+      margin-left: 37px !important;
     }
   }
 </style>

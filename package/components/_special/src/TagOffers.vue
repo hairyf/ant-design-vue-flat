@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:49:23
- * @LastEditTime: 2021-07-13 11:12:41
+ * @LastEditTime: 2021-07-17 11:24:04
  * @Description: 优惠券主题图标
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -11,6 +11,10 @@
     <div class="offers-view"> 优惠券 </div>
   </div>
 </template>
+<script lang="ts">
+  import { defineComponent } from 'vue'
+  export default defineComponent({ name: 'CalTagOffers' })
+</script>
 <script lang="ts" setup>
   import { useTheme } from '../../../utils/theme'
   useTheme('Common')
