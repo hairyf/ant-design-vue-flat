@@ -1,9 +1,9 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-07-12 15:53:35
- * @LastEditTime: 2021-07-13 15:14:56
+ * @LastEditTime: 2021-07-16 22:23:57
  * @Description: 
- * @LastEditors: Mr.Mao
+ * @LastEditors: Zhilong
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
 -->
 <template>
@@ -19,11 +19,13 @@
   export default defineComponent({ name: 'CalGrid' })
 </script>
 <script lang="ts" setup>
+  import { toSize } from '../../../utils/common'
+  import type { ToSize } from '../../../utils/common'
   const props = defineProps({
     /** 子元素大小 */
     size: {
-      type: [Number, String, Object as () => { width: Key; height: Key }],
-      require: true
+      type: Object as () => ToSize,
+      required: true
     },
     gap: {
       type: Number,
@@ -32,20 +34,7 @@
   })
 
   // 宽高
-  const handelSize = computed((): { width: string; height: string } => {
-    if (typeof props.size === 'string' || typeof props.size === 'number') {
-      // 正方形的单条数据
-      return { width: analyUnit(props.size), height: analyUnit(props.size) }
-    } else if (typeof props.size === 'object') {
-      // 对象类型的数据
-      return {
-        width: analyUnit(props.size?.width || '0'),
-        height: analyUnit(props.size?.height || '0')
-      }
-    }
-    // 默认数据
-    return { width: '', height: '' }
-  })
+  const handelSize = computed(() => toSize(props.size))
   useCssVars(() => ({
     ...handelSize.value,
     gap: analyUnit(props.gap)

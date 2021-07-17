@@ -1,16 +1,17 @@
 {
-  "eslint.validate": [
+   "eslint.validate": [
     "javascirpt",
-    "typescript"
+    "typescript",
+    "vue"
   ],
   "editor.tabSize": 2,
   "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
   "volar.tsPlugin": true,
   // 保存时调用 eslint|stylelint 的自动修复
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.stylelint": true
-  },
+  // "editor.codeActionsOnSave": {
+  //   "source.fixAll.eslint": true,
+  //   "source.fixAll.stylelint": true
+  // },
   "typescript.suggest.paths": false,
   "javascript.suggest.paths": false,
   "path-autocomplete.pathMappings": {
