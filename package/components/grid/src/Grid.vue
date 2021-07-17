@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-07-12 15:53:35
- * @LastEditTime: 2021-07-16 22:23:57
+ * @LastEditTime: 2021-07-17 17:37:16
  * @Description: 
  * @LastEditors: Zhilong
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
@@ -30,6 +30,14 @@
     gap: {
       type: Number,
       default: 24
+    },
+    justifyContent: {
+      type: String,
+      default: 'space-evenly'
+    },
+    alignItems: {
+      type: String,
+      default: 'initial'
     }
   })
 
@@ -37,7 +45,9 @@
   const handelSize = computed(() => toSize(props.size))
   useCssVars(() => ({
     ...handelSize.value,
-    gap: analyUnit(props.gap)
+    gap: analyUnit(props.gap),
+    justifyContent: props.justifyContent,
+    alignItems: props.alignItems
   }))
 </script>
 <style lang="scss">
@@ -45,7 +55,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, var(--width));
     gap: var(--gap);
-    justify-content: space-evenly;
+    justify-content: var(--justify-content);
+    align-items: var(--align-items);
     & > * {
       height: var(--height);
     }
