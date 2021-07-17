@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:48:54
- * @LastEditTime: 2021-07-17 15:45:50
+ * @LastEditTime: 2021-07-17 16:11:29
  * @Description: 折扣券主题图标
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -33,7 +33,6 @@
     color: var(--common-primary-color);
     background-color: var(--common-primary-color);
     position: relative;
-    // overflow: hidden;
     &::after {
       position: absolute;
       content: '';
@@ -66,7 +65,6 @@
         position: absolute;
         content: '';
         right: -32px;
-        // transform: rotateZ(45deg);
         top: 0;
         bottom: 0;
         margin: auto;
