@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-16 17:03:52
+ * @LastEditTime: 2021-07-17 10:06:06
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -50,7 +50,7 @@
       <cal-radio-button value="c">七级</cal-radio-button>
       <cal-radio-button value="d">八级</cal-radio-button>
     </cal-radio-group>
-    <cal-dialog v-model="show" title="测试">adsadaonino</cal-dialog>
+    <!-- <cal-dialog v-model="show" title="测试">adsadaonino</cal-dialog> -->
     <cal-input-search v-model="value"> </cal-input-search>
     <cal-input-select v-model="value">
       <a-select-option value=" ">全部</a-select-option>
@@ -64,6 +64,12 @@
     </cal-input-special-select>
     <cal-input v-model="value" />
     <!-- <cal-textarea class="h-192"></cal-textarea> -->
+
+    <cal-image
+      circle
+      size="50"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png"
+    />
   </cal-space>
 </template>
 <script lang="ts" setup>
