@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:49:36
- * @LastEditTime: 2021-07-17 16:06:34
+ * @LastEditTime: 2021-07-17 16:45:18
  * @Description: 排序箭头
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -36,8 +36,9 @@
 </script>
 <script lang="ts" setup>
   import { useVModel } from '@vueuse/core'
-  import { defineProps, ref } from 'vue'
+  import { defineProps } from 'vue'
   import { useTheme } from '../../../utils/theme'
+  import CalIcon from '../../icon/src/Icon.vue'
   const props = defineProps({
     modelValue: {
       type: Number as () => 0 | 1 | 2,

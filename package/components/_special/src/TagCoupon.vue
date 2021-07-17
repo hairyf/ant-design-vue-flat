@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:48:54
- * @LastEditTime: 2021-07-17 16:11:29
+ * @LastEditTime: 2021-07-17 16:45:03
  * @Description: 折扣券主题图标
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -17,6 +17,7 @@
 </script>
 <script lang="ts" setup>
   import { useTheme } from '../../../utils/theme'
+  import { Tag as ATag } from 'ant-design-vue'
   useTheme('Common')
   useTheme('Tabs')
 </script>
