@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:29:58
- * @LastEditTime: 2021-07-18 10:33:05
+ * @LastEditTime: 2021-07-18 10:38:23
  * @Description: 上传组件
  * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -29,8 +29,11 @@
     <cal-button class="w-112 mt-24" type="primary" @click="submitForm" style="border-radius: 26px">
       提交
     </cal-button>
-    <cal-button type="link" class="ml-20" @click="emit('downloadTemplate')">
+    <cal-button type="link" class="ml-32 px-0" @click="emit('downloadTemplate')">
       下载Excel模板
+    </cal-button>
+    <cal-button type="link" class="ml-32 px-0" @click="emit('downloadExpress')" v-if="isExpress">
+      快递公司对照模板
     </cal-button>
   </div>
 </template>
@@ -41,12 +44,18 @@
 <script setup lang="ts">
   import { useTheme } from '../../../utils/theme'
   import { message } from 'ant-design-vue'
-  import { ref, watch, defineEmits } from 'vue'
+  import { ref, watch, defineEmits, defineProps } from 'vue'
   import { Upload as AUpload } from 'ant-design-vue'
   import CalButton from '../../button/src/Button.vue'
   const fileList = ref<any>([])
-  const emit = defineEmits(['uploadFile', 'downloadTemplate'])
+  const emit = defineEmits(['uploadFile', 'downloadTemplate', 'downloadExpress'])
   // const show = ref(false)
+  const props = defineProps({
+    isExpress: {
+      type: Boolean,
+      default: false
+    }
+  })
   // 上传成功的钩子
   const handleChange = (info: any) => {
     let newFileList = [...info.fileList]
