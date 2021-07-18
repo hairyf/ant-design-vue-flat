@@ -1,14 +1,14 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:29:58
- * @LastEditTime: 2021-07-16 17:35:26
+ * @LastEditTime: 2021-07-18 10:33:05
  * @Description: 上传组件
- * @LastEditors: Mr.Mao
+ * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
   <div class="cal-upload__box w-1/2 bg-upload-bg-color">
-    <div class="border-dashed border-2 border-primary-light-6">
+    <div class="border-dashed border-2 border-common-primary-color-light-6">
       <a-upload
         name="file"
         :file-list="fileList"
@@ -18,7 +18,7 @@
         accept=".xls, .xlsx"
       >
         <div class="text-center py-24">
-          <div class="text-primary text-sm">
+          <div class="text-common-primary-color text-sm">
             <slot></slot>
           </div>
           <cal-button class="w-112 mt-12" style="border-radius: 26px">选择文件</cal-button>
@@ -80,6 +80,7 @@
     }
   }
   useTheme('upload')
+  useTheme('Common')
 </script>
 <style lang="scss" scoped>
   .cal-upload__box {

@@ -1,13 +1,13 @@
 <!--
  * @Author: Pan.Yu.Lin
  * @Date: 2021-07-12 17:02:15
- * @LastEditTime: 2021-07-13 20:21:46
+ * @LastEditTime: 2021-07-18 10:19:43
  * @Description: 
  * @LastEditors: Mr.wang
 -->
 <template>
   <a-card
-    class="bg-card-bg-color rounded-3xl"
+    class="bg-card-bg-color"
     :class="[isHidden ? 'cal-card ' : 'card-style-none']"
     v-bind="props"
   >
@@ -34,6 +34,7 @@
 <style lang="scss" scoped>
   .cal-card {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05), 0px 0px 20px rgba(0, 0, 0, 0.02);
+    border-radius: 20px;
     :deep(.ant-card-body) {
       height: 100%;
       width: 100%;
