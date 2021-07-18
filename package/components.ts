@@ -80,4 +80,5 @@ export { default as CalTagOffers } from './components/_special/src/TagOffers.vue
 export { default as CalTagSortArrow } from './components/_special/src/TagSortArrow.vue'
 export { default as CalIncreaseBox } from './components/_special/src/IncreaseBox.vue'
 export { default as CalSelectBox } from './components/_special/src/SelectBox.vue'
+export { default as CalThemeEditor } from './components/theme/src/ThemeEditor.vue'
 export { default as CalButtonTabs } from './components/button/src/ButtonTabs.vue'

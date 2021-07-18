@@ -6,7 +6,7 @@
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
-import { computed, inject, ref, Ref, ComputedRef, useCssVars, watchEffect } from 'vue'
+import { computed, inject, ref, Ref, ComputedRef } from 'vue'
 import { cloneDeep, kebabCase, merge } from 'lodash'
 import * as option from '../theme/default'
 
@@ -17,8 +17,10 @@ export type ThemeOverrides = DeepPartial<ThemeDefaultOption>
 export type ThemeAnyOption = { [key: string]: ThemeAnyOption }
 export type MountThemeParame = ComputedRef<ThemeAnyOption> | Ref<ThemeAnyOption>
 /** 获取默认配置 */
-export const defaultTheme = () => cloneDeep(merge(option.colors, option.sizes, option.basics))
-
+export const defaultTheme = () => {
+  const theme = cloneDeep(merge(option.colors, option.sizes, option.basics))
+  return theme
+}
 /**
  * 将主题转换为 css 变量 key in value
  * @param theme

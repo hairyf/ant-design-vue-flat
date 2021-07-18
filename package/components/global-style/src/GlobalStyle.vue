@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent } from 'vue'
+  import { defineComponent, watch } from 'vue'
   export default defineComponent({ name: 'CalGlobalStyle' })
 </script>
 <script lang="ts" setup>
@@ -25,12 +25,16 @@
   })
   const root = toRef(props, 'root')
   const globalTheme = useGlobalTheme()
-  watchEffect(() => {
-    const cssVars = transformTheme2CssVars(globalTheme.value)
-    for (const key in cssVars) {
-      root.value.style.removeProperty(`--${key}`)
-      root.value.style.setProperty(`--${key}`, cssVars[key])
-    }
-  })
+  watch(
+    globalTheme,
+    (value) => {
+      const cssVars = transformTheme2CssVars(value)
+      for (const key in cssVars) {
+        root.value.style.removeProperty(`--${key}`)
+        root.value.style.setProperty(`--${key}`, cssVars[key])
+      }
+    },
+    { deep: true, immediate: true }
+  )
 </script>
 <style lang="scss" scoped></style>
