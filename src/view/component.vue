@@ -1,17 +1,17 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-17 17:59:33
+ * @LastEditTime: 2021-07-18 16:36:22
  * @Description: 
- * @LastEditors: Zhilong
+ * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-<cal-grid size=50>
-  <div>1</div>
-  <div>1</div>
-  <div>1</div>
-</cal-grid>
+  <cal-grid size="50">
+    <div>1</div>
+    <div>1</div>
+    <div>1</div>
+  </cal-grid>
   <cal-space vertical>
     <cal-space>
       <cal-tag-sort-arrow :modelValue="2" />
@@ -71,6 +71,12 @@
       src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png"
     />
   </cal-space>
+  <!-- <a-rate v-model:value="value" allowHalf>
+    <template #character> <cal-icon type="date" size="20" color="#8C8C8C"> </cal-icon> </template>
+  </a-rate> -->
+  <cal-rate :value="2" disabled></cal-rate>
+  <cal-input> </cal-input>
+  <cal-input-range-picker :placeholder="['下单开始时间', '下单结束时间']"></cal-input-range-picker>
 </template>
 <script lang="ts" setup>
   import { ref } from 'vue'

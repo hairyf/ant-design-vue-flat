@@ -1,10 +1,10 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-17 11:22:39
+ * @LastEditTime: 2021-07-18 16:40:04
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
- * @LastEditors: Mr.Mao
+ * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
 export { default as CalButton } from './components/button/src/Button.vue'
@@ -47,6 +47,7 @@ export { default as CalInputNumber } from './components/input/src/InputNumber.vu
 export { default as CalInputSearch } from './components/input/src/InputSearch.vue'
 export { default as CalInputSelect } from './components/input/src/InputSelect.vue'
 export { default as CalInputSpecialSelect } from './components/input/src/InputSpecialSelect.vue'
+export { default as CalInputRangePicker } from './components/input/src/InputRangePicker.vue'
 export { default as CalIcon } from './components/icon/src/Icon.vue'
 export { default as CalImage } from './components/image/src/Image.vue'
 export { default as CalCard } from './components/card/src/Card.vue'
