@@ -1,10 +1,10 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-18 16:40:04
+ * @LastEditTime: 2021-07-18 17:32:31
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
 export { default as CalButton } from './components/button/src/Button.vue'
@@ -80,3 +80,4 @@ export { default as CalTagOffers } from './components/_special/src/TagOffers.vue
 export { default as CalTagSortArrow } from './components/_special/src/TagSortArrow.vue'
 export { default as CalIncreaseBox } from './components/_special/src/IncreaseBox.vue'
 export { default as CalSelectBox } from './components/_special/src/SelectBox.vue'
+export { default as CalButtonTabs } from './components/button/src/ButtonTabs.vue'
