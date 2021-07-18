@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-18 16:36:22
+ * @LastEditTime: 2021-07-18 16:43:11
  * @Description: 
  * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -71,17 +71,14 @@
       src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png"
     />
   </cal-space>
-  <!-- <a-rate v-model:value="value" allowHalf>
-    <template #character> <cal-icon type="date" size="20" color="#8C8C8C"> </cal-icon> </template>
-  </a-rate> -->
-  <cal-rate :value="2" disabled></cal-rate>
+  <cal-switch v-model="value"> </cal-switch>
   <cal-input> </cal-input>
   <cal-input-range-picker :placeholder="['下单开始时间', '下单结束时间']"></cal-input-range-picker>
 </template>
 <script lang="ts" setup>
   import { ref } from 'vue'
   import { CalModel } from '~/components'
-  const value = ref()
+  const value = ref(false)
   const props = defineProps({})
   const show = ref(true)
   // CalModel({ title: 'adnioasd', content: 'wdnwaodnoiwa' })
