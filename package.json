@@ -33,7 +33,7 @@
     "@rollup/plugin-node-resolve": "^11.1.1",
     "@tuimao/eslint-config-preset": "^1.1.0",
     "@tuimao/tailwind-config-preset": "^1.1.0",
-    "@tuimao/utils": "^1.1.0",
+    "@tuimao/utils": "^1.1.1",
     "@types/jest": "^26.0.24",
     "@types/lodash-es": "^4.17.4",
     "@types/nprogress": "^0.2.0",
