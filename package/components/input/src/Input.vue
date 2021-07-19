@@ -83,6 +83,9 @@
       border-color: var(--input-hover-color) !important;
       box-shadow: 0 2px 0 0 var(--input-focus-color) !important;
     }
+    &.ant-input-affix-wrapper > input.ant-input {
+      border: none !important;
+    }
   }
   input {
     &::placeholder {

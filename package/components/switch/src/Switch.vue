@@ -1,13 +1,14 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 19:56:47
- * @LastEditTime: 2021-07-16 17:30:21
+ * @LastEditTime: 2021-07-18 16:44:59
  * @Description: 切换栏
- * @LastEditors: Mr.Mao
+ * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
   <a-switch
+    class="cal-switch"
     v-bind="props"
     v-model:checked="switchValue"
     @change="emit('change', $event ? activeValue : closeValue)"
@@ -51,14 +52,19 @@
 </script>
 
 <style lang="scss">
-  .ant-switch-checked {
-    background-color: var(--common-primary-color) !important;
-  }
-  .ant-switch:focus {
-    box-shadow: none !important;
-  }
-  [ant-click-animating-without-extra-node='true']::after,
-  .ant-click-animating-node {
-    box-shadow: none !important;
+  .cal-switch {
+    &.ant-switch-checked {
+      background-color: var(--common-primary-color) !important;
+    }
+    &.ant-switch {
+      background-color: #eaeaea;
+    }
+    &.ant-switch:focus {
+      box-shadow: none !important;
+    }
+    &[ant-click-animating-without-extra-node='true']::after,
+    .ant-click-animating-node {
+      box-shadow: none !important;
+    }
   }
 </style>

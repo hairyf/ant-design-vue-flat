@@ -1,14 +1,14 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:29:58
- * @LastEditTime: 2021-07-16 17:35:26
+ * @LastEditTime: 2021-07-18 10:38:23
  * @Description: 上传组件
- * @LastEditors: Mr.Mao
+ * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
   <div class="cal-upload__box w-1/2 bg-upload-bg-color">
-    <div class="border-dashed border-2 border-primary-light-6">
+    <div class="border-dashed border-2 border-common-primary-color-light-6">
       <a-upload
         name="file"
         :file-list="fileList"
@@ -18,7 +18,7 @@
         accept=".xls, .xlsx"
       >
         <div class="text-center py-24">
-          <div class="text-primary text-sm">
+          <div class="text-common-primary-color text-sm">
             <slot></slot>
           </div>
           <cal-button class="w-112 mt-12" style="border-radius: 26px">选择文件</cal-button>
@@ -29,8 +29,11 @@
     <cal-button class="w-112 mt-24" type="primary" @click="submitForm" style="border-radius: 26px">
       提交
     </cal-button>
-    <cal-button type="link" class="ml-20" @click="emit('downloadTemplate')">
+    <cal-button type="link" class="ml-32 px-0" @click="emit('downloadTemplate')">
       下载Excel模板
+    </cal-button>
+    <cal-button type="link" class="ml-32 px-0" @click="emit('downloadExpress')" v-if="isExpress">
+      快递公司对照模板
     </cal-button>
   </div>
 </template>
@@ -41,12 +44,18 @@
 <script setup lang="ts">
   import { useTheme } from '../../../utils/theme'
   import { message } from 'ant-design-vue'
-  import { ref, watch, defineEmits } from 'vue'
+  import { ref, watch, defineEmits, defineProps } from 'vue'
   import { Upload as AUpload } from 'ant-design-vue'
   import CalButton from '../../button/src/Button.vue'
   const fileList = ref<any>([])
-  const emit = defineEmits(['uploadFile', 'downloadTemplate'])
+  const emit = defineEmits(['uploadFile', 'downloadTemplate', 'downloadExpress'])
   // const show = ref(false)
+  const props = defineProps({
+    isExpress: {
+      type: Boolean,
+      default: false
+    }
+  })
   // 上传成功的钩子
   const handleChange = (info: any) => {
     let newFileList = [...info.fileList]
@@ -80,6 +89,7 @@
     }
   }
   useTheme('upload')
+  useTheme('Common')
 </script>
 <style lang="scss" scoped>
   .cal-upload__box {

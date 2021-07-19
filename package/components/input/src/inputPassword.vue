@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 14:47:41
- * @LastEditTime: 2021-07-16 17:24:35
+ * @LastEditTime: 2021-07-18 18:12:14
  * @Description: 
- * @LastEditors: Mr.Mao
+ * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -53,6 +53,9 @@
       }
       &.ant-input-affix-wrapper-focused {
         box-shadow: 0 2px 0 0 var(--input-focus-color) !important;
+      }
+      &.ant-input-affix-wrapper > input.ant-input {
+        border: none !important;
       }
     }
     .cal-input-number-off-handel {

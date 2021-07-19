@@ -12,12 +12,14 @@
   </div>
 </template>
 <script lang="ts">
-  import { defineComponent } from 'vue'
+  import { computed, defineComponent } from 'vue'
   export default defineComponent({ name: 'CalConfigProvider' })
 </script>
 <script lang="ts" setup>
-  import { defineProps, provide, toRef } from 'vue'
+  import { defineProps, provide, toRef, inject } from 'vue'
   import { ConfigProvider } from 'ant-design-vue'
+  import { merge } from 'lodash'
+  import type { Ref } from 'vue'
   import type { ThemeOverrides } from '../../../utils/theme'
   const props = defineProps({
     ...(ConfigProvider.props as {}),
@@ -27,7 +29,9 @@
     }
   })
   const themeOverrides = toRef(props, 'themeOverrides')
-  provide('themeOverrides', themeOverrides)
+  const injectOverrides = inject<Ref<ThemeOverrides>>('themeOverrides')
+  const mergeTheme = computed(() => merge(injectOverrides?.value, themeOverrides.value))
+  provide('themeOverrides', mergeTheme)
 </script>
 
 <style lang="scss" scoped>

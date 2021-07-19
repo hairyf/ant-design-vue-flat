@@ -6,7 +6,7 @@
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
-import { computed, inject, ref, Ref, ComputedRef, useCssVars, watchEffect } from 'vue'
+import { computed, inject, ref, Ref, ComputedRef } from 'vue'
 import { cloneDeep, kebabCase, merge } from 'lodash'
 import * as option from '../theme/default'
 
@@ -18,7 +18,6 @@ export type ThemeAnyOption = { [key: string]: ThemeAnyOption }
 export type MountThemeParame = ComputedRef<ThemeAnyOption> | Ref<ThemeAnyOption>
 /** 获取默认配置 */
 export const defaultTheme = () => cloneDeep(merge(option.colors, option.sizes, option.basics))
-
 /**
  * 将主题转换为 css 变量 key in value
  * @param theme
@@ -53,18 +52,6 @@ export const transformTheme2CssVars = (theme: Record<string, Object | 'string'>)
 }
 
 /**
- * 获取当前主题配置
- * @param identif 主题标识 >> keyof option
- * @returns {themeMerge}
- */
-export const useTheme = <K extends keyof ThemeDefaultOption>(identif: K) => {
-  const themeDefault = ref(defaultTheme())
-  const themeOverrides = inject<Ref<ThemeDefaultOption>>('themeOverrides')
-  const themeMerge = computed(() => merge(themeDefault.value, themeOverrides?.value)[identif])
-  return themeMerge
-}
-
-/**
  * 获取全局主题配置
  * @returns {themeMerge}
  */
@@ -72,5 +59,15 @@ export const useGlobalTheme = () => {
   const theme = ref(defaultTheme())
   const themeOverrides = inject<Ref<ThemeDefaultOption>>('themeOverrides')
   const themeMerge = computed(() => merge(theme.value, themeOverrides?.value))
-  return themeMerge
+  return computed(() => themeMerge.value)
+}
+
+/**
+ * 获取当前主题配置
+ * @param identif 主题标识 >> keyof option
+ * @returns {themeMerge}
+ */
+export const useTheme = <K extends keyof ThemeDefaultOption>(identif: K) => {
+  const themeMerge = useGlobalTheme()
+  return computed(() => themeMerge.value[identif])
 }

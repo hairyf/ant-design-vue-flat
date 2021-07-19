@@ -8,8 +8,10 @@
 -->
 <template>
   <cal-config-provider :locale="locale" :theme-overrides="{}">
-    <router-view></router-view>
-    <cal-global-style />
+    <cal-theme-editor>
+      <router-view></router-view>
+      <cal-global-style />
+    </cal-theme-editor>
     <cal-nprogress :router="$router" />
   </cal-config-provider>
 </template>
