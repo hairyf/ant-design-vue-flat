@@ -1,35 +1,34 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Mr\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @tuimao/utuls
+  C:\Program Files\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add tuimao/utils
 
 PATH: 
-  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\TortoiseSVN\bin;C:\Users\Mr\AppData\Local\Microsoft\WindowsApps;C:\Users\Mr\AppData\Roaming\npm;C:\Users\Mr\AppData\Local\GitHubDesktop\bin;F:\Longtion\software\phpstudy_pro\Extensions\php\php7.3.4nts;C:\Program Files\Java\jdk1.8.0_261\bin;F:\flutter\bin;F:\softs\Microsoft VS Code\bin;C:\Users\Mr\.deno\bin;C:\Users\Mr\AppData\Local\Yarn\bin;
+  C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm
 
 Yarn version: 
   1.22.10
 
 Node version: 
-  12.13.0
+  14.16.0
 
 Platform: 
   win32 x64
 
 Trace: 
-  Error: https://registry.npm.taobao.org/@tuimao%2futuls: Not found
-      at Request.params.callback [as _callback] (C:\Users\Mr\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:66988:18)
-      at Request.self.callback (C:\Users\Mr\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:140662:22)
-      at Request.emit (events.js:210:5)
-      at Request.<anonymous> (C:\Users\Mr\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141634:10)
-      at Request.emit (events.js:210:5)
-      at IncomingMessage.<anonymous> (C:\Users\Mr\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141556:12)
-      at Object.onceWrapper (events.js:299:28)
-      at IncomingMessage.emit (events.js:215:7)
-      at endReadableNT (_stream_readable.js:1183:12)
-      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+  Error: https://github.com/tuimao/utils: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141289:19)
+      at Object.onceWrapper (events.js:421:28)
+      at ClientRequest.emit (events.js:315:20)
+      at TLSSocket.emitRequestTimeout (_http_client.js:784:9)
+      at Object.onceWrapper (events.js:421:28)
+      at TLSSocket.emit (events.js:327:22)
+      at TLSSocket.Socket._onTimeout (net.js:483:8)
+      at listOnTimeout (internal/timers.js:554:17)
+      at processTimers (internal/timers.js:497:7)
 
 npm manifest: 
   {
     "name": "ant-design-vue-flat",
-    "version": "0.0.30-alpha.11",
+    "version": "0.0.30-alpha.16",
     "description": "",
     "author": "peiyahui",
     "types": "package/index.ts",
@@ -61,7 +60,7 @@ npm manifest:
       "@rollup/plugin-node-resolve": "^11.1.1",
       "@tuimao/eslint-config-preset": "^1.1.0",
       "@tuimao/tailwind-config-preset": "^1.1.0",
-      "@tuimao/utils": "^1.0.9",
+      "@tuimao/utils": "^1.1.0",
       "@types/jest": "^26.0.24",
       "@types/lodash-es": "^4.17.4",
       "@types/nprogress": "^0.2.0",
@@ -1658,10 +1657,10 @@ Lockfile:
     dependencies:
       lodash "^4.17.21"
   
-  "@tuimao/utils@^1.0.9":
-    version "1.0.9"
-    resolved "https://registry.npmjs.org/@tuimao/utils/-/utils-1.0.9.tgz"
-    integrity sha512-w1XjbQwjn5+KKwBrEQx2i85Ixoan0jVTnqpBaLhJnGzdhRv0Ngx1Ej7r/lWcmlUhYWeMdspLoRWEcZNQ06w4HQ==
+  "@tuimao/utils@^1.1.0":
+    version "1.1.0"
+    resolved "https://registry.nlark.com/@tuimao/utils/download/@tuimao/utils-1.1.0.tgz?cache=0&sync_timestamp=1626678884271&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40tuimao%2Futils%2Fdownload%2F%40tuimao%2Futils-1.1.0.tgz#47b40359f9e1de48d30ad350b703cdd3cfb2037a"
+    integrity sha1-R7QDWfnh3kjTCtNQtwPN08+yA3o=
     dependencies:
       "@types/lodash" "^4.14.170"
       "@types/node" "^15.12.5"
