@@ -1,25 +1,65 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-19 15:16:32
+ * @LastEditTime: 2021-07-19 16:59:28
  * @Description: 
  * @LastEditors: Pan.Yu.Lin
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
+  <cal-input
+    v-model="value"
+    class="w-208"
+    max-length="5"
+    :showCount="true"
+    placeholder="输入标签名称"
+  ></cal-input>
   <cal-space vertical>
-    <cal-grid size="50" class="h-56">
-      <div>1</div>
-      <div>1</div>
-      <div>1</div>
-    </cal-grid>
-    <cal-button-tabs
-      :tabs="[
-        { value: 0, label: '店铺页面' },
-        { value: 1, label: '商品' }
-      ]"
-      v-model:current="current"
-    />
+    <cal-layout-sticky class="w-500" height="120px">
+      <div> 1s </div>
+      <div> 1s </div>
+      <div> 1s </div>
+      <div> 1s </div>
+      <div> 1s </div>
+      <div> 1s </div>
+      <div> 1s </div>
+      <div> 1s </div>
+      <div> 1s </div>
+      <div> 1s </div>
+      <div> 1s </div>
+      <div> 1s </div>
+      <div> 1s </div>
+      <div> 1s </div>
+      <div> 1s </div>
+      <div> 1s </div>
+      <div> 1s </div>
+      <template #sticky>
+        <div class="h-20">sticky</div>
+      </template>
+    </cal-layout-sticky>
+    <cal-space>
+      <cal-grid size="50" class="h-56">
+        <div>1</div>
+        <div>1</div>
+        <div>1</div>
+      </cal-grid>
+      <cal-button-tabs
+        :tabs="[
+          { value: 0, label: '店铺页面' },
+          { value: 1, label: '商品' }
+        ]"
+        v-model:current="current"
+      />
+      <cal-button-tabs
+        shape=""
+        :tabs="[
+          { value: 0, label: '店铺页面' },
+          { value: 1, label: '商品' }
+        ]"
+        default-type="link"
+        v-model:current="current"
+      />
+    </cal-space>
     <cal-space>
       <cal-tag-sort-arrow :modelValue="2" />
       <cal-tag-offers />

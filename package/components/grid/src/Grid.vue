@@ -1,9 +1,9 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-07-12 15:53:35
- * @LastEditTime: 2021-07-17 18:06:07
+ * @LastEditTime: 2021-07-19 15:21:08
  * @Description: 
- * @LastEditors: Zhilong
+ * @LastEditors: Mr.Mao
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
 -->
 <template>
@@ -19,12 +19,12 @@
   export default defineComponent({ name: 'CalGrid' })
 </script>
 <script lang="ts" setup>
-  import { toSize } from '../../../utils/common'
-  import type { ToSize } from '../../../utils/common'
+  import { analySize } from '@tuimao/utils'
+  import type { AnalySizeOption } from '@tuimao/utils'
   const props = defineProps({
     /** 子元素大小 */
     size: {
-      type: Object as () => ToSize,
+      type: Object as () => AnalySizeOption,
       required: true
     },
     gap: {
@@ -42,7 +42,7 @@
   })
 
   // 宽高
-  const handelSize = computed(() => toSize(props.size))
+  const handelSize = computed(() => analySize(props.size))
   useCssVars(() => ({
     ...handelSize.value,
     gap: analyUnit(props.gap),

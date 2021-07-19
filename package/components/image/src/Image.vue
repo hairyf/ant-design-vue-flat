@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 16:23:04
- * @LastEditTime: 2021-07-17 11:05:39
+ * @LastEditTime: 2021-07-19 14:58:09
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -22,14 +22,14 @@
   import { defineProps } from 'vue'
   import { Image as AImage } from 'ant-design-vue'
   import { analyUnit } from '@tuimao/utils'
-  import { toSize } from '../../../utils/common'
-  import type { ToSize } from '../../../utils/common'
+  import { analySize } from '@tuimao/utils'
+  import type { AnalySizeOption } from '@tuimao/utils'
 
   const props = defineProps({
     ...(AImage.props as {}),
     /** 子元素大小 */
     size: {
-      type: Object as () => ToSize,
+      type: Object as () => AnalySizeOption,
       default: '100%'
     },
     /** 圆角 */
@@ -39,7 +39,7 @@
   })
 
   // 宽高
-  const wh = computed(() => toSize(props.size))
+  const wh = computed(() => analySize(props.size))
 
   // 圆角
   const circle = computed(() => {
