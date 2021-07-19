@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 19:34:01
- * @LastEditTime: 2021-07-19 16:59:34
+ * @LastEditTime: 2021-07-19 19:46:49
  * @Description: 
  * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -22,13 +22,13 @@
   import { Steps } from 'ant-design-vue'
   useTheme('Common')
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
   .cal-steps {
     .circular {
       border: 2px solid var(--common-primary-color-light-8);
       border-radius: 50%;
     }
-    :deep(.ant-steps-item-wait) {
+    .ant-steps-item-wait {
       &.ant-steps-item-wait:first-child {
         color: #001426;
         .ant-steps-item-title {
@@ -39,24 +39,24 @@
         }
       }
     }
-    :deep(.ant-steps-item-process) {
+    .ant-steps-item-process {
       &.ant-steps-item-process + .ant-steps-item-wait {
         .ant-steps-item-title {
           color: #001426 !important;
         }
       }
     }
-    :deep(.ant-steps-item-tail) {
+    .ant-steps-item-tail {
       padding: 3.5px 28px;
     }
-    :deep(.ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-tail::after) {
+    .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-tail::after {
       height: 4px;
       border-radius: 8px;
       background-color: var(--common-primary-color-light-2);
     }
 
-    :deep(.ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-tail::after),
-    :deep(.ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-tail::after) {
+    .ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-tail::after,
+    .ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-tail::after {
       width: 100%;
       height: 2px;
       background-color: transparent;
@@ -69,31 +69,28 @@
       background-size: 35px 5px;
       background-repeat: repeat-x;
     }
-    :deep(.ant-steps-item-title) {
+    .ant-steps-item-title {
       color: #001426;
       font-weight: 600;
       font-size: 16px;
       line-height: 20px;
     }
-    :deep(.ant-steps-item-wait
-        > .ant-steps-item-container
-        > .ant-steps-item-content
-        > .ant-steps-item-title) {
+    .ant-steps-item-wait .ant-steps-item-container .ant-steps-item-content > .ant-steps-item-title {
       color: var(--common-primary-color-light-8);
       font-weight: 600;
       font-size: 16px;
       line-height: 20px;
     }
-    :deep(.ant-steps-item-description) {
+    .ant-steps-item-description {
       color: #8c8c8c;
       font-size: 13px;
       margin-top: 2px;
       white-space: nowrap;
     }
-    :deep(.ant-steps-item-content) {
+    .ant-steps-item-content {
       width: 126px;
     }
-    :deep(.ant-steps-item-icon) {
+    .ant-steps-item-icon {
       margin-top: -4px;
       margin-left: 37px !important;
     }
