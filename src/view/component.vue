@@ -111,9 +111,7 @@
       size="50"
       src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png"
     />
-    <cal-switch v-model="value"> </cal-switch>
-    <cal-input> </cal-input>
-    <cal-input-range-picker :placeholder="['下单开始时间', '下单结束时间']" />
+   <cal-upload></cal-upload>
   </cal-space>
 </template>
 <script lang="ts" setup>

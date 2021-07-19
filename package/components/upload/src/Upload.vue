@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:29:58
- * @LastEditTime: 2021-07-18 10:38:23
+ * @LastEditTime: 2021-07-19 17:19:21
  * @Description: 上传组件
  * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -59,7 +59,7 @@
   // 上传成功的钩子
   const handleChange = (info: any) => {
     let newFileList = [...info.fileList]
-    newFileList = newFileList.slice(-5)
+    newFileList = newFileList.slice(-1)
     newFileList = newFileList.map((file) => {
       if (file.response) {
         file.url = file.response.url
@@ -91,7 +91,7 @@
   useTheme('upload')
   useTheme('Common')
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
   .cal-upload__box {
     position: relative;
     .tips {
@@ -102,10 +102,10 @@
       font-size: 14px;
       color: #f56c6c;
     }
-    :deep(.ant-upload) {
+    .ant-upload {
       width: 100%;
     }
-    :deep(.ant-upload-list) {
+    .ant-upload-list {
       & > div {
         padding-bottom: 14px;
         margin: 0 24px 0 24px;
@@ -114,30 +114,43 @@
         color: #000;
       }
     }
-    :deep(.ant-upload-list-item-info) {
+    .ant-upload-list-item-info {
       display: flex;
       align-items: center;
     }
-    :deep(.ant-upload-list-item-name) {
+    .ant-upload-list-item-name {
       display: inline;
       line-height: 24px;
       padding-left: 12px;
     }
-    :deep(.ant-upload-list-item:hover .ant-upload-list-item-info) {
+    .ant-upload-list-item:hover .ant-upload-list-item-info {
       background-color: transparent;
     }
-    :deep(.ant-upload-list-item-card-actions) {
+    .ant-upload-list-item-card-actions {
       margin-top: 6px;
     }
-    :deep(.anticon-paper-clip) {
-      position: relative;
+    .anticon-paper-clip {
+      top: 0px !important;
+      left: -13px !important;
+      position: relative !important;
       background: url('https://client-static-1254212114.cos.ap-guangzhou.myqcloud.com/images/excel.png')
-        no-repeat;
-      width: 24px;
-      height: 24px;
-      background-size: 24px 24px;
+        no-repeat !important;
+      width: 24px !important;
+      height: 24px !important;
+      background-size: 24px 24px !important;
       svg {
-        display: none;
+        display: none !important;
+      }
+    }
+    .anticon-delete {
+      position: relative !important;
+      background: url(' https://client-static-1254212114.cos.ap-guangzhou.myqcloud.com/images/Modifier%3DNone%2C%20Size%3D16%2C%20Theme%3DRegular.png')
+        no-repeat !important;
+      width: 24px !important;
+      height: 24px !important;
+      background-size: 24px 24px !important;
+      svg {
+        display: none !important;
       }
     }
   }
