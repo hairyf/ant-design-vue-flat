@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 14:47:41
- * @LastEditTime: 2021-07-19 17:02:12
+ * @LastEditTime: 2021-07-19 17:58:53
  * @Description: 
  * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -48,18 +48,16 @@
         border-color: var(--input-hover-color) !important;
         box-shadow: 0 2px 0 0 var(--input-focus-color) !important;
       }
-      &.ant-input-affix-wrapper .ant-input {
-        border: none !important;
-      }
+
       .ant-input {
         background-color: transparent;
       }
       &.ant-input-affix-wrapper-focused {
         box-shadow: 0 2px 0 0 var(--input-focus-color) !important;
       }
-      &.ant-input-affix-wrapper > input.ant-input {
-        border: none !important;
-      }
+    }
+    .ant-input-affix-wrapper > input.ant-input {
+      border: none !important;
     }
     .cal-input-number-off-handel {
       .ant-input-number-handler-wrap {
