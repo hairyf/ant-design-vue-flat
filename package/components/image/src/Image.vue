@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 16:23:04
- * @LastEditTime: 2021-07-17 11:05:39
+ * @LastEditTime: 2021-07-19 14:58:09
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -23,13 +23,13 @@
   import { Image as AImage } from 'ant-design-vue'
   import { analyUnit } from '@tuimao/utils'
   import { toSize } from '../../../utils/common'
-  import type { ToSize } from '../../../utils/common'
+  import type { ToSizeOption } from '../../../utils/common'
 
   const props = defineProps({
     ...(AImage.props as {}),
     /** 子元素大小 */
     size: {
-      type: Object as () => ToSize,
+      type: Object as () => ToSizeOption,
       default: '100%'
     },
     /** 圆角 */

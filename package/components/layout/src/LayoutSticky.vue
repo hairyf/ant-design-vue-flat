@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-05-29 16:26:48
- * @LastEditTime: 2021-07-19 14:21:11
+ * @LastEditTime: 2021-07-19 14:43:44
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -13,7 +13,7 @@
       height ? { height: analyUnit(height || '') } : { minHeight: analyUnit(minHeight || '') }
     ]"
   >
-    <div class="cal-sticky-layout__content flex-1 overflow-y-auto">
+    <div class="cal-sticky-layout__content flex-1 overflow-y-auto relative">
       <slot />
     </div>
     <div class="cal-sticky-layout__sticky">
