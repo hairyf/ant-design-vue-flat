@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 16:11:30
- * @LastEditTime: 2021-07-16 22:26:02
+ * @LastEditTime: 2021-07-19 15:16:32
  * @Description: 
  * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -12,8 +12,8 @@
     <template #suffix>
       <slot v-if="slots['suffix']" name="suffix" />
       <div v-else-if="showCount" class="flex items-center text-gray-darkmin">
-        <span>{{ currentFontNumber }}</span>
-        <span v-if="maxLength">/{{ maxLength }}</span>
+        <span class="text-gray-500">{{ currentFontNumber }}</span>
+        <span class="text-gray-500">/{{ maxLength }}</span>
       </div>
     </template>
   </a-input>
