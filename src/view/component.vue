@@ -1,13 +1,23 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-19 16:59:28
+ * @LastEditTime: 2021-07-19 18:35:51
  * @Description: 
  * @LastEditors: Pan.Yu.Lin
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <cal-input-password></cal-input-password>
+  <cal-checkbox-group v-model:value="groupValue">
+    <cal-checkbox value="A">一个</cal-checkbox>
+    <cal-checkbox value="B">两个</cal-checkbox>
+  </cal-checkbox-group>
+  <cal-input
+    v-model="value"
+    class="w-208"
+    max-length="5"
+    :showCount="true"
+    placeholder="输入标签名称"
+  ></cal-input>
   <cal-space vertical>
     <cal-layout-sticky class="w-500" height="120px">
       <div> 1s </div>
@@ -125,6 +135,7 @@
   const onSearch = () => {
     console.log(61223)
   }
+  const groupValue = ref([])
 </script>
 
 <style lang="scss" scoped></style>
