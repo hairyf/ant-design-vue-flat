@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-12 17:51:26
- * @LastEditTime: 2021-07-19 14:57:31
+ * @LastEditTime: 2021-07-19 15:01:41
  * @Description:
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -44,17 +44,17 @@ export const toSize = (size: ToSizeOption) => {
     // 正方形的单条数据
     return { width: analyUnit(size), height: analyUnit(size) }
   }
+  if (Array.isArray(size)) {
+    return {
+      width: analyUnit(size[0]),
+      height: analyUnit(size[1])
+    }
+  }
   if (typeof size === 'object') {
     // 对象类型的数据
     return {
       width: analyUnit((size as any)?.width || (size as any)?.w || '0'),
       height: analyUnit((size as any)?.height || (size as any)?.h || '0')
-    }
-  }
-  if (Array.isArray(size)) {
-    return {
-      width: analyUnit(size[0]),
-      height: analyUnit(size[1])
     }
   }
   // 默认数据
