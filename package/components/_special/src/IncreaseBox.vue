@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:48:41
- * @LastEditTime: 2021-07-19 14:58:32
+ * @LastEditTime: 2021-07-19 15:21:01
  * @Description: 添加某个东西
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -28,8 +28,8 @@
 </script>
 <script lang="ts" setup>
   import { defineProps } from 'vue'
-  import type { ToSizeOption } from '../../../utils/common'
-  import { toSize } from '../../../utils/common'
+  import type { AnalySizeOption } from '@tuimao/utils'
+  import { analySize } from '@tuimao/utils'
   import { useTheme } from '../../../utils/theme'
   import CalIcon from '../../icon/src/Icon.vue'
   const props = defineProps({
@@ -41,10 +41,10 @@
       default: 'dashed'
     },
     size: {
-      type: Object as () => ToSizeOption,
+      type: Object as () => AnalySizeOption,
       required: true
     }
   })
-  const wh = computed(() => toSize(props.size))
+  const wh = computed(() => analySize(props.size))
   useTheme('Common')
 </script>

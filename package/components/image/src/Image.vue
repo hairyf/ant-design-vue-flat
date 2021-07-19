@@ -22,14 +22,14 @@
   import { defineProps } from 'vue'
   import { Image as AImage } from 'ant-design-vue'
   import { analyUnit } from '@tuimao/utils'
-  import { toSize } from '../../../utils/common'
-  import type { ToSizeOption } from '../../../utils/common'
+  import { analySize } from '@tuimao/utils'
+  import type { AnalySizeOption } from '@tuimao/utils'
 
   const props = defineProps({
     ...(AImage.props as {}),
     /** 子元素大小 */
     size: {
-      type: Object as () => ToSizeOption,
+      type: Object as () => AnalySizeOption,
       default: '100%'
     },
     /** 圆角 */
@@ -39,7 +39,7 @@
   })
 
   // 宽高
-  const wh = computed(() => toSize(props.size))
+  const wh = computed(() => analySize(props.size))
 
   // 圆角
   const circle = computed(() => {
