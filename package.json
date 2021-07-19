@@ -1,6 +1,6 @@
 {
   "name": "ant-design-vue-flat",
-  "version": "0.0.30-alpha.13",
+  "version": "0.0.30-alpha.21",
   "description": "",
   "author": "peiyahui",
   "types": "package/index.ts",
@@ -16,7 +16,8 @@
     "build:esm": "rollup --config script/rollup.esm.config.js",
     "build:umd": "rollup --config script/rollup.umd.config.js",
     "build:cjs": "rollup --config script/rollup.cjs.config.js",
-    "clean": "rimraf ./dist"
+    "clean": "rimraf ./dist",
+    "rimraf:modules": "rimraf ./node_modules"
   },
   "files": [
     "dist",
@@ -32,7 +33,7 @@
     "@rollup/plugin-node-resolve": "^11.1.1",
     "@tuimao/eslint-config-preset": "^1.1.0",
     "@tuimao/tailwind-config-preset": "^1.1.0",
-    "@tuimao/utils": "^1.0.9",
+    "@tuimao/utils": "^1.1.1",
     "@types/jest": "^26.0.24",
     "@types/lodash-es": "^4.17.4",
     "@types/nprogress": "^0.2.0",
