@@ -1,3 +1,11 @@
+<!--
+ * @Author: Zhilong
+ * @Date: 2021-07-19 10:07:11
+ * @LastEditTime: 2021-07-19 10:35:49
+ * @Description: 
+ * @LastEditors: Zhilong
+ * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
+-->
 <template>
   <slot />
   <cal-button @click="resetLocaleTheme">重置</cal-button>
@@ -15,7 +23,7 @@
 </template>
 <script lang="ts">
   import { computed, defineComponent, inject, provide, readonly } from 'vue'
-  import { useGlobalTheme } from '~/utils'
+  import { useGlobalTheme } from '../../../utils'
   import { useStorage } from '@vueuse/core'
   import { THEME_EDIT_KEY } from '../config'
   import type { WritableComputedRef, Ref } from 'vue'

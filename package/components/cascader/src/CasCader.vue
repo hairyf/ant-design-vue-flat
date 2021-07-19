@@ -1,16 +1,16 @@
 <!--
  * @Author: Pan.Yu.Lin
  * @Date: 2021-07-12 17:37:56
- * @LastEditTime: 2021-07-12 18:24:23
+ * @LastEditTime: 2021-07-19 10:05:12
  * @Description: 
- * @LastEditors: Pan.Yu.Lin
+ * @LastEditors: Zhilong
 -->
 <template>
   <a-cascader class="cal-cascader" v-bind="props" />
 </template>
 <script lang="ts">
   import { defineComponent } from 'vue'
-  export default defineComponent({ name: 'CalCasCader' })
+  export default defineComponent({ name: 'CalCascader' })
 </script>
 <script lang="ts" setup>
   import { defineProps } from 'vue'
