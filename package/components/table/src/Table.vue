@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-05-25 18:04:11
- * @LastEditTime: 2021-07-15 09:51:22
+ * @LastEditTime: 2021-07-19 16:12:49
  * @Description: 表格
  * @LastEditors: Mr.Mao
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
@@ -9,10 +9,11 @@
 <template>
   <div class="table-container">
     <div
-      class="table-view_title flex py-24 overflow-auto"
+      class="table-view flex py-24 overflow-auto"
       v-for="(item, index) in fictitiousList"
       :style="{ marginBottom: analyUnit(marginBottom) }"
       :key="item.CACHE_ID_TABLE"
+      @click="emit('itemClick', item)"
     >
       <div class="w-4" />
       <div class="px-20 flex items-center" v-if="select">
@@ -38,7 +39,7 @@
   import { orderBy } from 'lodash'
   import { analyUnit } from '@tuimao/utils'
   import { useTheme } from '../../../utils/theme'
-  const emit = defineEmits(['checkboxChange'])
+  const emit = defineEmits(['checkboxChange', 'itemClick'])
   const selectList: Record<string, any> = {}
   const onCheckboxChange = (item: typeof fictitiousList.value[0], { target: { checked } }: any) => {
     item.CACHE_SELECT_TABLE = checked
@@ -143,7 +144,7 @@
 </script>
 <style lang="scss" scoped>
   .table-container {
-    .table-view_title {
+    .table-view {
       background: var(--common-base-color);
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05), 0px 0px 20px rgba(0, 0, 0, 0.02);
       border-radius: 10px;
