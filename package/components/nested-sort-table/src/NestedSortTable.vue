@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-03-18 09:30:25
- * @LastEditTime: 2021-07-15 15:42:31
+ * @LastEditTime: 2021-07-19 17:11:58
  * @Description: 多嵌套表格组件
- * @LastEditors: Mr.Mao
+ * @LastEditors: Pan.Yu.Lin
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -11,34 +11,32 @@
     <slot v-if="showHeader" name="header" />
     <div class="table-list" ref="sortableContainer">
       <div class="table-item" v-for="(item, index) in tableItems" :key="item.CACHE_TABLE_ITEM_KEY">
-        <cal-card :is-hidden="nestedIndex == 0" class="mb-10">
-          <slot
-            name="item"
-            :nested-index="nestedIndex"
-            :items="tableItems"
-            :item="item"
-            :index="index"
-          />
-          <!-- <div class="strip"></div> -->
-          <!--  递归传递多层列表, 将 children 传入-->
-          <cal-nested-sort-table
-            v-if="item?.children?.length"
-            v-show="!item.hideChildren"
-            v-model="item.children"
-            :nested-index="nestedIndex + 1"
-            :isDrag="isDrag"
-          >
-            <template #item="{ nestedIndex, items, item, index }">
-              <slot
-                name="item"
-                :nested-index="nestedIndex"
-                :items="items"
-                :item="item"
-                :index="index"
-              />
-            </template>
-          </cal-nested-sort-table>
-        </cal-card>
+        <slot
+          name="item"
+          :nested-index="nestedIndex"
+          :items="tableItems"
+          :item="item"
+          :index="index"
+        />
+        <!-- <div class="strip"></div> -->
+        <!--  递归传递多层列表, 将 children 传入-->
+        <cal-nested-sort-table
+          v-if="item?.children?.length"
+          v-show="!item.hideChildren"
+          v-model="item.children"
+          :nested-index="nestedIndex + 1"
+          :isDrag="isDrag"
+        >
+          <template #item="{ nestedIndex, items, item, index }">
+            <slot
+              name="item"
+              :nested-index="nestedIndex"
+              :items="items"
+              :item="item"
+              :index="index"
+            />
+          </template>
+        </cal-nested-sort-table>
       </div>
     </div>
   </div>
@@ -121,9 +119,4 @@
     })
   })
 </script>
-<style lang="scss" scoped>
-  :deep(.ant-card-body) {
-    padding-left: 0;
-    padding-top: 40px;
-  }
-</style>
+<style lang="scss" scoped></style>

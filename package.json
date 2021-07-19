@@ -16,7 +16,8 @@
     "build:esm": "rollup --config script/rollup.esm.config.js",
     "build:umd": "rollup --config script/rollup.umd.config.js",
     "build:cjs": "rollup --config script/rollup.cjs.config.js",
-    "clean": "rimraf ./dist"
+    "clean": "rimraf ./dist",
+    "rimraf:modules": "rimraf ./node_modules"
   },
   "files": [
     "dist",
