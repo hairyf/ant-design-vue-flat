@@ -1,9 +1,9 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-07-12 15:53:35
- * @LastEditTime: 2021-07-17 18:06:07
+ * @LastEditTime: 2021-07-19 14:57:42
  * @Description: 
- * @LastEditors: Zhilong
+ * @LastEditors: Mr.Mao
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
 -->
 <template>
@@ -20,11 +20,11 @@
 </script>
 <script lang="ts" setup>
   import { toSize } from '../../../utils/common'
-  import type { ToSize } from '../../../utils/common'
+  import type { ToSizeOption } from '../../../utils/common'
   const props = defineProps({
     /** 子元素大小 */
     size: {
-      type: Object as () => ToSize,
+      type: Object as () => ToSizeOption,
       required: true
     },
     gap: {

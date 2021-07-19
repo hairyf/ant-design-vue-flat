@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-18 16:56:41
- * @LastEditTime: 2021-07-18 17:48:07
+ * @LastEditTime: 2021-07-19 09:14:37
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -10,6 +10,7 @@
   <n-space lass="cal-button-tabs" v-bind="props">
     <div class="cal-button-item" v-for="(item, index) in tabs" :key="index">
       <cal-button
+        v-bind="props"
         :type="currentModel === item.value ? activeType : defaultType"
         @click="currentModel = item.value"
         :style="{ width: analyUnit(buttonWidth) }"
@@ -32,6 +33,7 @@
   import { analyUnit } from '@tuimao/utils'
   const props = defineProps({
     ...inheritProps(NSpace),
+    ...(inheritProps(CalButton) as {}),
     tabs: {
       type: Object as () => { value: Key; label: string; suffix?: () => VNodeChild }[],
       default: []
