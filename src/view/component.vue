@@ -7,13 +7,7 @@
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <cal-input
-    v-model="value"
-    class="w-208"
-    max-length="5"
-    :showCount="true"
-    placeholder="输入标签名称"
-  ></cal-input>
+  <cal-input-password></cal-input-password>
   <cal-space vertical>
     <cal-layout-sticky class="w-500" height="120px">
       <div> 1s </div>
