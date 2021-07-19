@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-05-25 09:35:14
- * @LastEditTime: 2021-07-16 09:41:53
+ * @LastEditTime: 2021-07-19 21:19:58
  * @Description: 模态框二次封装
- * @LastEditors: Mr.Mao
+ * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -74,8 +74,8 @@
     <template #footer>
       <slot name="footer" v-if="$slots['footer']" />
       <template v-else>
-        <cal-button class="mr-20 w-96 h-32" @click="onClone" v-if="showCancel">取消</cal-button>
-        <cal-button type="primary " class="w-96 h-32" @click="onConfirm">确认</cal-button>
+        <cal-button class="mr-20 w-96 h-32" @click="onClone" v-if="showCancel">{{ cancelText }}</cal-button>
+        <cal-button type="primary " class="w-96 h-32" @click="onConfirm">{{ confirmText }}</cal-button>
       </template>
     </template>
   </a-modal>
@@ -130,7 +130,17 @@
       default: true
     },
     // 确定关闭回调
-    onOk: Function
+    onOk: Function,
+    // 确认文本
+    confirmText:{
+      type:String,
+      default:'确认'
+    },
+    // 取消文本
+    cancelText:{
+      type:String,
+      default:'取消'
+    }
   })
 
   // 双向数据绑定
