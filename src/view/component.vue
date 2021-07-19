@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-19 18:35:51
+ * @LastEditTime: 2021-07-19 20:29:29
  * @Description: 
- * @LastEditors: Pan.Yu.Lin
+ * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -121,7 +121,7 @@
       size="50"
       src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png"
     />
-   <cal-upload></cal-upload>
+    <cal-upload></cal-upload>
   </cal-space>
 </template>
 <script lang="ts" setup>

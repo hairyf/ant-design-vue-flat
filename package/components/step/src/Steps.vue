@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 19:34:01
- * @LastEditTime: 2021-07-19 19:46:49
+ * @LastEditTime: 2021-07-19 20:34:05
  * @Description: 
  * @LastEditors: Mr.wang
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -28,21 +28,11 @@
       border: 2px solid var(--common-primary-color-light-8);
       border-radius: 50%;
     }
-    .ant-steps-item-wait {
-      &.ant-steps-item-wait:first-child {
-        color: #001426;
-        .ant-steps-item-title {
-          color: #001426 !important;
-          font-weight: 600;
-          font-size: 16px;
-          line-height: 12px;
-        }
-      }
-    }
     .ant-steps-item-process {
       &.ant-steps-item-process + .ant-steps-item-wait {
         .ant-steps-item-title {
           color: #001426 !important;
+          font-weight: 600 !important;
         }
       }
     }
@@ -54,7 +44,6 @@
       border-radius: 8px;
       background-color: var(--common-primary-color-light-2);
     }
-
     .ant-steps-item-wait > .ant-steps-item-container > .ant-steps-item-tail::after,
     .ant-steps-item-process > .ant-steps-item-container > .ant-steps-item-tail::after {
       width: 100%;
@@ -70,16 +59,27 @@
       background-repeat: repeat-x;
     }
     .ant-steps-item-title {
-      color: #001426;
-      font-weight: 600;
+      color: #001426 !important;
+      font-weight: 600 !important;
       font-size: 16px;
       line-height: 20px;
     }
     .ant-steps-item-wait .ant-steps-item-container .ant-steps-item-content > .ant-steps-item-title {
-      color: var(--common-primary-color-light-8);
+      color: var(--common-primary-color-light-8) !important;
       font-weight: 600;
       font-size: 16px;
       line-height: 20px;
+    }
+    .ant-steps-item-wait {
+      &.ant-steps-item-wait:first-child {
+        color: #001426 !important;
+        .ant-steps-item-title {
+          color: #001426 !important;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 12px;
+        }
+      }
     }
     .ant-steps-item-description {
       color: #8c8c8c;
