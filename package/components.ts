@@ -1,10 +1,10 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-17 11:22:39
+ * @LastEditTime: 2021-07-19 10:06:45
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
- * @LastEditors: Mr.Mao
+ * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
 export { default as CalButton } from './components/button/src/Button.vue'
@@ -51,7 +51,7 @@ export { default as CalIcon } from './components/icon/src/Icon.vue'
 export { default as CalImage } from './components/image/src/Image.vue'
 export { default as CalCard } from './components/card/src/Card.vue'
 export { default as CalGraphicsVerif } from './components/graphics-verif/src/GraphicsVerif.vue'
-export { default as CalCasCader } from './components/cascader/src/CasCader.vue'
+export { default as CalCascader } from './components/cascader/src/Cascader.vue'
 export { default as CalCheckbox } from './components/checkbox/src/Checkbox.vue'
 export { default as CalClassification } from './components/classification/src/Classification.vue'
 export { default as CalNestedSortTable } from './components/nested-sort-table/src/NestedSortTable.vue'
