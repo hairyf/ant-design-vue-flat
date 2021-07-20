@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-05-20 17:54:55
- * @LastEditTime: 2021-07-15 14:23:05
+ * @LastEditTime: 2021-07-20 11:48:58
  * @Description: 菜单栏
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -19,7 +19,7 @@
 </script>
 <script lang="ts" setup>
   import { defineProps, provide, toRef } from 'vue'
-  import CalPerfectScrollbar from '../../perfect-scrollbar/src/PerfectScrollbar'
+  import CalPerfectScrollbar from '../../perfect-scrollbar/src/PerfectScrollbar.vue'
   const props = defineProps({
     /** 是否收起 */
     collapse: Boolean,

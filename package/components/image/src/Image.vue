@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 16:23:04
- * @LastEditTime: 2021-07-19 14:58:09
+ * @LastEditTime: 2021-07-20 10:18:44
  * @Description: 
- * @LastEditors: Mr.Mao
+ * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -35,6 +35,11 @@
     /** 圆角 */
     circle: {
       type: [Boolean, Number, String]
+    },
+    /** 开启点击查看 */
+    preview:{
+      type:Boolean,
+      default:false
     }
   })
 
@@ -44,7 +49,7 @@
   // 圆角
   const circle = computed(() => {
     if (typeof props.circle === 'boolean' && props.circle) {
-      return '100000px'
+      return '99999px'
     }
     return analyUnit(props.circle || '')
   })

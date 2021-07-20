@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:29:58
- * @LastEditTime: 2021-07-19 18:00:24
+ * @LastEditTime: 2021-07-20 14:07:15
  * @Description: 上传组件
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -90,3 +90,43 @@
   useTheme('upload')
   useTheme('Common')
 </script>
+<style lang="scss">
+  .cal-upload-box {
+    position: relative;
+    .tips {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 30px;
+      font-size: 14px;
+      color: #f56c6c;
+    }
+    .ant-upload {
+      width: 100%;
+    }
+    .ant-upload-list {
+      & > div {
+        padding-bottom: 14px;
+        margin: 0 24px 0 24px;
+        border-bottom: 1px solid #f5f5f5;
+        font-size: 14px;
+        color: #000;
+      }
+    }
+    .ant-upload-list-item-info {
+      display: flex;
+      align-items: center;
+    }
+    .ant-upload-list-item-name {
+      display: inline;
+      line-height: 24px;
+      padding-left: 12px;
+    }
+    .ant-upload-list-item:hover .ant-upload-list-item-info {
+      background-color: transparent;
+    }
+    .ant-upload-list-item-card-actions {
+      margin-top: 6px;
+    }
+  }
+</style>
