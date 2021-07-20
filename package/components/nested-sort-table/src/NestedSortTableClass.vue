@@ -21,7 +21,7 @@
           />
           <!-- <div class="strip"></div> -->
           <!--  递归传递多层列表, 将 children 传入-->
-          <cal-nested-sort-table
+          <cal-nested-sort-table-class
             v-if="item?.children?.length"
             v-show="!item.hideChildren"
             v-model="item.children"
@@ -37,7 +37,7 @@
                 :index="index"
               />
             </template>
-          </cal-nested-sort-table>
+          </cal-nested-sort-table-class>
         </cal-card>
       </div>
     </div>

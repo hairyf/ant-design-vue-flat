@@ -129,27 +129,27 @@
     .ant-upload-list-item-card-actions {
       margin-top: 6px;
     }
-    .anticon-paper-clip {
-      position: relative !important;
-      background: url('https://client-static-1254212114.cos.ap-guangzhou.myqcloud.com/images/excel.png')
-        no-repeat !important;
-      width: 24px !important;
-      height: 24px !important;
-      background-size: 24px 24px !important;
-      svg {
-        display: none !important;
-      }
-    }
-    .anticon-delete {
-      position: relative !important;
-      background: url(' https://client-static-1254212114.cos.ap-guangzhou.myqcloud.com/images/Modifier%3DNone%2C%20Size%3D16%2C%20Theme%3DRegular.png')
-        no-repeat !important;
-      width: 24px !important;
-      height: 24px !important;
-      background-size: 24px 24px !important;
-      svg {
-        display: none !important;
-      }
-    }
+    // .anticon-paper-clip {
+    //   position: relative !important;
+    //   background: url('https://client-static-1254212114.cos.ap-guangzhou.myqcloud.com/images/excel.png')
+    //     no-repeat !important;
+    //   width: 24px !important;
+    //   height: 24px !important;
+    //   background-size: 24px 24px !important;
+    //   svg {
+    //     display: none !important;
+    //   }
+    // }
+    // .anticon-delete {
+    //   position: relative !important;
+    //   background: url(' https://client-static-1254212114.cos.ap-guangzhou.myqcloud.com/images/Modifier%3DNone%2C%20Size%3D16%2C%20Theme%3DRegular.png')
+    //     no-repeat !important;
+    //   width: 24px !important;
+    //   height: 24px !important;
+    //   background-size: 24px 24px !important;
+    //   svg {
+    //     display: none !important;
+    //   }
+    // }
   }
 </style>
