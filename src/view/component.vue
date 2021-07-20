@@ -121,8 +121,8 @@
       size="50"
       src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png"
     />
-    <cal-upload></cal-upload>
   </cal-space>
+  <cal-upload></cal-upload>
 </template>
 <script lang="ts" setup>
   import { ref } from 'vue'

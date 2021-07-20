@@ -7,9 +7,9 @@
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <div class="cal-upload__box w-1/2 bg-upload-bg-color">
+  <div class="cal-upload-box w-1/2 bg-upload-bg-color">
     <div class="border-dashed border-2 border-common-primary-color-light-6">
-      <a-upload
+      <upload
         name="file"
         :file-list="fileList"
         action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
@@ -23,7 +23,7 @@
           </div>
           <cal-button class="w-112 mt-12" style="border-radius: 26px">选择文件</cal-button>
         </div>
-      </a-upload>
+      </upload>
     </div>
     <!-- <div class="tips" v-if="show">请先上传文件在提交</div> -->
     <cal-button class="w-112 mt-24" type="primary" @click="submitForm" style="border-radius: 26px">
@@ -41,13 +41,12 @@
   import { defineComponent } from 'vue'
   export default defineComponent({ name: 'CalUpload' })
 </script>
-<script setup lang="ts">
+<script lang="ts" setup>
   import { useTheme } from '../../../utils/theme'
-  import { message } from 'ant-design-vue'
-  import { ref, watch, defineEmits, defineProps } from 'vue'
-  import { Upload as AUpload } from 'ant-design-vue'
+  import { ref, defineEmits, defineProps } from 'vue'
+  import { Upload, message } from 'ant-design-vue'
   import CalButton from '../../button/src/Button.vue'
-  const fileList = ref<any>([])
+  const fileList = ref<any>()
   const emit = defineEmits(['uploadFile', 'downloadTemplate', 'downloadExpress'])
   // const show = ref(false)
   const props = defineProps({
@@ -92,7 +91,7 @@
   useTheme('Common')
 </script>
 <style lang="scss">
-  .cal-upload__box {
+  .cal-upload-box {
     position: relative;
     .tips {
       position: absolute;
