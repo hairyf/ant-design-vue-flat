@@ -175,6 +175,7 @@
     />
   </cal-space>
   <cal-textarea placeholder="623"></cal-textarea>
+  <cal-input-range-picker></cal-input-range-picker>
   <el-time-picker
     is-range
     range-separator="至"
