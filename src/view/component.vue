@@ -1,14 +1,14 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-20 14:29:46
+ * @LastEditTime: 2021-07-20 14:52:56
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
   <cal-space vertical>
-    <cal-echarts class="h-208" :option="orderGhlOpts" />
+    <cal-echarts class="h-208 w-500" :option="orderGhlOpts" />
 
     <!-- 配合高度单独使用 -->
     <cal-perfect-scrollbar class="h-112">

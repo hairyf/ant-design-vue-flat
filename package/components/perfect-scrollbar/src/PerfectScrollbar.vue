@@ -1,20 +1,17 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-20 11:26:55
- * @LastEditTime: 2021-07-20 11:56:17
+ * @LastEditTime: 2021-07-20 14:51:33
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
   <div class="cal-perfect-scrollbar relative">
-    <div
-      class="cal-perfect-scrollbar__content absolute w-full h-full overflow-auto"
-      v-if="original"
-    >
+    <div class="cal-perfect-scrollbar__content w-full h-full overflow-auto" v-if="original">
       <slot></slot>
     </div>
-    <perfect-scrollbar class="absolute w-full h-full" v-bind="props" v-else>
+    <perfect-scrollbar class="cal-perfect-scrollbar__content w-full h-full" v-bind="props" v-else>
       <slot></slot>
     </perfect-scrollbar>
   </div>
@@ -36,4 +33,8 @@
   })
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+  .cal-perfect-scrollbar__content {
+    position: absolute;
+  }
+</style>
