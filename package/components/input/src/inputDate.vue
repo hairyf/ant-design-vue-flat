@@ -73,6 +73,9 @@
       box-shadow: 0 2px 0 0 var(--input-focus-color) !important;
     }
   }
+  :deep(.ant-input:focus) {
+    box-shadow: none;
+  }
   input {
     &::placeholder {
       color: #8c8c8c !important;
