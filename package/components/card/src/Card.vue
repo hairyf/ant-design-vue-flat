@@ -1,9 +1,9 @@
 <!--
  * @Author: Pan.Yu.Lin
  * @Date: 2021-07-12 17:02:15
- * @LastEditTime: 2021-07-18 10:19:43
+ * @LastEditTime: 2021-07-20 11:14:52
  * @Description: 
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
 -->
 <template>
   <a-card
@@ -40,7 +40,9 @@
       width: 100%;
     }
   }
-
+  .ant-card-body {
+    height: 100%;
+  }
   .card-style-none {
     border: none;
     :deep(.ant-card-body) {
