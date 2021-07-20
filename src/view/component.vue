@@ -1,13 +1,32 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-20 15:43:32
+ * @LastEditTime: 2021-07-20 21:52:47
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <cal-radio-group v-model="value">
+  <cal-space vertical>
+    <!-- tab 撑开内容(多个tab) -->
+    <div class="h-320 flex flex-col">
+      <div>title</div>
+      <cal-tabs class="flex-1">
+        <cal-tab-pane key="www" tab="ww"></cal-tab-pane>
+        <cal-tab-pane key="bbb" tab="bb"></cal-tab-pane>
+      </cal-tabs>
+    </div>
+    <!-- tab 撑开内容(单个tab) -->
+    <div class="h-320 flex flex-col">
+      <div>title</div>
+      <cal-tabs>
+        <cal-tab-pane hide key="www" tab="ww"></cal-tab-pane>
+        <cal-tab-pane hide key="bbb" tab="bb"></cal-tab-pane>
+      </cal-tabs>
+      <cal-tab-pane alone class="flex-1">www</cal-tab-pane>
+    </div>
+    
+    <cal-radio-group v-model="value">
     <cal-radio-button
       v-for="v in [
         { name: '一级', weight: 1 },
@@ -37,7 +56,6 @@
     :showCount="true"
     placeholder="输入标签名称"
   ></cal-input>
-  <cal-space vertical>
     <cal-echarts class="h-208 w-500" :option="orderGhlOpts" />
 
     <!-- 配合高度单独使用 -->
