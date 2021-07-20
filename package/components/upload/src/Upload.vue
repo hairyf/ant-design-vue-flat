@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:29:58
- * @LastEditTime: 2021-07-19 18:00:24
+ * @LastEditTime: 2021-07-20 14:07:15
  * @Description: 上传组件
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -128,27 +128,5 @@
     .ant-upload-list-item-card-actions {
       margin-top: 6px;
     }
-    // .anticon-paper-clip {
-    //   position: relative !important;
-    //   background: url('https://client-static-1254212114.cos.ap-guangzhou.myqcloud.com/images/excel.png')
-    //     no-repeat !important;
-    //   width: 24px !important;
-    //   height: 24px !important;
-    //   background-size: 24px 24px !important;
-    //   svg {
-    //     display: none !important;
-    //   }
-    // }
-    // .anticon-delete {
-    //   position: relative !important;
-    //   background: url(' https://client-static-1254212114.cos.ap-guangzhou.myqcloud.com/images/Modifier%3DNone%2C%20Size%3D16%2C%20Theme%3DRegular.png')
-    //     no-repeat !important;
-    //   width: 24px !important;
-    //   height: 24px !important;
-    //   background-size: 24px 24px !important;
-    //   svg {
-    //     display: none !important;
-    //   }
-    // }
   }
 </style>
