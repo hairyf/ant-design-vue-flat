@@ -7,6 +7,25 @@
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
+  <cal-radio-group v-model="value">
+    <cal-radio-button
+      v-for="v in [
+        { name: '一级', weight: 1 },
+        { name: '二级', weight: 2 },
+        { name: '三级', weight: 3 },
+        { name: '四级', weight: 4 },
+        { name: '五级', weight: 5 },
+        { name: '六级', weight: 6 },
+        { name: '七级', weight: 7 },
+        { name: '八级', weight: 8 }
+      ]"
+      :disabled="true"
+      :value="v.name"
+      :key="v.name"
+    >
+      {{ v.name }}
+    </cal-radio-button>
+  </cal-radio-group>
   <cal-checkbox-group v-model:value="groupValue">
     <cal-checkbox value="A">一个</cal-checkbox>
     <cal-checkbox value="B">两个</cal-checkbox>
@@ -123,11 +142,24 @@
     />
   </cal-space>
   <cal-textarea placeholder="623"></cal-textarea>
+  <el-time-picker
+    is-range
+    range-separator="至"
+    start-placeholder="开始时间"
+    end-placeholder="结束时间"
+    placeholder="选择时间范围"
+  >
+  </el-time-picker>
 </template>
 <script lang="ts" setup>
   import { ref } from 'vue'
   import { CalModel } from '~/components'
-  const value = ref()
+  import { ElCheckboxButton, ElCheckboxGroup, ElTimePicker } from 'element-plus'
+
+  import 'element-plus/lib/theme-chalk/el-time-picker.css'
+
+  import 'element-plus/lib/theme-chalk/el-icon.css'
+  const value = ref('二级')
   const props = defineProps({})
   const show = ref(true)
   const current = ref(0)
