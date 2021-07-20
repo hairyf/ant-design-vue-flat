@@ -26,32 +26,33 @@
   useTheme('Common')
 </script>
 <style lang="scss">
+  .cal-textarea {
+    &.ant-input {
+      border-radius: inherit;
+      border: 1px solid #8c8c8c !important;
+    }
+    &.ant-input-textarea {
+      position: relative;
+    }
+    &.ant-input-textarea-show-count::after {
+      position: absolute !important;
+      right: 14px;
+      bottom: 0px;
+      font-size: 14px;
+      color: #8c8c8c;
+    }
+    &.ant-input:hover {
+      border-color: var(--common-primary-color) !important;
+    }
+    &.ant-input:focus {
+      border-color: var(--common-primary-color) !important;
+      box-shadow: none !important;
+    }
+  }
   textarea {
     height: 100% !important;
     resize: none !important;
   }
-  .ant-input {
-    border-radius: inherit;
-    border: 1px solid #8c8c8c !important;
-  }
-  .ant-input-textarea {
-    position: relative;
-  }
-  .ant-input-textarea-show-count::after {
-    position: absolute !important;
-    right: 14px;
-    bottom: 0px;
-    font-size: 14px;
-    color: #8c8c8c;
-  }
-  .ant-input:hover {
-    border-color: var(--common-primary-color) !important;
-  }
-  .ant-input:focus {
-    border-color: var(--common-primary-color) !important;
-    box-shadow: none !important;
-  }
-
   textarea {
     &::placeholder {
       color: #8c8c8c !important;

@@ -50,6 +50,7 @@
       }
       .ant-input {
         background-color: transparent;
+        border: none !important;
       }
       &.ant-input-affix-wrapper-focused {
         box-shadow: 0 2px 0 0 var(--input-focus-color) !important;

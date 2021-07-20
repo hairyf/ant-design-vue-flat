@@ -66,5 +66,13 @@
       background: #d9d9d9;
       color: #8c8c8c !important;
     }
+    &.ant-radio-button-wrapper-disabled:first-child,
+    .ant-radio-button-wrapper-disabled:hover {
+      background: #d9d9d9;
+    }
+    &.ant-radio-button-wrapper-disabled.ant-radio-button-wrapper-checked {
+      background-color: var(--common-primary-color) !important;
+      color: var(--common-base-color) !important;
+    }
   }
 </style>
