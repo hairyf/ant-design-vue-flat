@@ -1522,8 +1522,8 @@
 
 "@tuimao/utils@^1.1.1":
   version "1.1.1"
-  resolved "https://registry.nlark.com/@tuimao/utils/download/@tuimao/utils-1.1.1.tgz?cache=0&sync_timestamp=1626687078295&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40tuimao%2Futils%2Fdownload%2F%40tuimao%2Futils-1.1.1.tgz#736018c0b381282980b975bf5cd1b0048fab7158"
-  integrity sha1-c2AYwLOBKCmAuXW/XNGwBI+rcVg=
+  resolved "https://registry.yarnpkg.com/@tuimao/utils/-/utils-1.1.1.tgz#736018c0b381282980b975bf5cd1b0048fab7158"
+  integrity sha512-NNRkOkrNJ7HzMliTUp5VGlRFfOv3X6or/hFSaIXKeGicNhXXj5/RniXKTSJMaoQ3ZwAA0pQ9+soto/VF4jr2Xg==
   dependencies:
     "@types/lodash" "^4.14.170"
     "@types/node" "^15.12.5"
