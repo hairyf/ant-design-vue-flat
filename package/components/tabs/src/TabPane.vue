@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 09:09:40
- * @LastEditTime: 2021-07-13 09:56:42
+ * @LastEditTime: 2021-07-20 21:49:50
  * @Description: 分栏项
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -23,7 +23,7 @@
     class="cal-tab-pane bg-tabs-background-color p-24 flex flex-col"
     :style="{ minHeight: analyUnit(minHeight || '') }"
     v-bind="props"
-    v-else-if="!hide"
+    v-else-if="!isHide"
   >
     <template #tab>
       <slot name="tab" />
@@ -37,7 +37,7 @@
   </a-tab-pane>
 </template>
 <script lang="ts">
-  import { defineComponent } from 'vue'
+  import { computed, defineComponent, inject } from 'vue'
   export default defineComponent({ name: 'CalTabPane' })
 </script>
 <script lang="ts" setup>
@@ -53,6 +53,7 @@
     /** 最低高度 */
     minHeight: [Number, String]
   })
+  const isHide = computed(() => inject('hideTab') || props.hide)
 </script>
 <style lang="scss">
   .cal-tab-pane {

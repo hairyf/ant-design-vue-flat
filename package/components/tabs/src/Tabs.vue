@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 09:09:40
- * @LastEditTime: 2021-07-15 10:35:07
+ * @LastEditTime: 2021-07-20 21:47:55
  * @Description: 分栏组
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -12,19 +12,24 @@
   </a-tabs>
 </template>
 <script lang="ts">
-  import { defineComponent } from 'vue'
+  import { defineComponent, provide } from 'vue'
   export default defineComponent({ name: 'CalTabs' })
 </script>
 <script lang="ts" setup>
   import { useTheme } from '../../../utils/theme'
   import { defineProps } from 'vue'
   import { Tabs as ATabs } from 'ant-design-vue'
-  const props = defineProps()
+  const props = defineProps({
+    hideTab: Boolean
+  })
+  provide('hideTab', props.hideTab)
   useTheme('Common')
   useTheme('Tabs')
 </script>
 <style lang="scss">
   .cal-tabs {
+    display: flex;
+    flex-direction: column;
     .ant-tabs-bar {
       margin-bottom: 0;
       border-bottom: none;
@@ -55,6 +60,12 @@
       &:active {
         color: var(--tabs-hollow-color, var(--common-primary-color));
       }
+    }
+    .ant-tabs-top-content {
+      flex: 1;
+    }
+    .ant-tabs-tabpane {
+      height: 100%;
     }
     .ant-tabs-ink-bar {
       display: none !important;
