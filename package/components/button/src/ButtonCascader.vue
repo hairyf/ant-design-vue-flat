@@ -1,7 +1,7 @@
 <!--
  * @Author: Pan.Yu.Lin
  * @Date: 2021-07-12 17:02:15
- * @LastEditTime: 2021-07-21 14:47:00
+ * @LastEditTime: 2021-07-21 15:26:15
  * @Description: 
  * @LastEditors: Mr.Mao
 -->
@@ -22,6 +22,7 @@
             cursor-pointer
             transition-colors
             duration-300
+            min-w-80
           "
           v-for="(item, index) in options?.[fieldNames['children']]"
           :key="index"
