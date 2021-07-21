@@ -1,16 +1,16 @@
 <!--
  * @Author: Pan.Yu.Lin
  * @Date: 2021-07-12 17:02:15
- * @LastEditTime: 2021-07-21 11:14:29
+ * @LastEditTime: 2021-07-21 11:54:51
  * @Description: 
  * @LastEditors: Mr.Mao
 -->
 <template>
   <div class="cal-class__container">
     <div class="cal-class__item flex items-center">
-      <div class="cal-class__label w-64 mr-10 text-center select-none">
+      <cal-ellipsis class="cal-class__label w-64 mr-10 text-center select-none">
         {{ label || options?.[fieldNames['label']] }}
-      </div>
+      </cal-ellipsis>
       <div class="cal-class__options">
         <div
           class="
@@ -59,7 +59,7 @@
   import { defineProps, inject, ref } from 'vue'
   import { defineEmits, provide } from 'vue'
   import { cloneDeep } from 'lodash'
-  import CalButton from '../../button/src/Button.vue'
+  import CalEllipsis from '../../ellipsis/src/Ellipsis.vue'
   import type { Ref } from 'vue'
   import { useVModel } from '@vueuse/core'
   /** 列表项配置 */
@@ -95,7 +95,7 @@
         nestedIndex: number
       }) => Option | Promise<Option>,
       default: () => {
-        return ({ option }: any) => ({ ...option, label: '子分类' })
+        return ({ option }: any) => option
       }
     },
     modelValue: {
@@ -116,8 +116,6 @@
   const onClickItem = async (optionItem: Option) => {
     // 当前选择状态
     const select = selects.value[props.nestedIndex] === optionItem[props.fieldNames['value']]
-    // 清空选择逻辑
-    options.value?.[props.fieldNames['children']]?.forEach((v: any) => delete v.select)
     // 每次选择, 将子项选择重置
     if (select) {
       current.value = undefined

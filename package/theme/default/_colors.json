@@ -70,7 +70,7 @@
   "Classification": {
     "notSelectedBodyColor": "#F2F6FA",
     "notSelectedTextColor": "#8C8C8C",
-    "selectedTextColor": "#8C8C8C",
+    "selectedTextColor": "#ffffff",
     "selectedBodyColor": "#558BF7"
   }
 }
