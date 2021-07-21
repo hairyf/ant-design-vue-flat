@@ -1,17 +1,52 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-21 11:09:05
+ * @LastEditTime: 2021-07-21 11:29:41
  * @Description: 
- * @LastEditors: Mr.Mao
+ * @LastEditors: Pan.Yu.Lin
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <cal-space vertical>
-    <cal-card>
-      <cal-classification label="分类" :option="option" v-model="select" />
-    </cal-card>
-  </cal-space>
+  <cal-button @click="printing">12332</cal-button>
+  <cal-input-tree-select
+    style="width: 200px"
+    v-model:value="valueTree"
+    tree-checkable
+    allow-clear
+    search-placeholder="Please select"
+    :tree-data="treeData"
+    :replaceFields="appointParameter"
+  />
+  <cal-radio-group v-model="value">
+    <cal-radio-button
+      v-for="v in [
+        { name: '一级', weight: 1 },
+        { name: '二级', weight: 2 },
+        { name: '三级', weight: 3 },
+        { name: '四级', weight: 4 },
+        { name: '五级', weight: 5 },
+        { name: '六级', weight: 6 },
+        { name: '七级', weight: 7 },
+        { name: '八级', weight: 8 }
+      ]"
+      :disabled="true"
+      :value="v.name"
+      :key="v.name"
+    >
+      {{ v.name }}
+    </cal-radio-button>
+  </cal-radio-group>
+  <cal-checkbox-group v-model:value="groupValue">
+    <cal-checkbox value="A">一个</cal-checkbox>
+    <cal-checkbox value="B">两个</cal-checkbox>
+  </cal-checkbox-group>
+  <cal-input
+    v-model="value"
+    class="w-208"
+    max-length="5"
+    :showCount="true"
+    placeholder="输入标签名称"
+  ></cal-input>
   <cal-space vertical>
     <!-- tab 撑开内容(多个tab) -->
     <div class="h-320 flex flex-col">
@@ -233,7 +268,74 @@
   import { ElCheckboxButton, ElCheckboxGroup, ElTimePicker } from 'element-plus'
   import 'element-plus/lib/theme-chalk/el-time-picker.css'
   import 'element-plus/lib/theme-chalk/el-icon.css'
-  watchEffect(() => console.log([...select.value]))
+  const valueTree = ref([])
+  const printing = () => {
+    console.log('选中的值', valueTree.value)
+  }
+  const appointParameter = ref({
+    children: 'children',
+    title: 'title',
+    key: 'key',
+    value: 'id'
+  })
+  const treeData = ref([
+    {
+      title: 'Node1',
+      value: '0-0-aaa',
+      id: 1,
+      key: '0-0',
+      children: [
+        {
+          title: 'Child Node1',
+          value: '0-0-0',
+          id: 11,
+          key: '0-0-0'
+        }
+      ]
+    },
+    {
+      title: 'Node2',
+      value: '0-1',
+      id: 2,
+      key: '0-1',
+      children: [
+        {
+          title: 'Child Node3',
+          value: '0-1-0',
+          id: 21,
+          key: '0-1-0',
+          disabled: true
+        },
+        {
+          title: 'Child Node4',
+          value: '0-1-1',
+          key: '0-1-1',
+          id: 22,
+          children: [
+            {
+              title: 'Node22222',
+              value: '0-1-2-5',
+              id: 222,
+              key: '0-1-2-5'
+            },
+            {
+              title: 'Node2123122222',
+              value: '0-1-2-3',
+              id: 223,
+              key: '0-1-2-3'
+            }
+          ]
+        },
+        {
+          title: 'Child Node5',
+          value: '0-1-2',
+          id: 23,
+          key: '0-1-2'
+        }
+      ]
+    }
+  ])
+
   const value = ref('二级')
   const props = defineProps({})
   const show = ref(true)
@@ -283,4 +385,4 @@
   })
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss"></style>
