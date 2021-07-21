@@ -1,13 +1,13 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-06-03 17:06:29
- * @LastEditTime: 2021-06-15 16:57:10
+ * @LastEditTime: 2021-07-21 10:05:46
  * @Description:
- * @LastEditors: Mr.Mao
+ * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
 
-import { ref, Ref } from 'vue-demi'
+import { ref, Ref } from 'vue'
 import { ValidationRule } from 'ant-design-vue/lib/form/Form'
 import { message } from 'ant-design-vue'
 /**
@@ -23,9 +23,9 @@ export const useAntdForm = (
   /** 表单规则 */
   const rules = ref(validRules)
   /** 对整个表单进行校验 */
-  const validate = async () => {
+  const validate = async (namePaths?: string[]) => {
     try {
-      return await formRef.value?.validate()
+      return await formRef.value?.validate(namePaths)
     } catch (error) {
       if (!error?.errorFields?.length) {
         message.error(error)
@@ -38,7 +38,8 @@ export const useAntdForm = (
   /** 对部分表单字段进行校验 */
   const validateFields = async (namePaths?: string[]) => {
     try {
-      return await formRef.value?.validateFields(namePaths)
+      const validateFields = formRef.value?.validateFields || formRef.value?.validate
+      return await validateFields(namePaths)
     } catch (error) {
       if (!error.errorFields.length) return undefined
       message.error(error.errorFields[0]['errors'][0])
