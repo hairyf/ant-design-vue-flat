@@ -1,43 +1,66 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-20 15:43:32
+ * @LastEditTime: 2021-07-21 11:09:05
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <cal-radio-group v-model="value">
-    <cal-radio-button
-      v-for="v in [
-        { name: '一级', weight: 1 },
-        { name: '二级', weight: 2 },
-        { name: '三级', weight: 3 },
-        { name: '四级', weight: 4 },
-        { name: '五级', weight: 5 },
-        { name: '六级', weight: 6 },
-        { name: '七级', weight: 7 },
-        { name: '八级', weight: 8 }
-      ]"
-      :disabled="true"
-      :value="v.name"
-      :key="v.name"
-    >
-      {{ v.name }}
-    </cal-radio-button>
-  </cal-radio-group>
-  <cal-checkbox-group v-model:value="groupValue">
-    <cal-checkbox value="A">一个</cal-checkbox>
-    <cal-checkbox value="B">两个</cal-checkbox>
-  </cal-checkbox-group>
-  <cal-input
-    v-model="value"
-    class="w-208"
-    max-length="5"
-    :showCount="true"
-    placeholder="输入标签名称"
-  ></cal-input>
   <cal-space vertical>
+    <cal-card>
+      <cal-classification label="分类" :option="option" v-model="select" />
+    </cal-card>
+  </cal-space>
+  <cal-space vertical>
+    <!-- tab 撑开内容(多个tab) -->
+    <div class="h-320 flex flex-col">
+      <div>title</div>
+      <cal-tabs class="flex-1">
+        <cal-tab-pane key="www" tab="ww"></cal-tab-pane>
+        <cal-tab-pane key="bbb" tab="bb"></cal-tab-pane>
+      </cal-tabs>
+    </div>
+    <!-- tab 撑开内容(单个tab) -->
+    <div class="h-320 flex flex-col">
+      <div>title</div>
+      <cal-tabs>
+        <cal-tab-pane hide key="www" tab="ww"></cal-tab-pane>
+        <cal-tab-pane hide key="bbb" tab="bb"></cal-tab-pane>
+      </cal-tabs>
+      <cal-tab-pane alone class="flex-1">www</cal-tab-pane>
+    </div>
+
+    <cal-radio-group v-model="value">
+      <cal-radio-button
+        v-for="v in [
+          { name: '一级', weight: 1 },
+          { name: '二级', weight: 2 },
+          { name: '三级', weight: 3 },
+          { name: '四级', weight: 4 },
+          { name: '五级', weight: 5 },
+          { name: '六级', weight: 6 },
+          { name: '七级', weight: 7 },
+          { name: '八级', weight: 8 }
+        ]"
+        :disabled="true"
+        :value="v.name"
+        :key="v.name"
+      >
+        {{ v.name }}
+      </cal-radio-button>
+    </cal-radio-group>
+    <cal-checkbox-group v-model:value="groupValue">
+      <cal-checkbox value="A">一个</cal-checkbox>
+      <cal-checkbox value="B">两个</cal-checkbox>
+    </cal-checkbox-group>
+    <cal-input
+      v-model="value"
+      class="w-208"
+      max-length="5"
+      :showCount="true"
+      placeholder="输入标签名称"
+    ></cal-input>
     <cal-echarts class="h-208 w-500" :option="orderGhlOpts" />
 
     <!-- 配合高度单独使用 -->
@@ -173,26 +196,44 @@
       size="50"
       src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png"
     />
+    <cal-textarea placeholder="623"></cal-textarea>
+    <cal-input-range-picker></cal-input-range-picker>
+    <el-time-picker
+      is-range
+      range-separator="至"
+      start-placeholder="开始时间"
+      end-placeholder="结束时间"
+      placeholder="选择时间范围"
+    >
+    </el-time-picker>
   </cal-space>
-  <cal-textarea placeholder="623"></cal-textarea>
-  <cal-input-range-picker></cal-input-range-picker>
-  <el-time-picker
-    is-range
-    range-separator="至"
-    start-placeholder="开始时间"
-    end-placeholder="结束时间"
-    placeholder="选择时间范围"
-  >
-  </el-time-picker>
 </template>
 <script lang="ts" setup>
-  import { ref } from 'vue'
+  const option = ref([
+    {
+      label: '一级分类选择-1',
+      value: '1',
+      children: [
+        { label: '二级分类选择-1-1', value: '1-1' },
+        { label: '二级分类选择-1-2', value: '1-2' }
+      ]
+    },
+    {
+      label: '一级分类选择-2',
+      value: '2',
+      children: [
+        { label: '二级分类选择-2-1', value: '2-1' },
+        { label: '二级分类选择-2-2', value: '2-2' }
+      ]
+    }
+  ])
+  const select = ref([])
+  import { ref, watchEffect } from 'vue'
   import { CalModel } from '~/components'
   import { ElCheckboxButton, ElCheckboxGroup, ElTimePicker } from 'element-plus'
-
   import 'element-plus/lib/theme-chalk/el-time-picker.css'
-
   import 'element-plus/lib/theme-chalk/el-icon.css'
+  watchEffect(() => console.log([...select.value]))
   const value = ref('二级')
   const props = defineProps({})
   const show = ref(true)
