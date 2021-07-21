@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-21 11:33:19
+ * @LastEditTime: 2021-07-21 14:31:19
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
  * @LastEditors: Mr.Mao
@@ -56,7 +56,7 @@ export { default as CalGraphicsVerif } from './components/graphics-verif/src/Gra
 export { default as CalCascader } from './components/cascader/src/Cascader.vue'
 export { default as CalCheckbox } from './components/checkbox/src/Checkbox.vue'
 export { default as CalCheckboxGroup } from './components/checkbox/src/CalCheckboxGroup.vue'
-export { default as CalClassification } from './components/classification/src/Classification.vue'
+export { default as CalButtonCascader } from './components/button/src/ButtonCascader.vue'
 export { default as CalNestedSortTable } from './components/nested-sort-table/src/NestedSortTable.vue'
 export { default as CalCollapseTransition } from './components/transition/src/CollapseTransition.vue'
 export { default as CalEmpty } from './components/empty/src/Empty.vue'
