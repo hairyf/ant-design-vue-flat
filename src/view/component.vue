@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-21 11:27:58
+ * @LastEditTime: 2021-07-21 11:29:41
  * @Description: 
  * @LastEditors: Pan.Yu.Lin
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -9,6 +9,7 @@
 <template>
   <cal-button @click="printing">12332</cal-button>
   <cal-input-tree-select
+    style="width: 200px"
     v-model:value="valueTree"
     tree-checkable
     allow-clear
@@ -46,9 +47,6 @@
     :showCount="true"
     placeholder="输入标签名称"
   ></cal-input>
-  <cal-space vertical>
-    <cal-card>
-  </cal-space>
   <cal-space vertical>
     <!-- tab 撑开内容(多个tab) -->
     <div class="h-320 flex flex-col">
