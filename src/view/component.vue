@@ -1,13 +1,24 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-21 14:47:31
+ * @LastEditTime: 2021-07-21 20:48:05
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
   <cal-space vertical>
+    <cal-drag-file #="{ isOver, selectFiles }" @change="$outEvents">
+      <!-- isOver 当前文件是否正在框内移动中 -->
+      <div
+        class="w-144 h-144 flex flex-col justify-center items-center text-white select-none"
+        :class="[isOver ? 'bg-purple-300' : 'bg-purple-600']"
+      >
+        <div>拖拽到此处上传</div>
+        <cal-button @click="selectFiles()"> 点击上传 </cal-button>
+      </div>
+    </cal-drag-file>
+
     <cal-card>
       <cal-button-cascader
         label="分类"

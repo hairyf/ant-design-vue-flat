@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-21 14:31:19
+ * @LastEditTime: 2021-07-21 20:17:10
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
  * @LastEditors: Mr.Mao
@@ -60,6 +60,7 @@ export { default as CalButtonCascader } from './components/button/src/ButtonCasc
 export { default as CalNestedSortTable } from './components/nested-sort-table/src/NestedSortTable.vue'
 export { default as CalCollapseTransition } from './components/transition/src/CollapseTransition.vue'
 export { default as CalEmpty } from './components/empty/src/Empty.vue'
+export { default as CalDragFile } from './components/drag/src/DragFile.vue'
 export { default as CalPageSelect } from './components/page-select/src/PageSelect.vue'
 export { default as CalPagination } from './components/pagination/src/Pagination.vue'
 export { default as CalRadio } from './components/radio/src/Radio.vue'
