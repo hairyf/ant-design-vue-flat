@@ -2,7 +2,7 @@
   "Common": {
     "baseTextColor": "#000000",
     "primaryColor": "#558BF7",
-    "baseColor": "white",
+    "baseColor": "#ffffff",
     
     "primaryColorLight-2":"#77a2f9",
     "primaryColorLight-4":"#99b9fa",
@@ -24,45 +24,45 @@
   },
   "Menu": {
     "itemTextColor": "#C2DEF8",
-    "itemTextActiveColor": "white",
-    "itemTextHoverColor": "var(--menu-item-text-color)",
-    "itemBodyColor": "white",
+    "itemTextActiveColor": "#FFFFFF",
+    "itemTextHoverColor": "#C2DEF8",
+    "itemBodyColor": "#FFFFFF00",
     "itemBodyActiveColor": "#4474D6",
     "itemBodyHoverColor": "inherit",
 
-    "itemBtnTextColor": "var(--layout-sider-color)",
-    "itemBtnTextActiveColor": "white",
-    "itemBtnTextHoverColor": "var(--common-primary-color)",
+    "itemBtnTextColor": "#001426",
+    "itemBtnTextActiveColor": "#FFFFFF",
+    "itemBtnTextHoverColor": "#558BF7",
     "itemBtnBodyColor": "inherit",
-    "itemBtnBodyActiveColor": "var(--common-primary-color)",
-    "itemBtnBodyHoverColor": "var(--primary-color-light-8)",
+    "itemBtnBodyActiveColor": "#558BF7",
+    "itemBtnBodyHoverColor": "#DDE8FD",
 
-    "itemChildTextColor": "var(--layout-sider-color)",
-    "itemChildTextActiveColor": "var(--common-primary-color)",
-    "itemChildTextHoverColor": "var(--common-primary-color)",
+    "itemChildTextColor": "#001426",
+    "itemChildTextActiveColor": "#558BF7",
+    "itemChildTextHoverColor": "#558BF7",
     "itemChildBodyColor": "inherit",
-    "itemChildBodyActiveColor": "var(--primary-color-light-8)",
-    "itemChildBodyHoverColor": "var(--primary-color-light-8)"
+    "itemChildBodyActiveColor": "#DDE8FD",
+    "itemChildBodyHoverColor": "#DDE8FD"
   },
   "Button": {},
   "Input": {
     "activeColor": "",
-    "hoverColor": "var(--common-primary-color)",
-    "focusColor": "var(--primary-color-light-8)",
-    "solidColor": "white"
+    "hoverColor": "#558BF7",
+    "focusColor": "#dde8fd",
+    "solidColor": "#ffffff"
   },
   "PageSelect":{
-    "solidColor": "white"
+    "solidColor": "#ffffff"
   },
   "Tabs":{
-    "backgroundColor":"white",
+    "backgroundColor":"#ffffff",
     "hollowColor":""
 },
   "Card": {
-    "bgColor": "white"
+    "bgColor": "#ffffff"
   },
   "upload":{
-    "bgColor": "white"
+    "bgColor": "#ffffff"
   },
   "Table":{
     "borderColor":"#f5f5f5"
@@ -70,7 +70,7 @@
   "Classification": {
     "notSelectedBodyColor": "#F2F6FA",
     "notSelectedTextColor": "#8C8C8C",
-    "selectedTextColor": "white",
-    "selectedBodyColor": "var(--common-primary-color)"
+    "selectedTextColor": "#8C8C8C",
+    "selectedBodyColor": "#558BF7"
   }
 }
