@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-20 16:22:33
+ * @LastEditTime: 2021-07-21 09:49:44
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
  * @LastEditors: Pan.Yu.Lin
@@ -48,6 +48,7 @@ export { default as CalInputSearch } from './components/input/src/InputSearch.vu
 export { default as CalInputSelect } from './components/input/src/InputSelect.vue'
 export { default as CalInputSpecialSelect } from './components/input/src/InputSpecialSelect.vue'
 export { default as CalInputRangePicker } from './components/input/src/InputRangePicker.vue'
+export { default as CalInputTreeSelect } from './components/input/src/inputTreeSelect.vue'
 export { default as CalIcon } from './components/icon/src/Icon.vue'
 export { default as CalImage } from './components/image/src/Image.vue'
 export { default as CalCard } from './components/card/src/Card.vue'
