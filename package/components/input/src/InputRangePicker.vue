@@ -52,10 +52,10 @@
     &:focus {
       box-shadow: 0 2px 0 0 var(--input-focus-color) !important;
     }
-    .ant-calendar-picker-clear {
-      right: 0;
-      background-color: inherit !important;
-    }
+  }
+  :deep(.ant-calendar-picker-clear) {
+    right: 0px;
+    background-color: inherit !important;
   }
   :deep(.ant-calendar-picker-input:not(.ant-input-disabled)) {
     box-shadow: none !important;

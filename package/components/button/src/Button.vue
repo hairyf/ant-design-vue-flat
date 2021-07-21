@@ -1,13 +1,13 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-05-22 14:18:13
- * @LastEditTime: 2021-07-20 10:21:09
+ * @LastEditTime: 2021-07-20 14:32:04
  * @Description: 按钮
- * @LastEditors: Zhilong
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <a-button class="cal-btn" v-bind="props" :size='props.antdSize'>
+  <a-button class="cal-btn" v-bind="props">
     <slot></slot>
   </a-button>
 </template>
@@ -25,30 +25,23 @@
   const props = defineProps({
     ...AButton.props,
     /** 子元素大小 */
-    size: {
-      type: Object as () => AnalySizeOption,
-      default: '100%'
-    },
+    size: Object as () => AnalySizeOption,
     shape: {
       type: String,
       default: 'round'
-    }, 
-    antdSize: {
-     type: String as () => 'large' | 'middle' | 'small' ,
-     default:'middle'
     }
   })
 
   // 宽高
   const wh = computed(() => analySize(props.size))
 
-  useCssVars(()=>wh.value)
+  useCssVars(() => wh.value)
   useTheme('Common')
 </script>
 <style lang="scss" scoped>
   .cal-btn {
     width: var(--width);
-    height:var(--height);
+    height: var(--height);
     &.ant-btn-sm {
       font-size: 12px !important;
     }
