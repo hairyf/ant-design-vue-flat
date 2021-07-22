@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-13 09:10:07
- * @LastEditTime: 2021-07-15 09:20:09
+ * @LastEditTime: 2021-07-22 15:23:11
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -31,6 +31,7 @@
 </template>
 <script lang="ts">
   import { defineComponent, provide } from 'vue'
+  import type { Ref } from 'vue'
   export default defineComponent({ name: 'CalMenuGroup' })
 </script>
 <script lang="ts" setup>
@@ -47,6 +48,13 @@
       default: ''
     }
   })
+  // 上级所有索引
+  const upindexs = inject<Ref<string[]>>('upindexs')
+  // 注入索引
+  provide(
+    'upindexs',
+    computed(() => [...(upindexs?.value || []), props.index])
+  )
   // 当前高亮項
   const defaultActive = inject('defaultActive') as vt.Ref<string[]>
   // 当前是否高亮
