@@ -1,13 +1,19 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-21 20:48:05
+ * @LastEditTime: 2021-07-22 15:32:13
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
   <cal-space vertical>
+    <cal-menu class="h-208 w-80" v-model:default-active="menuvalue">
+      <cal-menu-item index="www">asdsa</cal-menu-item>
+      <cal-menu-item index="eee">qwe</cal-menu-item>
+      <cal-menu-item index="ddd">erwq</cal-menu-item>
+      <cal-menu-item index="ccc">qweqwe</cal-menu-item>
+    </cal-menu>
     <cal-drag-file #="{ isOver, selectFiles }" @change="$outEvents">
       <!-- isOver 当前文件是否正在框内移动中 -->
       <div
@@ -18,7 +24,6 @@
         <cal-button @click="selectFiles()"> 点击上传 </cal-button>
       </div>
     </cal-drag-file>
-
     <cal-card>
       <cal-button-cascader
         label="分类"
@@ -250,6 +255,7 @@
   import 'element-plus/lib/theme-chalk/el-time-picker.css'
   import 'element-plus/lib/theme-chalk/el-icon.css'
   watchEffect(() => console.log(select.value))
+  const menuvalue = ref('')
   const value = ref('二级')
   const props = defineProps({})
   const show = ref(true)
