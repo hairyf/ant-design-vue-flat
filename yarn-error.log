@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add tuimao/utils
+  C:\Program Files\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
 
 PATH: 
-  C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm
+  C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\bin
 
 Yarn version: 
   1.22.10
@@ -14,21 +14,12 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: https://github.com/tuimao/utils: ESOCKETTIMEDOUT
-      at ClientRequest.<anonymous> (C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141289:19)
-      at Object.onceWrapper (events.js:421:28)
-      at ClientRequest.emit (events.js:315:20)
-      at TLSSocket.emitRequestTimeout (_http_client.js:784:9)
-      at Object.onceWrapper (events.js:421:28)
-      at TLSSocket.emit (events.js:327:22)
-      at TLSSocket.Socket._onTimeout (net.js:483:8)
-      at listOnTimeout (internal/timers.js:554:17)
-      at processTimers (internal/timers.js:497:7)
+  Error: EPERM: operation not permitted, lstat 'C:\Users\Administrator\Desktop\ant-design-vue-flat\node_modules\@ant-design-vue\use'
 
 npm manifest: 
   {
     "name": "ant-design-vue-flat",
-    "version": "0.0.30-alpha.16",
+    "version": "0.0.30-alpha.40",
     "description": "",
     "author": "peiyahui",
     "types": "package/index.ts",
@@ -44,7 +35,8 @@ npm manifest:
       "build:esm": "rollup --config script/rollup.esm.config.js",
       "build:umd": "rollup --config script/rollup.umd.config.js",
       "build:cjs": "rollup --config script/rollup.cjs.config.js",
-      "clean": "rimraf ./dist"
+      "clean": "rimraf ./dist",
+      "rimraf:modules": "rimraf ./node_modules"
     },
     "files": [
       "dist",
@@ -60,7 +52,7 @@ npm manifest:
       "@rollup/plugin-node-resolve": "^11.1.1",
       "@tuimao/eslint-config-preset": "^1.1.0",
       "@tuimao/tailwind-config-preset": "^1.1.0",
-      "@tuimao/utils": "^1.1.0",
+      "@tuimao/utils": "^1.1.1",
       "@types/jest": "^26.0.24",
       "@types/lodash-es": "^4.17.4",
       "@types/nprogress": "^0.2.0",
@@ -1657,10 +1649,10 @@ Lockfile:
     dependencies:
       lodash "^4.17.21"
   
-  "@tuimao/utils@^1.1.0":
-    version "1.1.0"
-    resolved "https://registry.nlark.com/@tuimao/utils/download/@tuimao/utils-1.1.0.tgz?cache=0&sync_timestamp=1626678884271&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40tuimao%2Futils%2Fdownload%2F%40tuimao%2Futils-1.1.0.tgz#47b40359f9e1de48d30ad350b703cdd3cfb2037a"
-    integrity sha1-R7QDWfnh3kjTCtNQtwPN08+yA3o=
+  "@tuimao/utils@^1.1.1":
+    version "1.1.1"
+    resolved "https://registry.nlark.com/@tuimao/utils/download/@tuimao/utils-1.1.1.tgz?cache=0&sync_timestamp=1626687078295&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40tuimao%2Futils%2Fdownload%2F%40tuimao%2Futils-1.1.1.tgz#736018c0b381282980b975bf5cd1b0048fab7158"
+    integrity sha1-c2AYwLOBKCmAuXW/XNGwBI+rcVg=
     dependencies:
       "@types/lodash" "^4.14.170"
       "@types/node" "^15.12.5"
