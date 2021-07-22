@@ -1,15 +1,31 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-21 11:09:05
+ * @LastEditTime: 2021-07-21 20:48:05
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
   <cal-space vertical>
+    <cal-drag-file #="{ isOver, selectFiles }" @change="$outEvents">
+      <!-- isOver 当前文件是否正在框内移动中 -->
+      <div
+        class="w-144 h-144 flex flex-col justify-center items-center text-white select-none"
+        :class="[isOver ? 'bg-purple-300' : 'bg-purple-600']"
+      >
+        <div>拖拽到此处上传</div>
+        <cal-button @click="selectFiles()"> 点击上传 </cal-button>
+      </div>
+    </cal-drag-file>
+
     <cal-card>
-      <cal-classification label="分类" :option="option" v-model="select" />
+      <cal-button-cascader
+        label="分类"
+        :option="option"
+        v-model="select"
+        :field-names="{ label: 'name', value: 'value', children: 'children' }"
+      />
     </cal-card>
   </cal-space>
   <cal-space vertical>
@@ -211,19 +227,19 @@
 <script lang="ts" setup>
   const option = ref([
     {
-      label: '一级分类选择-1',
+      name: '一级分类选择-1',
       value: '1',
       children: [
-        { label: '二级分类选择-1-1', value: '1-1' },
-        { label: '二级分类选择-1-2', value: '1-2' }
+        { name: '二级分类选择-1-1', value: '1-1' },
+        { name: '二级分类选择-1-2', value: '1-2' }
       ]
     },
     {
-      label: '一级分类选择-2',
+      name: '一级分类选择-2',
       value: '2',
       children: [
-        { label: '二级分类选择-2-1', value: '2-1' },
-        { label: '二级分类选择-2-2', value: '2-2' }
+        { name: '二级分类选择-2-1', value: '2-1' },
+        { name: '二级分类选择-2-2', value: '2-2' }
       ]
     }
   ])
@@ -233,7 +249,7 @@
   import { ElCheckboxButton, ElCheckboxGroup, ElTimePicker } from 'element-plus'
   import 'element-plus/lib/theme-chalk/el-time-picker.css'
   import 'element-plus/lib/theme-chalk/el-icon.css'
-  watchEffect(() => console.log([...select.value]))
+  watchEffect(() => console.log(select.value))
   const value = ref('二级')
   const props = defineProps({})
   const show = ref(true)

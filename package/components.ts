@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-21 09:37:30
+ * @LastEditTime: 2021-07-21 20:17:10
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
  * @LastEditors: Mr.Mao
@@ -17,7 +17,7 @@ export { default as CalModel } from './components/modal/src/Modal'
 export { default as CalEcharts } from './components/echarts/src/Echarts'
 export { default as CalForm } from './components/form/src/Form'
 export { default as CalFormItem } from './components/form/src/FormItem'
-// export { default as CalPerfectScrollbar } from './components/perfect-scrollbar/src/PerfectScrollbar.vue'
+export { default as CalPerfectScrollbar } from './components/perfect-scrollbar/src/PerfectScrollbar.vue'
 export { default as CalEditor } from './components/editor/src/Editor.vue'
 export { default as CalBreadcrumb } from './components/breadcrumb/src/Breadcrumb'
 export { default as CalBreadcrumbItem } from './components/breadcrumb/src/BreadcrumbItem'
@@ -48,6 +48,7 @@ export { default as CalInputSearch } from './components/input/src/InputSearch.vu
 export { default as CalInputSelect } from './components/input/src/InputSelect.vue'
 export { default as CalInputSpecialSelect } from './components/input/src/InputSpecialSelect.vue'
 export { default as CalInputRangePicker } from './components/input/src/InputRangePicker.vue'
+export { default as CalInputTreeSelect } from './components/input/src/inputTreeSelect.vue'
 export { default as CalIcon } from './components/icon/src/Icon.vue'
 export { default as CalImage } from './components/image/src/Image.vue'
 export { default as CalCard } from './components/card/src/Card.vue'
@@ -55,10 +56,11 @@ export { default as CalGraphicsVerif } from './components/graphics-verif/src/Gra
 export { default as CalCascader } from './components/cascader/src/Cascader.vue'
 export { default as CalCheckbox } from './components/checkbox/src/Checkbox.vue'
 export { default as CalCheckboxGroup } from './components/checkbox/src/CalCheckboxGroup.vue'
-export { default as CalClassification } from './components/classification/src/Classification.vue'
+export { default as CalButtonCascader } from './components/button/src/ButtonCascader.vue'
 export { default as CalNestedSortTable } from './components/nested-sort-table/src/NestedSortTable.vue'
 export { default as CalCollapseTransition } from './components/transition/src/CollapseTransition.vue'
 export { default as CalEmpty } from './components/empty/src/Empty.vue'
+export { default as CalDragFile } from './components/drag/src/DragFile.vue'
 export { default as CalPageSelect } from './components/page-select/src/PageSelect.vue'
 export { default as CalPagination } from './components/pagination/src/Pagination.vue'
 export { default as CalRadio } from './components/radio/src/Radio.vue'

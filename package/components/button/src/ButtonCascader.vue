@@ -1,16 +1,16 @@
 <!--
  * @Author: Pan.Yu.Lin
  * @Date: 2021-07-12 17:02:15
- * @LastEditTime: 2021-07-21 11:14:29
+ * @LastEditTime: 2021-07-21 15:26:15
  * @Description: 
  * @LastEditors: Mr.Mao
 -->
 <template>
   <div class="cal-class__container">
     <div class="cal-class__item flex items-center">
-      <div class="cal-class__label w-64 mr-10 text-center select-none">
+      <cal-ellipsis class="cal-class__label w-64 mr-10 text-center select-none">
         {{ label || options?.[fieldNames['label']] }}
-      </div>
+      </cal-ellipsis>
       <div class="cal-class__options">
         <div
           class="
@@ -22,6 +22,7 @@
             cursor-pointer
             transition-colors
             duration-300
+            min-w-80
           "
           v-for="(item, index) in options?.[fieldNames['children']]"
           :key="index"
@@ -36,8 +37,8 @@
         </div>
       </div>
     </div>
-    <cal-classification
-      v-if="current?.[fieldNames['children']]?.length"
+    <CalButtonCascader
+      v-if="current?.[fieldNames['children']]?.length && Array.isArray(source)"
       :nested-index="nestedIndex + 1"
       :option="current"
       :loadData="loadData"
@@ -53,13 +54,13 @@
    * <cal-classification label="一级分类" :option="[{label: '一级分类选择-1', value: '1'}, {label: '一级分类选择-2', value: '2'}]" />
    */
   import { computed, defineComponent } from 'vue'
-  export default defineComponent({ name: 'CalClassification' })
+  export default defineComponent({ name: 'CalButtonCascader' })
 </script>
 <script lang="ts" setup>
   import { defineProps, inject, ref } from 'vue'
   import { defineEmits, provide } from 'vue'
   import { cloneDeep } from 'lodash'
-  import CalButton from '../../button/src/Button.vue'
+  import CalEllipsis from '../../ellipsis/src/Ellipsis.vue'
   import type { Ref } from 'vue'
   import { useVModel } from '@vueuse/core'
   /** 列表项配置 */
@@ -95,11 +96,11 @@
         nestedIndex: number
       }) => Option | Promise<Option>,
       default: () => {
-        return ({ option }: any) => ({ ...option, label: '子分类' })
+        return ({ option }: any) => option
       }
     },
     modelValue: {
-      type: Array as () => Key[],
+      type: Array as () => Key[] | Key,
       default: []
     }
   })
@@ -110,23 +111,27 @@
     return props.option as Option
   })
   /** 选中列表 */
-  const selects = inject<Ref<Key[]>>('selects') || useVModel(props, 'modelValue')
+  const source = inject<Ref<Key[]>>('selects') || useVModel(props, 'modelValue')
+  const selects = computed({
+    get: () => (Array.isArray(source.value) ? source.value : [source.value]),
+    set: (value) => {
+      Array.isArray(source.value) ? (source.value = value) : (source.value = value[0])
+    }
+  })
   if (props.nestedIndex === 0) provide('selects', selects)
   /** 点击当前项 */
-  const onClickItem = async (optionItem: Option) => {
+  const onClickItem = async (item: Option) => {
     // 当前选择状态
-    const select = selects.value[props.nestedIndex] === optionItem[props.fieldNames['value']]
-    // 清空选择逻辑
-    options.value?.[props.fieldNames['children']]?.forEach((v: any) => delete v.select)
+    const select = selects.value[props.nestedIndex] === item[props.fieldNames['value']]
     // 每次选择, 将子项选择重置
     if (select) {
       current.value = undefined
-      selects.value = selects.value.slice(0, props.nestedIndex - 1)
+      selects.value = selects.value.slice(0, props.nestedIndex)
     } else {
-      const data = await props.loadData?.({ option: optionItem, nestedIndex: props.nestedIndex })
-      current.value = data || cloneDeep(optionItem)
+      const data = await props.loadData?.({ option: item, nestedIndex: props.nestedIndex })
+      current.value = data || cloneDeep(item)
       const value = selects.value.slice(0, props.nestedIndex)
-      value.push(optionItem[props.fieldNames['value']])
+      value.push(item[props.fieldNames['value']])
       selects.value = value
     }
     emit('change', selects.value)
