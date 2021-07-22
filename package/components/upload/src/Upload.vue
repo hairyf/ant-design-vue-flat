@@ -120,13 +120,15 @@
     .ant-upload-list-item-name {
       display: inline;
       line-height: 24px;
-      padding-left: 12px;
     }
     .ant-upload-list-item:hover .ant-upload-list-item-info {
       background-color: transparent;
     }
     .ant-upload-list-item-card-actions {
       margin-top: 6px;
+    }
+    a:hover {
+      color: var(--common-primary-color);
     }
   }
 </style>

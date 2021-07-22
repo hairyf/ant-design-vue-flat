@@ -17,6 +17,11 @@ import '~/main.scss'
 // import AntdFlat from '../../dist/ant-design-vue-flat.esm.js'
 // import '../../dist/ant-design-vue-flat.esm.css'
 
+// 汉化element-plus
+import ElementPlus from 'element-plus'
+import 'dayjs/locale/zh-cn'
+import locale from 'element-plus/lib/locale/lang/zh-cn'
+
 // 引入颜色选择框
 import 'vanilla-colorful'
 
@@ -25,4 +30,5 @@ export const usePlugins = (app: App<Element>) => {
   app.use(router)
   app.use(store)
   app.use(AntdFlat)
+  app.use(ElementPlus, { locale })
 }

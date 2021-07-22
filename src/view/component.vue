@@ -7,6 +7,18 @@
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
+  <cal-input-date></cal-input-date>
+  <cal-input-time-picker
+    class="w-208"
+    format="HH:mm"
+    arrow-control
+    v-model="time"
+    start-placeholder="营业开始时间"
+    end-placeholder="营业结束时间"
+    clearable
+  ></cal-input-time-picker>
+  <cal-upload class="mt-44"></cal-upload>
+
   <cal-space vertical>
     <cal-drag-file #="{ isOver, selectFiles }" @change="$outEvents">
       <!-- isOver 当前文件是否正在框内移动中 -->
@@ -214,14 +226,6 @@
     />
     <cal-textarea placeholder="623"></cal-textarea>
     <cal-input-range-picker></cal-input-range-picker>
-    <el-time-picker
-      is-range
-      range-separator="至"
-      start-placeholder="开始时间"
-      end-placeholder="结束时间"
-      placeholder="选择时间范围"
-    >
-    </el-time-picker>
   </cal-space>
 </template>
 <script lang="ts" setup>
@@ -246,11 +250,9 @@
   const select = ref([])
   import { ref, watchEffect } from 'vue'
   import { CalModel } from '~/components'
-  import { ElCheckboxButton, ElCheckboxGroup, ElTimePicker } from 'element-plus'
-  import 'element-plus/lib/theme-chalk/el-time-picker.css'
-  import 'element-plus/lib/theme-chalk/el-icon.css'
   watchEffect(() => console.log(select.value))
   const value = ref('二级')
+  const time = ref([])
   const props = defineProps({})
   const show = ref(true)
   const current = ref(0)

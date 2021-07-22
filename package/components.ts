@@ -50,6 +50,7 @@ export { default as CalInputSelect } from './components/input/src/InputSelect.vu
 export { default as CalInputSpecialSelect } from './components/input/src/InputSpecialSelect.vue'
 export { default as CalInputRangePicker } from './components/input/src/InputRangePicker.vue'
 export { default as CalInputTreeSelect } from './components/input/src/inputTreeSelect.vue'
+export { default as CalInputTimePicker } from './components/input/src/InputTimePicker.vue'
 export { default as CalIcon } from './components/icon/src/Icon.vue'
 export { default as CalImage } from './components/image/src/Image.vue'
 export { default as CalCard } from './components/card/src/Card.vue'
