@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-06-22 11:12:06
- * @LastEditTime: 2021-07-22 15:18:32
+ * @LastEditTime: 2021-07-22 15:30:57
  * @Description: 
  * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -15,7 +15,7 @@
     >
       取消
     </cal-button>
-    <cal-button v-else class="w-176 h-48 mr-56 text-base" @click="emit('prev')">
+    <cal-button v-else class="w-176 h-48 mr-56 text-base" @click="current--, emit('prev')">
       上一步
     </cal-button>
     <cal-button
