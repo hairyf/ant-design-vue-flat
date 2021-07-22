@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-05-20 17:54:55
- * @LastEditTime: 2021-07-15 19:30:47
+ * @LastEditTime: 2021-07-22 15:25:53
  * @Description: 菜单项
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -23,9 +23,9 @@
       vertical ? 'flex-col' : 'cal-menu-item--vertical',
       collapse ? 'cal-menu-item--collapse' : ''
     ]"
-    @click="!notUpdate && onUpdate?.(index)"
+    @click="!notUpdate && onUpdate?.(index, indexs)"
   >
-    <span class="cal-menu-item__prefix">
+    <span class="cal-menu-item__prefix" v-if="$slots['prefix']">
       <slot name="prefix" />
     </span>
     <transition
@@ -37,7 +37,7 @@
         <slot />
       </span>
     </transition>
-    <slot name="suffix" />
+    <slot name="suffix" v-if="$slots['suffix']" />
   </li>
 </template>
 <script lang="ts">
@@ -61,6 +61,11 @@
     notUpdate: Boolean
   })
   useTheme('Menu')
+  type Part<T> = T | undefined
+  // 上级所有索引
+  const upindexs = inject<Ref<string[]>>('upindexs')
+  // 所有索引
+  const indexs = computed(() => [...(upindexs?.value || []), props.index])
   // 当前是否收起
   const collapse = inject('collapse') as Ref<boolean>
   // 当前高亮項
@@ -70,7 +75,7 @@
   // 当前组件类型为 children
   const isChildren = inject<boolean>('isChildren')
   // 调起更新
-  const onUpdate = inject<(key?: string) => void>('onUpdate')
+  const onUpdate = inject<(key: Part<string>, indexs: Part<string>[]) => void>('onUpdate')
   // 当前是否高亮
   const active = computed(() => {
     return defaultActive.value.some((v) => v === props.index)

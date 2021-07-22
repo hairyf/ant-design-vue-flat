@@ -1,13 +1,46 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-21 20:48:05
+ * @LastEditTime: 2021-07-22 16:05:01
  * @Description: 
- * @LastEditors: Mr.Mao
+ * @LastEditors: Pan.Yu.Lin
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
+  <cal-input-search></cal-input-search>
+  <cal-input-tree-select
+    style="width: 300px"
+    v-model:value="treeValue"
+    :tree-data="treeData"
+    tree-checkable
+    allow-clear
+    placeholder="Please select"
+  />
+  <cal-input-date></cal-input-date>
+  <cal-popover-examples
+    size="350"
+    title="sadasdsa"
+    src="C:\Users\Administrator\Pictures\82910218_p0.png"
+  >
+  </cal-popover-examples>
+  <cal-input-time-picker
+    class="w-208"
+    format="HH:mm"
+    arrow-control
+    v-model="time"
+    start-placeholder="营业开始时间"
+    end-placeholder="营业结束时间"
+    clearable
+  ></cal-input-time-picker>
+  <cal-upload class="mt-44"></cal-upload>
+
   <cal-space vertical>
+    <cal-menu class="h-208 w-80" v-model:default-active="menuvalue">
+      <cal-menu-item index="www">asdsa</cal-menu-item>
+      <cal-menu-item index="eee">qwe</cal-menu-item>
+      <cal-menu-item index="ddd">erwq</cal-menu-item>
+      <cal-menu-item index="ccc">qweqwe</cal-menu-item>
+    </cal-menu>
     <cal-drag-file #="{ isOver, selectFiles }" @change="$outEvents">
       <!-- isOver 当前文件是否正在框内移动中 -->
       <div
@@ -18,7 +51,6 @@
         <cal-button @click="selectFiles()"> 点击上传 </cal-button>
       </div>
     </cal-drag-file>
-
     <cal-card>
       <cal-button-cascader
         label="分类"
@@ -214,17 +246,10 @@
     />
     <cal-textarea placeholder="623"></cal-textarea>
     <cal-input-range-picker></cal-input-range-picker>
-    <el-time-picker
-      is-range
-      range-separator="至"
-      start-placeholder="开始时间"
-      end-placeholder="结束时间"
-      placeholder="选择时间范围"
-    >
-    </el-time-picker>
   </cal-space>
 </template>
 <script lang="ts" setup>
+  const treeValue = ref<any[]>([])
   const option = ref([
     {
       name: '一级分类选择-1',
@@ -243,14 +268,50 @@
       ]
     }
   ])
+  const treeData = ref([
+    {
+      title: 'Node1',
+      value: '0-0',
+      key: '0-0',
+      children: [
+        {
+          title: 'Child Node1',
+          value: '0-0-0',
+          key: '0-0-0'
+        }
+      ]
+    },
+    {
+      title: 'Node2',
+      value: '0-1',
+      key: '0-1',
+      children: [
+        {
+          title: 'Child Node3',
+          value: '0-1-0',
+          key: '0-1-0',
+          disabled: true
+        },
+        {
+          title: 'Child Node4',
+          value: '0-1-1',
+          key: '0-1-1'
+        },
+        {
+          title: 'Child Node5',
+          value: '0-1-2',
+          key: '0-1-2'
+        }
+      ]
+    }
+  ])
   const select = ref([])
   import { ref, watchEffect } from 'vue'
   import { CalModel } from '~/components'
-  import { ElCheckboxButton, ElCheckboxGroup, ElTimePicker } from 'element-plus'
-  import 'element-plus/lib/theme-chalk/el-time-picker.css'
-  import 'element-plus/lib/theme-chalk/el-icon.css'
   watchEffect(() => console.log(select.value))
+  const menuvalue = ref('')
   const value = ref('二级')
+  const time = ref([])
   const props = defineProps({})
   const show = ref(true)
   const current = ref(0)
