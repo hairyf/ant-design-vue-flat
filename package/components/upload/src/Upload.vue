@@ -120,7 +120,6 @@
     .ant-upload-list-item-name {
       display: inline;
       line-height: 24px;
-      // padding-left: 12px;
     }
     .ant-upload-list-item:hover .ant-upload-list-item-info {
       background-color: transparent;
