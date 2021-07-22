@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-22 14:47:18
+ * @LastEditTime: 2021-07-22 15:19:46
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
  * @LastEditors: Zhilong
@@ -18,7 +18,7 @@ export { default as CalEcharts } from './components/echarts/src/Echarts'
 export { default as CalForm } from './components/form/src/Form'
 export { default as CalFormItem } from './components/form/src/FormItem'
 export { default as CalPerfectScrollbar } from './components/perfect-scrollbar/src/PerfectScrollbar.vue'
-export { default as CalButtonProcess } from './components/button/src/ButtonProcess.vue'
+export { default as CalButtonProgress } from './components/button/src/ButtonProgress.vue'
 export { default as CalEditor } from './components/editor/src/Editor.vue'
 export { default as CalBreadcrumb } from './components/breadcrumb/src/Breadcrumb'
 export { default as CalBreadcrumbItem } from './components/breadcrumb/src/BreadcrumbItem'
