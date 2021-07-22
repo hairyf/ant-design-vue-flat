@@ -1,13 +1,19 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-21 20:48:05
+ * @LastEditTime: 2021-07-22 18:06:52
  * @Description: 
- * @LastEditors: Mr.Mao
+ * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
   <cal-input-date></cal-input-date>
+  <cal-popover-examples
+    size="350"
+    title="sadasdsa"
+    src="C:\Users\Administrator\Pictures\82910218_p0.png"
+  >
+  </cal-popover-examples>
   <cal-input-time-picker
     class="w-208"
     format="HH:mm"

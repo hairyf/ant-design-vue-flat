@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-22 15:19:46
+ * @LastEditTime: 2021-07-22 16:48:30
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
  * @LastEditors: Zhilong
@@ -87,3 +87,4 @@ export { default as CalIncreaseBox } from './components/_special/src/IncreaseBox
 export { default as CalSelectBox } from './components/_special/src/SelectBox.vue'
 export { default as CalThemeEditor } from './components/theme/src/ThemeEditor.vue'
 export { default as CalButtonTabs } from './components/button/src/ButtonTabs.vue'
+export { default as CalPopoverExamples } from './components/popover/src/PopoverExamples.vue'
