@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-06-03 17:06:29
- * @LastEditTime: 2021-07-21 10:05:46
+ * @LastEditTime: 2021-07-21 21:44:55
  * @Description:
  * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -16,14 +16,14 @@ import { message } from 'ant-design-vue'
  * @param rules 规则列表
  * @returns form 实例方法与规则
  */
-export const useAntdForm = (
+export const useAntdForm = <T extends Record<string, ValidationRule | ValidationRule[]>>(
   formRef: Ref<any>,
-  validRules: { [k: string]: ValidationRule | ValidationRule[] }
+  validRules: T
 ) => {
   /** 表单规则 */
   const rules = ref(validRules)
   /** 对整个表单进行校验 */
-  const validate = async (namePaths?: string[]) => {
+  const validate = async (namePaths?: (keyof T)[]) => {
     try {
       return await formRef.value?.validate(namePaths)
     } catch (error) {
