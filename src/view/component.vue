@@ -1,12 +1,21 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-22 15:32:13
+ * @LastEditTime: 2021-07-22 15:57:58
  * @Description: 
- * @LastEditors: Mr.Mao
+ * @LastEditors: Pan.Yu.Lin
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
+<cal-input-search></cal-input-search>
+<cal-input-tree-select 
+
+    style="width: 300px"
+    v-model:value="treeValue"
+    :tree-data="treeData"
+    tree-checkable
+    allow-clear
+    placeholder="Please select" />
   <cal-input-date></cal-input-date>
   <cal-input-time-picker
     class="w-208"
@@ -234,6 +243,7 @@
   </cal-space>
 </template>
 <script lang="ts" setup>
+  const treeValue = ref<any[]>([])
   const option = ref([
     {
       name: '一级分类选择-1',
@@ -252,6 +262,43 @@
       ]
     }
   ])
+  const treeData = ref([
+  {
+    title: 'Node1',
+    value: '0-0',
+    key: '0-0',
+    children: [
+      {
+        title: 'Child Node1',
+        value: '0-0-0',
+        key: '0-0-0',
+      },
+    ],
+  },
+  {
+    title: 'Node2',
+    value: '0-1',
+    key: '0-1',
+    children: [
+      {
+        title: 'Child Node3',
+        value: '0-1-0',
+        key: '0-1-0',
+        disabled: true,
+      },
+      {
+        title: 'Child Node4',
+        value: '0-1-1',
+        key: '0-1-1',
+      },
+      {
+        title: 'Child Node5',
+        value: '0-1-2',
+        key: '0-1-2',
+      },
+    ],
+  },
+]);
   const select = ref([])
   import { ref, watchEffect } from 'vue'
   import { CalModel } from '~/components'
