@@ -127,26 +127,6 @@
     .ant-upload-list-item-card-actions {
       margin-top: 6px;
     }
-    .anticon svg {
-      display: none !important;
-    }
-    .anticon-paper-clip {
-      background: url('https://client-static-1254212114.cos.ap-guangzhou.myqcloud.com/images/excel.png')
-        no-repeat;
-      top: 0px !important;
-      left: -4px !important;
-      width: 24px !important;
-      height: 24px !important;
-      background-size: 24px 24px !important;
-    }
-    .anticon-delete {
-      transform: translateY(-5px);
-      background: url('https://client-static-1254212114.cos.ap-guangzhou.myqcloud.com/images/delete.png')
-        no-repeat;
-      width: 24px !important;
-      height: 24px !important;
-      background-size: 24px 24px !important;
-    }
     a:hover {
       color: var(--common-primary-color);
     }

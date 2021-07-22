@@ -249,9 +249,6 @@
   const select = ref([])
   import { ref, watchEffect } from 'vue'
   import { CalModel } from '~/components'
-  import { ElCheckboxButton, ElCheckboxGroup, ElTimePicker } from 'element-plus'
-  import 'element-plus/lib/theme-chalk/el-time-picker.css'
-  import 'element-plus/lib/theme-chalk/el-icon.css'
   watchEffect(() => console.log(select.value))
   const value = ref('二级')
   const time = ref([])
