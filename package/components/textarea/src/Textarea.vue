@@ -48,6 +48,13 @@
       border-color: var(--common-primary-color) !important;
       box-shadow: none !important;
     }
+    .ant-input {
+      border-radius: inherit;
+      border: 1px solid #8c8c8c !important;
+    }
+    .ant-input:hover {
+      border-color: var(--common-primary-color) !important;
+    }
   }
   textarea {
     height: 100% !important;
