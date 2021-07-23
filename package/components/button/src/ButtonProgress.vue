@@ -7,7 +7,7 @@
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <div class="flex justify-center my-64">
+  <div class="flex justify-center">
     <cal-button
       v-if="openLastStep && modelValue == 0"
       class="w-176 h-48 mr-56 text-base"
