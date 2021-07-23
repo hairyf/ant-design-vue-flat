@@ -27,7 +27,7 @@
 </script>
 <style lang="scss">
   .cal-textarea {
-    &.ant-input {
+    .ant-input {
       border-radius: inherit;
       border: 1px solid #8c8c8c !important;
     }
@@ -41,10 +41,10 @@
       font-size: 14px;
       color: #8c8c8c;
     }
-    &.ant-input:hover {
+    .ant-input:hover {
       border-color: var(--common-primary-color) !important;
     }
-    &.ant-input:focus {
+    .ant-input:focus {
       border-color: var(--common-primary-color) !important;
       box-shadow: none !important;
     }
