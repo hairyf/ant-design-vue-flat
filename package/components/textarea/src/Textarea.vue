@@ -28,6 +28,7 @@
 <style lang="scss">
   .cal-textarea {
     &.ant-input {
+      padding: 14px;
       border-radius: inherit;
       border: 1px solid #8c8c8c !important;
     }
@@ -37,7 +38,7 @@
     &.ant-input-textarea-show-count::after {
       position: absolute !important;
       right: 14px;
-      bottom: 0px;
+      bottom: 9px;
       font-size: 14px;
       color: #8c8c8c;
     }
@@ -49,11 +50,26 @@
       box-shadow: none !important;
     }
     .ant-input {
+      padding: 14px;
       border-radius: inherit;
       border: 1px solid #8c8c8c !important;
     }
     .ant-input:hover {
       border-color: var(--common-primary-color) !important;
+    }
+    .ant-input:focus {
+      border-color: var(--common-primary-color) !important;
+      box-shadow: none !important;
+    }
+    .ant-input:hover {
+      border-color: var(--common-primary-color) !important;
+    }
+    .ant-input-textarea-show-count::after {
+      position: absolute !important;
+      right: 14px;
+      bottom: 9px;
+      font-size: 14px;
+      color: #8c8c8c;
     }
   }
   textarea {
