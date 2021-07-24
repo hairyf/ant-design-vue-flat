@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-13 11:01:35
- * @LastEditTime: 2021-07-24 15:02:01
+ * @LastEditTime: 2021-07-24 15:50:00
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -10,7 +10,8 @@
   <slot />
 </template>
 <script lang="ts">
-  import { defineComponent, toRefs } from 'vue'
+  import { useVModel } from '@vueuse/core'
+  import { computed, defineComponent, toRefs, watch } from 'vue'
   export default defineComponent({ name: 'CalProvides' })
 </script>
 <script lang="ts" setup>
@@ -21,8 +22,11 @@
       required: true
     }
   })
-  const providesRefs = toRefs(props.provides)
-  for (const k in providesRefs) provide(k, providesRefs[k])
+  const provides = useVModel(props, 'provides')
+  for (const k in props.provides) {
+    const v = computed(() => provides.value?.[k])
+    provide(k, v)
+  }
 </script>
 
 <style lang="scss" scoped></style>
