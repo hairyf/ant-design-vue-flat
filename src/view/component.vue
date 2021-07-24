@@ -7,7 +7,7 @@
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <cal-input-search></cal-input-search>
+  <cal-textarea class="w-400 h-400" :maxlength="100" showCount></cal-textarea>
   <cal-input-tree-select
     style="width: 300px"
     v-model:value="treeValue"
