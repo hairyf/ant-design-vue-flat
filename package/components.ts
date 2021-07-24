@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-24 18:11:22
+ * @LastEditTime: 2021-07-24 19:20:36
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
  * @LastEditors: Mr.Mao
@@ -17,6 +17,7 @@ export { default as CalNprogress } from './components/nprogress/src/Nprogress.vu
 export { default as CalModel } from './components/modal/src/Modal'
 export { default as CalEcharts } from './components/echarts/src/Echarts'
 export { default as CalForm } from './components/form/src/Form'
+export { default as CalSlider } from './components/slider/src/Slider.vue'
 export { default as CalResult } from './components/result/src/Result'
 export { default as CalFormItem } from './components/form/src/FormItem'
 export { default as CalPerfectScrollbar } from './components/perfect-scrollbar/src/PerfectScrollbar.vue'
@@ -47,7 +48,7 @@ export { default as CalInput } from './components/input/src/Input.vue'
 export { default as CalInputSection } from './components/input/src/InputSection.vue'
 export { default as CalInputPassword } from './components/input/src/InputPassword.vue'
 export { default as CalInputDate } from './components/input/src/InputDate.vue'
-export { default as CalInputNumber } from './components/input/src/InputNumber.vue'
+export { default as CalInputNumber } from './components/input/src/inputNumber.vue'
 export { default as CalInputSearch } from './components/input/src/InputSearch.vue'
 export { default as CalInputSelect } from './components/input/src/InputSelect.vue'
 export { default as CalInputSpecialSelect } from './components/input/src/InputSpecialSelect.vue'
