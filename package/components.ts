@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-24 13:53:09
+ * @LastEditTime: 2021-07-24 14:55:14
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
  * @LastEditors: Mr.Mao
@@ -11,6 +11,7 @@ export { default as CalButton } from './components/button/src/Button.vue'
 export { default as CalQrCode } from './components/qrcode/src/QrCode.vue'
 export { default as CalGlobalStyle } from './components/global-style/src/GlobalStyle.vue'
 export { default as CalProvide } from './components/_internal/src/Provide.vue'
+export { default as CalProvides } from './components/_internal/src/Provides.vue'
 export { default as CalDialog } from './components/modal/src/Dialog.vue'
 export { default as CalNprogress } from './components/nprogress/src/Nprogress.vue'
 export { default as CalModel } from './components/modal/src/Modal'
