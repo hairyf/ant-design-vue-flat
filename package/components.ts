@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-07-24 14:55:14
+ * @LastEditTime: 2021-07-24 18:11:22
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
  * @LastEditors: Mr.Mao
@@ -25,6 +25,7 @@ export { default as CalEditor } from './components/editor/src/Editor.vue'
 export { default as CalBreadcrumb } from './components/breadcrumb/src/Breadcrumb'
 export { default as CalBreadcrumbItem } from './components/breadcrumb/src/BreadcrumbItem'
 export { default as CalColorElPickr } from './components/color-pickr/src/ColorElPickr.vue'
+export { default as CalColorNPickr } from './components/color-pickr/src/ColorNPickr.vue'
 export { default as CalColorFullPickr } from './components/color-pickr/src/ColorFullPickr.vue'
 export { default as CalColorSimonwepPickr } from './components/color-pickr/src/ColorSimonwepPickr.vue'
 export { default as CalDescriptions } from './components/descriptions/src/Descriptions'

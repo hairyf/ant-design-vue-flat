@@ -1,14 +1,14 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-24 16:26:32
+ * @LastEditTime: 2021-07-24 18:17:50
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
   <cal-card title="wainodwaod">
-    asdsad
+    <cal-color-n-pickr control />
   </cal-card>
   <cal-textarea class="w-400 h-400" :maxlength="100" showCount></cal-textarea>
   <cal-input-tree-select
