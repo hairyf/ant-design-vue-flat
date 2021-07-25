@@ -1,17 +1,23 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-03-18 09:30:25
- * @LastEditTime: 2021-07-25 15:47:24
+ * @LastEditTime: 2021-07-25 16:49:52
  * @Description: 多嵌套表格组件
  * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
   <div :class="[nestedIndex ? `nested-sort-table-${nestedIndex}` : 'nested-sort-table']">
-    <slot v-if="showHeader" name="header" />
     <div class="table-list" ref="sortableContainer">
-      <div class="table-item" v-for="(item, index) in tableItems" :key="item.CACHE_TABLE_ITEM_KEY">
-        <cal-card :is-hidden="nestedIndex == 0" class="mb-10" left-border>
+      <div
+      class="table-item"
+      v-for="(item, index) in tableItems"
+      :key="item.CACHE_TABLE_ITEM_KEY"
+      >
+      <card-container :hide="!!nestedIndex">
+          <template #header>
+            <slot name="header" />
+          </template>
           <slot
             name="item"
             :nested-index="nestedIndex"
@@ -21,7 +27,7 @@
           />
           <!-- <div class="strip"></div> -->
           <!--  递归传递多层列表, 将 children 传入-->
-          <cal-nested-sort-table-class
+          <cal-nested-sort-table-card
             v-if="item?.children?.length"
             v-show="!item.hideChildren"
             v-model="item.children"
@@ -37,17 +43,17 @@
                 :index="index"
               />
             </template>
-          </cal-nested-sort-table-class>
-        </cal-card>
+          </cal-nested-sort-table-card>
+        </card-container>
+        </div>
       </div>
-    </div>
   </div>
 </template>
-<script lang="ts">
+<script lang="tsx">
   import { defineComponent } from 'vue'
   export default defineComponent({ name: 'CalNestedSortTableCard' })
 </script>
-<script lang="ts" setup>
+<script lang="tsx" setup>
   import { computed, defineEmits, defineProps, onMounted, ref, useSlots, watch } from 'vue'
   import { nanoid } from 'nanoid'
   import Sortable from 'sortablejs'
@@ -120,10 +126,21 @@
       }
     })
   })
+
+  const CardContainer = defineComponent({
+    props: {
+      hide: Boolean
+    },
+    setup(props, { slots }) {
+      return () =>
+        props.hide ? (
+          <> {slots['default']?.()} </>
+        ) : (
+          <CalCard class="mb-10" left-border>
+            {slots['header']?.()}
+            {slots['default']?.()}
+          </CalCard>
+        )
+    }
+  })
 </script>
-<style lang="scss" scoped>
-  :deep(.ant-card-body) {
-    padding-left: 0;
-    padding-top: 40px;
-  }
-</style>
