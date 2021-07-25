@@ -75,7 +75,7 @@
       }
     }
     .ant-steps-item-description {
-      color: #8c8c8c;
+      color: #8c8c8c !important;
       font-size: 13px;
       margin-top: 2px;
       white-space: nowrap;
