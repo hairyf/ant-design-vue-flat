@@ -1520,10 +1520,10 @@
   dependencies:
     lodash "^4.17.21"
 
-"@tuimao/utils@^1.1.7":
-  version "1.1.7"
-  resolved "https://registry.npmjs.org/@tuimao/utils/-/utils-1.1.7.tgz"
-  integrity sha512-BLtQk9oAXZeN01PcdhfCd3WhJ8XwQxUsfXfttPm/EqN6IV9Mz4grZ89evLCuxARJPyRdXxwPGpsE55yFvuPCJA==
+"@tuimao/utils@^1.1.8":
+  version "1.1.8"
+  resolved "https://registry.nlark.com/@tuimao/utils/download/@tuimao/utils-1.1.8.tgz?cache=0&sync_timestamp=1627186021006&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40tuimao%2Futils%2Fdownload%2F%40tuimao%2Futils-1.1.8.tgz#5c6df5e6cbd110e71de4d35ad83cd010b452a653"
+  integrity sha1-XG315svREOcd5NNa2DzQELRSplM=
   dependencies:
     "@types/lodash" "^4.14.170"
     "@types/node" "^15.12.5"
@@ -6481,8 +6481,8 @@ psl@^1.1.33:
 
 pubsub-js@^1.9.3:
   version "1.9.3"
-  resolved "https://registry.npmjs.org/pubsub-js/-/pubsub-js-1.9.3.tgz"
-  integrity sha512-FhYYlPNOywTh7zN38u5AlG67emA47w6JZd7YgdQU1w8gQbZhhIGxVM0AQosdaINHb2ALb+fhfnVyBJAt4D4IzA==
+  resolved "https://registry.npm.taobao.org/pubsub-js/download/pubsub-js-1.9.3.tgz#674eea4d568d0402e0527cdb10e2aab7b55621d2"
+  integrity sha1-Z07qTVaNBALgUnzbEOKqt7VWIdI=
 
 pug-attrs@^3.0.0:
   version "3.0.0"
