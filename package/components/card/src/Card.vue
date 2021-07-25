@@ -1,14 +1,14 @@
 <!--
  * @Author: Pan.Yu.Lin
  * @Date: 2021-07-12 17:02:15
- * @LastEditTime: 2021-07-20 11:14:52
+ * @LastEditTime: 2021-07-25 15:22:22
  * @Description: 
- * @LastEditors: Mr.Mao
+ * @LastEditors: Zhilong
 -->
 <template>
   <a-card
     class="bg-card-bg-color"
-    :class="[isHidden ? 'cal-card ' : 'card-style-none']"
+    :class="[isHidden ? 'cal-card ' : 'card-style-none', leftBorder ? 'card-side-strip' : '']"
     v-bind="props"
   >
     <slot></slot>
@@ -27,7 +27,8 @@
     isHidden: {
       type: Boolean,
       default: true
-    }
+    },
+    leftBorder: Boolean
   })
   useTheme('Card')
 </script>
@@ -47,6 +48,20 @@
     border: none;
     :deep(.ant-card-body) {
       padding: 0;
+    }
+  }
+
+  .card-side-strip {
+    position: relative;
+    &::before {
+      border-radius: 10000px;
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 24px;
+      bottom: 24px;
+      width: 4px;
+      background: var(--common-primary-color);
     }
   }
 </style>

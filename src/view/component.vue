@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-22 16:05:01
+ * @LastEditTime: 2021-07-25 15:22:32
  * @Description: 
- * @LastEditors: Pan.Yu.Lin
+ * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -51,7 +51,8 @@
         <cal-button @click="selectFiles()"> 点击上传 </cal-button>
       </div>
     </cal-drag-file>
-    <cal-card>
+    <cal-card leftBorder>
+      xxx
       <cal-button-cascader
         label="分类"
         :option="option"
