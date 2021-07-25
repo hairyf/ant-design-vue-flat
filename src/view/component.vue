@@ -1,40 +1,49 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-25 15:22:32
+ * @LastEditTime: 2021-07-25 15:30:28
  * @Description: 
  * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <cal-input-search></cal-input-search>
-  <cal-input-tree-select
-    style="width: 300px"
-    v-model:value="treeValue"
-    :tree-data="treeData"
-    tree-checkable
-    allow-clear
-    placeholder="Please select"
-  />
-  <cal-input-date></cal-input-date>
-  <cal-popover-examples
-    size="350"
-    title="sadasdsa"
-    src="C:\Users\Administrator\Pictures\82910218_p0.png"
-  >
-  </cal-popover-examples>
-  <cal-input-time-picker
-    class="w-208"
-    format="HH:mm"
-    arrow-control
-    v-model="time"
-    start-placeholder="营业开始时间"
-    end-placeholder="营业结束时间"
-    clearable
-  ></cal-input-time-picker>
-  <cal-upload class="mt-44"></cal-upload>
-
   <cal-space vertical>
+    <cal-radio-group>
+      <cal-radio-button-even>wadwad</cal-radio-button-even>
+    </cal-radio-group>
+    <cal-icon type="date" svg-size />
+    <cal-slider />
+    <cal-input-number></cal-input-number>
+    <cal-card title="wainodwaod">
+      <cal-color-n-pickr control />
+      <template #extra>asdsanio</template>
+    </cal-card>
+    <cal-textarea class="w-400 h-400" :maxlength="100" showCount></cal-textarea>
+    <cal-input-tree-select
+      style="width: 300px"
+      v-model:value="treeValue"
+      :tree-data="treeData"
+      tree-checkable
+      allow-clear
+      placeholder="Please select"
+    />
+    <cal-input-date></cal-input-date>
+    <cal-popover-examples
+      size="350"
+      title="sadasdsa"
+      src="C:\Users\Administrator\Pictures\82910218_p0.png"
+    >
+    </cal-popover-examples>
+    <cal-input-time-picker
+      class="w-208"
+      format="HH:mm"
+      arrow-control
+      v-model="time"
+      start-placeholder="营业开始时间"
+      end-placeholder="营业结束时间"
+      clearable
+    ></cal-input-time-picker>
+    <cal-upload class="mt-44"></cal-upload>
     <cal-menu class="h-208 w-80" v-model:default-active="menuvalue">
       <cal-menu-item index="www">asdsa</cal-menu-item>
       <cal-menu-item index="eee">qwe</cal-menu-item>

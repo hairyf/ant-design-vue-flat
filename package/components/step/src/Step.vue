@@ -10,7 +10,7 @@
   <step class="cal-step" v-bind="props">
     <template #icon>
       <!-- <i class="nr-after text-4xl" /> -->
-      <cal-icon class="after" type="step-highlight" size="37"> </cal-icon>
+      <cal-icon class="after" type="step-highlight" size="40"> </cal-icon>
       <cal-icon
         class="step-await text-common-primary-color-light-4 transform translate-y-2"
         type="step-not"

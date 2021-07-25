@@ -1,7 +1,7 @@
 <!--
  * @Author: Pan.Yu.Lin
  * @Date: 2021-07-12 17:02:15
- * @LastEditTime: 2021-07-25 15:22:22
+ * @LastEditTime: 2021-07-25 15:30:19
  * @Description: 
  * @LastEditors: Zhilong
 -->
@@ -11,7 +11,9 @@
     :class="[isHidden ? 'cal-card ' : 'card-style-none', leftBorder ? 'card-side-strip' : '']"
     v-bind="props"
   >
-    <slot></slot>
+    <template v-for="(_, key) in $slots" :key="key" #[key]>
+      <slot :name="key" />
+    </template>
   </a-card>
 </template>
 <script lang="ts">
@@ -21,7 +23,6 @@
 <script lang="ts" setup>
   import { defineProps } from 'vue'
   import { useTheme } from '../../../utils/theme'
-  import { analyUnit } from '@tuimao/utils'
   import { Card as ACard } from 'ant-design-vue'
   const props = defineProps({
     isHidden: {
@@ -40,9 +41,13 @@
       height: 100%;
       width: 100%;
     }
-  }
-  .ant-card-body {
-    height: 100%;
+    :deep(.ant-card-head) {
+      border-bottom: none;
+      min-height: auto;
+      .ant-card-head-title {
+        padding-bottom: 0;
+      }
+    }
   }
   .card-style-none {
     border: none;
