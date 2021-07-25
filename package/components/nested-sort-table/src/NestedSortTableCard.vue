@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-03-18 09:30:25
- * @LastEditTime: 2021-07-25 11:50:16
+ * @LastEditTime: 2021-07-25 15:47:24
  * @Description: 多嵌套表格组件
- * @LastEditors: Mr.Mao
+ * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -11,7 +11,7 @@
     <slot v-if="showHeader" name="header" />
     <div class="table-list" ref="sortableContainer">
       <div class="table-item" v-for="(item, index) in tableItems" :key="item.CACHE_TABLE_ITEM_KEY">
-        <cal-card :is-hidden="nestedIndex == 0" class="mb-10">
+        <cal-card :is-hidden="nestedIndex == 0" class="mb-10" left-border>
           <slot
             name="item"
             :nested-index="nestedIndex"
