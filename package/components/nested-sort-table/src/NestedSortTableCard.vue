@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-03-18 09:30:25
- * @LastEditTime: 2021-07-25 16:49:52
+ * @LastEditTime: 2021-07-25 18:44:39
  * @Description: 多嵌套表格组件
  * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -54,7 +54,7 @@
   export default defineComponent({ name: 'CalNestedSortTableCard' })
 </script>
 <script lang="tsx" setup>
-  import { computed, defineEmits, defineProps, onMounted, ref, useSlots, watch } from 'vue'
+  import { computed, defineEmits, defineProps, onMounted, ref, useSlots, watch, Fragment } from 'vue'
   import { nanoid } from 'nanoid'
   import Sortable from 'sortablejs'
   import CalCard from '../../card/src/Card.vue'
@@ -134,7 +134,7 @@
     setup(props, { slots }) {
       return () =>
         props.hide ? (
-          <> {slots['default']?.()} </>
+          <Fragment> {slots['default']?.()} </Fragment>
         ) : (
           <CalCard class="mb-10" left-border>
             {slots['header']?.()}

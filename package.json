@@ -1,6 +1,6 @@
 {
   "name": "ant-design-vue-flat",
-  "version": "0.0.30-alpha.60",
+  "version": "0.0.30-alpha.61",
   "description": "",
   "author": "peiyahui",
   "types": "package/index.ts",
@@ -9,6 +9,7 @@
   "module": "dist/ant-design-vue-flat.esm.js",
   "scripts": {
     "dev": "yarn && vite --force",
+    "test": "yarn dev --mode test",
     "start": "yarn dev",
     "serve": "vite preview",
     "release": "npm run build && npm pub",
