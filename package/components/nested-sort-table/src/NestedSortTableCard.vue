@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-03-18 09:30:25
- * @LastEditTime: 2021-07-19 16:55:48
+ * @LastEditTime: 2021-07-25 11:50:16
  * @Description: 多嵌套表格组件
- * @LastEditors: Pan.Yu.Lin
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -45,7 +45,7 @@
 </template>
 <script lang="ts">
   import { defineComponent } from 'vue'
-  export default defineComponent({ name: 'CalNestedSortTableClass' })
+  export default defineComponent({ name: 'CalNestedSortTableCard' })
 </script>
 <script lang="ts" setup>
   import { computed, defineEmits, defineProps, onMounted, ref, useSlots, watch } from 'vue'

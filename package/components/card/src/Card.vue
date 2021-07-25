@@ -1,7 +1,7 @@
 <!--
  * @Author: Pan.Yu.Lin
  * @Date: 2021-07-12 17:02:15
- * @LastEditTime: 2021-07-24 16:33:25
+ * @LastEditTime: 2021-07-25 11:54:26
  * @Description: 
  * @LastEditors: Mr.Mao
 -->
@@ -11,7 +11,9 @@
     :class="[isHidden ? 'cal-card ' : 'card-style-none']"
     v-bind="props"
   >
-    <slot></slot>
+    <template v-for="(_, key) in $slots" :key="key" #[key]>
+      <slot :name="key" />
+    </template>
   </a-card>
 </template>
 <script lang="ts">

@@ -1,18 +1,22 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-24 19:31:52
+ * @LastEditTime: 2021-07-25 11:59:16
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
   <cal-space vertical>
+    <cal-radio-group>
+      <cal-radio-button-even>wadwad</cal-radio-button-even>
+    </cal-radio-group>
+    <cal-icon type="date" svg-size />
     <cal-slider />
-    <cal-input-number>
-    </cal-input-number>
+    <cal-input-number></cal-input-number>
     <cal-card title="wainodwaod">
       <cal-color-n-pickr control />
+      <template #extra>asdsanio</template>
     </cal-card>
     <cal-textarea class="w-400 h-400" :maxlength="100" showCount></cal-textarea>
     <cal-input-tree-select

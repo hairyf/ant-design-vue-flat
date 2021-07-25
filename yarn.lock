@@ -1341,7 +1341,7 @@
 
 "@simonwep/pickr@^1.8.1", "@simonwep/pickr@~1.8.0":
   version "1.8.1"
-  resolved "https://registry.nlark.com/@simonwep/pickr/download/@simonwep/pickr-1.8.1.tgz?cache=0&sync_timestamp=1620897298440&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40simonwep%2Fpickr%2Fdownload%2F%40simonwep%2Fpickr-1.8.1.tgz#e136cbd9c345ddbb7d71eb14af544c798165d495"
+  resolved "https://registry.nlark.com/@simonwep/pickr/download/@simonwep/pickr-1.8.1.tgz?cache=0&sync_timestamp=1620897298440&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40simonwep%2Fpickr%2Fdownload%2F%40simonwep%2Fpickr-1.8.1.tgz"
   integrity sha1-4TbL2cNF3bt9cesUr1RMeYFl1JU=
   dependencies:
     core-js "^3.12.1"
@@ -1494,8 +1494,8 @@
 
 "@tinymce/tinymce-vue@^4.0.5-rc.20210709233739642.sha7bda220":
   version "4.0.5-rc.20210709233739642.sha7bda220"
-  resolved "https://registry.nlark.com/@tinymce/tinymce-vue/download/@tinymce/tinymce-vue-4.0.5-rc.20210709233739642.sha7bda220.tgz#8c04a50f1779fa22abfb176b1b5781d47523df4e"
-  integrity sha1-jASlDxd5+iKr+xdrG1eB1HUj304=
+  resolved "https://registry.npmjs.org/@tinymce/tinymce-vue/-/tinymce-vue-4.0.5-rc.20210709233739642.sha7bda220.tgz"
+  integrity sha512-/30pAx/XdLA+g4E/wIOXefQKdrwFU12zGvs1R6hSAOYLPuk3D96C8G4zkPsY7/X88Oh35cqvGhEr5/fpNgatuA==
 
 "@tootallnate/once@1":
   version "1.1.2"
@@ -1520,16 +1520,19 @@
   dependencies:
     lodash "^4.17.21"
 
-"@tuimao/utils@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.nlark.com/@tuimao/utils/download/@tuimao/utils-1.1.1.tgz?cache=0&sync_timestamp=1626687078295&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40tuimao%2Futils%2Fdownload%2F%40tuimao%2Futils-1.1.1.tgz#736018c0b381282980b975bf5cd1b0048fab7158"
-  integrity sha1-c2AYwLOBKCmAuXW/XNGwBI+rcVg=
+"@tuimao/utils@^1.1.7":
+  version "1.1.7"
+  resolved "https://registry.npmjs.org/@tuimao/utils/-/utils-1.1.7.tgz"
+  integrity sha512-BLtQk9oAXZeN01PcdhfCd3WhJ8XwQxUsfXfttPm/EqN6IV9Mz4grZ89evLCuxARJPyRdXxwPGpsE55yFvuPCJA==
   dependencies:
     "@types/lodash" "^4.14.170"
     "@types/node" "^15.12.5"
+    "@types/pubsub-js" "^1.8.2"
+    "@vueuse/core" "^5.1.4"
     axios "^0.21.1"
     dayjs "^1.10.5"
     lodash "^4.17.21"
+    pubsub-js "^1.9.3"
     vue "^3.1.2"
     vue-composable "^1.0.0-beta.23"
     vue-router "^4.0.10"
@@ -1656,13 +1659,18 @@
 
 "@types/nprogress@^0.2.0":
   version "0.2.0"
-  resolved "https://registry.nlark.com/@types/nprogress/download/@types/nprogress-0.2.0.tgz?cache=0&sync_timestamp=1621242037799&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fnprogress%2Fdownload%2F%40types%2Fnprogress-0.2.0.tgz#86c593682d4199212a0509cc3c4d562bbbd6e45f"
+  resolved "https://registry.nlark.com/@types/nprogress/download/@types/nprogress-0.2.0.tgz?cache=0&sync_timestamp=1621242037799&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fnprogress%2Fdownload%2F%40types%2Fnprogress-0.2.0.tgz"
   integrity sha1-hsWTaC1BmSEqBQnMPE1WK7vW5F8=
 
 "@types/prettier@^2.1.5":
   version "2.3.2"
   resolved "https://registry.nlark.com/@types/prettier/download/@types/prettier-2.3.2.tgz?cache=0&sync_timestamp=1625678505137&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fprettier%2Fdownload%2F%40types%2Fprettier-2.3.2.tgz"
   integrity sha1-/IwoJeTtIUJHO0qBBk5uCBRj0bM=
+
+"@types/pubsub-js@^1.8.2":
+  version "1.8.2"
+  resolved "https://registry.npmjs.org/@types/pubsub-js/-/pubsub-js-1.8.2.tgz"
+  integrity sha512-cj3ZoAopr2ZmUYwRuXUiq48PlfNj5sBcUIkBnSJunfXlmf6y8o2kx4l70h1X1j0fR3IBorPrPM3B9SoyWwoqLg==
 
 "@types/q@^1.5.1":
   version "1.5.4"
@@ -1678,8 +1686,8 @@
 
 "@types/sortablejs@^1.10.7":
   version "1.10.7"
-  resolved "https://registry.nlark.com/@types/sortablejs/download/@types/sortablejs-1.10.7.tgz?cache=0&sync_timestamp=1625594014253&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fsortablejs%2Fdownload%2F%40types%2Fsortablejs-1.10.7.tgz#ab9039c85429f0516955ec6dbc0bb20139417b15"
-  integrity sha1-q5A5yFQp8FFpVextvAuyATlBexU=
+  resolved "https://registry.npmjs.org/@types/sortablejs/-/sortablejs-1.10.7.tgz"
+  integrity sha512-lGCwwgpj8zW/ZmaueoPVSP7nnc9t8VqVWXS+ASX3eoUUENmiazv0rlXyTRludXzuX9ALjPsMqBu85TgJNWbTOg==
 
 "@types/stack-utils@^2.0.0":
   version "2.0.1"
@@ -1970,18 +1978,18 @@
   resolved "https://registry.nlark.com/@vue/shared/download/@vue/shared-3.1.4.tgz"
   integrity sha1-wUxGHsQuosFVbob2CwNUNB2RrcM=
 
-"@vueuse/core@^5.1.3":
-  version "5.1.3"
-  resolved "https://registry.npmjs.org/@vueuse/core/-/core-5.1.3.tgz"
-  integrity sha512-5CmF/epSo9L1Obz3A37UJOpDdno0BDw46zyXq0DHgvzEwL6gPb9GgJZcy4Hm5YSjQYIeQPo35uO8qsZyIjEZog==
+"@vueuse/core@^5.1.3", "@vueuse/core@^5.1.4":
+  version "5.2.0"
+  resolved "https://registry.npmjs.org/@vueuse/core/-/core-5.2.0.tgz"
+  integrity sha512-IS2QnVZ4lTlRUtgPHJ4ttTatXGWRZuvj/GJDVp8FRlUjzKXD0YjZtx0280FCg7y3YejXV2QGhY+/YrXybMjpPw==
   dependencies:
-    "@vueuse/shared" "5.1.3"
+    "@vueuse/shared" "5.2.0"
     vue-demi "*"
 
-"@vueuse/shared@5.1.3":
-  version "5.1.3"
-  resolved "https://registry.npmjs.org/@vueuse/shared/-/shared-5.1.3.tgz"
-  integrity sha512-p8n/69QMtSsLN5rri9c3sN5QJJXWA7cm9chgo3DowTBRYLBni1I9kGY2nz299Tur6XEFuf+63E5TvMTJVJeHHw==
+"@vueuse/shared@5.2.0":
+  version "5.2.0"
+  resolved "https://registry.npmjs.org/@vueuse/shared/-/shared-5.2.0.tgz"
+  integrity sha512-PD2PBaEcdl+pXXeKjhU+LZqQuA9xX/6mtVGIYG29xsjH7W3IjU164nwCAfDe2Lsy8rMaYmVqVSB6PHtiZZyDSg==
   dependencies:
     vue-demi "*"
 
@@ -3252,7 +3260,7 @@ duplexer3@^0.1.4:
 
 echarts@^5.1.2:
   version "5.1.2"
-  resolved "https://registry.nlark.com/echarts/download/echarts-5.1.2.tgz#aa1ab0cef5b74fa2f7c620261a5f286893d30fd1"
+  resolved "https://registry.nlark.com/echarts/download/echarts-5.1.2.tgz"
   integrity sha1-qhqwzvW3T6L3xiAmGl8oaJPTD9E=
   dependencies:
     tslib "2.0.3"
@@ -3790,7 +3798,7 @@ fs.realpath@^1.0.0:
 
 fsevents@^2.3.2, fsevents@~2.3.2:
   version "2.3.2"
-  resolved "https://registry.npm.taobao.org/fsevents/download/fsevents-2.3.2.tgz"
+  resolved "https://registry.nlark.com/fsevents/download/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
   integrity sha1-ilJveLj99GI7cJ4Ll1xSwkwC/Ro=
 
 function-bind@^1.1.1:
@@ -5493,15 +5501,10 @@ mkdirp@~0.5.1:
   dependencies:
     minimist "^1.2.5"
 
-moment@^2.27.0:
+moment@^2.27.0, moment@^2.29.1:
   version "2.29.1"
   resolved "https://registry.npm.taobao.org/moment/download/moment-2.29.1.tgz"
   integrity sha1-sr52n6MZQL6e7qZGnAdeNQBvo9M=
-
-moment@^2.29.1:
-  version "2.29.1"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
-  integrity sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
 
 ms@2.0.0:
   version "2.0.0"
@@ -5543,7 +5546,7 @@ naive-ui@^2.15.4:
 
 nanoid@^3.1.23:
   version "3.1.23"
-  resolved "https://registry.nlark.com/nanoid/download/nanoid-3.1.23.tgz#f744086ce7c2bc47ee0a8472574d5c78e4183a81"
+  resolved "https://registry.nlark.com/nanoid/download/nanoid-3.1.23.tgz"
   integrity sha1-90QIbOfCvEfuCoRyV01ceOQYOoE=
 
 nanopop@^2.1.0:
@@ -5652,7 +5655,7 @@ npm-run-path@^4.0.1:
 
 nprogress@^0.2.0:
   version "0.2.0"
-  resolved "https://registry.nlark.com/nprogress/download/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
+  resolved "https://registry.nlark.com/nprogress/download/nprogress-0.2.0.tgz"
   integrity sha1-y480xTIT2JVyP8urkH6UIq28r7E=
 
 nth-check@^1.0.2:
@@ -6476,6 +6479,11 @@ psl@^1.1.33:
   resolved "https://registry.npm.taobao.org/psl/download/psl-1.8.0.tgz"
   integrity sha1-kyb4vPsBOtzABf3/BWrM4CDlHCQ=
 
+pubsub-js@^1.9.3:
+  version "1.9.3"
+  resolved "https://registry.npmjs.org/pubsub-js/-/pubsub-js-1.9.3.tgz"
+  integrity sha512-FhYYlPNOywTh7zN38u5AlG67emA47w6JZd7YgdQU1w8gQbZhhIGxVM0AQosdaINHb2ALb+fhfnVyBJAt4D4IzA==
+
 pug-attrs@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npm.taobao.org/pug-attrs/download/pug-attrs-3.0.0.tgz"
@@ -6614,8 +6622,8 @@ q@^1.1.2:
 
 qrcodejs2-fix@^0.0.1:
   version "0.0.1"
-  resolved "https://registry.nlark.com/qrcodejs2-fix/download/qrcodejs2-fix-0.0.1.tgz#7e355c1facbe74fdf85520bf973d30abb9d79a52"
-  integrity sha1-fjVcH6y+dP34VSC/lz0wq7nXmlI=
+  resolved "https://registry.npmjs.org/qrcodejs2-fix/-/qrcodejs2-fix-0.0.1.tgz"
+  integrity sha512-1R6jB87k1PUwjX65hh24FftDjrghPvryYfsajV3chCp//dQb8QUeL446DVLj2SIeotP8ro9rSYri0wOp7O+7Hg==
 
 queue-microtask@^1.2.2:
   version "1.2.3"
@@ -7119,8 +7127,8 @@ slice-ansi@^4.0.0:
 
 sortablejs@^1.14.0:
   version "1.14.0"
-  resolved "https://registry.nlark.com/sortablejs/download/sortablejs-1.14.0.tgz#6d2e17ccbdb25f464734df621d4f35d4ab35b3d8"
-  integrity sha1-bS4XzL2yX0ZHNN9iHU811Ks1s9g=
+  resolved "https://registry.npmjs.org/sortablejs/-/sortablejs-1.14.0.tgz"
+  integrity sha512-pBXvQCs5/33fdN1/39pPL0NZF20LeRbLQ5jtnheIPN9JQAaufGjKdWduZn4U7wCtVuzKhmRkI0DFYHYRbB2H1w==
 
 source-map-js@^0.6.2:
   version "0.6.2"
@@ -7492,8 +7500,8 @@ timsort@^0.3.0:
 
 tinymce@^5.8.2:
   version "5.8.2"
-  resolved "https://registry.nlark.com/tinymce/download/tinymce-5.8.2.tgz?cache=0&sync_timestamp=1624431174429&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftinymce%2Fdownload%2Ftinymce-5.8.2.tgz#54eb8160b697796c3b52282e648d9d12b1a7399a"
-  integrity sha1-VOuBYLaXeWw7UiguZI2dErGnOZo=
+  resolved "https://registry.npmjs.org/tinymce/-/tinymce-5.8.2.tgz"
+  integrity sha512-qfWThBrSzbj4DoUk+lgGeDoP2GzLDSWrfvVUxf40HZhTzsG15X2nZ4N49IFqwaVgRl5AyFDtuWiEH/lCmiAcRA==
 
 tmpl@1.0.x:
   version "1.0.4"
@@ -8193,7 +8201,7 @@ vue-demi@*, vue-demi@^0.9.1:
 
 vue-echarts@^6.0.0-rc.6:
   version "6.0.0-rc.6"
-  resolved "https://registry.nlark.com/vue-echarts/download/vue-echarts-6.0.0-rc.6.tgz?cache=0&sync_timestamp=1623260068981&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fvue-echarts%2Fdownload%2Fvue-echarts-6.0.0-rc.6.tgz#c12afdbe2e858c941d434996e9bb9b7af3c8c631"
+  resolved "https://registry.nlark.com/vue-echarts/download/vue-echarts-6.0.0-rc.6.tgz?cache=0&sync_timestamp=1623260068981&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fvue-echarts%2Fdownload%2Fvue-echarts-6.0.0-rc.6.tgz"
   integrity sha1-wSr9vi6FjJQdQ0mW6bubevPIxjE=
   dependencies:
     resize-detector "^0.3.0"
@@ -8214,7 +8222,7 @@ vue-eslint-parser@^7.0.0, vue-eslint-parser@^7.8.0:
 
 vue-router@^4.0.10:
   version "4.0.10"
-  resolved "https://registry.nlark.com/vue-router/download/vue-router-4.0.10.tgz#ec8fda032949b2a31d3273170f8f376e86eb52ac"
+  resolved "https://registry.nlark.com/vue-router/download/vue-router-4.0.10.tgz"
   integrity sha1-7I/aAylJsqMdMnMXD483bobrUqw=
   dependencies:
     "@vue/devtools-api" "^6.0.0-beta.14"
@@ -8240,7 +8248,7 @@ vue3-click-away@^1.2.1:
 
 vue3-perfect-scrollbar@^1.5.5:
   version "1.5.5"
-  resolved "https://registry.nlark.com/vue3-perfect-scrollbar/download/vue3-perfect-scrollbar-1.5.5.tgz#3557e0fd7f337886171e60fd8a271855e8717db8"
+  resolved "https://registry.nlark.com/vue3-perfect-scrollbar/download/vue3-perfect-scrollbar-1.5.5.tgz"
   integrity sha1-NVfg/X8zeIYXHmD9iicYVehxfbg=
   dependencies:
     cssnano "^4.1.3"

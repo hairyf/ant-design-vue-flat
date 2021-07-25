@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-12 14:04:45
- * @LastEditTime: 2021-07-17 16:01:09
+ * @LastEditTime: 2021-07-25 11:23:03
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -19,13 +19,18 @@
 </script>
 <script lang="ts" setup>
   import { defineProps } from 'vue'
-  import { analyUnit } from '@tuimao/utils'
+  import { analyUnit, removeHtmlStrTagAttr } from '@tuimao/utils'
   import option from './iconfont.json'
   const props = defineProps({
+    // 图标类型
     type: String as () => keyof typeof option,
+    // 图标尺寸
     size: [String, Number],
+    // 图标颜色
     color: String,
+    // 保留 svg 宽高属性, 开启后 size 失效
     svgSize: Boolean,
+    // 自定义 svg 内容
     svgContent: String
   })
   const svgCotnent = computed(() => {
@@ -41,7 +46,7 @@
   })
   const svgTag = computed(() => {
     if (!props.svgSize) {
-      return svgCotnent.value?.replace(/width="(\w*%?)"/g, '')?.replace(/height="(\w*%?)"/g, '')
+      return removeHtmlStrTagAttr(svgCotnent.value || '', ['height', 'width'])
     }
     return svgCotnent.value
   })
