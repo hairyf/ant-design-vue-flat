@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 14:41:34
- * @LastEditTime: 2021-07-26 09:53:44
+ * @LastEditTime: 2021-07-26 13:58:12
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -22,10 +22,7 @@
   import { useVModel } from '@vueuse/core'
   const props = defineProps({
     ...inheritProps(NInputNumber),
-    modelValue: {
-      type: Number,
-      default: 0
-    }
+    modelValue: Number
   })
   const num = useVModel(props, 'modelValue')
   useTheme('Input')
