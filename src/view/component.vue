@@ -1,12 +1,34 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-25 15:30:28
+ * @LastEditTime: 2021-07-25 17:55:03
  * @Description: 
  * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
+  <cal-card title="-------------------">
+    <cal-nested-sort-table-card v-model="list">
+      <template #header>
+        <div class=flex>
+          <div>
+            1
+          </div> <div>
+            1
+          </div> <div>
+            1
+          </div> <div>
+            1
+          </div> <div>
+            1
+          </div>
+        </div>
+      </template>
+      <template #item="{ nestedIndex }">
+        <div :style="{ marginLeft: nestedIndex * 20 + 'px' }">item{{ nestedIndex }}</div>
+      </template>
+    </cal-nested-sort-table-card>
+  </cal-card>
   <cal-space vertical>
     <cal-radio-group>
       <cal-radio-button-even>wadwad</cal-radio-button-even>
@@ -260,6 +282,25 @@
 </template>
 <script lang="ts" setup>
   const treeValue = ref<any[]>([])
+  const list = ref([
+    {
+      children: [
+        { children: [] },
+        { children: [{}, {}, {}] },
+        { children: [] },
+        { children: [] },
+        {},
+        {}
+      ]
+    },
+    { children: [] },
+    { children: [] },
+    { children: [] },
+    { children: [{}, {}, {}] },
+    { children: [] },
+    { children: [] },
+    { children: [{}, {}, {}] }
+  ])
   const option = ref([
     {
       name: '一级分类选择-1',
@@ -318,7 +359,6 @@
   const select = ref([])
   import { ref, watchEffect } from 'vue'
   import { CalModel } from '~/components'
-  watchEffect(() => console.log(select.value))
   const menuvalue = ref('')
   const value = ref('二级')
   const time = ref([])

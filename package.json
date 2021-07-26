@@ -1,6 +1,6 @@
 {
   "name": "ant-design-vue-flat",
-  "version": "0.0.30-alpha.57",
+  "version": "0.0.30-alpha.61",
   "description": "",
   "author": "peiyahui",
   "types": "package/index.ts",
@@ -8,8 +8,9 @@
   "main": "dist/ant-design-vue-flat.umd.js",
   "module": "dist/ant-design-vue-flat.esm.js",
   "scripts": {
-    "dev": "vite",
-    "start": "vite",
+    "dev": "yarn && vite --force",
+    "test": "yarn dev --mode test",
+    "start": "yarn dev",
     "serve": "vite preview",
     "release": "npm run build && npm pub",
     "build": "yarn clean && yarn build:esm && yarn build:umd",
