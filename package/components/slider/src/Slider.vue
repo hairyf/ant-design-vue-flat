@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-24 16:36:38
- * @LastEditTime: 2021-07-24 19:45:29
+ * @LastEditTime: 2021-07-26 09:58:59
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -15,7 +15,8 @@
       railHeight: '10px',
       fillColor: 'var(--common-primary-color-light-4)',
       fillColorHover: 'var(--common-primary-color)',
-      handleColor: 'var(--common-primary-color)'
+      handleColor: 'var(--common-primary-color)',
+      railColor: '#F5F5F5'
     }"
   />
 </template>
