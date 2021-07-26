@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 14:41:34
- * @LastEditTime: 2021-07-24 20:29:11
+ * @LastEditTime: 2021-07-26 09:47:40
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -22,9 +22,9 @@
   const props = defineProps(inheritProps(NInputNumber))
   useTheme('Input')
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
   .cal-input-number {
-    :deep(.n-input) {
+    .n-input {
       --border-hover: 1px solid var(--common-primary-color) !important;
       --border-focus: 1px solid var(--common-primary-color) !important;
       --color: transparent !important;
