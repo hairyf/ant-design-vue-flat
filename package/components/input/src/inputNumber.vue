@@ -1,14 +1,14 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 14:41:34
- * @LastEditTime: 2021-07-26 09:47:40
+ * @LastEditTime: 2021-07-26 09:53:44
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
   <div class="cal-input-number flex items-center">
-    <n-input-number class="flex-1" v-bind="props" :show-button="false" />
+    <n-input-number class="flex-1" v-bind="props" v-model:value="num" :show-button="false" />
     <slot name="suffix" />
   </div>
 </template>
@@ -19,7 +19,15 @@
 <script lang="ts" setup>
   import { NInputNumber } from 'naive-ui'
   import { useTheme, inheritProps } from '../../../utils'
-  const props = defineProps(inheritProps(NInputNumber))
+  import { useVModel } from '@vueuse/core'
+  const props = defineProps({
+    ...inheritProps(NInputNumber),
+    modelValue: {
+      type: Number,
+      default: 0
+    }
+  })
+  const num = useVModel(props, 'modelValue')
   useTheme('Input')
 </script>
 <style lang="scss">

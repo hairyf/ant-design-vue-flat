@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-25 17:55:03
+ * @LastEditTime: 2021-07-26 09:56:48
  * @Description: 
- * @LastEditors: Zhilong
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -35,7 +35,7 @@
     </cal-radio-group>
     <cal-icon type="date" svg-size />
     <cal-slider />
-    <cal-input-number></cal-input-number>
+    <cal-input-number v-model="num"></cal-input-number>
     <cal-card title="wainodwaod">
       <cal-color-n-pickr control />
       <template #extra>asdsanio</template>
@@ -319,6 +319,8 @@
       ]
     }
   ])
+  const num = ref(0)
+  watch(num, () => console.log(num.value))
   const treeData = ref([
     {
       title: 'Node1',
@@ -357,7 +359,7 @@
     }
   ])
   const select = ref([])
-  import { ref, watchEffect } from 'vue'
+  import { ref, watch, watchEffect } from 'vue'
   import { CalModel } from '~/components'
   const menuvalue = ref('')
   const value = ref('二级')
