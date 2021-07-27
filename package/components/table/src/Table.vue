@@ -1,9 +1,9 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-05-25 18:04:11
- * @LastEditTime: 2021-07-19 16:12:49
+ * @LastEditTime: 2021-07-27 14:22:08
  * @Description: 表格
- * @LastEditors: Mr.Mao
+ * @LastEditors: Zhilong
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
 -->
 <template>
@@ -17,7 +17,10 @@
     >
       <div class="w-4" />
       <div class="px-20 flex items-center" v-if="select">
-        <cal-checkbox @change="onCheckboxChange(item, $event)" />
+        <cal-checkbox
+          @change="onCheckboxChange(item, $event)"
+          v-model:checked="item.CACHE_SELECT_TABLE"
+        />
       </div>
       <div class="flex flex-1" :style="{ minWidth: minWidth }">
         <table-provide :item="item.CACHE_OLD_ITEM_TABLE" :index="index">
@@ -36,21 +39,11 @@
   import { defineEmits, defineProps, provide, watch, ref } from 'vue'
   import TableProvide from './TableProvide.vue'
   import { nanoid } from 'nanoid'
-  import { orderBy } from 'lodash'
+  import { orderBy, debounce } from 'lodash'
   import { analyUnit } from '@tuimao/utils'
   import { useTheme } from '../../../utils/theme'
-  const emit = defineEmits(['checkboxChange', 'itemClick'])
-  const selectList: Record<string, any> = {}
-  const onCheckboxChange = (item: typeof fictitiousList.value[0], { target: { checked } }: any) => {
-    item.CACHE_SELECT_TABLE = checked
-    if (checked) {
-      selectList[item?.CACHE_ID_TABLE] = item.CACHE_OLD_ITEM_TABLE
-    } else {
-      delete selectList[item?.CACHE_ID_TABLE]
-    }
-    emit('checkboxChange', Object.values(selectList))
-  }
-
+  import { useVModel } from '@vueuse/core'
+  const emit = defineEmits(['checkboxChange', 'itemClick', 'update:selectAll'])
   const props = defineProps({
     /** 块边距 */
     marginBottom: {
@@ -82,6 +75,11 @@
       type: Boolean,
       default: false
     },
+    /** 全选 */
+    selectAll: {
+      type: Boolean,
+      default: false
+    },
     /** 行内间距 */
     space: {
       type: [Number, String],
@@ -90,6 +88,41 @@
     /** 自动计算间距 */
     syncSpace: Boolean
   })
+
+  const indeterminate = ref(false)
+
+  /** 全选 和 多选操作 */
+  const selectList: Record<string, any> = {}
+  const selectAll = useVModel(props, 'selectAll')
+  watch(selectAll, (value) => {
+    if (value) {
+      fictitiousList.value.forEach((item) => {
+        item.CACHE_SELECT_TABLE = value
+      })
+    } else {
+      const currentAllSelect = !fictitiousList.value.some((item) => !item.CACHE_SELECT_TABLE)
+      if (currentAllSelect) {
+        fictitiousList.value.forEach((item) => {
+          item.CACHE_SELECT_TABLE = value
+        })
+      }
+    }
+    checkboxChange()
+  })
+
+  const onCheckboxChange = (item: typeof fictitiousList.value[0], { target: { checked } }: any) => {
+    item.CACHE_SELECT_TABLE = checked
+    emit('update:selectAll', !fictitiousList.value.some((item) => !item.CACHE_SELECT_TABLE))
+    checkboxChange()
+  }
+
+  const checkboxChange = debounce(() => {
+    emit(
+      'checkboxChange',
+      fictitiousList.value.filter((item) => item.CACHE_SELECT_TABLE)
+    )
+  }, 50)
+
   // 获取数据更新后的值
   const updateList = () => {
     return props.list.map((item: { CACHE_ID_TABLE?: string; select?: boolean }) => {

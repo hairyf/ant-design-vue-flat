@@ -1,12 +1,20 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-26 09:56:48
+ * @LastEditTime: 2021-07-27 11:35:44
  * @Description: 
- * @LastEditors: Mr.Mao
+ * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
+<cal-card>
+  <cal-checkbox v-model:checked='selectAll' />
+  <cal-table :list='tableData' select v-model:selectAll='selectAll' @checkboxChange="$outEvents">
+    <cal-table-option title='000' />
+    <cal-table-option title='111'/>
+    <cal-table-option title='222'/>
+  </cal-table>
+</cal-card>
   <cal-card title="-------------------">
     <cal-nested-sort-table-card v-model="list">
       <template #header>
@@ -371,6 +379,18 @@
   const onSearch = () => {
     console.log(61223)
   }
+
+  const tableData = ref([
+    {
+
+    },
+    {
+
+    }
+  ])
+
+  const selectAll= ref(false)
+
   const groupValue = ref([])
   const orderGhlOpts = ref({
     tooltip: {
