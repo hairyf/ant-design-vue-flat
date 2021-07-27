@@ -1632,7 +1632,7 @@
   dependencies:
     "@types/lodash" "*"
 
-"@types/lodash@*", "@types/lodash@^4.14.161", "@types/lodash@^4.14.165", "@types/lodash@^4.14.170":
+"@types/lodash@*", "@types/lodash@^4.14.165", "@types/lodash@^4.14.170":
   version "4.14.171"
   resolved "https://registry.nlark.com/@types/lodash/download/@types/lodash-4.14.171.tgz?cache=0&sync_timestamp=1625609589008&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Flodash%2Fdownload%2F%40types%2Flodash-4.14.171.tgz"
   integrity sha1-8Bs6X+NJnjS2IsNipGpgn9sjVzs=
@@ -3271,13 +3271,12 @@ electron-to-chromium@^1.3.723:
   resolved "https://registry.nlark.com/electron-to-chromium/download/electron-to-chromium-1.3.769.tgz"
   integrity sha1-c61+Py1DWBC2+LKWF+w0THgvy+0=
 
-element-plus@^1.0.2-beta.54:
-  version "1.0.2-beta.55"
-  resolved "https://registry.nlark.com/element-plus/download/element-plus-1.0.2-beta.55.tgz?cache=0&sync_timestamp=1625823476329&other_urls=https%3A%2F%2Fregistry.nlark.com%2Felement-plus%2Fdownload%2Felement-plus-1.0.2-beta.55.tgz"
-  integrity sha1-2ViGZJVgxO3yFWjm1Kgi5MdPzdA=
+element-plus@^1.0.2-beta.59:
+  version "1.0.2-beta.63"
+  resolved "https://registry.yarnpkg.com/element-plus/-/element-plus-1.0.2-beta.63.tgz#f2faf1456d8b597e1f9b88daaea2fb412d2fe675"
+  integrity sha512-z47wZwLxtxWNl6o/E5te+AnrQZw6pPLrz8lVCFdnMcdseconldiCmfDxacUtVzMFAvC5G89fC9/PYHt28Vz2BA==
   dependencies:
     "@popperjs/core" "^2.4.4"
-    "@types/lodash" "^4.14.161"
     async-validator "^3.4.0"
     dayjs "1.x"
     lodash "^4.17.20"
