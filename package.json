@@ -2,7 +2,7 @@
   "name": "ant-design-vue-flat",
   "version": "0.0.30-alpha.65",
   "description": "",
-  "author": "peiyahui",
+  "author": "TuiMao233,RanxinStart",
   "types": "package/index.ts",
   "license": "ISC",
   "main": "dist/ant-design-vue-flat.umd.js",
