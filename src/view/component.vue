@@ -1,42 +1,39 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-27 11:35:44
+ * @LastEditTime: 2021-07-27 15:09:00
  * @Description: 
  * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-<cal-card>
-  <cal-checkbox v-model:checked='selectAll' />
-  <cal-table :list='tableData' select v-model:selectAll='selectAll' @checkboxChange="$outEvents">
-    <cal-table-option title='000' />
-    <cal-table-option title='111'/>
-    <cal-table-option title='222'/>
-  </cal-table>
-</cal-card>
-  <cal-card title="-------------------">
-    <cal-nested-sort-table-card v-model="list">
-      <template #header>
-        <div class=flex>
-          <div>
-            1
-          </div> <div>
-            1
-          </div> <div>
-            1
-          </div> <div>
-            1
-          </div> <div>
-            1
-          </div>
-        </div>
+  <cal-card>
+    <cal-checkbox v-model:checked="selectAll" />
+    <cal-table
+      :list="tableData"
+      select
+      v-model:selectAll="selectAll"
+      @checkboxChange="$outEvents"
+      select-position="top"
+    >
+      <template #header="{ item }">
+        <cal-nested-sort-table-card v-model="list">
+          <template #header>
+            <div class="flex">
+              <div> 1 </div> <div> 1 </div> <div> 1 </div> <div> 1 </div> <div> 1 </div>
+            </div>
+          </template>
+          <template #item="{ nestedIndex }">
+            <div :style="{ marginLeft: nestedIndex * 20 + 'px' }">item{{ nestedIndex }}</div>
+          </template>
+        </cal-nested-sort-table-card>
       </template>
-      <template #item="{ nestedIndex }">
-        <div :style="{ marginLeft: nestedIndex * 20 + 'px' }">item{{ nestedIndex }}</div>
-      </template>
-    </cal-nested-sort-table-card>
+      <cal-table-option title="000" />
+      <cal-table-option title="111" />
+      <cal-table-option title="222" />
+    </cal-table>
   </cal-card>
+  <cal-card title="-------------------"> </cal-card>
   <cal-space vertical>
     <cal-radio-group>
       <cal-radio-button-even>wadwad</cal-radio-button-even>
@@ -238,19 +235,7 @@
       <cal-increase-box size="112px" />
       <cal-button>asdadaS</cal-button>
     </cal-space>
-    <cal-table
-      sync-space
-      :list="[
-        {
-          a: [
-            { c: 'c', d: 'd' },
-            { c: 'c1', d: 'd1' }
-          ],
-          b: 2
-        },
-        { a: [{ c: 'c', d: 'd' }], b: '起来了' }
-      ]"
-    >
+    <cal-table sync-space :list="tableData">
       <cal-table-option index="a" type="list" max-width="250">
         <cal-table-option title="我是C" index="c">
           <div>xxx</div>
@@ -382,14 +367,16 @@
 
   const tableData = ref([
     {
-
+      a: [
+        { c: 'c', d: 'd' },
+        { c: 'c1', d: 'd1' }
+      ],
+      b: 2
     },
-    {
-
-    }
+    { a: [{ c: 'c', d: 'd' }], b: '起来了' }
   ])
 
-  const selectAll= ref(false)
+  const selectAll = ref(false)
 
   const groupValue = ref([])
   const orderGhlOpts = ref({

@@ -1,33 +1,49 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-05-25 18:04:11
- * @LastEditTime: 2021-07-27 14:22:08
+ * @LastEditTime: 2021-07-27 15:10:57
  * @Description: 表格
  * @LastEditors: Zhilong
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
 -->
 <template>
   <div class="table-container">
-    <div
-      class="table-view flex py-24 overflow-auto"
-      v-for="(item, index) in fictitiousList"
-      :style="{ marginBottom: analyUnit(marginBottom) }"
-      :key="item.CACHE_ID_TABLE"
-      @click="emit('itemClick', item)"
-    >
-      <div class="w-4" />
-      <div class="px-20 flex items-center" v-if="select">
-        <cal-checkbox
-          @change="onCheckboxChange(item, $event)"
-          v-model:checked="item.CACHE_SELECT_TABLE"
-        />
+    <template v-for="(item, index) in fictitiousList" :key="item.CACHE_ID_TABLE">
+      <div
+        class="table-view"
+        :style="{ marginBottom: analyUnit(marginBottom) }"
+        @click="emit('itemClick', item)"
+      >
+        <!-- 头部内容 -->
+        <div class="py-24 mx-24 border-b flex" style="border-color: #f5f5f5" v-if="slots['header']">
+          <div class="px-20 flex items-center" v-if="select && selectPosition === 'top'">
+            <cal-checkbox
+              @change="onCheckboxChange(item, $event)"
+              v-model:checked="item.CACHE_SELECT_TABLE"
+            />
+          </div>
+          <!-- 头内容 -->
+          <div class="flex-1">
+            <slot name="header" :item="item" :index="index" />
+          </div>
+        </div>
+        <div class="flex py-24 overflow-auto">
+          <div class="w-4" />
+          <div class="px-20 flex items-center" v-if="select && selectPosition === 'center'">
+            <cal-checkbox
+              @change="onCheckboxChange(item, $event)"
+              v-model:checked="item.CACHE_SELECT_TABLE"
+            />
+          </div>
+          <div class="flex flex-1" :style="{ minWidth: minWidth }">
+            <table-provide :item="item.CACHE_OLD_ITEM_TABLE" :index="index">
+              <slot name="default" />
+            </table-provide>
+          </div>
+        </div>
       </div>
-      <div class="flex flex-1" :style="{ minWidth: minWidth }">
-        <table-provide :item="item.CACHE_OLD_ITEM_TABLE" :index="index">
-          <slot />
-        </table-provide>
-      </div>
-    </div>
+    </template>
+
     <cal-empty class="mt-160" v-if="!fictitiousList.length" />
   </div>
 </template>
@@ -36,13 +52,14 @@
   export default defineComponent({ name: 'CalTable' })
 </script>
 <script lang="ts" setup>
-  import { defineEmits, defineProps, provide, watch, ref } from 'vue'
+  import { defineEmits, defineProps, provide, watch, ref, useSlots } from 'vue'
   import TableProvide from './TableProvide.vue'
   import { nanoid } from 'nanoid'
   import { orderBy, debounce } from 'lodash'
   import { analyUnit } from '@tuimao/utils'
   import { useTheme } from '../../../utils/theme'
   import { useVModel } from '@vueuse/core'
+  const slots = useSlots()
   const emit = defineEmits(['checkboxChange', 'itemClick', 'update:selectAll'])
   const props = defineProps({
     /** 块边距 */
@@ -74,6 +91,11 @@
     select: {
       type: Boolean,
       default: false
+    },
+    /** 勾选位置 */
+    selectPosition: {
+      type: String as () => 'top' | 'center',
+      default: 'center'
     },
     /** 全选 */
     selectAll: {
