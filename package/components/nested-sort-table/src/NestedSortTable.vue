@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-03-18 09:30:25
- * @LastEditTime: 2021-07-19 17:11:58
+ * @LastEditTime: 2021-07-28 18:50:33
  * @Description: 多嵌套表格组件
- * @LastEditors: Pan.Yu.Lin
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -72,12 +72,17 @@
   const slots = useSlots()
   // 判断是否展示头部
   const showHeader = !!slots.header
-  const emit = defineEmits(['update:modelValue'])
+  const emit = defineEmits<{
+    (event: 'update:modelValue', evt: any): void
+    (event: 'end', evt: Sortable.SortableEvent): void
+    (event: 'move', evt: Sortable.MoveEvent, originalEvent: Event): void
+  }>()
   // 多层model传递
   const tableItems = computed({
     get: () => props.modelValue,
     set: (value) => emit('update:modelValue', value)
   })
+  // 重置列表项
   const resetTableItem = (array: any[]) => {
     array.forEach((item) => {
       if (Array.isArray(item.children)) {
@@ -88,11 +93,11 @@
       }
     })
   }
+  // 监视列表，重置列表
   watch(
     () => tableItems.value.length,
     () => resetTableItem(tableItems.value)
   )
-
   // 当前列实现拖拽
   const sortableContainer = ref<HTMLElement>()
   onMounted(() => {
@@ -101,8 +106,9 @@
     Sortable.create(sortableContainer.value, {
       animation: 500,
       handle: props.handle,
-      onMove: () => {
+      onMove: (evt, originalEvent) => {
         if (debounce) return false
+        emit('move', evt, originalEvent)
       },
       onEnd: (event) => {
         setTimeout(() => {
@@ -114,6 +120,7 @@
             const temp = tableItems.value.splice(event.oldIndex, 1)[0]
             tableItems.value.splice(event.newIndex, 0, temp)
           }
+          emit('end', event)
         }, 400)
       }
     })
