@@ -93,7 +93,7 @@
   export default defineComponent({ name: 'CalGraphicsVerif' })
 </script>
 <script lang="ts" setup>
-  import { debounce } from 'lodash'
+  import { debounce } from 'lodash-es'
   import {
     ref,
     reactive,
