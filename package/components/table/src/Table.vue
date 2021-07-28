@@ -55,7 +55,7 @@
   import { defineEmits, defineProps, provide, watch, ref, useSlots } from 'vue'
   import TableProvide from './TableProvide.vue'
   import { nanoid } from 'nanoid'
-  import { orderBy, debounce } from 'lodash'
+  import { orderBy, debounce } from 'lodash-es'
   import { analyUnit } from '@tuimao/utils'
   import { useTheme } from '../../../utils/theme'
   import { useVModel } from '@vueuse/core'

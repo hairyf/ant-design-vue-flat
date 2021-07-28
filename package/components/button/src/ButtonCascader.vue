@@ -59,7 +59,7 @@
 <script lang="ts" setup>
   import { defineProps, inject, ref } from 'vue'
   import { defineEmits, provide } from 'vue'
-  import { cloneDeep } from 'lodash'
+  import { cloneDeep } from 'lodash-es'
   import CalEllipsis from '../../ellipsis/src/Ellipsis.vue'
   import type { Ref } from 'vue'
   import { useVModel } from '@vueuse/core'

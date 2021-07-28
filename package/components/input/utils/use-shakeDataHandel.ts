@@ -6,7 +6,7 @@
  * @LastEditors: Mr.Mao
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
  */
-import { debounce } from 'lodash'
+import { debounce } from 'lodash-es'
 import { computed, ref, Ref } from 'vue'
 
 type TValue = number | string

@@ -8,7 +8,7 @@
 
 import { AxiosResponse } from 'axios'
 import store from '@/store'
-import { debounce } from 'lodash'
+import { debounce } from 'lodash-es'
 import { message } from 'ant-design-vue'
 import router from '@/router'
 

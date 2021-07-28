@@ -7,7 +7,7 @@ import { watch } from 'vue-demi'
  * @LastEditors: Zhilong
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
  */
-import { debounce } from 'lodash'
+import { debounce } from 'lodash-es'
 import { computed, ref, Ref } from 'vue-demi'
 
 type TValue = number | string

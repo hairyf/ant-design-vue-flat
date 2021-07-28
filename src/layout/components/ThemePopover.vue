@@ -108,7 +108,7 @@
   import { setThemeColor } from '@/utils'
   import { RECEVE_THEME_OPTION } from '@/store/types'
   import { message } from 'ant-design-vue'
-  import { cloneDeep } from 'lodash'
+  import { cloneDeep } from 'lodash-es'
   const store = useStore()
   const theme = computed(() => store.state.theme)
   const currentOption = ref(theme.value.option)
