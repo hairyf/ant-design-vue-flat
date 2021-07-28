@@ -59,6 +59,7 @@
   import { analyUnit } from '@tuimao/utils'
   import { useTheme } from '../../../utils/theme'
   import { useVModel } from '@vueuse/core'
+  import CalCheckbox from '../../checkbox/src/Checkbox.vue'
   const slots = useSlots()
   const emit = defineEmits(['checkboxChange', 'itemClick', 'update:selectAll'])
   const props = defineProps({
