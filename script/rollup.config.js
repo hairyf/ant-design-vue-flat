@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-07 15:17:55
- * @LastEditTime: 2021-07-28 16:32:02
+ * @LastEditTime: 2021-07-28 18:02:23
  * @Description:
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -56,11 +56,16 @@ export default defineConfig({
     })
   ],
   external: [
-    'vue',
-    'echarts',
-    /ant-design-vue/,
     /naive-ui/,
     /element-plus/,
+    /tinymce/,
+    /@simonwep\/pickr/,
+    /ant-design-vue\/lib/,
+    /ant-design-vue\/es/,
+    /@tuimao\/utils/,
+    'ant-design-vue',
+    'vue',
+    'echarts',
     'lodash-es',
     'nanoid',
     'qrcodejs2-fix',
@@ -68,12 +73,9 @@ export default defineConfig({
     'vue3-perfect-scrollbar',
     'sortablejs',
     'vanilla-colorful',
-    /tinymce/,
     'moment',
     'echarts',
     'vue-echarts',
     'nprogress',
-    /@simonwep\/pickr/,
-    '@tuimao/utils'
   ]
 })
