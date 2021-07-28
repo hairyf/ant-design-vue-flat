@@ -1,20 +1,24 @@
 <template>
-  <el-time-picker
-    class="cal-time-picker"
-    is-range
-    v-bind="props"
-    popper-class="cal-time-range-picke"
-  >
-  </el-time-picker>
+  <el-config-provider :locale="locale">
+    <el-time-picker
+      class="cal-time-picker"
+      is-range
+      v-bind="props"
+      popper-class="cal-time-range-picke"
+    >
+    </el-time-picker>
+  </el-config-provider>
 </template>
 <script lang="ts">
   import { defineComponent } from 'vue'
   export default defineComponent({ name: 'CalInputTimePicker' })
 </script>
 <script setup lang="ts">
+  import { ElConfigProvider } from 'element-plus'
   import { ElTimePicker } from 'element-plus'
   import 'element-plus/lib/theme-chalk/el-icon.css'
   import 'element-plus/lib/theme-chalk/el-time-picker.css'
+  import locale from 'element-plus/lib/locale/lang/zh-cn'
   import { useTheme } from '../../../utils/theme'
   import { defineProps } from 'vue'
   const props = defineProps()
