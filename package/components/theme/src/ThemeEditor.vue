@@ -28,7 +28,7 @@
   import { THEME_EDIT_KEY } from '../config'
   import type { WritableComputedRef, Ref } from 'vue'
   import type { ThemeOverrides } from '../../../utils/theme'
-  import { forIn, get, set, camelCase, merge } from 'lodash'
+  import { forIn, get, set, camelCase, merge } from 'lodash-es'
   export default defineComponent({ name: 'CalThemeEditor' })
 </script>
 <script lang="ts" setup>

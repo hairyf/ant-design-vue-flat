@@ -30,7 +30,7 @@
 <script lang="ts" setup>
   import { defineProps } from 'vue-demi'
   import { PerfectScrollbar } from 'vue3-perfect-scrollbar'
-  import { capitalize } from 'lodash'
+  import { capitalize } from 'lodash-es'
   import 'vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.css'
   const props = defineProps({
     ...((PerfectScrollbar as any).props as {}),

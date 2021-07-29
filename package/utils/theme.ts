@@ -1,13 +1,13 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:55:33
- * @LastEditTime: 2021-07-14 15:03:28
+ * @LastEditTime: 2021-07-28 16:31:49
  * @Description:
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
 import { computed, inject, ref, Ref, ComputedRef } from 'vue'
-import { cloneDeep, kebabCase, merge } from 'lodash'
+import { cloneDeep, kebabCase, merge } from 'lodash-es'
 import * as option from '../theme/default'
 
 type DeepPartial<T> = T extends object ? { [P in keyof T]?: DeepPartial<T[P]> } : T

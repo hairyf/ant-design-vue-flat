@@ -18,7 +18,7 @@
 <script lang="ts" setup>
   import { defineProps, provide, toRef, inject } from 'vue'
   import { ConfigProvider } from 'ant-design-vue'
-  import { merge } from 'lodash'
+  import { merge } from 'lodash-es'
   import type { Ref } from 'vue'
   import type { ThemeOverrides } from '../../../utils/theme'
   const props = defineProps({

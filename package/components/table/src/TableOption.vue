@@ -94,9 +94,10 @@
 </script>
 <script lang="ts" setup>
   import { analyUnit } from '@tuimao/utils'
-  import { get } from 'lodash'
+  import { get } from 'lodash-es'
   import { computed, defineProps, inject, useSlots, provide } from 'vue'
   import { useTheme } from '../../../utils/theme'
+  import CalIcon from '../../icon/src/Icon.vue'
   const slots = useSlots()
   const props = defineProps({
     /** 最小宽度 */

@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-06-22 11:12:06
- * @LastEditTime: 2021-07-22 15:30:57
+ * @LastEditTime: 2021-07-28 19:23:15
  * @Description: 
- * @LastEditors: Zhilong
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -30,9 +30,7 @@
 </template>
 <script lang="ts">
   import { defineComponent } from 'vue'
-  defineComponent({
-    name: 'CalButtonProgress'
-  })
+  export default defineComponent({ name: 'CalButtonProgress' })
 </script>
 <script lang="ts" setup>
   import { useVModel } from '@vueuse/core'

@@ -1,9 +1,9 @@
 <!--
  * @Author: Pan.Yu.Lin
  * @Date: 2021-07-12 17:02:15
- * @LastEditTime: 2021-07-25 15:30:19
+ * @LastEditTime: 2021-07-28 19:25:06
  * @Description: 
- * @LastEditors: Zhilong
+ * @LastEditors: Mr.Mao
 -->
 <template>
   <a-card
@@ -23,7 +23,7 @@
 <script lang="ts" setup>
   import { defineProps } from 'vue'
   import { useTheme } from '../../../utils/theme'
-  import { Card as ACard } from 'ant-design-vue'
+  import ACard from 'ant-design-vue/es/card'
   const props = defineProps({
     isHidden: {
       type: Boolean,

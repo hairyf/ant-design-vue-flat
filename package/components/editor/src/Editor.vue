@@ -27,7 +27,7 @@
   import type { RawEditorSettings } from 'tinymce'
   import TinymceEditor from '@tinymce/tinymce-vue'
   import { useVModel } from '@vueuse/core'
-  import { merge } from 'lodash'
+  import { merge } from 'lodash-es'
   import initOption from './_option'
   import './_import'
   const props = defineProps({
