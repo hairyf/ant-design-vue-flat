@@ -1,12 +1,16 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-27 15:09:00
+ * @LastEditTime: 2021-07-29 15:40:55
  * @Description: 
- * @LastEditors: Zhilong
+ * @LastEditors: Pan.Yu.Lin
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
+<cal-radio-group v-model:value="form.norms_type">
+        <cal-radio :value="0">单规格</cal-radio>
+        <cal-radio :value="1">多规格</cal-radio>
+      </cal-radio-group>
   <cal-input-time-picker> </cal-input-time-picker>
   <cal-card>
     <cal-checkbox v-model:checked="selectAll" />
@@ -275,6 +279,9 @@
   </cal-space>
 </template>
 <script lang="ts" setup>
+  const form = ref({
+    norms_type: 0
+  })
   const treeValue = ref<any[]>([])
   const list = ref([
     {
