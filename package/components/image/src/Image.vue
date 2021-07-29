@@ -1,14 +1,14 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 16:23:04
- * @LastEditTime: 2021-07-20 10:18:44
+ * @LastEditTime: 2021-07-29 11:45:49
  * @Description: 
  * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
   <div
-    class="cal-image rounded-lg overflow-hidden"
+    class="cal-image overflow-hidden"
     :style="{ width: wh.width, height: wh.height, borderRadius: circle }"
   >
     <a-image class="object-cover block" v-bind="props" width="100%" height="100%" />
@@ -34,12 +34,13 @@
     },
     /** 圆角 */
     circle: {
-      type: [Boolean, Number, String]
+      type: [Boolean, Number, String],
+      default: 8
     },
     /** 开启点击查看 */
-    preview:{
-      type:Boolean,
-      default:false
+    preview: {
+      type: Boolean,
+      default: false
     }
   })
 
