@@ -25,21 +25,21 @@
   "Menu": {
     "itemTextColor": "#C2DEF8",
     "itemTextActiveColor": "#FFFFFF",
-    "itemTextHoverColor": "#C2DEF8",
-    "itemBodyColor": "#FFFFFF00",
+    "itemTextHoverColor": "var(--menu-item-text-color)",
+    "itemBodyColor": "#FFFFFF",
     "itemBodyActiveColor": "#4474D6",
     "itemBodyHoverColor": "inherit",
 
-    "itemBtnTextColor": "#001426",
+    "itemBtnTextColor": "var(--layout-sider-color)",
     "itemBtnTextActiveColor": "#FFFFFF",
-    "itemBtnTextHoverColor": "#558BF7",
+    "itemBtnTextHoverColor": "var(--common-primary-color)",
     "itemBtnBodyColor": "inherit",
-    "itemBtnBodyActiveColor": "#558BF7",
+    "itemBtnBodyActiveColor": "var(--common-primary-color)",
     "itemBtnBodyHoverColor": "#DDE8FD",
 
-    "itemChildTextColor": "#001426",
-    "itemChildTextActiveColor": "#558BF7",
-    "itemChildTextHoverColor": "#558BF7",
+    "itemChildTextColor": "var(--layout-sider-color)",
+    "itemChildTextActiveColor": "var(--common-primary-color)",
+    "itemChildTextHoverColor": "var(--common-primary-color)",
     "itemChildBodyColor": "inherit",
     "itemChildBodyActiveColor": "#DDE8FD",
     "itemChildBodyHoverColor": "#DDE8FD"
@@ -47,7 +47,7 @@
   "Button": {},
   "Input": {
     "activeColor": "",
-    "hoverColor": "#558BF7",
+    "hoverColor": "var(--common-primary-color)",
     "focusColor": "#dde8fd",
     "solidColor": "#ffffff"
   },
@@ -71,6 +71,6 @@
     "notSelectedBodyColor": "#F2F6FA",
     "notSelectedTextColor": "#8C8C8C",
     "selectedTextColor": "#ffffff",
-    "selectedBodyColor": "#558BF7"
+    "selectedBodyColor": "var(--common-primary-color)"
   }
 }

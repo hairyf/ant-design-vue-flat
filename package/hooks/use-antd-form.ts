@@ -1,15 +1,15 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-06-03 17:06:29
- * @LastEditTime: 2021-07-21 21:44:55
+ * @LastEditTime: 2021-07-30 10:30:48
  * @Description:
- * @LastEditors: Zhilong
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
 
 import { ref, Ref } from 'vue'
 import { ValidationRule } from 'ant-design-vue/lib/form/Form'
-import { message } from 'ant-design-vue'
+import message from 'ant-design-vue/es/message'
 /**
  * 自定义 antd form 表单逻辑钩子
  * @param formRef 表单实例

@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-07-12 15:53:35
- * @LastEditTime: 2021-07-19 15:21:08
+ * @LastEditTime: 2021-07-30 10:48:33
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
@@ -16,6 +16,7 @@
 <script lang="ts">
   import { analyUnit } from '@tuimao/utils'
   import { computed, defineComponent, useCssVars } from 'vue'
+  import type { PropType } from 'vue'
   export default defineComponent({ name: 'CalGrid' })
 </script>
 <script lang="ts" setup>
@@ -24,7 +25,7 @@
   const props = defineProps({
     /** 子元素大小 */
     size: {
-      type: Object as () => AnalySizeOption,
+      type: [Number, String, Array, Object] as PropType<AnalySizeOption>,
       required: true
     },
     gap: {

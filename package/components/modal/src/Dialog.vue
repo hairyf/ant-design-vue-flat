@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-05-25 09:35:14
- * @LastEditTime: 2021-07-19 21:19:58
+ * @LastEditTime: 2021-07-30 10:29:18
  * @Description: 模态框二次封装
- * @LastEditors: Zhilong
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -85,7 +85,7 @@
   export default defineComponent({ name: 'CalDialog' })
 </script>
 <script lang="ts" setup>
-  import { Modal as AModal } from 'ant-design-vue'
+  import AModal from 'ant-design-vue/es/modal'
   import { watch, isRef } from 'vue'
   import { useVModel } from '@vueuse/core'
   import CalButton from '../../button/src/Button.vue'
