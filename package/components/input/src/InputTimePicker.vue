@@ -22,11 +22,9 @@
   export default defineComponent({ name: 'CalInputTimePicker' })
 </script>
 <script setup lang="ts">
-  import ElConfigProvider from 'element-plus/es/el-config-provider'
   import ElTimePicker from 'element-plus/es/el-time-picker'
   import 'element-plus/lib/theme-chalk/el-icon.css'
   import 'element-plus/lib/theme-chalk/el-time-picker.css'
-  import locale from 'element-plus/lib/locale/lang/zh-cn'
   import { useTheme } from '../../../utils/theme'
   import { defineProps } from 'vue'
   const props = defineProps()
@@ -36,6 +34,11 @@
 
 <style lang="scss">
   .cal-time-range-picke {
+    .el-picker-panel {
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05), 0px 0px 20px rgba(0, 0, 0, 0.02);
+      border-radius: 4px;
+    }
+
     .el-time-panel__footer {
       border: none !important;
       text-align: center;
