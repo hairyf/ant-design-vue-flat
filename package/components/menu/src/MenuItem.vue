@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-05-20 17:54:55
- * @LastEditTime: 2021-07-22 15:25:53
+ * @LastEditTime: 2021-07-30 15:46:35
  * @Description: 菜单项
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -31,7 +31,7 @@
     <transition
       enter-active-class="animate__bounceIn"
       leave-active-class="animate__bounceOut"
-      :duration="{ enter: 400, leave: 100 }"
+      :duration="{ enter: 400, leave: 1 }"
     >
       <span class="cal-menu-item__content" v-if="!collapse">
         <slot />
@@ -124,11 +124,11 @@
     padding: 8px 0;
     line-height: 20px;
   }
+  .cal-menu-item__content {
+    padding: 0 10px;
+  }
   .cal-menu-item.cal-menu-item--vertical {
     padding: 16px 0;
-  }
-  .cal-menu-item.cal-menu-item--vertical .cal-menu-item__prefix {
-    margin-right: 10px;
   }
   .cal-menu-item--collapse {
     padding: 10px 0;
