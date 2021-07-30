@@ -1,13 +1,14 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:55:33
- * @LastEditTime: 2021-07-28 16:31:49
+ * @LastEditTime: 2021-07-30 11:33:18
  * @Description:
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
  */
-import { computed, inject, ref, Ref, ComputedRef } from 'vue'
+import { computed, inject, ref, Ref, ComputedRef, unref } from 'vue'
 import { cloneDeep, kebabCase, merge } from 'lodash-es'
+import { MaybeRef } from '@vueuse/core'
 import * as option from '../theme/default'
 
 type DeepPartial<T> = T extends object ? { [P in keyof T]?: DeepPartial<T[P]> } : T
@@ -50,15 +51,25 @@ export const transformTheme2CssVars = (theme: Record<string, Object | 'string'>)
   recursion(theme)
   return result
 }
-
+/**
+ * 合并主题
+ * @param theme 默认主题
+ * @param overridesTheme 合并配置
+ */
+export const mergeThemeOverrides = (
+  theme?: MaybeRef<ThemeOverrides>,
+  overridesTheme?: MaybeRef<ThemeOverrides>
+) => {
+  const _theme = computed(() => merge(defaultTheme(), unref(theme)))
+  const _overridesTheme = overridesTheme || inject<Ref<ThemeOverrides>>('themeOverrides')
+  return computed(() => merge(unref(_theme), unref(_overridesTheme)))
+}
 /**
  * 获取全局主题配置
  * @returns {themeMerge}
  */
 export const useGlobalTheme = () => {
-  const theme = ref(defaultTheme())
-  const themeOverrides = inject<Ref<ThemeDefaultOption>>('themeOverrides')
-  const themeMerge = computed(() => merge(theme.value, themeOverrides?.value))
+  const themeMerge = mergeThemeOverrides()
   return computed(() => themeMerge.value)
 }
 

@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:48:41
- * @LastEditTime: 2021-07-19 15:21:01
+ * @LastEditTime: 2021-07-30 10:46:32
  * @Description: 添加某个东西
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -28,6 +28,7 @@
 </script>
 <script lang="ts" setup>
   import { defineProps } from 'vue'
+  import type { PropType } from 'vue'
   import type { AnalySizeOption } from '@tuimao/utils'
   import { analySize } from '@tuimao/utils'
   import { useTheme } from '../../../utils/theme'
@@ -41,10 +42,9 @@
       default: 'dashed'
     },
     size: {
-      type: Object as () => AnalySizeOption,
-      required: true
+      type: [Number, String, Array, Object] as PropType<AnalySizeOption>
     }
   })
-  const wh = computed(() => analySize(props.size))
+  const wh = computed(() => analySize(props.size || ''))
   useTheme('Common')
 </script>

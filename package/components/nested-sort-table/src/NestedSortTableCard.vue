@@ -9,12 +9,8 @@
 <template>
   <div :class="[nestedIndex ? `nested-sort-table-${nestedIndex}` : 'nested-sort-table']">
     <div class="table-list" ref="sortableContainer">
-      <div
-      class="table-item"
-      v-for="(item, index) in tableItems"
-      :key="item.CACHE_TABLE_ITEM_KEY"
-      >
-      <card-container :hide="!!nestedIndex">
+      <div class="table-item" v-for="(item, index) in tableItems" :key="item.CACHE_TABLE_ITEM_KEY">
+        <card-container :hide="!!nestedIndex">
           <template #header>
             <slot name="header" />
           </template>
@@ -45,8 +41,8 @@
             </template>
           </cal-nested-sort-table-card>
         </card-container>
-        </div>
       </div>
+    </div>
   </div>
 </template>
 <script lang="tsx">
@@ -54,7 +50,16 @@
   export default defineComponent({ name: 'CalNestedSortTableCard' })
 </script>
 <script lang="tsx" setup>
-  import { computed, defineEmits, defineProps, onMounted, ref, useSlots, watch, Fragment } from 'vue'
+  import {
+    computed,
+    defineEmits,
+    defineProps,
+    onMounted,
+    ref,
+    useSlots,
+    watch,
+    Fragment
+  } from 'vue'
   import { nanoid } from 'nanoid'
   import Sortable from 'sortablejs'
   import CalCard from '../../card/src/Card.vue'

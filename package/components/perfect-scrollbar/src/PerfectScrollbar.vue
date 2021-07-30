@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-20 11:26:55
- * @LastEditTime: 2021-07-20 15:50:52
+ * @LastEditTime: 2021-07-30 15:34:05
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -24,7 +24,7 @@
 </template>
 
 <script lang="ts">
-  import { defineComponent, onMounted, ref } from 'vue'
+  import { defineComponent, ref } from 'vue'
   export default defineComponent({ name: 'CalPerfectScrollbar' })
 </script>
 <script lang="ts" setup>

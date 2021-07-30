@@ -1,6 +1,8 @@
 {
   "Common": {
     "baseTextColor": "#000000",
+    "solidTextColor": "",
+    "hollowTextColor": "",
     "primaryColor": "#558BF7",
     "baseColor": "#ffffff",
     
@@ -25,30 +27,30 @@
   "Menu": {
     "itemTextColor": "#C2DEF8",
     "itemTextActiveColor": "#FFFFFF",
-    "itemTextHoverColor": "#C2DEF8",
+    "itemTextHoverColor": "var(--menu-item-text-color)",
     "itemBodyColor": "#FFFFFF00",
     "itemBodyActiveColor": "#4474D6",
     "itemBodyHoverColor": "inherit",
 
-    "itemBtnTextColor": "#001426",
+    "itemBtnTextColor": "var(--layout-sider-color)",
     "itemBtnTextActiveColor": "#FFFFFF",
-    "itemBtnTextHoverColor": "#558BF7",
+    "itemBtnTextHoverColor": "var(--common-primary-color)",
     "itemBtnBodyColor": "inherit",
-    "itemBtnBodyActiveColor": "#558BF7",
-    "itemBtnBodyHoverColor": "#DDE8FD",
+    "itemBtnBodyActiveColor": "var(--common-primary-color)",
+    "itemBtnBodyHoverColor": "var(--common-primary-color-light-8)",
 
-    "itemChildTextColor": "#001426",
-    "itemChildTextActiveColor": "#558BF7",
-    "itemChildTextHoverColor": "#558BF7",
+    "itemChildTextColor": "var(--layout-sider-color)",
+    "itemChildTextActiveColor": "var(--common-primary-color)",
+    "itemChildTextHoverColor": "var(--common-primary-color)",
     "itemChildBodyColor": "inherit",
-    "itemChildBodyActiveColor": "#DDE8FD",
-    "itemChildBodyHoverColor": "#DDE8FD"
+    "itemChildBodyActiveColor": "var(--menu-item-btn-body-hover-color)",
+    "itemChildBodyHoverColor": "var(--menu-item-btn-body-hover-color)"
   },
   "Button": {},
   "Input": {
     "activeColor": "",
-    "hoverColor": "#558BF7",
-    "focusColor": "#dde8fd",
+    "hoverColor": "var(--common-primary-color)",
+    "focusColor": "var(--common-primary-color-light-8)",
     "solidColor": "#ffffff"
   },
   "PageSelect":{
@@ -59,7 +61,7 @@
     "hollowColor":""
 },
   "Card": {
-    "bgColor": "#ffffff"
+    "bgColor": "var(--common-base-color)"
   },
   "upload":{
     "bgColor": "#ffffff"
@@ -71,6 +73,6 @@
     "notSelectedBodyColor": "#F2F6FA",
     "notSelectedTextColor": "#8C8C8C",
     "selectedTextColor": "#ffffff",
-    "selectedBodyColor": "#558BF7"
+    "selectedBodyColor": "var(--common-primary-color)"
   }
 }

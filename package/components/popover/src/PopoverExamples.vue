@@ -1,9 +1,9 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-07-22 16:46:57
- * @LastEditTime: 2021-07-22 18:04:03
+ * @LastEditTime: 2021-07-30 10:49:14
  * @Description: 示例
- * @LastEditors: Zhilong
+ * @LastEditors: Mr.Mao
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
 -->
 <template>
@@ -32,6 +32,7 @@
   import { useSlots } from 'vue'
   import Icon from '../../icon/src/Icon.vue'
   import Image from '../../image/src/Image.vue'
+  import type { PropType } from 'vue'
 
   const slots = useSlots()
   const props = defineProps({
@@ -40,7 +41,7 @@
       default: '示例'
     },
     size: {
-      type: Object as () => AnalySizeOption
+      type: [Number, String, Array, Object] as PropType<AnalySizeOption>
     },
     src: String
   })

@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-18 15:20:09
- * @LastEditTime: 2021-07-30 10:14:39
+ * @LastEditTime: 2021-07-30 10:35:27
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -18,10 +18,11 @@
   export default defineComponent({ name: 'CalInputRangePicker' })
 </script>
 <script lang="ts" setup>
-  import RangePicker from 'ant-design-vue/es/date-picker/RangePicker'
+  import DetePicker from 'ant-design-vue/es/date-picker'
   import { defineEmits, defineProps } from 'vue'
   import { useTheme } from '../../../utils/theme'
   import CalIcon from '../../icon/src/Icon.vue'
+  const RangePicker = DetePicker.RangePicker
   const props = defineProps({
     placeholder: {
       type: Object as () => [string, string],

@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:49:30
- * @LastEditTime: 2021-07-17 16:44:37
+ * @LastEditTime: 2021-07-30 10:47:02
  * @Description: 选择状态框
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -62,6 +62,8 @@
   import { computed, defineProps } from 'vue'
   import { useTheme } from '../../../utils/theme'
   import CalIcon from '../../icon/src/Icon.vue'
+  import type { PropType } from 'vue'
+  import type { AnalySizeOption } from '@tuimao/utils'
   const props = defineProps({
     // 是否展示状态
     select: Boolean,

@@ -1,9 +1,9 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-05-26 10:05:03
- * @LastEditTime: 2021-07-13 20:32:18
+ * @LastEditTime: 2021-07-30 10:51:27
  * @Description: 表格配置
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
 -->
 <template>
@@ -29,11 +29,11 @@
       :class="[option.textAlign === 'left' ? 'text-left' : 'text-center']"
     >
       <span v-if="!sort">{{ title }}</span>
-      <cal-theme-icon v-else type="sortArrow" v-model="sortState">
+      <CalTagSortArrow v-else type="sortArrow" v-model="sortState">
         <span>
           {{ title }}
         </span>
-      </cal-theme-icon>
+      </CalTagSortArrow>
     </div>
     <div
       class="flex flex-1 flex-col w-full justify-center list-border"
@@ -98,6 +98,7 @@
   import { computed, defineProps, inject, useSlots, provide } from 'vue'
   import { useTheme } from '../../../utils/theme'
   import CalIcon from '../../icon/src/Icon.vue'
+  import CalTagSortArrow from '../../_special/src/TagSortArrow.vue'
   const slots = useSlots()
   const props = defineProps({
     /** 最小宽度 */
@@ -145,7 +146,7 @@
     const isTitle = controller?.value?.order?.index === props.title
     return isIndex || isTitle
   }
-  const sortState = computed({
+  const sortState = computed<0>({
     get() {
       return isCurrentIndex() ? controller.value.order.sort : 0
     },

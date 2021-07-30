@@ -1,88 +1,97 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-07-19 10:07:11
- * @LastEditTime: 2021-07-19 10:35:49
+ * @LastEditTime: 2021-07-30 17:02:33
  * @Description: 
- * @LastEditors: Zhilong
+ * @LastEditors: Mr.Mao
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
 -->
 <template>
   <slot />
-  <cal-button @click="resetLocaleTheme">重置</cal-button>
-  <div class="cal-theme-editor">
-    <div v-for="(items, key) in deepEditorTheme" :key="key">
-      <div>{{ key }}</div>
-      <div class="ml-10" v-for="(item, index) in items" :key="index">
-        {{ item.name }}：<cal-input
-          v-model="item.value.value"
-          :placeholder="get(currentTheme, item.target)"
-        />
+  <n-popover placement="left-end" trigger="click">
+    <template #trigger>
+      <div class="cal-theme-editor">
+        <cal-icon type="theme" size="35" />
+      </div>
+    </template>
+    <div class="w-320 pt-10 mb-20 grid gap-28 overflow-hidden select-none">
+      <div class="text-lg">主题编辑器</div>
+      <cal-pefrect-scrollbar class="h-500">
+        <n-collapse>
+          <n-collapse-item v-for="(editors, key) in deepEditorTheme" :key="key" :title="key">
+            <div class="grid gap-10">
+              <template v-for="(item, index) in editors" :key="index">
+                <div class="flex gap-10">
+                  <span>{{ item.name }}</span>
+                  <cal-tag
+                    class="cursor-pointer"
+                    v-if="item.name === 'commonPrimaryColor'"
+                    @click="generateThemeFuse(item.value.value)"
+                  >
+                    生成
+                  </cal-tag>
+                </div>
+                <cal-input
+                  v-model="item.value.value"
+                  :placeholder="get(currentTheme, item.target) || '暂无'"
+                />
+              </template>
+            </div>
+          </n-collapse-item>
+        </n-collapse>
+      </cal-pefrect-scrollbar>
+      <div class="flex gap-28">
+        <cal-button class="flex-1" @click="resetLocaleTheme">清除</cal-button>
+        <cal-button class="flex-1" type="primary" @click="createJsonDownload">导出</cal-button>
       </div>
     </div>
-  </div>
+  </n-popover>
 </template>
 <script lang="ts">
-  import { computed, defineComponent, inject, provide, readonly } from 'vue'
-  import { useGlobalTheme } from '../../../utils'
-  import { useStorage } from '@vueuse/core'
-  import { THEME_EDIT_KEY } from '../config'
-  import type { WritableComputedRef, Ref } from 'vue'
-  import type { ThemeOverrides } from '../../../utils/theme'
-  import { forIn, get, set, camelCase, merge } from 'lodash-es'
+  import CalIcon from '../../icon/src/Icon.vue'
+  import CalInput from '../../input/src/Input.vue'
+  import CalButton from '../../button/src/Button.vue'
+  import CalTag from '../../tag/src/Tag.vue'
+  import CalPefrectScrollbar from '../../perfect-scrollbar/src/PerfectScrollbar.vue'
+  import { defineComponent, provide } from 'vue'
+  import { mergeThemeOverrides } from '../../../utils/theme'
+  import { useDeepEditorTheme } from '../hooks/use-deep-editor-theme'
+  import { NPopover } from 'naive-ui/es/popover'
+  import { NCollapse, NCollapseItem } from 'naive-ui/es/collapse'
+  import { get } from 'lodash-es'
+  import { downloadBlobFile, fuseThemeColor } from '@tuimao/utils'
+  import message from 'ant-design-vue/es/message'
   export default defineComponent({ name: 'CalThemeEditor' })
 </script>
 <script lang="ts" setup>
-  type DeepThemeConfigItem = { target: string[]; value: WritableComputedRef<string>; name: string }
-  // 当前全局挂载主题
-  const currentTheme = useGlobalTheme()
-  // 本地缓存主题
-  const localeTheme = useStorage<ThemeOverrides>(THEME_EDIT_KEY, {})
-  // 深层编辑主题
-  const deepEditorTheme = computed(() => {
-    const deepThemeConfig: Record<string, DeepThemeConfigItem[]> = {}
-    const getTargetComputed = (target: string[]) => {
-      return {
-        value: computed({
-          get: () => (get(localeTheme.value, target) as string) || '',
-          set: (value) => {
-            if (value) {
-              set(localeTheme.value, target, value)
-            } else {
-              delete (localeTheme.value as any)[target[0]]
-            }
-          }
-        }),
-        target,
-        name: camelCase(target.join('-'))
-      }
-    }
-    const getThemeComputeds = (option: object, upperPath: string) => {
-      const array: DeepThemeConfigItem[] = []
-      let pathMaps: string[] = [upperPath]
-      const recursion = (option: object) => {
-        forIn(option, (v, k) => {
-          pathMaps.push(k)
-          if (typeof v === 'object') {
-            recursion(v)
-          } else {
-            array.push(getTargetComputed([...pathMaps]))
-          }
-          pathMaps = pathMaps.slice(0, pathMaps.indexOf(k))
-        })
-      }
-      recursion(option)
-      return array
-    }
-    forIn(currentTheme.value, (v, k) => {
-      deepThemeConfig[k] = getThemeComputeds(v, k)
-    })
-    return deepThemeConfig
-  })
+  // 获取递归编辑项
+  const { localeTheme, deepEditorTheme, currentTheme } = useDeepEditorTheme()
+  // 进行注入
+  const mergeTheme = mergeThemeOverrides(localeTheme)
+  provide('themeOverrides', mergeTheme)
   // 重置编辑主题
   const resetLocaleTheme = () => (localeTheme.value = {})
-  const injectOverrides = inject<Ref<ThemeOverrides>>('themeOverrides')
-  const mergeTheme = computed(() => merge(injectOverrides?.value, localeTheme.value))
-  provide('themeOverrides', mergeTheme)
+  // 根据颜色生成混合
+  const generateThemeFuse = (color: string) => {
+    if (!color) {
+      message.error('请先输入颜色')
+      return
+    }
+    localeTheme.value.Common = {
+      ...localeTheme.value.Common,
+      ...fuseThemeColor(color)
+    }
+  }
+  // 导出主题 JSON 文件
+  const createJsonDownload = () => {
+    downloadBlobFile(JSON.stringify(localeTheme.value, null, '\t') as any, 'theme-overrides.json')
+  }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+  .cal-theme-editor {
+    @apply fixed w-56 h-56 bg-white rounded-full shadow flex justify-center items-center cursor-pointer;
+    right: 40px;
+    bottom: 40px;
+  }
+</style>
