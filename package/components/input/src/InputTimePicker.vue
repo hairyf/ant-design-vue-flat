@@ -7,26 +7,24 @@
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <el-config-provider :locale="locale">
-    <el-time-picker
-      class="cal-time-picker"
-      is-range
-      v-bind="props"
-      popper-class="cal-time-range-picke"
-    >
-    </el-time-picker>
-  </el-config-provider>
+  <!-- <el-config-provider :locale="locale"> -->
+  <el-time-picker
+    class="cal-time-picker"
+    is-range
+    v-bind="props"
+    popper-class="cal-time-range-picke"
+  >
+  </el-time-picker>
+  <!-- </el-config-provider> -->
 </template>
 <script lang="ts">
   import { defineComponent } from 'vue'
   export default defineComponent({ name: 'CalInputTimePicker' })
 </script>
 <script setup lang="ts">
-  import ElConfigProvider from 'element-plus/es/el-config-provider'
   import ElTimePicker from 'element-plus/es/el-time-picker'
   import 'element-plus/lib/theme-chalk/el-icon.css'
   import 'element-plus/lib/theme-chalk/el-time-picker.css'
-  import locale from 'element-plus/lib/locale/lang/zh-cn'
   import { useTheme } from '../../../utils/theme'
   import { defineProps } from 'vue'
   const props = defineProps()
@@ -36,6 +34,11 @@
 
 <style lang="scss">
   .cal-time-range-picke {
+    .el-picker-panel {
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05), 0px 0px 20px rgba(0, 0, 0, 0.02);
+      border-radius: 4px;
+    }
+
     .el-time-panel__footer {
       border: none !important;
       text-align: center;
@@ -54,6 +57,13 @@
         background-color: var(--input-hover-color);
         color: #fff;
       }
+      button:focus {
+        outline: none !important;
+      }
+    }
+    .el-time-range-picker__body {
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05), 0px 0px 20px rgba(0, 0, 0, 0.02);
+      border-radius: 4px;
     }
   }
   .cal-time-picker {
