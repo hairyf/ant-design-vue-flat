@@ -7,6 +7,8 @@
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
+  <cal-tag> 45123 </cal-tag>
+  <cal-tag> 45123 </cal-tag>
   <cal-input-time-picker
     format="HH:mm"
     v-model="formState.businessHours"

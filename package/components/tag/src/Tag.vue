@@ -7,7 +7,7 @@
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <a-tag v-bind="props">
+  <a-tag v-bind="props" class="cal-tag">
     <slot />
   </a-tag>
 </template>
@@ -29,4 +29,10 @@
   useTheme('Common')
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+  .cal-tag {
+    &.ant-tag {
+      margin-right: 10px;
+    }
+  }
+</style>
