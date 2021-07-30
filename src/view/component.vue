@@ -7,7 +7,16 @@
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <cal-card></cal-card>
+  <cal-tag> 45123 </cal-tag>
+  <cal-tag> 45123 </cal-tag>
+  <cal-input-time-picker
+    format="HH:mm"
+    v-model="formState.businessHours"
+    start-placeholder="营业开始时间"
+    end-placeholder="营业结束时间"
+    clearable
+  >
+  </cal-input-time-picker>
 </template>
 <script lang="ts" setup>
   const formState = ref({
