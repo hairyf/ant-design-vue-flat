@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-24 16:36:38
- * @LastEditTime: 2021-07-24 18:41:45
+ * @LastEditTime: 2021-07-30 10:02:19
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -23,7 +23,7 @@
 </script>
 <script lang="ts" setup>
   import { defineProps } from 'vue-demi'
-  import { NColorPicker } from 'naive-ui'
+  import { NColorPicker } from 'naive-ui/es/color-picker'
   import { inheritProps } from '../../../utils'
   import { useVModel } from '@vueuse/core'
   import CalTag from '../../tag/src/Tag.vue'

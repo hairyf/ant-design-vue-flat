@@ -2,7 +2,7 @@
  * @Author: Mr.Mao
  * @LastEditors: Mr.Mao
  * @Date: 2021-02-26 11:17:43
- * @LastEditTime: 2021-07-24 17:33:36
+ * @LastEditTime: 2021-07-30 10:01:43
  * @Description: 颜色选择器
  * @任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
@@ -15,7 +15,7 @@
 </script>
 <script lang="ts" setup>
   import { computed, defineEmits, defineProps } from 'vue'
-  import { ElColorPicker } from 'element-plus'
+  import ElColorPicker from 'element-plus/es/el-color-picker'
   const props = defineProps({
     modelValue: String,
     // 是否动态更改值

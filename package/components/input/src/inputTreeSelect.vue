@@ -1,9 +1,9 @@
 <!--
  * @Author: Pan.Yu.Lin
  * @Date: 2021-07-21 09:10:04
- * @LastEditTime: 2021-07-22 16:04:09
+ * @LastEditTime: 2021-07-30 10:17:09
  * @Description: 
- * @LastEditors: Pan.Yu.Lin
+ * @LastEditors: Mr.Mao
 -->
 <template>
   <a-tree-select
@@ -17,10 +17,10 @@
   export default defineComponent({ name: 'CalInputTreeSelect' })
 </script>
 <script lang="ts" setup>
-  import { TreeSelect as ATreeSelect, TreeSelect } from 'ant-design-vue'
+  import ATreeSelect from 'ant-design-vue/es/tree-select'
   import { defineProps } from 'vue'
   import { useTheme } from '../../../utils/theme'
-  const SHOW_PARENT = TreeSelect.SHOW_PARENT
+  const SHOW_PARENT = ATreeSelect.SHOW_PARENT
   const props = defineProps()
   useTheme('Input')
 </script>

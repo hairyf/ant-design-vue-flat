@@ -1,3 +1,11 @@
+<!--
+ * @Author: Mr.Mao
+ * @Date: 2021-07-22 15:33:02
+ * @LastEditTime: 2021-07-30 10:16:31
+ * @Description: 
+ * @LastEditors: Mr.Mao
+ * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
+-->
 <template>
   <el-config-provider :locale="locale">
     <el-time-picker
@@ -14,8 +22,8 @@
   export default defineComponent({ name: 'CalInputTimePicker' })
 </script>
 <script setup lang="ts">
-  import { ElConfigProvider } from 'element-plus'
-  import { ElTimePicker } from 'element-plus'
+  import ElConfigProvider from 'element-plus/es/el-config-provider'
+  import ElTimePicker from 'element-plus/es/el-time-picker'
   import 'element-plus/lib/theme-chalk/el-icon.css'
   import 'element-plus/lib/theme-chalk/el-time-picker.css'
   import locale from 'element-plus/lib/locale/lang/zh-cn'

@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 16:23:04
- * @LastEditTime: 2021-07-29 11:45:49
+ * @LastEditTime: 2021-07-30 10:11:29
  * @Description: 
- * @LastEditors: Zhilong
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -20,7 +20,7 @@
 </script>
 <script lang="ts" setup>
   import { defineProps } from 'vue'
-  import { Image as AImage } from 'ant-design-vue'
+  import AImage from 'ant-design-vue/es/image'
   import { analyUnit } from '@tuimao/utils'
   import { analySize } from '@tuimao/utils'
   import type { AnalySizeOption } from '@tuimao/utils'

@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 19:34:01
- * @LastEditTime: 2021-07-19 20:34:05
+ * @LastEditTime: 2021-07-30 10:21:17
  * @Description: 
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -19,7 +19,7 @@
   import { defineProps } from 'vue'
   const props = defineProps()
   import { useTheme } from '../../../utils/theme'
-  import { Steps } from 'ant-design-vue'
+  import Steps from 'ant-design-vue/es/steps'
   useTheme('Common')
 </script>
 <style lang="scss">

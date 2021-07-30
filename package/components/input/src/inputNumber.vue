@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 14:41:34
- * @LastEditTime: 2021-07-26 13:58:12
+ * @LastEditTime: 2021-07-30 10:12:43
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -17,7 +17,7 @@
   export default defineComponent({ name: 'CalInputNumber' })
 </script>
 <script lang="ts" setup>
-  import { NInputNumber } from 'naive-ui'
+  import { NInputNumber } from 'naive-ui/es/input-number'
   import { useTheme, inheritProps } from '../../../utils'
   import { useVModel } from '@vueuse/core'
   const props = defineProps({

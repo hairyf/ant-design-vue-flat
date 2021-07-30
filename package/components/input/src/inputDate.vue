@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 14:37:14
- * @LastEditTime: 2021-07-24 19:21:10
+ * @LastEditTime: 2021-07-30 10:12:23
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -16,7 +16,7 @@
 <script lang="ts" setup>
   import moment from 'moment'
   import type { unitOfTime } from 'moment'
-  import { DatePicker } from 'ant-design-vue'
+  import DatePicker from 'ant-design-vue/es/date-picker'
   import { computed, defineEmits, defineProps } from 'vue'
   import { useTheme } from '../../../utils/theme'
   const props = defineProps({

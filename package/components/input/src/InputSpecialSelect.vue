@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-15 15:07:42
- * @LastEditTime: 2021-07-16 17:26:56
+ * @LastEditTime: 2021-07-30 10:15:46
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -24,7 +24,7 @@
 <script lang="ts" setup>
   import { analyUnit } from '@tuimao/utils'
   import { useTheme } from '../../../utils/theme'
-  import { Select as ASelect } from 'ant-design-vue'
+  import ASelect from 'ant-design-vue/es/select'
   import { computed, defineProps, defineEmits } from 'vue'
   const props = defineProps({
     modelValue: {

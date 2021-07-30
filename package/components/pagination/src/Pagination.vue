@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 18:30:28
- * @LastEditTime: 2021-07-13 18:32:53
+ * @LastEditTime: 2021-07-30 10:18:20
  * @Description: 分页选择
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -16,7 +16,7 @@
 <script lang="ts" setup>
   import { useTheme } from '../../../utils/theme'
   import { useVModel } from '@vueuse/core'
-  import { Pagination as APagination } from 'ant-design-vue'
+  import APagination from 'ant-design-vue/es/pagination'
   import { defineProps } from 'vue'
   const props = defineProps({
     modelValue: Number

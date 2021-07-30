@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-16 09:44:38
- * @LastEditTime: 2021-07-16 10:35:56
+ * @LastEditTime: 2021-07-30 10:17:46
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -15,7 +15,6 @@
   export default defineComponent({ name: 'CalNprogress' })
 </script>
 <script lang="ts" setup>
-  import type { NProgressOptions } from 'nprogress'
   import type { Router } from 'vue-router'
   import nProgress from 'nprogress'
   import { watchEffect } from 'vue'

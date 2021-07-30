@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 19:56:47
- * @LastEditTime: 2021-07-18 16:44:59
+ * @LastEditTime: 2021-07-30 10:22:00
  * @Description: 切换栏
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -21,7 +21,7 @@
 <script lang="ts" setup>
   import { useTheme } from '../../../utils/theme'
   import { defineProps, defineEmits, computed } from 'vue'
-  import { Switch as ASwitch } from 'ant-design-vue'
+  import ASwitch from 'ant-design-vue/es/switch'
   const props = defineProps({
     modelValue: [String, Number, Boolean],
     activeValue: {

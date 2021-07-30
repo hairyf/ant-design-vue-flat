@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:05:56
- * @LastEditTime: 2021-07-16 14:25:16
+ * @LastEditTime: 2021-07-30 10:23:25
  * @Description: 富文本
- * @LastEditors: Mr.wang
+ * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -16,7 +16,7 @@
 <script lang="ts" setup>
   import { useTheme } from '../../../utils/theme'
   import { defineProps } from 'vue'
-  import { Input } from 'ant-design-vue'
+  import Input from 'ant-design-vue/es/input'
   const ATextarea = Input.TextArea
   import { useVModel } from '@vueuse/core'
   const props = defineProps({

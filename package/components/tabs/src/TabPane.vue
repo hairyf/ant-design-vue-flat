@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 09:09:40
- * @LastEditTime: 2021-07-20 21:49:50
+ * @LastEditTime: 2021-07-30 10:22:55
  * @Description: 分栏项
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -43,7 +43,7 @@
 <script lang="ts" setup>
   import { analyUnit } from '@tuimao/utils'
   import { defineProps } from 'vue'
-  import { Tabs as ATabs } from 'ant-design-vue'
+  import ATabs from 'ant-design-vue/es/tabs'
   const ATabPane = ATabs.TabPane
   const props = defineProps({
     /** 是否单独使用 */

@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:29:58
- * @LastEditTime: 2021-07-20 14:07:15
+ * @LastEditTime: 2021-07-30 10:24:34
  * @Description: 上传组件
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -44,7 +44,8 @@
 <script lang="ts" setup>
   import { useTheme } from '../../../utils/theme'
   import { ref, defineEmits, defineProps } from 'vue'
-  import { Upload, message } from 'ant-design-vue'
+  import Upload from 'ant-design-vue/es/upload'
+  import message from 'ant-design-vue/es/message'
   import CalButton from '../../button/src/Button.vue'
   const fileList = ref<any>()
   const emit = defineEmits(['uploadFile', 'downloadTemplate', 'downloadExpress'])

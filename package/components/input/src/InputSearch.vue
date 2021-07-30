@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-14 09:29:24
- * @LastEditTime: 2021-07-16 17:24:11
+ * @LastEditTime: 2021-07-30 10:15:00
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -16,7 +16,7 @@
 <script lang="ts" setup>
   import { defineProps } from 'vue'
   import { useTheme } from '../../../utils/theme'
-  import { InputSearch } from 'ant-design-vue'
+  import InputSearch from 'ant-design-vue/es/input/Search'
   const props = defineProps()
   useTheme('Input')
 </script>

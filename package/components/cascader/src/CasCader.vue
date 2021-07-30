@@ -1,9 +1,9 @@
 <!--
  * @Author: Pan.Yu.Lin
  * @Date: 2021-07-12 17:37:56
- * @LastEditTime: 2021-07-19 10:44:41
+ * @LastEditTime: 2021-07-30 09:57:55
  * @Description: 
- * @LastEditors: Zhilong
+ * @LastEditors: Mr.Mao
 -->
 <template>
   <a-cascader class="cal-cascader" v-bind="props" />
@@ -15,7 +15,7 @@
 <script lang="ts" setup>
   import { defineProps } from 'vue'
   import { useTheme } from '../../../utils/theme'
-  import { Cascader as ACascader } from 'ant-design-vue'
+  import ACascader from 'ant-design-vue/es/cascader'
   const props = defineProps()
   useTheme('Common')
 </script>

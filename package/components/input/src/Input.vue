@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 16:11:30
- * @LastEditTime: 2021-07-24 19:21:03
+ * @LastEditTime: 2021-07-30 10:11:48
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -23,7 +23,7 @@
   export default defineComponent({ name: 'CalInput' })
 </script>
 <script lang="ts" setup>
-  import { Input as AInput } from 'ant-design-vue'
+  import AInput from 'ant-design-vue/es/input'
   import { defineProps, ref, useSlots, watch } from 'vue'
   import { useVModel } from '@vueuse/core'
   import { useTheme } from '../../../utils/theme'

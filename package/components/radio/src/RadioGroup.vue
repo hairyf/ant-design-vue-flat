@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-12 19:28:29
- * @LastEditTime: 2021-07-16 17:28:13
+ * @LastEditTime: 2021-07-30 10:20:00
  * @Description: 单选组
  * @LastEditors: Mr.Mao
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -18,7 +18,7 @@
 <script lang="ts" setup>
   import { defineProps } from 'vue'
   import { useVModel } from '@vueuse/core'
-  import { RadioGroup } from 'ant-design-vue'
+  import RadioGroup from 'ant-design-vue/es/radio/Group'
   const props = defineProps({
     modelValue: [String, Number]
   })
