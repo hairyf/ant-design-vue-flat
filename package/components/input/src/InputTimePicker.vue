@@ -7,15 +7,15 @@
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <el-config-provider :locale="locale">
-    <el-time-picker
-      class="cal-time-picker"
-      is-range
-      v-bind="props"
-      popper-class="cal-time-range-picke"
-    >
-    </el-time-picker>
-  </el-config-provider>
+  <!-- <el-config-provider :locale="locale"> -->
+  <el-time-picker
+    class="cal-time-picker"
+    is-range
+    v-bind="props"
+    popper-class="cal-time-range-picke"
+  >
+  </el-time-picker>
+  <!-- </el-config-provider> -->
 </template>
 <script lang="ts">
   import { defineComponent } from 'vue'
@@ -54,6 +54,13 @@
         background-color: var(--input-hover-color);
         color: #fff;
       }
+      button:focus {
+        outline: none !important;
+      }
+    }
+    .el-time-range-picker__body {
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05), 0px 0px 20px rgba(0, 0, 0, 0.02);
+      border-radius: 4px;
     }
   }
   .cal-time-picker {
