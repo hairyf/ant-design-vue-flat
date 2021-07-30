@@ -1,6 +1,8 @@
 {
   "Common": {
     "baseTextColor": "#000000",
+    "solidTextColor": "",
+    "hollowTextColor": "",
     "primaryColor": "#558BF7",
     "baseColor": "#ffffff",
     

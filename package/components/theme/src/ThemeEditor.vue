@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-07-19 10:07:11
- * @LastEditTime: 2021-07-30 15:38:08
+ * @LastEditTime: 2021-07-30 17:02:33
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
@@ -33,7 +33,7 @@
                 </div>
                 <cal-input
                   v-model="item.value.value"
-                  :placeholder="get(currentTheme, item.target)"
+                  :placeholder="get(currentTheme, item.target) || '暂无'"
                 />
               </template>
             </div>
