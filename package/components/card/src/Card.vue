@@ -1,7 +1,7 @@
 <!--
  * @Author: Pan.Yu.Lin
  * @Date: 2021-07-12 17:02:15
- * @LastEditTime: 2021-07-28 19:25:06
+ * @LastEditTime: 2021-07-30 16:19:20
  * @Description: 
  * @LastEditors: Mr.Mao
 -->
@@ -54,8 +54,10 @@
     :deep(.ant-card-body) {
       padding: 0;
     }
+    &.ant-card-bordered {
+      border: none !important;
+    }
   }
-
   .card-side-strip {
     position: relative;
     &::before {
