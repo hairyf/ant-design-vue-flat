@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-07-19 10:07:11
- * @LastEditTime: 2021-07-31 15:54:29
+ * @LastEditTime: 2021-07-31 15:59:10
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
@@ -24,7 +24,7 @@
       <cal-pefrect-scrollbar class="h-500">
         <n-collapse>
           <n-collapse-item v-for="(editors, key) in deepEditorTheme" :key="key" :title="key">
-            <div class="grid gap-10">
+            <div class="grid gap-10" v-if="editors.length">
               <template v-for="(item, index) in editors" :key="index">
                 <div class="flex gap-10">
                   <span>{{ item.name }}</span>
@@ -48,6 +48,7 @@
                 />
               </template>
             </div>
+            <cal-empty v-else />
           </n-collapse-item>
         </n-collapse>
       </cal-pefrect-scrollbar>
@@ -65,6 +66,7 @@
   import CalTag from '../../tag/src/Tag.vue'
   import CalColorNPickr from '../../color-pickr/src/ColorNPickr.vue'
   import CalPefrectScrollbar from '../../perfect-scrollbar/src/PerfectScrollbar.vue'
+  import CalEmpty from '../../empty/src/Empty.vue'
   import { defineComponent, provide } from 'vue'
   import { mergeThemeOverrides } from '../../../utils/theme'
   import { useDeepEditorTheme } from '../hooks/use-deep-editor-theme'
