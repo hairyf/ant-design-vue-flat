@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-07-19 10:07:11
- * @LastEditTime: 2021-07-30 17:02:33
+ * @LastEditTime: 2021-07-31 15:54:29
  * @Description: 
  * @LastEditors: Mr.Mao
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
@@ -15,7 +15,12 @@
       </div>
     </template>
     <div class="w-320 pt-10 mb-20 grid gap-28 overflow-hidden select-none">
-      <div class="text-lg">主题编辑器</div>
+      <div class="flex items-center gap-10">
+        <span class="text-lg">主题编辑器</span>
+        <div>
+          <cal-tag class="cursor-pointer" @click="onResetLocaleTheme">清除配置</cal-tag>
+        </div>
+      </div>
       <cal-pefrect-scrollbar class="h-500">
         <n-collapse>
           <n-collapse-item v-for="(editors, key) in deepEditorTheme" :key="key" :title="key">
@@ -24,14 +29,20 @@
                 <div class="flex gap-10">
                   <span>{{ item.name }}</span>
                   <cal-tag
-                    class="cursor-pointer"
                     v-if="item.name === 'commonPrimaryColor'"
-                    @click="generateThemeFuse(item.value.value)"
+                    class="cursor-pointer"
+                    @click="onGenerateThemeFuse(item.value.value)"
                   >
-                    生成
+                    生成混色
                   </cal-tag>
                 </div>
+                <cal-color-n-pickr
+                  v-if="/color/i.test(item.name)"
+                  :model-value="item.value.value || get(currentTheme, item.target)"
+                  @complete="item.value.value = $event"
+                />
                 <cal-input
+                  v-else
                   v-model="item.value.value"
                   :placeholder="get(currentTheme, item.target) || '暂无'"
                 />
@@ -41,8 +52,8 @@
         </n-collapse>
       </cal-pefrect-scrollbar>
       <div class="flex gap-28">
-        <cal-button class="flex-1" @click="resetLocaleTheme">清除</cal-button>
-        <cal-button class="flex-1" type="primary" @click="createJsonDownload">导出</cal-button>
+        <cal-button class="flex-1" @click="onImportJsonOption">导入</cal-button>
+        <cal-button class="flex-1" type="primary" @click="onCreateJsonDownload">导出</cal-button>
       </div>
     </div>
   </n-popover>
@@ -52,6 +63,7 @@
   import CalInput from '../../input/src/Input.vue'
   import CalButton from '../../button/src/Button.vue'
   import CalTag from '../../tag/src/Tag.vue'
+  import CalColorNPickr from '../../color-pickr/src/ColorNPickr.vue'
   import CalPefrectScrollbar from '../../perfect-scrollbar/src/PerfectScrollbar.vue'
   import { defineComponent, provide } from 'vue'
   import { mergeThemeOverrides } from '../../../utils/theme'
@@ -59,7 +71,7 @@
   import { NPopover } from 'naive-ui/es/popover'
   import { NCollapse, NCollapseItem } from 'naive-ui/es/collapse'
   import { get } from 'lodash-es'
-  import { downloadBlobFile, fuseThemeColor } from '@tuimao/utils'
+  import { downloadBlobFile, fuseThemeColor, readFileReader, selectFiles } from '@tuimao/utils'
   import message from 'ant-design-vue/es/message'
   export default defineComponent({ name: 'CalThemeEditor' })
 </script>
@@ -70,9 +82,9 @@
   const mergeTheme = mergeThemeOverrides(localeTheme)
   provide('themeOverrides', mergeTheme)
   // 重置编辑主题
-  const resetLocaleTheme = () => (localeTheme.value = {})
+  const onResetLocaleTheme = () => (localeTheme.value = {})
   // 根据颜色生成混合
-  const generateThemeFuse = (color: string) => {
+  const onGenerateThemeFuse = (color: string) => {
     if (!color) {
       message.error('请先输入颜色')
       return
@@ -83,8 +95,14 @@
     }
   }
   // 导出主题 JSON 文件
-  const createJsonDownload = () => {
+  const onCreateJsonDownload = () => {
     downloadBlobFile(JSON.stringify(localeTheme.value, null, '\t') as any, 'theme-overrides.json')
+  }
+  // 导入主题 JSON 文件
+  const onImportJsonOption = async () => {
+    const [file] = await selectFiles({ multiple: false })
+    const jsonText = await readFileReader('readAsText', file)
+    localeTheme.value = JSON.parse(jsonText)
   }
 </script>
 

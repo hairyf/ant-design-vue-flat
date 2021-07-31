@@ -7,8 +7,8 @@ html {
   color: var(--common-base-text-color);
 }
 
-[class^="ant-"]{
-  color:inherit
+[class^="ant-"]:not([class^="ant-tag"]) {
+    color:inherit
 }
 
 @import 'ant-design-vue/dist/antd.css';

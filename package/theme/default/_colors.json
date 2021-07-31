@@ -57,7 +57,7 @@
     "solidColor": "#ffffff"
   },
   "Tabs":{
-    "backgroundColor":"#ffffff",
+    "backgroundColor":"var(--common-base-color)",
     "hollowColor":""
 },
   "Card": {
