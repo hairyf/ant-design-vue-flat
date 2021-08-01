@@ -53,8 +53,12 @@
     }
   }
   :deep(.ant-calendar-picker-clear) {
+    margin-top: -7px;
     right: 0px;
     background-color: inherit !important;
+  }
+  :deep(.ant-calendar-picker-icon) {
+    margin-top: -8px;
   }
   :deep(.ant-calendar-picker-input:not(.ant-input-disabled)) {
     box-shadow: none !important;

@@ -117,6 +117,9 @@
         border-top-color: #fff;
         border-left-color: #fff;
       }
+      .ant-select-item-empty {
+        color: #8c8c8c !important;
+      }
     }
 
     .ant-select-item-option-selected {

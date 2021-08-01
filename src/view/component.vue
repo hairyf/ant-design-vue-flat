@@ -8,6 +8,7 @@
 -->
 <template>
   <cal-upload></cal-upload>
+  <cal-input-range-picker></cal-input-range-picker>
   <cal-steps :current="-1" labelPlacement="vertical">
     <cal-step title="会员等级信息" />
     <cal-step title="会员权益" />
