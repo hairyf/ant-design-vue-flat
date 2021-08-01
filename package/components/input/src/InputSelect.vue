@@ -59,10 +59,10 @@
     }
 
     .ant-select-selection-placeholder {
-      @apply text-gray-500;
+      @apply text-gray-450;
     }
     .anticon {
-      @apply text-gray-500;
+      @apply text-gray-450;
     }
 
     // 选择前的样式

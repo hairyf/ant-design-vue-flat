@@ -64,7 +64,7 @@
       }
     }
     .ant-select-selection-search-input::-webkit-input-placeholder {
-      @apply text-gray-500;
+      @apply text-gray-450;
     }
     .anticon {
       color: #001426;

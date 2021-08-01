@@ -12,8 +12,8 @@
     <template #suffix>
       <slot v-if="slots['suffix']" name="suffix" />
       <div v-else-if="showCount" class="flex items-center text-gray-darkmin">
-        <span class="text-gray-500">{{ currentFontNumber }}</span>
-        <span class="text-gray-500">/{{ maxLength }}</span>
+        <span class="text-gray-450">{{ currentFontNumber }}</span>
+        <span class="text-gray-450">/{{ maxLength }}</span>
       </div>
     </template>
   </a-input>
@@ -65,7 +65,7 @@
       @apply rounded-none;
       color: #001426;
       &::-webkit-input-placeholder {
-        @apply text-gray-500;
+        @apply text-gray-450;
       }
       &:focus,
       &:hover {

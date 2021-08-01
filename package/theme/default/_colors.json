@@ -1,6 +1,6 @@
 {
   "Common": {
-    "baseTextColor": "#000000",
+    "baseTextColor": "#001426",
     "solidTextColor": "",
     "hollowTextColor": "",
     "primaryColor": "#558BF7",
@@ -22,14 +22,14 @@
     "primaryColorOpacity-8":"rgba(85,139,247,0.2)"
   },
   "Layout": {
-    "siderColor": "#001426"
+    "siderColor": "var(--common-primary-color-dark-8)"
   },
   "Menu": {
-    "itemTextColor": "#C2DEF8",
+    "itemTextColor": "var(--common-primary-color-light-8)",
     "itemTextActiveColor": "#FFFFFF",
     "itemTextHoverColor": "var(--menu-item-text-color)",
     "itemBodyColor": "#FFFFFF00",
-    "itemBodyActiveColor": "#4474D6",
+    "itemBodyActiveColor": "var(--common-primary-color-dark-2)",
     "itemBodyHoverColor": "inherit",
 
     "itemBtnTextColor": "var(--layout-sider-color)",
