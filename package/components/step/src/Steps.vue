@@ -44,8 +44,8 @@
       background-color: transparent;
       background-image: linear-gradient(
         to right,
-        var(--common-primary-color-light-4) 0%,
-        var(--common-primary-color-light-4) 50%,
+        var(--common-primary-color-light-8) 0%,
+        var(--common-primary-color-light-8) 50%,
         transparent 50%
       ) !important;
       background-size: 35px 5px;

@@ -7,6 +7,11 @@
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
+  <cal-upload></cal-upload>
+  <cal-steps :current="-1" labelPlacement="vertical">
+    <cal-step title="会员等级信息" />
+    <cal-step title="会员权益" />
+  </cal-steps>
   <cal-tag> 45123 </cal-tag>
   <cal-tag> 45123 </cal-tag>
   <cal-input-time-picker

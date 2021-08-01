@@ -8,7 +8,10 @@
 -->
 <template>
   <div class="cal-upload-box w-1/2 bg-upload-bg-color">
-    <div class="border-dashed border-2 border-common-primary-color-light-6">
+    <div
+      class="border-dashed border-2 border-common-primary-color-light-6"
+      style="border-radius: 10px"
+    >
       <upload
         name="file"
         :file-list="fileList"
@@ -21,7 +24,7 @@
           <div class="text-common-primary-color text-sm">
             <slot></slot>
           </div>
-          <cal-button class="w-112 mt-12" style="border-radius: 26px">选择文件</cal-button>
+          <cal-button class="w-112 mt-16" style="border-radius: 26px">选择文件</cal-button>
         </div>
       </upload>
     </div>
