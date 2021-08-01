@@ -42,7 +42,7 @@
       border-radius: none !important;
       color: #001426;
       &::-webkit-input-placeholder {
-        @apply text-gray-500;
+        @apply text-gray-450;
       }
       &:focus,
       &:hover {

@@ -32,9 +32,9 @@
       border-left: none;
       border-right: none;
       @apply rounded-none;
-      @apply border-gray-500;
+      @apply border-gray-450;
       &::-webkit-input-placeholder {
-        @apply text-gray-500;
+        @apply text-gray-450;
       }
       &:focus,
       &:hover {
