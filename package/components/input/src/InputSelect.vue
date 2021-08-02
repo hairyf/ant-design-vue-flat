@@ -59,7 +59,8 @@
     }
 
     .ant-select-selection-placeholder {
-      @apply text-gray-450;
+      // @apply text-gray-450;
+      color: #8c8c8c !important;
     }
     .anticon {
       @apply text-gray-450;
@@ -85,6 +86,9 @@
         border-color: var(--common-primary-color) !important;
         box-shadow: 0 2px 0 0 var(--common-primary-color-light-8) !important;
       }
+    }
+    ::placeholder {
+      color: #8c8c8c !important;
     }
   }
 

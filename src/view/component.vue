@@ -7,6 +7,11 @@
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
+  <cal-input-select placeholder="商品类型">
+    <a-select-option value=" ">全部</a-select-option>
+    <a-select-option value="1">实体商品</a-select-option>
+    <a-select-option value="2">虚拟商品</a-select-option>
+  </cal-input-select>
   <cal-upload></cal-upload>
   <cal-input-range-picker></cal-input-range-picker>
   <cal-steps :current="current" labelPlacement="vertical">

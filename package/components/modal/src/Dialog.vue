@@ -74,8 +74,12 @@
     <template #footer>
       <slot name="footer" v-if="$slots['footer']" />
       <template v-else>
-        <cal-button class="mr-20 w-96 h-32" @click="onClone" v-if="showCancel">{{ cancelText }}</cal-button>
-        <cal-button type="primary " class="w-96 h-32" @click="onConfirm">{{ confirmText }}</cal-button>
+        <cal-button class="mr-20 w-96 h-32" @click="onClone" v-if="showCancel">{{
+          cancelText
+        }}</cal-button>
+        <cal-button type="primary " class="w-96 h-32" @click="onConfirm">{{
+          confirmText
+        }}</cal-button>
       </template>
     </template>
   </a-modal>
@@ -132,14 +136,14 @@
     // 确定关闭回调
     onOk: Function,
     // 确认文本
-    confirmText:{
-      type:String,
-      default:'确认'
+    confirmText: {
+      type: String,
+      default: '确认'
     },
     // 取消文本
-    cancelText:{
-      type:String,
-      default:'取消'
+    cancelText: {
+      type: String,
+      default: '取消'
     }
   })
 
