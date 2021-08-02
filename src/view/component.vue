@@ -116,7 +116,7 @@
     }
   ])
   const select = ref([])
-  import { ref, watch, watchEffect } from 'vue'
+  import { onMounted, ref, watch, watchEffect } from 'vue'
   import { CalModel } from '~/components'
   const menuvalue = ref('')
   const value = ref('二级')
@@ -180,6 +180,13 @@
       },
       { name: '待收货', data: [320, 332, 301, 334, 390, 330, 320], type: 'line', showSymbol: false }
     ]
+  })
+  onMounted(async () => {
+    await CalModel({
+      type: 'success',
+      title: '提示',
+      content: '确定删除分组 吗？'
+    })
   })
 </script>
 

@@ -39,7 +39,8 @@
       <!-- 警告 -->
       <template v-if="type === 'warning'">
         <div class="flex items-center">
-          <i class="nr-warning text-red text-5xl mr-20" />
+          <!-- <i class="nr-warning text-red text-5xl mr-20" /> -->
+          <cal-icon type="warning" class="text-5xl mr-20" style="color: red"> </cal-icon>
           <div class="flex-1">
             <div v-if="content" v-html="content"></div>
             <slot />
@@ -53,7 +54,8 @@
       <!-- 成功 -->
       <template v-else-if="type === 'success'">
         <div class="flex items-center justify-center">
-          <i class="nr-after text-green text-4xl mr-10" />
+          <!-- <i class="nr-after text-green text-4xl mr-10" /> -->
+          <cal-icon type="step-highlight" class="text-4xl mr-10" style="color: #1ad370"> </cal-icon>
           <div class="text-xl font-semibold">
             <div v-if="content" v-html="content"></div>
             <slot />
@@ -182,7 +184,7 @@
       padding: 24px;
       .ant-modal-title {
         font-size: 16px;
-        color: white;
+        color: white !important;
       }
     }
     .ant-modal-content {
