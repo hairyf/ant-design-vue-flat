@@ -59,7 +59,6 @@
     }
 
     .ant-select-selection-placeholder {
-      // @apply text-gray-450;
       color: #8c8c8c !important;
     }
     .anticon {
@@ -96,7 +95,6 @@
     background-color: transparent !important;
     box-shadow: none !important;
     padding: 7px 0 0 !important;
-    // .ant-select-item-option {}
     &.ant-select-dropdown-placement-bottomLeft {
       overflow: initial !important;
     }
