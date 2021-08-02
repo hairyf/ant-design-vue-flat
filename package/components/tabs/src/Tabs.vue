@@ -38,6 +38,7 @@
       margin-bottom: -5px;
     }
     .ant-tabs-nav .ant-tabs-tab {
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05), 0px 0px 20px rgba(0, 0, 0, 0.02);
       border-radius: 20px 20px 0px 0px;
       font-weight: normal;
       overflow: hidden;
@@ -66,6 +67,7 @@
     }
     .ant-tabs-tabpane {
       height: 100%;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05), 0px 0px 20px rgba(0, 0, 0, 0.02);
     }
     .ant-tabs-ink-bar {
       display: none !important;

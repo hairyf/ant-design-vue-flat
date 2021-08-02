@@ -7,6 +7,10 @@
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
+  <cal-tabs :current="current">
+    <cal-tab-pane tab="微信支付" key="WxPay"> </cal-tab-pane>
+    <cal-tab-pane tab="3165" key="AliPay"> </cal-tab-pane>
+  </cal-tabs>
   <cal-input-select placeholder="商品类型">
     <a-select-option value=" ">全部</a-select-option>
     <a-select-option value="1">实体商品</a-select-option>
