@@ -70,7 +70,7 @@
           color: #001426 !important;
           font-weight: 600;
           font-size: 16px;
-          line-height: 12px;
+          line-height: 20px;
         }
       }
     }
@@ -81,11 +81,13 @@
       white-space: nowrap;
     }
     .ant-steps-item-content {
-      width: 126px;
+      margin-top: 2px !important;
+      width: 126px !important;
     }
     .ant-steps-item-icon {
       margin-top: -4px;
       margin-left: 37px !important;
+      line-height: 0 !important;
     }
     .ant-steps-item-process {
       &.ant-steps-item-process + .ant-steps-item-wait {

@@ -9,10 +9,12 @@
 <template>
   <cal-upload></cal-upload>
   <cal-input-range-picker></cal-input-range-picker>
-  <cal-steps :current="-1" labelPlacement="vertical">
-    <cal-step title="会员等级信息" />
+  <cal-steps :current="current" labelPlacement="vertical">
+    <cal-step title="会员等级信息" description="2021-5-28 19:20:54" />
     <cal-step title="会员权益" />
   </cal-steps>
+  <div @click="current++"> 点击我 </div>
+  <div @click="current--"> 取消我 </div>
   <cal-tag> 45123 </cal-tag>
   <cal-tag> 45123 </cal-tag>
   <cal-input-time-picker
@@ -116,7 +118,7 @@
   const time = ref([])
   const props = defineProps({})
   const show = ref(true)
-  const current = ref(0)
+  const current = ref(-1)
   // CalModel({ title: 'adnioasd', content: 'wdnwaodnoiwa' })
   const onSearch = () => {
     console.log(61223)
