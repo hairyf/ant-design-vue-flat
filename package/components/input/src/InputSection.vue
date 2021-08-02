@@ -9,7 +9,7 @@
 <template>
   <div class="flex h-36" :style="{ width: analyUnit(width) }">
     <cal-input :placeholder="placeholder" v-model="minValue" />
-    <div class="text-center text-sm text-gray-darkmin my-auto" style="min-width: 32px">-</div>
+    <div class="text-center text-sm text-gray-450 my-auto" style="min-width: 32px">-</div>
     <cal-input :placeholder="placeholder" v-model="maxValue" />
   </div>
 </template>

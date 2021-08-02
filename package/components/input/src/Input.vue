@@ -11,7 +11,7 @@
     <slot />
     <template #suffix>
       <slot v-if="slots['suffix']" name="suffix" />
-      <div v-else-if="showCount" class="flex items-center text-gray-darkmin">
+      <div v-else-if="showCount" class="flex items-center text-gray-450">
         <span class="text-gray-450">{{ currentFontNumber }}</span>
         <span class="text-gray-450">/{{ maxLength }}</span>
       </div>

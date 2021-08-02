@@ -25,7 +25,7 @@
     }"
   >
     <div
-      class="w-full text-gray-darkmin cursor-pointer select-none mb-24"
+      class="w-full text-gray-450 cursor-pointer select-none mb-24"
       :class="[option.textAlign === 'left' ? 'text-left' : 'text-center']"
     >
       <span v-if="!sort">{{ title }}</span>
