@@ -82,7 +82,6 @@
     }
     .ant-steps-item-content {
       margin-top: 2px !important;
-      width: 126px !important;
     }
     .ant-steps-item-icon {
       margin-top: -4px;
