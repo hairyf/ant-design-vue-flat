@@ -7,7 +7,13 @@ html {
   color: var(--common-base-text-color);
 }
 
-[class^="ant-"]:not([class*="ant-tag"]):not([class*="ant-btn"]):not([class*="ant-tab"]) {
+[class^="ant-"]
+:not([class*="ant-tag"])
+:not([class*="ant-btn"])
+:not([class*="ant-tab"])
+:not([calss*="ant-form-item-explain"])
+:not([calss*="ant-modal"])
+{
     color:inherit
 }
 
