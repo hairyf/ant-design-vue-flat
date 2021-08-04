@@ -1,0 +1,16 @@
+{
+  "navigationBarTitleText": "主页",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "u-navbar": "/node-modules/uview-ui/components/u-navbar/u-navbar",
+    "custom-icon": "/components/customs/custom-icon",
+    "u-search": "/node-modules/uview-ui/components/u-search/u-search",
+    "custom-blank": "/components/customs/custom-blank",
+    "u-swiper": "/node-modules/uview-ui/components/u-swiper/u-swiper",
+    "u-grid": "/node-modules/uview-ui/components/u-grid/u-grid",
+    "u-grid-item": "/node-modules/uview-ui/components/u-grid-item/u-grid-item",
+    "u-popup": "/node-modules/uview-ui/components/u-popup/u-popup",
+    "u-icon": "/node-modules/uview-ui/components/u-icon/u-icon",
+    "custom-tabbar": "/components/customs/custom-tabbar"
+  }
+}

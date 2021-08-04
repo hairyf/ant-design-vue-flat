@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "账单详情",
+  "usingComponents": {
+    "common-empty-page": "/components/commons/common-empty-page",
+    "u-card": "/node-modules/uview-ui/components/u-card/u-card",
+    "u-icon": "/node-modules/uview-ui/components/u-icon/u-icon"
+  }
+}

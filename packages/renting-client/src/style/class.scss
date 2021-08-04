@@ -1,0 +1,189 @@
+// 存放 class 全局类名
+
+/* 自定义样式 */
+u-button {
+  .u-size-default.u-btn--primary--plain,
+  .u-size-mini.u-btn--primary--plain
+  {
+    background-color: #ffffff !important;
+    &.u-primary-plain-hover {
+      background-color: $u-type-primary !important;
+    }
+    &.u-info-hover {
+      background-color: $u-type-primary !important;
+      color: #ffffff !important;
+    }
+  }
+  .u-btn.u-btn--default.u-default-hover {
+    background-color: #f4f4f5 !important;
+    border-color:#f4f4f5 !important;
+    color: #333333 !important;
+  }
+  // .u-btn--default {
+  //   font-weight: 800;
+  // }
+  .u-btn.u-btn--info {
+    border: none !important;
+    background: #E5E5E5;
+    color: #ADADAD;
+    &.u-btn-hover {
+      color: #ffffff !important;
+    }
+  }
+}
+/* 标签插槽内容 */
+.label-slot {
+  color: #ff0000;
+  margin-right: 5rpx;
+  margin-bottom: -10rpx;
+}
+/* 发送验证码按钮 */
+.send-code-btns {
+  flex-shrink: 0;
+  margin: 0 60rpx;
+}
+/* 表单容器 */
+.form-container {
+  background-color: #ffffff;
+}
+/* 编辑按钮容器 */
+.edit-btns-container {
+  margin: 80rpx 32rpx;
+}
+/* 订单信息头部 */
+.card-order-head {
+  .title {
+    @include text-ellipsis(300rpx);
+    font-size: 28rpx;
+    font-weight: bold;
+    color: #000000;
+  }
+  .price {
+    margin-left: 10rpx;
+    font-size: 24rpx;
+    color: #adadad;
+  }
+  .tips {
+    font-size: 24rpx;
+    color: #ADADAD;
+  }
+}
+/* 订单信息内容 */
+.card-order-body {
+  color: #000;
+  .info-layer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30rpx;
+    .text {
+      font-weight: bold;
+    }
+    .tips-sm {
+      font-size: 18rpx;
+      color: #acacac;
+    }
+  }
+  .explain-layer {
+    margin-bottom: 30rpx;
+    .tips {
+      margin-bottom: 22rpx;
+    }
+    .text {
+      font-size: 24rpx;
+      color: #5c5c5c;
+    }
+  }
+  .price-text {
+    text-align: right;
+    color: #ff7e5f;
+  }
+}
+/* 订单底部 */
+.card-order-foot {
+  custom-icon {
+    margin-right: 20rpx;
+    margin-top: 15rpx;
+  }
+  u-checkbox {
+    margin-right: -30rpx;
+  }
+}
+
+/* 纸质合同项头部 */
+.card-returnd-item-head {
+  display: flex;
+  justify-content: space-between;
+  .title {
+    font-weight: bold;
+  }
+  .tips {
+    color: #adadad;
+  }
+  .warning {
+    font-size: 24rpx;
+    color: #ff0000;
+  }
+}
+/* 纸质合同项内容 */
+.card-returnd-item-body {
+  display: flex;
+  align-items: center;
+  .title {
+    @include text-hidden-line(2);
+    font-weight: bold;
+  }
+  .tips {
+    font-size: 20rpx;
+  }
+  .price {
+    @extend .tips;
+    color: #FF7E5F;
+  }
+}
+
+/* 合同信息头部 */
+.card-contract-head {
+  @extend .card-order-head;
+}
+.card-contract-body {
+  @extend .card-order-body;
+  .image-layer {
+    @extend .info-layer;
+    flex-direction: column;
+    .tips {
+      margin-bottom: 25rpx;
+    }
+    align-items: flex-start;
+    .images {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 7rpx;
+      u-image {
+        @include not-last-child(margin-right, 15rpx);
+        margin-bottom: 10rpx;
+      }
+    }
+  }
+}
+/* 合同信息底部 */
+.card-returnd-item-foot {
+  display: flex;
+  justify-content: flex-end;
+}
+/* 商家端入口 */
+.admin-btns {
+  position: fixed;
+  bottom: 100rpx;
+  right: 80rpx;
+  width: 120rpx;
+  height: 120rpx;
+  z-index: 1000;
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: #ff7e5f;
+  box-shadow: 0 0 20rpx rgba(255, 126, 95, 0.3);
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}

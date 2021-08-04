@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "合同详情",
+  "usingComponents": {
+    "u-card": "/node-modules/uview-ui/components/u-card/u-card",
+    "u-image": "/node-modules/uview-ui/components/u-image/u-image",
+    "custom-icon": "/components/customs/custom-icon",
+    "u-popup": "/node-modules/uview-ui/components/u-popup/u-popup",
+    "custom-blank": "/components/customs/custom-blank",
+    "u-cell-item": "/node-modules/uview-ui/components/u-cell-item/u-cell-item",
+    "common-fixed-footer": "/components/commons/common-fixed-footer",
+    "u-button": "/node-modules/uview-ui/components/u-button/u-button"
+  }
+}

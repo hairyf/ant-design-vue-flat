@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "个人",
+  "usingComponents": {
+    "u-avatar": "/node-modules/uview-ui/components/u-avatar/u-avatar",
+    "u-icon": "/node-modules/uview-ui/components/u-icon/u-icon",
+    "u-grid": "/node-modules/uview-ui/components/u-grid/u-grid",
+    "u-grid-item": "/node-modules/uview-ui/components/u-grid-item/u-grid-item",
+    "custom-icon": "/components/customs/custom-icon",
+    "u-badge": "/node-modules/uview-ui/components/u-badge/u-badge",
+    "custom-tabbar": "/components/customs/custom-tabbar",
+    "u-modal": "/node-modules/uview-ui/components/u-modal/u-modal",
+    "common-contacts": "/components/commons/common-contacts"
+  }
+}

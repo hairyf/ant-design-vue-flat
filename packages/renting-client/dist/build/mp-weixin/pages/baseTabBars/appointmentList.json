@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "预约",
+  "usingComponents": {
+    "u-tabs": "/node-modules/uview-ui/components/u-tabs/u-tabs",
+    "u-image": "/node-modules/uview-ui/components/u-image/u-image",
+    "u-button": "/node-modules/uview-ui/components/u-button/u-button",
+    "u-empty": "/node-modules/uview-ui/components/u-empty/u-empty",
+    "custom-blank": "/components/customs/custom-blank",
+    "custom-tabbar": "/components/customs/custom-tabbar"
+  }
+}

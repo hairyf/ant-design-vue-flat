@@ -1,0 +1,1 @@
+<view class="common-fixed-footer _div"><custom-blank vue-id="20355ae2-1" height="{{120}}" bind:__l="__l"></custom-blank><view class="{{['footer-btns _div',(flex)?'u-flex':'']}}"><slot></slot></view></view>

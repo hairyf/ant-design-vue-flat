@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "custom-blank": "/components/customs/custom-blank"
+  }
+}

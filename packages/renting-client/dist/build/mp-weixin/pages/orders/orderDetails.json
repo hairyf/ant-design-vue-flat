@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "订单详情",
+  "usingComponents": {
+    "common-empty-page": "/components/commons/common-empty-page",
+    "u-card": "/node-modules/uview-ui/components/u-card/u-card",
+    "common-fixed-footer": "/components/commons/common-fixed-footer",
+    "u-button": "/node-modules/uview-ui/components/u-button/u-button"
+  }
+}
