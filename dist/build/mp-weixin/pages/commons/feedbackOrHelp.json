@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "反馈与帮助",
+  "usingComponents": {
+    "u-card": "/node-modules/uview-ui/components/u-card/u-card",
+    "u-collapse": "/node-modules/uview-ui/components/u-collapse/u-collapse",
+    "u-collapse-item": "/node-modules/uview-ui/components/u-collapse-item/u-collapse-item",
+    "common-fixed-footer": "/components/commons/common-fixed-footer",
+    "custom-icon": "/components/customs/custom-icon"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "延期处理",
+  "usingComponents": {
+    "u-tabs": "/node-modules/uview-ui/components/u-tabs/u-tabs",
+    "u-card": "/node-modules/uview-ui/components/u-card/u-card",
+    "u-tag": "/node-modules/uview-ui/components/u-tag/u-tag",
+    "u-icon": "/node-modules/uview-ui/components/u-icon/u-icon",
+    "u-empty": "/node-modules/uview-ui/components/u-empty/u-empty"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "地铁周边",
+  "usingComponents": {
+    "common-house-list": "/components/commons/common-house-list"
+  }
+}

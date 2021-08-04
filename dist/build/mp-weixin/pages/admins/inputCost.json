@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "录入水电杂费",
+  "usingComponents": {
+    "u-field": "/node-modules/uview-ui/components/u-field/u-field",
+    "u-icon": "/node-modules/uview-ui/components/u-icon/u-icon",
+    "u-subsection": "/node-modules/uview-ui/components/u-subsection/u-subsection",
+    "u-button": "/node-modules/uview-ui/components/u-button/u-button"
+  }
+}

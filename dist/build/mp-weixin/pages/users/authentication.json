@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "实名认证",
+  "navigationBarBackgroundColor": "#ffffff",
+  "usingComponents": {
+    "u-tabs": "/node-modules/uview-ui/components/u-tabs/u-tabs",
+    "u-upload": "/node-modules/uview-ui/components/u-upload/u-upload",
+    "u-icon": "/node-modules/uview-ui/components/u-icon/u-icon",
+    "custom-blank": "/components/customs/custom-blank",
+    "u-field": "/node-modules/uview-ui/components/u-field/u-field",
+    "u-button": "/node-modules/uview-ui/components/u-button/u-button"
+  }
+}

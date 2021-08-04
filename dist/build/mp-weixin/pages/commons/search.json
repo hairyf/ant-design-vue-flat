@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "搜索",
+  "usingComponents": {
+    "u-search": "/node-modules/uview-ui/components/u-search/u-search",
+    "custom-blank": "/components/customs/custom-blank",
+    "custom-icon": "/components/customs/custom-icon",
+    "u-tag": "/node-modules/uview-ui/components/u-tag/u-tag",
+    "u-empty": "/node-modules/uview-ui/components/u-empty/u-empty",
+    "u-modal": "/node-modules/uview-ui/components/u-modal/u-modal",
+    "common-house-list": "/components/commons/common-house-list"
+  }
+}

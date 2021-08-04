@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "申请延期",
+  "usingComponents": {
+    "u-card": "/node-modules/uview-ui/components/u-card/u-card",
+    "u-icon": "/node-modules/uview-ui/components/u-icon/u-icon",
+    "custom-textarea": "/components/customs/custom-textarea",
+    "u-select": "/node-modules/uview-ui/components/u-select/u-select",
+    "common-fixed-footer": "/components/commons/common-fixed-footer",
+    "u-button": "/node-modules/uview-ui/components/u-button/u-button"
+  }
+}

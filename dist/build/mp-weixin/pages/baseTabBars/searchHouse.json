@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "找房",
+  "navigationBarBackgroundColor": "#ffffff",
+  "usingComponents": {
+    "u-dropdown": "/node-modules/uview-ui/components/u-dropdown/u-dropdown",
+    "u-dropdown-item": "/node-modules/uview-ui/components/u-dropdown-item/u-dropdown-item",
+    "common-hm-filter": "/components/commons/common-hmFilter",
+    "u-button": "/node-modules/uview-ui/components/u-button/u-button",
+    "custom-blank": "/components/customs/custom-blank",
+    "custom-section-input": "/components/customs/custom-section-input",
+    "common-house-list": "/components/commons/common-house-list",
+    "custom-tabbar": "/components/customs/custom-tabbar",
+    "range-slider": "/libs/components/range-slider"
+  }
+}

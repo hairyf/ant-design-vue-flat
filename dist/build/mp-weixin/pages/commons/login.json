@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "登录",
+  "usingComponents": {
+    "u-field": "/node-modules/uview-ui/components/u-field/u-field",
+    "custom-code-input": "/components/customs/custom-code-input",
+    "u-button": "/node-modules/uview-ui/components/u-button/u-button",
+    "custom-icon": "/components/customs/custom-icon"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "房东管理",
+  "usingComponents": {
+    "u-icon": "/node-modules/uview-ui/components/u-icon/u-icon",
+    "common-progress": "/components/commons/common-progress",
+    "u-tabs": "/node-modules/uview-ui/components/u-tabs/u-tabs",
+    "u-tag": "/node-modules/uview-ui/components/u-tag/u-tag",
+    "u-cell-item": "/node-modules/uview-ui/components/u-cell-item/u-cell-item",
+    "u-select": "/node-modules/uview-ui/components/u-select/u-select"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "u-tabbar": "/node-modules/uview-ui/components/u-tabbar/u-tabbar",
+    "u-popup": "/node-modules/uview-ui/components/u-popup/u-popup",
+    "common-buyset": "/components/commons/common-buyset",
+    "u-modal": "/node-modules/uview-ui/components/u-modal/u-modal"
+  }
+}
