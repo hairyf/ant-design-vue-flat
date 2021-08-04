@@ -1,1 +1,0 @@
-<view class="common-fixed-footer _div"><block wx:if="{{occupyBlock}}"><union-blank vue-id="0f36e624-1" height="{{120}}" bind:__l="__l"></union-blank></block><view class="{{['footer-btns _div',(flex)?'u-flex':'']}}" style="{{'background-color:'+(bgColor)+';'+('position:'+(position)+';')}}"><slot></slot></view></view>

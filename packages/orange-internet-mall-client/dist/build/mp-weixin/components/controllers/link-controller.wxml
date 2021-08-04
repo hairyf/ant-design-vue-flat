@@ -1,1 +1,0 @@
-<button class="u-reset-button btn-serve" open-type="{{type}}" data-event-opts="{{[['tap',[['e0',['$event']]]]]}}" bindtap="__e"><slot></slot></button>

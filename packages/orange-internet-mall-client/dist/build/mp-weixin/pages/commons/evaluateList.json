@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "评价列表",
-  "usingComponents": {
-    "view-icon": "/components/view/view-icon",
-    "view-image": "/components/view/view-image",
-    "u-rate": "/node-modules/uview-ui/components/u-rate/u-rate",
-    "u-empty": "/node-modules/uview-ui/components/u-empty/u-empty"
-  }
-}

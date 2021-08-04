@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "我的优惠卷",
-  "usingComponents": {
-    "view-controller": "/components/controllers/view-controller",
-    "u-tabs": "/node-modules/uview-ui/components/u-tabs/u-tabs",
-    "u-card": "/node-modules/uview-ui/components/u-card/u-card",
-    "view-icon": "/components/view/view-icon"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "工单处理",
-  "usingComponents": {
-    "u-tabs": "/node-modules/uview-ui/components/u-tabs/u-tabs",
-    "u-card": "/node-modules/uview-ui/components/u-card/u-card",
-    "u-tag": "/node-modules/uview-ui/components/u-tag/u-tag"
-  }
-}

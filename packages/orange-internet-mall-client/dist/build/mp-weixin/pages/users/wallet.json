@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "钱包",
-  "usingComponents": {
-    "view-controller": "/components/controllers/view-controller",
-    "u-cell-item": "/node-modules/uview-ui/components/u-cell-item/u-cell-item",
-    "custom-icon": "/components/customs/custom-icon"
-  }
-}

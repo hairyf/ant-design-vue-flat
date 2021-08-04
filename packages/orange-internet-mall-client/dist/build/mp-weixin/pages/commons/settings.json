@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "用户设置",
-  "usingComponents": {
-    "u-cell-group": "/node-modules/uview-ui/components/u-cell-group/u-cell-group",
-    "u-cell-item": "/node-modules/uview-ui/components/u-cell-item/u-cell-item"
-  }
-}

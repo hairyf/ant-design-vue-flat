@@ -1,1 +1,0 @@
-import{a as e,S as s,ae as a,o,c as l,j as t}from"./vendor.71e19cde.js";const r={class:"styled-group-container"};var p=e({expose:[],props:{modelValue:{type:Object,required:!0},showAlpha:Boolean},setup(e){const p=e;return s("styled",p.modelValue),s("showAlpha",a(p,"showAlpha")),(e,s)=>(o(),l("div",r,[t(e.$slots,"default")]))}});export{p as _};

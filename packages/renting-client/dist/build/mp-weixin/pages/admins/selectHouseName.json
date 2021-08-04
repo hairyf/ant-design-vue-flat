@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "房子名称",
-  "usingComponents": {
-    "u-search": "/node-modules/uview-ui/components/u-search/u-search",
-    "u-index-list": "/node-modules/uview-ui/components/u-index-list/u-index-list",
-    "u-index-anchor": "/node-modules/uview-ui/components/u-index-anchor/u-index-anchor"
-  }
-}

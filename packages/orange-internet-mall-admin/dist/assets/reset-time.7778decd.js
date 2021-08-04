@@ -1,1 +1,0 @@
-const e=e=>e.replace(/^[^\d+]/,"").replace(/[^\d{1,}.\d{1,}|\d{1,}]/g,"").replace(".","$#$").replace(/\./g,"").replace("$#$",".").replace(/\.{2,}/g,".").replace(/^(-)*(\d+)\.(\d\d).*$/,"$1$2.$3"),a=e=>e.replace(/^(0+)|[^\d]+/g,"");export{a,e as i};

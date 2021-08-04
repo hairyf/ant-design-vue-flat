@@ -1,8 +1,0 @@
-node_modules
-.DS_Store
-dist-ssr
-*.local
-.idea
-package-lock.json
-dist
-debug.log

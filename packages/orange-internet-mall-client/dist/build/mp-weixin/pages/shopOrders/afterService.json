@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "评价售后服务",
-  "usingComponents": {
-    "u-rate": "/node-modules/uview-ui/components/u-rate/u-rate",
-    "u-input": "/node-modules/uview-ui/components/u-input/u-input",
-    "u-button": "/node-modules/uview-ui/components/u-button/u-button"
-  }
-}

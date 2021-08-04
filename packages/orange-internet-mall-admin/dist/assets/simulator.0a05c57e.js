@@ -1,1 +1,0 @@
-import{j as e}from"./index.a53c91c6.js";import{a as s,b as r,o,c as a,g as c,u as t}from"./vendor.71e19cde.js";const n={class:"oe-flex oe-row-center oe-p-t-15"};var u=s({expose:[],setup(s){const u=e();return(e,s)=>{const i=r("mobile-iframe");return o(),a("div",n,[c(i,{src:t(u).query.src},null,8,["src"])])}}});export default u;

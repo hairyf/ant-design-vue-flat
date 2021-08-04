@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "微信登录",
-  "usingComponents": {
-    "u-checkbox": "/node-modules/uview-ui/components/u-checkbox/u-checkbox"
-  }
-}

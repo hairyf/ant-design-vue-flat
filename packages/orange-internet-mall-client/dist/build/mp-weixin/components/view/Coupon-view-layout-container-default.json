@@ -1,8 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "Coupon-view-layout-container-default": "/components/view/Coupon-view-layout-container-default",
-    "view-layout-container": "/components/view/view-layout-container",
-    "price": "/components/view/Coupon/Price"
-  }
-}

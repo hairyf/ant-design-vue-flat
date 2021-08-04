@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "预约详情",
-  "usingComponents": {
-    "common-house-item": "/components/commons/common-house-item",
-    "u-card": "/node-modules/uview-ui/components/u-card/u-card"
-  }
-}

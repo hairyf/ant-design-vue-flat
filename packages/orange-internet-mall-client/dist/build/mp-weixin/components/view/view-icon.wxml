@@ -1,1 +1,0 @@
-<text data-event-opts="{{[['tap',[['$emit',['click']]]]]}}" class="{{[iconfont,name]}}" style="{{$root.s0}}" bindtap="__e"><slot></slot></text>

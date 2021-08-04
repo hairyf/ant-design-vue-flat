@@ -2,9 +2,10 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "pulls": "esno scripts/subtree.pulls.ts",
-    "pushs": "esno scripts/subtree.pushs.ts",
-    "foreachs": "esno scripts/subtree.foreachs.ts"
+    "pulls": "esno scripts/subtree/pulls.ts",
+    "pushs": "esno scripts/subtree/pushs.ts",
+    "foreachs": "esno scripts/subtree/foreachs.ts",
+    "adds": "esno scripts/subtree/adds.ts"
   },
   "devDependencies": {
     "@types/node": "^16.4.10",

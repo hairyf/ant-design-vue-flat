@@ -1,1 +1,0 @@
-<view class="common-empty-page _div"><block wx:if="{{!empty}}"><slot></slot></block><block wx:if="{{empty}}"><u-empty vue-id="e64b6e72-1" text="{{text||'该页面不存在'}}" mode="page" margin-top="400" icon-size="180" bind:__l="__l"></u-empty></block></view>

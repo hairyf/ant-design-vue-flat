@@ -1,1 +1,0 @@
-<view class="guide-container _div data-v-508c911a" style="{{'background-color:'+(background)+';'+('padding:'+(padding)+';')}}"><view class="guide-line top _div data-v-508c911a" style="{{'border-top-style:'+(option.componentType)+';'}}"></view><view class="guide-line bottom _div data-v-508c911a" style="{{'border-bottom-style:'+(option.componentType)+';'}}"></view></view>

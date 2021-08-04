@@ -1,1 +1,0 @@
-<view class="_div"><view class="common-auth-container _div"><block wx:if="{{!isAuthUserInfo}}"><view data-event-opts="{{[['tap',[['modalBox',['$event']]]]]}}" class="common-auth-mask _div" bindtap="__e"></view></block><slot></slot></view></view>

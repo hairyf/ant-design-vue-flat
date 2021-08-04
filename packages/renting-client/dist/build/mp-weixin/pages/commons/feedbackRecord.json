@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "反馈记录",
-  "usingComponents": {
-    "u-card": "/node-modules/uview-ui/components/u-card/u-card"
-  }
-}

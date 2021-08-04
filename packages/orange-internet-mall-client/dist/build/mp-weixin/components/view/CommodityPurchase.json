@@ -1,8 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "auth-controller": "/components/controllers/auth-controller",
-    "view-icon": "/components/view/view-icon",
-    "link-controller": "/components/controllers/link-controller"
-  }
-}

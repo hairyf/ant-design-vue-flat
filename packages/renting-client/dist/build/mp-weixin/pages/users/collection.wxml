@@ -1,1 +1,0 @@
-<view class="collection _div"><common-house-list vue-id="44e1dc70-1" list="{{list}}" type="collection" bind:__l="__l"></common-house-list></view>

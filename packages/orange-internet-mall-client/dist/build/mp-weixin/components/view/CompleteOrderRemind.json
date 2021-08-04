@@ -1,6 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "view-image": "/components/view/view-image"
-  }
-}

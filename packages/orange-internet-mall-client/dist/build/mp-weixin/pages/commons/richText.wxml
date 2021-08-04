@@ -1,1 +1,0 @@
-<view class="rich-text _div"><u-parse vue-id="3328133d-1" html="{{content}}" bind:__l="__l"></u-parse></view>

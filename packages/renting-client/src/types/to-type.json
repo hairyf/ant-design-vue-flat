@@ -1,6 +1,0 @@
-interface RootObject {
-  newpassword: string;
-  comfirmpassword: string;
-  mobile: string;
-  captcha: string;
-}

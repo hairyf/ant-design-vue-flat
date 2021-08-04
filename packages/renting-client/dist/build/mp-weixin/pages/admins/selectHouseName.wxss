@@ -1,1 +1,0 @@
-.header-container{padding:40rpx}.list-cell{display:-webkit-box;display:-webkit-flex;display:flex;box-sizing:border-box;padding:10px 24rpx;overflow:hidden;color:#323233;font-size:14px;line-height:24px;background-color:#fff}.list-cell ._span{max-width:650rpx;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}

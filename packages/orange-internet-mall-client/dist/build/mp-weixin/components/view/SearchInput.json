@@ -1,6 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "view-icon": "/components/view/view-icon"
-  }
-}

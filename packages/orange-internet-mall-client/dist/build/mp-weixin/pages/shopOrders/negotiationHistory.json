@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "协商历史",
-  "usingComponents": {
-    "u-card": "/node-modules/uview-ui/components/u-card/u-card",
-    "u-image": "/node-modules/uview-ui/components/u-image/u-image",
-    "u-count-down": "/node-modules/uview-ui/components/u-count-down/u-count-down"
-  }
-}

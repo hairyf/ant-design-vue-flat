@@ -1,1 +1,0 @@
-<view class="periphery _div"><common-house-list vue-id="e4ad37e4-1" list="{{list}}" bind:__l="__l"></common-house-list></view>

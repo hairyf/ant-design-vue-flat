@@ -1,1 +1,0 @@
-<view class="blank _div" style="{{$root.s0}}">{{''+text+''}}</view>

@@ -1,2 +1,0 @@
-.wallet{overflow:hidden}.wallet-content{position:relative;width:100%;height:320rpx;padding:0 50rpx}.wallet-content .tips,
-.wallet-content .money{position:relative;z-index:1;color:#fff}.wallet-content .tips{padding-top:106rpx;font-size:24rpx}.wallet-content .money{margin-top:10rpx;font-size:60rpx;font-weight:700}.u-cell{-webkit-box-align:center;-webkit-align-items:center;align-items:center}.u-cell custom-icon{margin-top:15rpx;margin-right:15rpx}.wallet-bg{position:absolute;top:0;left:0;width:100%;height:100%}

@@ -1,8 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "link-controller": "/components/controllers/link-controller",
-    "u-image": "/node-modules/uview-ui/components/u-image/u-image",
-    "u-empty": "/node-modules/uview-ui/components/u-empty/u-empty"
-  }
-}

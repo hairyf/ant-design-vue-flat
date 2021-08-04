@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "退租",
-  "usingComponents": {
-    "u-card": "/node-modules/uview-ui/components/u-card/u-card",
-    "u-image": "/node-modules/uview-ui/components/u-image/u-image",
-    "u-tag": "/node-modules/uview-ui/components/u-tag/u-tag",
-    "u-empty": "/node-modules/uview-ui/components/u-empty/u-empty"
-  }
-}

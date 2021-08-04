@@ -1,1 +1,0 @@
-<view class="_div"><u-popup bind:input="__e" vue-id="842af622-1" mode="top" value="{{show}}" data-event-opts="{{[['^input',[['__set_model',['','show','$event',[]]]]]]}}" bind:__l="__l" vue-slots="{{['default']}}"><view>人生若只如初见，何事秋风悲画扇</view></u-popup></view>

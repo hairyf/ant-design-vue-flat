@@ -1,1 +1,0 @@
-<view class="dev-test _div">{{countDown.seconds}}</view>
