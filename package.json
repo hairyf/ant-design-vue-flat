@@ -2,7 +2,8 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "pulls": "esno scripts/subtree.pull.ts"
+    "pulls": "esno scripts/subtree.pulls.ts",
+    "pushs": "esno scripts/subtree.pushs.ts"
   },
   "devDependencies": {
     "@types/node": "^16.4.10",
