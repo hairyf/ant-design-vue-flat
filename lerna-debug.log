@@ -1,0 +1,20 @@
+0 silly argv {
+0 silly argv   _: [ 'import' ],
+0 silly argv   lernaVersion: '4.0.0',
+0 silly argv   '$0': 'C:\\Users\\Administrator\\AppData\\Local\\npm-cache\\_npx\\d5cad42883f80c04\\node_modules\\lerna\\cli.js',
+0 silly argv   dir: '../o/mall-admin'
+0 silly argv }
+1 notice cli v4.0.0
+2 verbose rootPath F:\projects\橘子互联\橘子商城
+3 info versioning independent
+4 error Error: Command failed with exit code 128: git rev-parse HEAD
+4 error fatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.
+4 error Use '--' to separate paths from revisions, like this:
+4 error 'git <command> [<revision>...] -- [<file>...]'
+4 error HEAD
+4 error     at makeError (C:\Users\Administrator\AppData\Local\npm-cache\_npx\d5cad42883f80c04\node_modules\execa\lib\error.js:60:11)
+4 error     at Function.module.exports.sync (C:\Users\Administrator\AppData\Local\npm-cache\_npx\d5cad42883f80c04\node_modules\execa\index.js:194:17)
+4 error     at Object.execSync (C:\Users\Administrator\AppData\Local\npm-cache\_npx\d5cad42883f80c04\node_modules\@lerna\child-process\index.js:39:16)
+4 error     at ImportCommand.execSync (C:\Users\Administrator\AppData\Local\npm-cache\_npx\d5cad42883f80c04\node_modules\@lerna\import\index.js:141:25)
+4 error     at ImportCommand.getCurrentSHA (C:\Users\Administrator\AppData\Local\npm-cache\_npx\d5cad42883f80c04\node_modules\@lerna\import\index.js:133:17)
+4 error     at ImportCommand.initialize (C:\Users\Administrator\AppData\Local\npm-cache\_npx\d5cad42883f80c04\node_modules\@lerna\import\index.js:102:31)
