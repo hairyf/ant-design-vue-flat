@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:48:54
- * @LastEditTime: 2021-07-17 16:45:03
+ * @LastEditTime: 2021-08-04 17:14:28
  * @Description: 折扣券主题图标
- * @LastEditors: Mr.Mao
+ * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -23,7 +23,7 @@
 </script>
 <style lang="scss" scoped>
   .coupon-container {
-    width: 60px;
+    width: 46px;
     height: 30px;
     display: flex;
     align-items: center;
@@ -52,7 +52,7 @@
     }
     .coupon-view {
       flex: 1;
-      padding-left: 10px;
+      padding-left: 5px;
       margin: 0px 1px;
       display: flex;
       justify-content: center;

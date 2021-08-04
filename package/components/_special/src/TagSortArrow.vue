@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:49:36
- * @LastEditTime: 2021-07-30 10:47:23
+ * @LastEditTime: 2021-08-04 17:19:14
  * @Description: 排序箭头
- * @LastEditors: Mr.Mao
+ * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -24,9 +24,9 @@
       class="transform rotate-180 absolute"
       type="up-arrow-2"
       :size="size"
-      style="zoom: 0.7; top: 3.5px"
+      style="zoom: 0.7; top: 4px"
       :class="[status === 2 && 'text-common-primary-color']"
-      :style="{ fontSize: `${size}px`, marginTop: '0.5px' }"
+      :style="{ fontSize: `${size}px`, marginTop: '0.5px', marginLeft: '-2px' }"
     />
   </span>
 </template>

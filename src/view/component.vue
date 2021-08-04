@@ -1,12 +1,27 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-07-30 16:39:28
+ * @LastEditTime: 2021-08-04 17:35:43
  * @Description: 
- * @LastEditors: Mr.Mao
+ * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
+  <cal-card class="mb-40">
+    <cal-tag-coupon />
+    <cal-tag-offers />
+    <cal-tag-sort-arrow />
+  </cal-card>
+  <cal-card class="mb-40">
+    <cal-more-switch-group v-model="current">
+      <cal-more-switch-item keyword="1" label="阿迪王" />
+      <cal-more-switch-item keyword="2" label="大文档" />
+      <cal-more-switch-item keyword="3" label="的哇大" />
+      <cal-more-switch-item keyword="4" label="dwaa" />
+      <cal-more-switch-item keyword="5" label="01545" />
+      <cal-more-switch-item keyword="6" label="1515" />
+    </cal-more-switch-group>
+  </cal-card>
   <cal-tabs :current="current">
     <cal-tab-pane tab="微信支付" key="WxPay"> </cal-tab-pane>
     <cal-tab-pane tab="3165" key="AliPay"> </cal-tab-pane>
@@ -186,11 +201,11 @@
     ]
   })
   onMounted(async () => {
-    await CalModel({
+    /*  await CalModel({
       type: 'success',
       title: '提示',
       content: '确定删除分组 吗？'
-    })
+    }) */
   })
 </script>
 
