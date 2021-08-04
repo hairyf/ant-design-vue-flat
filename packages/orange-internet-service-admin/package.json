@@ -1,5 +1,5 @@
 {
-  "name": "orange-internet-mall-admin",
+  "name": "orange-internet-service-admin",
   "version": "0.0.1",
   "scripts": {
     "dev": "vite",
