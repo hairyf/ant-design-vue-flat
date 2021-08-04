@@ -1,0 +1,21 @@
+{
+  "eslint.validate": [
+    "javascirpt",
+    "typescript"
+  ],
+  "editor.tabSize": 2,
+  "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+  "volar.tsPlugin": true,
+  // 保存时调用 eslint|stylelint 的自动修复
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "typescript.suggest.paths": false,
+  "javascript.suggest.paths": false,
+  "path-autocomplete.pathMappings": {
+    "@/": "${folder}/src/",
+    "~/": "${folder}/src/components/"
+  },
+  "path-autocomplete.enableFolderTrailingSlash": false,
+  "path-autocomplete.extensionOnImport": true
+}

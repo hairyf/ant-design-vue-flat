@@ -1,0 +1,139 @@
+@import './style/mixin-adapt.scss';
+@import './style/mixin-utils.scss';
+@import './style/variables.scss';
+@import './style/reset-antdv.scss';
+
+/*! @import */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .theme-left-after {
+   &::after {
+      content: '';
+      height: 65%;
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+      @apply top-0 left-0 bottom-0 w-4 bg-primary rounded-full m-auto absolute;
+    }
+  }
+}
+// 项目存在的所有 css 变量
+:root {
+  // --blur-size: 0;
+  // --main-background: #ffffff;
+  // --background: #ffffff;
+  // --color-primary: #ffffff;
+  // --color-primary-light-1: #ffffff;
+  // --color-primary-light-2:  #ffffff; 
+  // --color-primary-light-3:  #ffffff; 
+  // --color-primary-light-4:  #ffffff; 
+  // --color-primary-light-5:  #ffffff; 
+  // --color-primary-light-6:  #ffffff; 
+  // --color-primary-light-7:  #ffffff; 
+  // --color-primary-light-8:  #ffffff; 
+  // --color-primary-light-9:  #ffffff; 
+  // --color-primary-dark-1: #000000;
+  // --color-primary-dark-2:  #000000; 
+  // --color-primary-dark-3:  #000000; 
+  // --color-primary-dark-4:  #000000; 
+  // --color-primary-dark-5:  #000000; 
+  // --color-primary-dark-6:  #000000; 
+  // --color-primary-dark-7:  #000000; 
+  // --color-primary-dark-8:  #000000; 
+  // --color-primary-dark-9:  #000000; 
+  // --color-primary-light-opacity-1: #ffffff;
+  // --color-primary-light-opacity-2:  #ffffff; 
+  // --color-primary-light-opacity-3:  #ffffff; 
+  // --color-primary-light-opacity-4:  #ffffff; 
+  // --color-primary-light-opacity-5:  #ffffff; 
+  // --color-primary-light-opacity-6:  #ffffff; 
+  // --color-primary-light-opacity-7:  #ffffff; 
+  // --color-primary-light-opacity-8:  #ffffff; 
+  // --color-primary-light-opacity-9:  #ffffff;
+}
+
+// 字体图标配置
+i[class*='nr-'] {
+  font-family:  "nr-iconfont" ;
+  font-style: normal;
+}
+// 滚动条凹槽的颜色，还可以设置边框属性
+::-webkit-scrollbar-track-piece {
+  background-color: none;
+}
+// 滚动条的宽度
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+// 滚动条的设置
+::-webkit-scrollbar-thumb {
+  background-color: #dddddd;
+  background-clip: padding-box;
+  min-height: 28px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #bbb;
+}
+
+.ant-descriptions {
+  // 自定义信息栏布局
+  table:not([cellpadding]) th, table:not([cellpadding]) td {
+    padding: 0.6rem;
+  }
+  .ant-descriptions-item-label {
+    min-width: 70px;
+    text-align: right;
+  }
+}
+
+// $gridSize: (0:576,1:768,2:992,3:1200,4:1600);
+// $gridName: (0:"sm",1:"md",2:"lg",3:"xl",4:"xxl");
+$gridSize: (4:576,3:768,2:992,1:1200,0:1600);
+$gridName: (4:"sm",3:"md",2:"lg",1:"xl",0:"xxl");
+@for $i from 1 through 9{
+  @for $j from 0 through 5{
+    @media (min-width: map-get($gridSize,$j)+px){
+      .ant-col-#{map-get($gridName,$j)}-10\:#{$i} {
+        flex: 0 0 #{10 * $i + "%"};
+        max-width: #{10 * $i + "%"};
+      }
+    }
+  }
+  .ant-col-#{$i} {
+    width: #{10 * $i + "%"};
+  }
+}
+
+
+
+// 自定义输入框错误提示布局
+// .ant-form-explain {
+//   position: absolute;
+//   right: 30px;
+//   top: 0;
+//   bottom: 0;
+//   margin: auto;
+//   display: flex;
+//   align-items: center;
+// }
+// .ant-form-item-with-help {
+//   margin-bottom: 24px;
+// }
+
+// 进度条主体色
+#nprogress .bar {
+  background: var(--color-primary) !important;
+}
+#nprogress .peg {
+  box-shadow: 0 0 10px var(--color-primary), 0 0 5px var(--color-primary) !important;
+}
+#nprogress .spinner-icon {
+  border-top-color: var(--color-primary) !important;
+  border-left-color: var(--color-primary) !important;
+}
+
+[class^="ant-"]{
+  color:inherit
+}
