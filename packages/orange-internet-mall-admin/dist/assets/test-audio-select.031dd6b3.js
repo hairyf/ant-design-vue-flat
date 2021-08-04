@@ -1,0 +1,1 @@
+import{b as e,o as r,c as s,I as a,g as c}from"./vendor.71e19cde.js";const n={},t=c("div",null,"点击展开",-1);n.render=function(c,n){const o=e("el-card");return r(),s(o,{shadow:"never",class:"custom-center-card center"},{default:a((()=>[t])),_:1})};export default n;

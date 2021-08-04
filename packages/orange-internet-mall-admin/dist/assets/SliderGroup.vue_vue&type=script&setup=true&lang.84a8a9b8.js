@@ -1,0 +1,1 @@
+import{a as e,S as a,o as s,c as o,j as d}from"./vendor.71e19cde.js";const p={class:"padding-group-container"};var r=e({expose:[],props:{modelValue:{type:Object,required:!0}},setup:e=>(a("padding",e.modelValue),(e,a)=>(s(),o("div",p,[d(e.$slots,"default")])))});export{r as _};
