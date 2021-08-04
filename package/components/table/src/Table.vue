@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-05-25 18:04:11
- * @LastEditTime: 2021-07-27 15:10:57
+ * @LastEditTime: 2021-08-04 18:26:15
  * @Description: 表格
  * @LastEditors: Zhilong
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
@@ -210,7 +210,7 @@
         height: calc(100% - 48px);
         transform: matrix(-1, 0, 0, 1, 0, 0);
         background: var(--common-primary-color);
-        @apply top-0 left-0 bottom-0 w-4 rounded-full m-auto absolute;
+        @apply top-0 left-0 bottom-0 w-4 rounded m-auto absolute;
       }
     }
   }

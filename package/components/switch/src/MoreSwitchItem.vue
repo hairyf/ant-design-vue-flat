@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-08-04 15:10:36
- * @LastEditTime: 2021-08-04 17:49:10
+ * @LastEditTime: 2021-08-04 18:30:18
  * @Description: 更多的切换项
  * @LastEditors: Zhilong
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
@@ -26,6 +26,7 @@
   import { analyUnit } from '@tuimao/utils'
   import { switchKey } from './MoreSwitchGroup.vue'
   const value = inject(switchKey)!
+  const emit = defineEmits<{ (event: 'change', keyword?: string): void }>()
   const props = defineProps({
     keyword: String,
     label: String
@@ -33,6 +34,7 @@
   const div = ref<HTMLElement | null>()
   const onSelect = () => {
     value.modelValue = props.keyword
+    emit('change', props.keyword)
   }
   onMounted(() => {
     watch(
