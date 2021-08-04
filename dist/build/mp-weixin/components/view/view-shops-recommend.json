@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "commodity-group": "/components/view/CommodityGroup"
+  }
+}

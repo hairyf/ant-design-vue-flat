@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "支付成功",
+  "usingComponents": {
+    "u-button": "/node-modules/uview-ui/components/u-button/u-button",
+    "view-shops-recommend": "/components/view/view-shops-recommend"
+  }
+}

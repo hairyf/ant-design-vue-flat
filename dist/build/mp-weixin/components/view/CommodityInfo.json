@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "auth-controller": "/components/controllers/auth-controller",
+    "view-icon": "/components/view/view-icon",
+    "u-tabs": "/node-modules/uview-ui/components/u-tabs/u-tabs",
+    "u-parse": "/node-modules/uview-ui/components/u-parse/u-parse",
+    "u-table": "/node-modules/uview-ui/components/u-table/u-table",
+    "u-tr": "/node-modules/uview-ui/components/u-tr/u-tr",
+    "u-td": "/node-modules/uview-ui/components/u-td/u-td",
+    "u-image": "/node-modules/uview-ui/components/u-image/u-image",
+    "common-shop-params": "/components/commons/common-shop-params"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "view-swiper": "/components/view/view-swiper"
+  }
+}

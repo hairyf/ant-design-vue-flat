@@ -1,0 +1,1 @@
+<view class="richt-ext-container _div data-v-0d5ca212" style="{{'box-shadow:'+(boxShadow)+';'+('border:'+(border)+';')+('padding:'+(padding)+';')+('border-radius:'+(borderRadius)+';')+('background:'+(background)+';')}}"><u-parse vue-id="2577a43e-1" html="{{option.contentEdit.value}}" class="data-v-0d5ca212" bind:__l="__l"></u-parse></view>

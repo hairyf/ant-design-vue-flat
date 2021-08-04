@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "选择物流公司",
+  "usingComponents": {
+    "u-search": "/node-modules/uview-ui/components/u-search/u-search"
+  }
+}

@@ -1,0 +1,10 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["components/view/OrderIconGroup"],{2759:function(n,e,o){},"2dd4":function(n,e,o){"use strict";o.d(e,"b",(function(){return t})),o.d(e,"c",(function(){return i})),o.d(e,"a",(function(){return r}));var r={linkController:function(){return o.e("components/controllers/link-controller").then(o.bind(null,"d887"))},viewIcon:function(){return Promise.all([o.e("common/vendor"),o.e("components/view/view-icon")]).then(o.bind(null,"2807"))},viewImage:function(){return Promise.all([o.e("common/vendor"),o.e("components/view/view-image")]).then(o.bind(null,"bacd"))}},t=function(){var n=this,e=n.$createElement;n._self._c},i=[]},"3b0d":function(n,e,o){"use strict";o.r(e);var r=o("2dd4"),t=o("e5e7");for(var i in t)["default"].indexOf(i)<0&&function(n){o.d(e,n,(function(){return t[n]}))}(i);o("84f9");var u,c=o("f0c5"),d=Object(c["a"])(t["default"],r["b"],r["c"],!1,null,"d9fcf5b8",null,!1,r["a"],u);e["default"]=d.exports},"84f9":function(n,e,o){"use strict";var r=o("2759"),t=o.n(r);t.a},c4a2:function(n,e,o){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var r=o("5a69"),t=o("824b"),i=o("a6f4"),u=(0,i.defineComponent)({props:{option:{type:Object,required:!0}},setup:function(n){var e=(0,t.usePaddingRadius)(n.option),o=e.padding,i=e.borderRadius,u=(0,t.useBackgroundColor)(n.option.colorStyle),c=u.background,d=r.shopOrderLinks["myOrders"];return d.value.params={id:0},{padding:o,borderRadius:i,background:c,allOrdersLink:d}}});e.default=u},e5e7:function(n,e,o){"use strict";o.r(e);var r=o("c4a2"),t=o.n(r);for(var i in r)["default"].indexOf(i)<0&&function(n){o.d(e,n,(function(){return r[n]}))}(i);e["default"]=t.a}}]);
+;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'components/view/OrderIconGroup-create-component',
+    {
+        'components/view/OrderIconGroup-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('543d')['createComponent'](__webpack_require__("3b0d"))
+        })
+    },
+    [['components/view/OrderIconGroup-create-component']]
+]);

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "钱款去向",
+  "usingComponents": {
+    "custom-card-container": "/components/customs/custom-card-container",
+    "u-time-line": "/node-modules/uview-ui/components/u-time-line/u-time-line",
+    "u-time-line-item": "/node-modules/uview-ui/components/u-time-line-item/u-time-line-item"
+  }
+}

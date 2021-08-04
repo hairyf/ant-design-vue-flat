@@ -1,0 +1,1 @@
+<view class="we-chat-login-tips _div"><view class="tips-container u-flex _div"><custom-icon class="u-m-r-20" vue-id="2d4c510a-1" name="wechart-icon" size="110" bind:__l="__l"></custom-icon><label class="text _span">请到微信客户端登录</label></view></view>

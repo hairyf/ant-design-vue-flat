@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "auth-controller": "/components/controllers/auth-controller",
+    "u-avatar": "/node-modules/uview-ui/components/u-avatar/u-avatar",
+    "view-icon": "/components/view/view-icon",
+    "finance": "/components/view/UserInfo/Finance"
+  }
+}

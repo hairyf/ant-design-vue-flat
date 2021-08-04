@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "u-popup": "/node-modules/uview-ui/components/u-popup/u-popup",
+    "union-blank": "/components/unions/union-blank",
+    "u-image": "/node-modules/uview-ui/components/u-image/u-image",
+    "u-number-box": "/node-modules/uview-ui/components/u-number-box/u-number-box",
+    "auth-controller": "/components/controllers/auth-controller",
+    "u-button": "/node-modules/uview-ui/components/u-button/u-button"
+  }
+}

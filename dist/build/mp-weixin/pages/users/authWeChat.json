@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "微信登录",
+  "usingComponents": {
+    "u-button": "/node-modules/uview-ui/components/u-button/u-button"
+  }
+}

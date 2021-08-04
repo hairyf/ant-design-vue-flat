@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "编辑收货地址",
+  "usingComponents": {
+    "u-field": "/node-modules/uview-ui/components/u-field/u-field",
+    "view-icon": "/components/view/view-icon",
+    "u-icon": "/node-modules/uview-ui/components/u-icon/u-icon",
+    "u-switch": "/node-modules/uview-ui/components/u-switch/u-switch",
+    "custom-fixed-footer": "/components/customs/custom-fixed-footer",
+    "u-button": "/node-modules/uview-ui/components/u-button/u-button"
+  }
+}

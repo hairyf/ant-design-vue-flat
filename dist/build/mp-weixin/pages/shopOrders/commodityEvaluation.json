@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "商品评价",
+  "usingComponents": {
+    "u-rate": "/node-modules/uview-ui/components/u-rate/u-rate",
+    "u-upload": "/node-modules/uview-ui/components/u-upload/u-upload",
+    "u-icon": "/node-modules/uview-ui/components/u-icon/u-icon",
+    "u-button": "/node-modules/uview-ui/components/u-button/u-button"
+  }
+}

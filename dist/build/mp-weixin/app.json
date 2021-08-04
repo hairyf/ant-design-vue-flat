@@ -1,0 +1,97 @@
+{
+  "pages": [
+    "pages/empty",
+    "libs/components/u-avatar-cropper"
+  ],
+  "subPackages": [
+    {
+      "root": "pages/baseTabBars",
+      "pages": [
+        "homePage",
+        "shopMall",
+        "shopCart",
+        "personal",
+        "customPage"
+      ]
+    },
+    {
+      "root": "pages/commons",
+      "pages": [
+        "evaluateList",
+        "richText",
+        "h5BasePage",
+        "search",
+        "searchResult",
+        "shopDetails",
+        "feedbackSubmit",
+        "help",
+        "settings",
+        "devTest"
+      ]
+    },
+    {
+      "root": "pages/shopOrders",
+      "pages": [
+        "myOrders",
+        "editOrder",
+        "cashier",
+        "afterSales",
+        "selectAfterSaleType",
+        "orderDetails",
+        "exchangeGood",
+        "refundReturnGoods",
+        "sprotectionRightDetail",
+        "refundOnly",
+        "refundReturnDetail",
+        "fillLogistics",
+        "expressSelect",
+        "moneyTo",
+        "negotiationHistory",
+        "commodityEvaluation",
+        "afterService",
+        "paymentSuccessful",
+        "viewLogisticsInfo",
+        "refund"
+      ]
+    },
+    {
+      "root": "pages/users",
+      "pages": [
+        "integral",
+        "authWeChat",
+        "wallet",
+        "footprint",
+        "followShops",
+        "coupons",
+        "addressList",
+        "addressEdit",
+        "addressSelect",
+        "userInfo",
+        "phoneEdit",
+        "userSignIn",
+        "bills",
+        "recharge",
+        "authLogin",
+        "authRegister",
+        "weChatLoginTips",
+        "myCoupons",
+        "authForget",
+        "withdrawal",
+        "authAccount"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "plugins": {},
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位"
+    }
+  },
+  "usingComponents": {}
+}

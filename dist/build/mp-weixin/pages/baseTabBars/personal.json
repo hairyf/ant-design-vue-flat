@@ -1,0 +1,9 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "view-controller": "/components/controllers/view-controller",
+    "view-distribution": "/components/view/view-distribution",
+    "common-copyright": "/components/commons/common-copyright",
+    "view-shops-recommend": "/components/view/view-shops-recommend"
+  }
+}

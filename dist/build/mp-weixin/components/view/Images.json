@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "link-controller": "/components/controllers/link-controller"
+  }
+}

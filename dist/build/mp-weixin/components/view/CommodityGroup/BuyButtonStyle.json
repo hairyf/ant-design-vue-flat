@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "view-icon": "/components/view/view-icon"
+  },
+  "component": true
+}

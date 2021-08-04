@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "反馈",
+  "usingComponents": {
+    "view-controller": "/components/controllers/view-controller",
+    "u-subsection": "/node-modules/uview-ui/components/u-subsection/u-subsection",
+    "u-card": "/node-modules/uview-ui/components/u-card/u-card",
+    "custom-textarea": "/components/customs/custom-textarea",
+    "u-field": "/node-modules/uview-ui/components/u-field/u-field"
+  }
+}

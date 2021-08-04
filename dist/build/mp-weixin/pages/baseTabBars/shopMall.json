@@ -1,0 +1,12 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "view-controller": "/components/controllers/view-controller",
+    "u-navbar": "/node-modules/uview-ui/components/u-navbar/u-navbar",
+    "union-l-3-class": "/components/unions/union-l-3-class",
+    "union-l-1-1-class": "/components/unions/union-l-1-1-class",
+    "union-l-1-2-class": "/components/unions/union-l-1-2-class",
+    "union-l-2-1-class": "/components/unions/union-l-2-1-class",
+    "union-l-2-2-class": "/components/unions/union-l-2-2-class"
+  }
+}
