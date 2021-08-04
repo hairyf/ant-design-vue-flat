@@ -899,6 +899,11 @@
   resolved "https://registry.nlark.com/@types/minimist/download/@types/minimist-1.2.2.tgz?cache=0&sync_timestamp=1625616294413&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fminimist%2Fdownload%2F%40types%2Fminimist-1.2.2.tgz#ee771e2ba4b3dc5b372935d549fd9617bf345b8c"
   integrity sha1-7nceK6Sz3Fs3KTXVSf2WF780W4w=
 
+"@types/node@^16.4.10":
+  version "16.4.10"
+  resolved "https://registry.nlark.com/@types/node/download/@types/node-16.4.10.tgz#e57e2a54fc6da58da94b3571b1cb456d39f88597"
+  integrity sha1-5X4qVPxtpY2pSzVxsctFbTn4hZc=
+
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
   resolved "https://registry.nlark.com/@types/normalize-package-data/download/@types/normalize-package-data-2.4.1.tgz#d3357479a0fdfdd5907fe67e17e0a85c906e1301"
@@ -1660,6 +1665,26 @@ es-to-primitive@^1.2.1:
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
 
+esbuild-node-loader@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.nlark.com/esbuild-node-loader/download/esbuild-node-loader-0.1.1.tgz#b43937133e70435f9dd1dc058a5ac27ccc7addbe"
+  integrity sha1-tDk3Ez5wQ1+d0dwFilrCfMx63b4=
+  dependencies:
+    esbuild "^0.12.6"
+
+esbuild-register@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.nlark.com/esbuild-register/download/esbuild-register-2.6.0.tgz#9f19a54c82be751dd87673d6a66d7b9e1cdd8498"
+  integrity sha1-nxmlTIK+dR3YdnPWpm17nhzdhJg=
+  dependencies:
+    esbuild "^0.12.8"
+    jsonc-parser "^3.0.0"
+
+esbuild@^0.12.6, esbuild@^0.12.8:
+  version "0.12.17"
+  resolved "https://registry.nlark.com/esbuild/download/esbuild-0.12.17.tgz#5816f905c2905de0ebbc658860df7b5b48afbcd3"
+  integrity sha1-WBb5BcKQXeDrvGWIYN97W0ivvNM=
+
 escalade@^3.1.1:
   version "3.1.1"
   resolved "https://registry.nlark.com/escalade/download/escalade-3.1.1.tgz#d8cfdc7000965c5a0174b4a82eaa5c0552742e40"
@@ -1669,6 +1694,16 @@ escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.nlark.com/escape-string-regexp/download/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
   integrity sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
+
+esmo@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.nlark.com/esmo/download/esmo-0.8.0.tgz#ab7bc3bc6f0757e3a8493b4cb56de3d658766ddb"
+  integrity sha1-q3vDvG8HV+OoSTtMtW3j1lh2bds=
+  dependencies:
+    cross-spawn "^7.0.3"
+    esbuild "^0.12.8"
+    esbuild-node-loader "^0.1.1"
+    esbuild-register "^2.6.0"
 
 eventemitter3@^4.0.4:
   version "4.0.7"
@@ -2418,6 +2453,11 @@ json-stringify-safe@^5.0.1, json-stringify-safe@~5.0.1:
   version "5.0.1"
   resolved "https://registry.npm.taobao.org/json-stringify-safe/download/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
   integrity sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus=
+
+jsonc-parser@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npm.taobao.org/jsonc-parser/download/jsonc-parser-3.0.0.tgz?cache=0&sync_timestamp=1605281904422&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fjsonc-parser%2Fdownload%2Fjsonc-parser-3.0.0.tgz#abdd785701c7e7eaca8a9ec8cf070ca51a745a22"
+  integrity sha1-q914VwHH5+rKip7IzwcMpRp0WiI=
 
 jsonfile@^6.0.1:
   version "6.1.0"

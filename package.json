@@ -1,7 +1,12 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "pulls": "esno scripts/subtree.pull.ts"
+  },
   "devDependencies": {
+    "@types/node": "^16.4.10",
+    "esmo": "^0.8.0",
     "lerna": "^4.0.0"
   }
 }
