@@ -1,0 +1,1052 @@
+@import './mixin.scss';
+:root {
+  --color-primary: #ffffff;
+  --color-primary-light-1: #ffffff;
+  --color-primary-light-2:  #ffffff; 
+  --color-primary-light-3:  #ffffff; 
+  --color-primary-light-4:  #ffffff; 
+  --color-primary-light-5:  #ffffff; 
+  --color-primary-light-6:  #ffffff; 
+  --color-primary-light-7:  #ffffff; 
+  --color-primary-light-8:  #ffffff; 
+  --color-primary-light-9:  #ffffff; 
+  --color-primary-dark-1: #ffffff;
+  --color-primary-light-opacity-1: #ffffff;
+  --color-primary-light-opacity-2:  #ffffff; 
+  --color-primary-light-opacity-3:  #ffffff; 
+  --color-primary-light-opacity-4:  #ffffff; 
+  --color-primary-light-opacity-5:  #ffffff; 
+  --color-primary-light-opacity-6:  #ffffff; 
+  --color-primary-light-opacity-7:  #ffffff; 
+  --color-primary-light-opacity-8:  #ffffff; 
+  --color-primary-light-opacity-9:  #ffffff;
+}
+::-webkit-scrollbar-track-piece {
+  //滚动条凹槽的颜色，还可以设置边框属性
+  background-color: #f8f8f8;
+}
+::-webkit-scrollbar {
+  //滚动条的宽度
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  //滚动条的设置
+  background-color: #dddddd;
+  background-clip: padding-box;
+  min-height: 28px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #bbb;
+}
+// 文字颜色
+.revenue {
+  margin-left: 18px;
+  .revenue-text {
+    color: #000;
+    font-size: 14px;
+  }
+}
+.red-socks{
+  font-size: 12px;
+  color: #ff0000;
+}
+.grey-text {
+  font-size: 12px;
+  color: #8C8C8C;
+}
+// 删除框
+.delete-box {
+  .el-icon-warning {
+    font-size: 44px;
+    color: #ff0000;
+  }
+
+  .el-dialog__footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  :deep(.el-card) {
+    border: none;
+    .el-card__header {
+      padding: 0;
+      border: none;
+    }
+  }
+  :deep(.el-table__row) > td {
+    border: none;
+  }
+  .card-header {
+    padding-left: 14px;
+    .card-header-text{
+      margin-top: 10px;
+      font-size: 14px;
+      color: #8c8c8c;
+    }
+    .card-header-title{
+      font-size: 16px;
+      color: #000;
+    }
+  }
+  .footer-right {
+    .el-button {
+      width: 100px;
+    }
+  }
+}
+// 排序箭头
+.table-list-sort {
+  font-size: 12px;
+  color: #8c8c8c;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+  }
+}
+.el-date-editor  .el-range__icon{
+  line-height: 26px;
+}
+// 维权模态的提示
+.protection-tips{
+  margin-bottom: 20px;
+  i{
+    font-size: 16px;
+    margin-right: 7px;
+    color: #ff0000;
+  }
+  div {
+    font-size: 14px;
+    color: #ff0000;
+  }
+}
+// table操作按钮
+.public-move-left {
+  margin-left: 14px;
+}
+ .el-table--enable-row-hover .el-table__body tr:hover > td{
+      background-color: var(--color-primary-light-opacity-9) !important;
+    }
+.el-dialog__body {
+  padding-top: 0 !important;
+}
+.el-button {
+ border-radius: 2px !important;
+ i {
+   font-size: 16px;
+   vertical-align: middle;
+ }
+}
+/* 右侧排放分页器 */
+.right-buttom-pagination.el-pagination {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+/* 自定义卡片容器 */
+.custom-crad-container {
+  >.el-card > .el-card__body {
+    @include self-lg-xl(min-height, 550px, 780px);
+    position: relative;
+  }
+}   
+.custom-card-page {
+  >.el-card > .el-card__body {
+    padding-bottom: 130px;
+  }
+}
+/* input 只能输入数字 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+/* 测试居中卡片容器 */
+.custom-center-card {
+  &.center {
+    >.el-card > .el-card__body {
+      justify-content: center;
+    }
+  }
+  >.el-card > .el-card__body {
+    @include self-lg-xl(min-height, 765px, 980px);
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+/* 输入框样式 */
+.el-input  {
+  height: 32px;
+  line-height: 32px !important;
+  .el-input__inner {
+    height: 32px;
+  }
+  .el-input__icon{
+    line-height: 32px;
+  }
+}
+.el-textarea__inner{
+  resize: none !important;
+}
+.el-range__close-icon{
+ line-height: 26px !important;
+}
+.el-card{
+  border-radius: 10px;
+}
+.el-button--primary:active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+/* 模态框标题 */
+.el-dialog__title {
+  color: #000 !important;
+}
+/* 自定义标签栏 */
+.custom-tabs {
+  .el-tabs__nav-wrap {
+    &::after {
+      display: none;
+    }
+
+    .el-tabs__active-bar {
+      background: linear-gradient(90deg, var(--color-primary) 0%, #fff 100%);
+    }
+  }
+}
+i[class*='ad-'] {
+  font-family:  "ad-iconfont" ;
+  font-style: normal;
+}
+i[class*='oe-'] {
+  font-family:  "oe-iconfont" ;
+  font-style: normal;
+}
+i[class*='ol-'] {
+  font-family:  "ol-iconfont" ;
+  font-style: normal;
+}
+
+/* 订单导出 */
+.export-report-box {
+  .layer-box {
+    .option-box {
+      cursor: pointer;
+      margin: 10px 0 0 10px;
+      position: relative;
+      width: 100px;
+      height: 53px;
+      text-align: center;
+      line-height: 53px;
+      border: 1px solid #d9d9d9;
+      border-radius: 2px;
+      .option-img {
+        width: 16px;
+        height: 10px;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      &.option-box:nth-child(7n + 1) {
+        margin-left: 0;
+      }
+      &.option-box:first-child {
+        margin-left: 0;
+      }
+    }
+    .selectStyle {
+      border: 1px solid var(--color-primary);
+    }
+  }
+  .choice-box {
+    .el-button {
+      padding: 0 14px;
+      min-height: 32px;
+      max-width: 84px;
+      min-width: 84px;
+    }
+  }
+  .layer-box-tips {
+    margin: 24px 0;
+    font-size: 14px;
+    color: #000;
+  }
+  .bottom-btn {
+    div {
+      font-size: 14px;
+      color: #000;
+    }
+    .el-button {
+      padding: 0 46px;
+      min-height: 32px;
+    }
+  }
+}
+/* 立即发货 */
+.Immediate-delivery-box {
+  .el-dialog {
+    min-width: 500px;
+  }
+  .dialog-footer {
+    .el-button {
+      min-height: 32px;
+      padding: 0 45px;
+      font-size: 14px;
+    }
+  }
+  .el-textarea__inner {
+    height: 146px;
+  }
+  .el-form-item__label {
+    color: #000;
+    line-height: 32px;
+  }
+  .el-form-item__content {
+    color: #000;
+    line-height: 32px;
+  }
+  .el-textarea__inner {
+    resize: none;
+  }
+  .cell {
+    color: #000;
+  }
+  .el-form {
+    .el-input {
+      width: 250px;
+    }
+  }
+  .box-right {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+  .immediate-delivery,
+  .modify-logistics {
+    .el-tag--mini {
+      margin-top: 6px;
+      border: none;
+      padding: 0;
+    }
+    .commodity-box {
+      .el-image {
+        width: 50px !important;
+        height: 50px;
+      }
+    }
+    .commodity-box-right {
+      margin-left: 10px;
+    }
+    .delivery-mode-text {
+      transform: translateY(-2px);
+      font-size: 14px;
+      color: #000000;
+    }
+    .el-form {
+      margin-top: 18px;
+    }
+    .el-textarea__inner {
+      height: 171px;
+    }
+  }
+}
+/* 确定发货 */
+.confirm-receipt-box {
+  .el-dialog {
+    min-width: 500px;
+  }
+  .dialog-footer {
+    .el-button {
+      min-height: 32px;
+      padding: 0 45px;
+      font-size: 14px;
+    }
+  }
+  .confirm-receipt {
+    .confirm-receipt-tips {
+      width: 100%;
+      margin-bottom: 30px;
+      padding: 0 0 0 14px;
+      height: 34px;
+      font-size: 12px;
+      line-height: 34px;
+      color: #262626;
+      background: rgba(255, 157, 40, 0.2);
+      border: 1px solid var(--color-primary);
+      box-sizing: border-box;
+      border-radius: 2px;
+    }
+    .el-input__inner {
+      background: #f5f5f5;
+    }
+    .confirm-receipt-text {
+      margin-right: 14px;
+      font-size: 14px;
+      color: #000000;
+    }
+  }
+}
+/* 收货人信息 */
+.consignee-information-box {
+  .consignee-information {
+  .el-form {
+    margin-top: 20px;
+  }
+  .dialog-footer {
+    .el-button {
+      min-height: 32px;
+      padding: 0 45px;
+      font-size: 14px;
+    }
+  }
+  .el-input {
+    line-height: 32px;
+  }
+
+  .el-checkbox__inner {
+    transform: translateY(-2px);
+  }
+
+  .tips-text {
+    margin-left: 10px;
+    color: #ff0000;
+  }
+}
+.el-form-item__label {
+  line-height: 32px;
+}
+.el-form-item__content{
+  line-height: 32px;
+}
+.el-input__inner {
+  background: #f5f5f5;
+}
+}
+/* 物流信息 */
+.logistics-information-box {
+  .dialog-footer {
+    .el-button {
+      min-height: 32px;
+      padding: 0 45px;
+    }
+  }
+  .el-timeline {
+    padding-top: 20px;
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  .el-dialog {
+    min-width: 500px;
+  }
+  .title {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .text {
+    font-size: 12px;
+  }
+  .highlight {
+    color: #000;
+  }
+  .default {
+    color: #acacac;
+  }
+}
+/* 退款关闭 */
+.refund-closed-box {
+  .make-sure-text {
+    margin: 28px 0;
+  }
+  .e-left {
+    margin-left: 12px;
+  }
+  .el-textarea__inner {
+    resize: none;
+    height: 67px;
+  }
+  .dialog-footer {
+    .el-button {
+      min-height: 32px;
+      padding: 0 45px;
+      font-size: 14px;
+    }
+  }
+  .confirm-receipt-text {
+    margin-right: 14px;
+    font-size: 14px;
+    color: #000000;
+  }
+  .el-form-item__label {
+    color: #000;
+  }
+  .el-form-item__content {
+    color: #000;
+  }
+  .confirm-receipt-tips {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 5px 0 5px 14px;
+    font-size: 12px;
+    line-height: 24px;
+    color: #262626;
+    background: rgba(255, 157, 40, 0.2);
+    border: 1px solid #ff9d28;
+    box-sizing: border-box;
+    border-radius: 2px;
+  }
+}
+/* 修改物流 */
+.modify-logistics-box {
+  .modify-logistics {
+    .el-dialog {
+      min-width: 500px;
+    }
+    .el-textarea__inner {
+      resize: none;
+      height: 90px;
+    }
+    .el-form-item__label,
+    .el-form-item__content,
+    .el-form-item__content {
+      line-height: 32px;
+    }
+    .el-input {
+      line-height: 32px;
+    }
+    .dialog-footer {
+      .el-button {
+        min-height: 32px;
+        padding: 0 45px;
+        font-size: 14px;
+      }
+    }
+    .el-tag--mini {
+      margin-top: 6px;
+      padding: 0;
+    }
+    .commodity-box-right {
+      margin-left: 10px;
+    }
+    .delivery-mode-text {
+      transform: translateY(-2px);
+      font-size: 14px;
+      color: #000000;
+    }
+    .el-form {
+      margin-top: 18px;
+    }
+    .el-input__inner {
+      background: #f5f5f5;
+    }
+    .odd-umber {
+      margin-left: 28px;
+    }
+    .el-textarea__inner {
+      height: 171px;
+    }
+    .el-dialog__body {
+      padding-top: 0;
+    }
+    .el-form-item__label {
+      color: #000;
+    }
+  }
+}
+/* 改价 */
+.price-change-box {
+  .price-box {
+  font-size: 14px;
+  color: #000;
+  .el-input-group__append {
+    line-height: 30px;
+  }
+}
+.dialog-footer {
+  .el-button {
+    min-height: 32px;
+    padding: 0 45px;
+    font-size: 14px;
+  }
+}
+.el-form-item__label {
+  font-size: 14px;
+  color: #000;
+  line-height: 32px;
+}
+.el-form-item__content {
+  line-height: 32px;
+}
+.el-textarea__inner {
+  height: 100px;
+}
+.el-input {
+  width: 200px;
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
+}
+/* 重新发货 */
+.redelivery-box {
+  .el-dialog {
+    min-width: 500px;
+  }
+  .dialog-footer {
+    .el-button {
+      min-height: 32px;
+      padding: 0 45px;
+      font-size: 14px;
+    }
+  }
+  .el-textarea__inner {
+    height: 146px;
+  }
+  .el-form-item__label {
+    color: #000;
+    line-height: 32px;
+  }
+  .el-form-item__content {
+    color: #000;
+    line-height: 32px;
+  }
+  .el-textarea__inner {
+    resize: none;
+  }
+  .cell {
+    color: #000;
+  }
+  .el-form {
+    .el-input {
+      width: 250px;
+    }
+  }
+
+  .immediate-delivery,
+  .modify-logistics {
+    .el-tag--mini {
+      margin-top: 6px;
+      border: none;
+      padding: 0;
+    }
+    .commodity-box {
+      .el-image {
+        width: 50px;
+        height: 50px;
+      }
+    }
+    .commodity-box-right {
+      margin-left: 10px;
+    }
+    .delivery-mode-text {
+      transform: translateY(-2px);
+      font-size: 14px;
+      color: #000000;
+    }
+    .el-form {
+      margin-top: 18px;
+    }
+    .el-textarea__inner {
+      height: 171px;
+    }
+  }
+}
+/* 退款 */
+.refund-box {
+  .refund-closed {
+    .dialog-footer {
+      .el-button {
+        min-height: 32px;
+        padding: 0 45px;
+        font-size: 14px;
+      }
+    }
+    .el-input-group__append {
+      line-height: 30px;
+      padding: 0 10px;
+    }
+  }
+  .cell {
+    color: #000;
+  }
+  .commodity-box {
+    .commodity-box-right {
+      margin-left: 10px;
+    }
+    .box-right {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+    }
+    .el-image {
+      width: 50px;
+      height: 50px;
+    }
+    .el-tag--mini {
+      padding: 0;
+    }
+  }
+  .el-input-group__append {
+    padding: 0 8px;
+    line-height: 30px;
+  }
+  .el-textarea__inner {
+    height: 87px;
+  }
+  .cell {
+    color: #000;
+  }
+  .refund-closed-text {
+    margin: 24px 0;
+    font-size: 14px;
+    color: #000;
+    text-align: right;
+    span {
+      color: #ff0000;
+    }
+  }
+}
+/* 驳回申请 */
+.reject-apply-box {
+  .make-sure-text {
+    margin: 28px 0;
+  }
+  .e-left {
+    margin-left: 12px;
+  }
+  .el-textarea__inner {
+    resize: none;
+    height: 67px;
+  }
+  .dialog-footer {
+    .el-button {
+      min-height: 32px;
+      padding: 0 45px;
+      font-size: 14px;
+    }
+  }
+  .confirm-receipt-text {
+    margin-right: 14px;
+    font-size: 14px;
+    color: #000000;
+  }
+  .el-form-item__label {
+    color: #000;
+  }
+  .el-form-item__content{
+    color: #000;
+  }
+  .confirm-receipt-tips {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 0 0 0 14px;
+    height: 34px;
+    font-size: 12px;
+    line-height: 34px;
+    color: #262626;
+    background: rgba(255, 157, 40, 0.2);
+    border: 1px solid #ff9d28;
+    box-sizing: border-box;
+    border-radius: 2px;
+  }
+}
+/* 退货地址 */
+.return-address-box {
+  .return-address {
+    position: relative;
+    .roll-box {
+      max-height: 500px;
+      overflow-y: auto;
+    }
+    .address-box {
+      margin-top: 14px;
+      padding: 14px 26px;
+      border: 1px solid #d9d9d9;
+    }
+    .default {
+      border: 1px solid var(--color-primary);
+    }
+    .adderess-box-right {
+      padding-left: 60px;
+      div {
+        font-size: 14px;
+        line-height: 22px;
+        color: #000000;
+      }
+    }
+    .middle {
+      margin: 14px 0;
+    }
+    .e-right {
+      margin-left: 14px;
+    }
+    .newly-added {
+      cursor: pointer;
+      position: absolute;
+      bottom: 28px;
+      left: 20px;
+      color: var(--color-primary);
+    }
+    .dialog-footer {
+      .el-button {
+        min-height: 32px;
+        padding: 0 45px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+/* 备注或者关闭 */
+.note-close-box {
+  .remarks-box {
+    .dialog-footer {
+      .el-button {
+        min-height: 32px;
+        padding: 0 45px;
+        font-size: 14px;
+      }
+    }
+    .el-textarea__inner {
+      resize: none;
+    }
+    .el-textarea__inner {
+      height: 157px;
+    }
+    .refund-closed-img {
+      position: absolute;
+      top: 11px;
+      width: 44px;
+      height: 44px;
+    }
+  }
+}
+/* 自定义element布局栅格尺寸 */
+@media only screen and (min-width: 1920px) {
+  .el-row {
+  .el-col-xl-4_8 {
+    max-width: 20%;
+    flex: 0 0 20%;
+  }
+
+  .el-col-xl-14_4 {
+    max-width: 60%;
+    flex: 0 0 60%;
+  }
+
+  .el-col-xl-9_2 {
+    max-width: 40%;
+    flex: 0 0 40%;
+  }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .el-col-lg-4_8 {
+    max-width: 20%;
+    flex: 0 0 20%;
+  }
+
+  .el-col-lg-14_4 {
+    max-width: 60%;
+    flex: 0 0 60%;
+  }
+
+  .el-col-lg-9_2 {
+    max-width: 40%;
+    flex: 0 0 40%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .el-col-md-4_8 {
+    max-width: 20%;
+    flex: 0 0 20%;
+  }
+
+  .el-col-md-14_4 {
+    max-width: 60%;
+    flex: 0 0 60%;
+  }
+
+  .el-col-md-9_2 {
+    max-width: 40%;
+    flex: 0 0 40%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .el-row {
+    .el-col-sm-4_8 {
+      max-width: 20%;
+      flex: 0 0 20%;
+    }
+
+    .el-col-sm-14_4 {
+      max-width: 60%;
+      flex: 0 0 60%;
+    }
+
+    .el-col-sm-9_2 {
+      max-width: 40%;
+      flex: 0 0 40%;
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .el-row {
+    .el-col-xs-4_8 {
+      max-width: 20%;
+      flex: 0 0 20%;
+    }
+
+    .el-col-xs-14_4 {
+      max-width: 60%;
+      flex: 0 0 60%;
+    }
+
+    .el-col-xs-9_2 {
+      max-width: 40%;
+      flex: 0 0 40%;
+    }
+  }
+}
+
+/* flex工具类 */
+.oe-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.oe-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.oe-flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.oe-col-center {
+  align-items: center;
+}
+
+.oe-col-top {
+  align-items: flex-start;
+}
+
+.oe-col-bottom {
+  align-items: flex-end;
+}
+
+.oe-row-center {
+  justify-content: center;
+}
+
+.oe-row-left {
+  justify-content: flex-start;
+}
+
+.oe-row-right {
+  justify-content: flex-end;
+}
+
+.oe-row-between {
+  justify-content: space-between;
+}
+
+.oe-row-around {
+  justify-content: space-around;
+}
+
+.oe-text-left {
+  text-align: left;
+}
+
+.oe-text-center {
+  text-align: center;
+}
+
+.oe-text-right {
+  text-align: right;
+}
+.oe-flex-row{
+  flex-direction:row-reverse;
+}
+.oe-flex-rev {
+  display: flex;
+  flex-direction:column-reverse;
+}
+.oe-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+// 定义flex等分
+@for $i from 0 through 12 {
+  .oe-flex-#{$i} {
+    flex: $i;
+  }
+}
+
+//定义字体大小,遍历5-40
+@for $i from 1 through 40 {
+  @if $i > 11 {
+    .oe-f-s-#{$i}{
+			font-size: $i + px !important;
+    }
+  } 
+  @if $i < 12 {
+    .oe-f-s-#{$i}{
+			font-size: $i * 2 + px !important;
+      zoom:0.5;
+    }
+  }
+}
+
+// 定义内外边距，历遍1-80
+@for $i from 0 through 80 {
+	// 只要双数和能被5除尽的数
+	@if $i % 2 == 0 or $i % 5 == 0 {
+		// 得出：oe-margin-30或者oe-m-30
+		.oe-margin-#{$i}, .oe-m-#{$i} {
+			margin: $i + px!important;
+		}
+		
+		// 得出：oe-padding-30或者oe-p-30
+		.oe-padding-#{$i}, .oe-p-#{$i} {
+			padding: $i + px!important;
+		}
+		
+		@each $short, $long in l left, t top, r right, b bottom {
+			// 缩写版，结果如： oe-m-l-30
+			// 定义外边距
+			.oe-m-#{$short}-#{$i} {
+				margin-#{$long}: $i + px!important;
+			}
+			
+			// 定义内边距
+			.oe-p-#{$short}-#{$i} {
+				padding-#{$long}: $i + px!important;
+			}
+			
+			// 完整版，结果如：oe-margin-left-30
+			// 定义外边距
+			.oe-margin-#{$long}-#{$i} {
+				margin-#{$long}: $i + px!important;
+			}
+			
+			// 定义内边距
+			.oe-padding-#{$long}-#{$i} {
+				padding-#{$long}: $i + px!important;
+			}
+		}
+	}
+}

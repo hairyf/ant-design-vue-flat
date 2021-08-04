@@ -1,0 +1,1 @@
+import{b as e,o as r,c as a,I as s,g as c}from"./vendor.71e19cde.js";const o={};o.render=function(o,t){const n=e("mobile-iframe"),d=e("el-card");return r(),a(d,{shadow:"never",class:"custom-center-card center"},{default:s((()=>[c(n)])),_:1})};export default o;
