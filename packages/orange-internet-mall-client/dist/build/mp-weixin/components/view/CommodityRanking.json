@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "view-image": "/components/view/view-image",
+    "commodity-group": "/components/view/CommodityGroup"
+  }
+}

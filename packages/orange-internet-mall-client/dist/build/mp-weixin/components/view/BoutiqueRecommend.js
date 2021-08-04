@@ -1,0 +1,10 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["components/view/BoutiqueRecommend"],{"10f5":function(n,e,o){"use strict";o.r(e);var t=o("ad09"),r=o.n(t);for(var u in t)["default"].indexOf(u)<0&&function(n){o.d(e,n,(function(){return t[n]}))}(u);e["default"]=r.a},"3f62":function(n,e,o){},"4b8e":function(n,e,o){"use strict";var t=o("3f62"),r=o.n(t);r.a},"507f":function(n,e,o){"use strict";o.r(e);var t=o("d452"),r=o("10f5");for(var u in r)["default"].indexOf(u)<0&&function(n){o.d(e,n,(function(){return r[n]}))}(u);o("4b8e");var i,c=o("f0c5"),d=Object(c["a"])(r["default"],t["b"],t["c"],!1,null,"ab41b3be",null,!1,t["a"],i);e["default"]=d.exports},ad09:function(n,e,o){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var t=o("a6f4"),r=o("824b"),u=(0,t.defineComponent)({props:{option:{type:Object,required:!0}},setup:function(n){var e=n.option,o=e.contentStyle,t=e.componentStyle,u=(0,r.usePaddingRadius)(n.option),i=u.padding,c=u.borderRadius,d=(0,r.useBackgroundColor)(n.option.colorStyle),a=d.background,l=(0,r.useComponentModalStyle)(n.option.contentStyle),f=l.boxShadow,s=l.border;return{contentStyle:o,componentStyle:t,padding:i,borderRadius:c,background:a,boxShadow:f,border:s}}});e.default=u},d452:function(n,e,o){"use strict";o.d(e,"b",(function(){return r})),o.d(e,"c",(function(){return u})),o.d(e,"a",(function(){return t}));var t={linkController:function(){return o.e("components/controllers/link-controller").then(o.bind(null,"d887"))},viewIcon:function(){return Promise.all([o.e("common/vendor"),o.e("components/view/view-icon")]).then(o.bind(null,"2807"))}},r=function(){var n=this,e=n.$createElement;n._self._c},u=[]}}]);
+;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'components/view/BoutiqueRecommend-create-component',
+    {
+        'components/view/BoutiqueRecommend-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('543d')['createComponent'](__webpack_require__("507f"))
+        })
+    },
+    [['components/view/BoutiqueRecommend-create-component']]
+]);

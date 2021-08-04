@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "帮助",
+  "usingComponents": {
+    "view-controller": "/components/controllers/view-controller",
+    "u-card": "/node-modules/uview-ui/components/u-card/u-card",
+    "u-collapse": "/node-modules/uview-ui/components/u-collapse/u-collapse",
+    "u-collapse-item": "/node-modules/uview-ui/components/u-collapse-item/u-collapse-item"
+  }
+}

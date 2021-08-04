@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "effect-text-frame": "/components/view/EffectTextFrame"
+  }
+}

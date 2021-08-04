@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "u-card": "/node-modules/uview-ui/components/u-card/u-card",
+    "u-image": "/node-modules/uview-ui/components/u-image/u-image",
+    "u-button": "/node-modules/uview-ui/components/u-button/u-button",
+    "link-controller": "/components/controllers/link-controller",
+    "view-icon": "/components/view/view-icon"
+  },
+  "component": true
+}

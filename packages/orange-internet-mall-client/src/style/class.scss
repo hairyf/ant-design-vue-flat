@@ -1,0 +1,149 @@
+// 存放 class 全局类名
+.u-margin-bottim-28 {
+  margin-bottom: 28rpx !important;
+}
+.u-margin-bottim-40 {
+  margin-bottom: 40rpx !important;
+}
+.u-margin-bottom-50 {
+  margin-bottom: 50rpx !important;
+}
+/* 自定义卡片 */
+.custom-cart-head {
+  margin: 0 25rpx;
+  margin-top: 25rpx;
+  font-size: 28rpx;
+  color: #000;
+}
+.custom-cart-body {
+  u-grid-item {
+    .title {
+      margin-bottom: 10rpx;
+      font-size: 36rpx;
+      font-weight: bold;
+    }
+    image {
+      width: 45rpx;
+      height: 45rpx;
+      margin-bottom: 8rpx;
+    }
+  }
+}
+/* 自定义优惠卷项 */
+.custom-discount__body {
+  height: 192rpx;
+  color: #ffffff;
+  position: relative;
+  .status-image {
+    z-index: 1;
+    position: absolute;
+    right: 20rpx;
+  }
+  .left-column {
+    width: 200rpx;
+    flex-direction: column;
+  }
+  .count-layer {
+    margin-bottom: 5rpx;
+    .content {
+      font-size: 60rpx;
+      font-weight: bold;
+    }
+  }
+  .right-column {
+    padding: 0 20rpx;
+    height: 192rpx;
+    border-left: 1rpx dashed #ffffff;
+    flex-direction: column;
+    align-items: flex-start;
+    .title {
+      margin-bottom: 10rpx;
+      font-size: 28rpx;
+      font-weight: bold;
+    }
+    .tips-btns {
+      width: 100%;
+      margin-bottom: 10rpx;
+      .tips {
+        font-size: 24rpx;
+      }
+      .btns {
+        font-size: 28rpx;
+      }
+    }
+  }
+  &.full {
+    background-color: #fe9b2a;
+  }
+  &.disc {
+    background-color: #ff6f6f;
+  }
+  &.be-overdue {
+    background-color: #EBEBEB;
+    color: #ACACAC;
+  }
+  .times {
+    font-size: 20rpx;
+  }
+}
+/* 自定义售后订单容器 */
+.after-sales-order-container {
+  align-items: flex-start;
+  color: #000;
+  .left-column {
+    margin-right: 20rpx;
+  }
+  .right-column {
+    .title {
+      @include text-hidden-line(2);
+      margin-bottom: 16rpx;
+    }
+    .buttons {
+      text-align: right;
+    }
+  }
+}
+/* 自定义样式覆盖 */
+u-navbar {
+  margin-left
+  u-avatar {
+    margin-top: 5rpx;
+    margin-left: 20rpx;
+  }
+  u-search {
+    margin-left: 20rpx;
+  }
+}
+
+u-number-box .u-numberbox {
+  .u-number-input {
+    background: #ECECEC !important;
+    border-radius: 10rpx;
+  }
+  .u-icon-minus.u-icon-disabled {
+    background-color: #ffffff !important;
+  }
+}
+.form-container {
+  background: #ffffff;
+}
+.enlarge-btns {
+  padding: 8rpx;
+}
+
+//定义字体大小(rpx)单位,遍历5-50
+@for $i from 5 through 50 {
+  @if  $i % 2 == 0{
+    @if $i > 23 {
+      .u-f-s-#{$i}{
+		  	font-size: $i + rpx !important;
+      }
+    } 
+    @if $i < 24 {
+      .u-f-s-#{$i}{
+		  	font-size: $i + rpx !important;
+        zoom:0.5;
+      }
+    }
+  }
+}

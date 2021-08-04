@@ -1,0 +1,1 @@
+.icon-tag{font-size:56rpx}.text-tag{height:44rpx;display:-webkit-box;display:-webkit-flex;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;border-radius:10rpx;font-size:24rpx;padding:0 10rpx;text-align:center;background-color:#fff;color:#fff;border:solid 2rpx;border-color:transparent}

@@ -1,0 +1,1 @@
+<image style="{{$root.s0}}" src="{{path}}" data-event-opts="{{[['tap',[['$emit',['click']]]]]}}" bindtap="__e"></image>

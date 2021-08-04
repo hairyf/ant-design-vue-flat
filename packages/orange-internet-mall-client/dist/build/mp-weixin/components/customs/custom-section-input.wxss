@@ -1,0 +1,1 @@
+.custom-section-input input{padding:5rpx 30rpx;border-radius:30rpx;background:#ececec;-webkit-box-flex:1;-webkit-flex:1;flex:1;text-align:center}.custom-section-input .line{width:20rpx;height:4rpx;margin:0 20rpx;background:#ececec}

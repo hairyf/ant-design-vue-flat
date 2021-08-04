@@ -1,0 +1,1 @@
+.hot-city{padding:25rpx;padding-right:50rpx}.hot-city .tips{color:#acacac}.list-cell{display:-webkit-box;display:-webkit-flex;display:flex;box-sizing:border-box;width:100%;padding:10px 24rpx;overflow:hidden;color:#323233;background-color:#fff}

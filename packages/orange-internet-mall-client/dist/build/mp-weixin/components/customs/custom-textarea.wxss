@@ -1,0 +1,1 @@
+.custom-textarea{position:relative;padding:20rpx 0}textarea{position:relative;width:auto;padding:25rpx;padding-bottom:48rpx;border-radius:8rpx}.placeholder-input{color:#9a9a9a}.tips{width:160rpx;margin-bottom:24rpx}.textarea-tips{position:absolute;font-size:24rpx;right:24rpx;bottom:64rpx;color:#9a9a9a}

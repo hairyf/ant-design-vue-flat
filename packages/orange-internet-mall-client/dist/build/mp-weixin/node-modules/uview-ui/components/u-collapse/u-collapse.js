@@ -1,0 +1,10 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["node-modules/uview-ui/components/u-collapse/u-collapse"],{5364:function(t,n,e){"use strict";var c;e.d(n,"b",(function(){return u})),e.d(n,"c",(function(){return o})),e.d(n,"a",(function(){return c}));var u=function(){var t=this,n=t.$createElement;t._self._c},o=[]},"7ca9":function(t,n,e){},"93c4":function(t,n,e){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),n.default=void 0;var c={name:"u-collapse",props:{accordion:{type:Boolean,default:!0},headStyle:{type:Object,default:function(){return{}}},bodyStyle:{type:Object,default:function(){return{}}},itemStyle:{type:Object,default:function(){return{}}},arrow:{type:Boolean,default:!0},arrowColor:{type:String,default:"#909399"},hoverClass:{type:String,default:"u-hover-class"}},created:function(){this.childrens=[]},data:function(){return{}},methods:{init:function(){this.childrens.forEach((function(t,n){t.init()}))},onChange:function(){var t=[];this.childrens.forEach((function(n,e){n.isShow&&t.push(n.nameSync)})),this.accordion&&(t=t.join("")),this.$emit("change",t)}}};n.default=c},"9e9a":function(t,n,e){"use strict";e.r(n);var c=e("5364"),u=e("bd37");for(var o in u)["default"].indexOf(o)<0&&function(t){e.d(n,t,(function(){return u[t]}))}(o);e("c46f");var a,r=e("f0c5"),i=Object(r["a"])(u["default"],c["b"],c["c"],!1,null,"ffdf7c46",null,!1,c["a"],a);n["default"]=i.exports},bd37:function(t,n,e){"use strict";e.r(n);var c=e("93c4"),u=e.n(c);for(var o in c)["default"].indexOf(o)<0&&function(t){e.d(n,t,(function(){return c[t]}))}(o);n["default"]=u.a},c46f:function(t,n,e){"use strict";var c=e("7ca9"),u=e.n(c);u.a}}]);
+;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'node-modules/uview-ui/components/u-collapse/u-collapse-create-component',
+    {
+        'node-modules/uview-ui/components/u-collapse/u-collapse-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('543d')['createComponent'](__webpack_require__("9e9a"))
+        })
+    },
+    [['node-modules/uview-ui/components/u-collapse/u-collapse-create-component']]
+]);

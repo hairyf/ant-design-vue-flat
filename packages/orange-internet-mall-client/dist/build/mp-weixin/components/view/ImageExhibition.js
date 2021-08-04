@@ -1,0 +1,10 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["components/view/ImageExhibition"],{"25bf":function(n,e,t){},"520f":function(n,e,t){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var o=t("a6f4"),r=t("824b"),i=(0,o.defineComponent)({props:{option:{type:Object,required:!0}},setup:function(n){var e=n.option.carouselSetting,t=(0,r.useBackgroundColor)(n.option.colorStyle),o=t.background,i=(0,r.usePaddingRadius)(n.option),u=i.padding,a=i.borderRadius;return{carouselSetting:e,background:o,padding:u,borderRadius:a}}});e.default=i},"5b65":function(n,e,t){"use strict";t.r(e);var o=t("520f"),r=t.n(o);for(var i in o)["default"].indexOf(i)<0&&function(n){t.d(e,n,(function(){return o[n]}))}(i);e["default"]=r.a},"653b":function(n,e,t){"use strict";t.r(e);var o=t("99e7"),r=t("5b65");for(var i in r)["default"].indexOf(i)<0&&function(n){t.d(e,n,(function(){return r[n]}))}(i);t("a259");var u,a=t("f0c5"),c=Object(a["a"])(r["default"],o["b"],o["c"],!1,null,"40e10329",null,!1,o["a"],u);e["default"]=c.exports},"99e7":function(n,e,t){"use strict";t.d(e,"b",(function(){return r})),t.d(e,"c",(function(){return i})),t.d(e,"a",(function(){return o}));var o={linkController:function(){return t.e("components/controllers/link-controller").then(t.bind(null,"d887"))},viewImage:function(){return Promise.all([t.e("common/vendor"),t.e("components/view/view-image")]).then(t.bind(null,"bacd"))}},r=function(){var n=this,e=n.$createElement,t=(n._self._c,n.__map(n.carouselSetting.imageList,(function(e,t){var o=n.__get_orig(e),r={width:184,height:200};return{$orig:o,a0:r}})));n.$mp.data=Object.assign({},{$root:{l0:t}})},i=[]},a259:function(n,e,t){"use strict";var o=t("25bf"),r=t.n(o);r.a}}]);
+;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'components/view/ImageExhibition-create-component',
+    {
+        'components/view/ImageExhibition-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('543d')['createComponent'](__webpack_require__("653b"))
+        })
+    },
+    [['components/view/ImageExhibition-create-component']]
+]);

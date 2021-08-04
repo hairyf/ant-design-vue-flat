@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "link-controller": "/components/controllers/link-controller",
+    "u-image": "/node-modules/uview-ui/components/u-image/u-image",
+    "u-card": "/node-modules/uview-ui/components/u-card/u-card",
+    "u-grid": "/node-modules/uview-ui/components/u-grid/u-grid",
+    "u-grid-item": "/node-modules/uview-ui/components/u-grid-item/u-grid-item",
+    "u-empty": "/node-modules/uview-ui/components/u-empty/u-empty"
+  }
+}

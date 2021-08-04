@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "收货地址",
+  "usingComponents": {
+    "view-controller": "/components/controllers/view-controller",
+    "u-card": "/node-modules/uview-ui/components/u-card/u-card",
+    "u-icon": "/node-modules/uview-ui/components/u-icon/u-icon",
+    "u-checkbox": "/node-modules/uview-ui/components/u-checkbox/u-checkbox",
+    "u-empty": "/node-modules/uview-ui/components/u-empty/u-empty",
+    "custom-fixed-footer": "/components/customs/custom-fixed-footer",
+    "u-button": "/node-modules/uview-ui/components/u-button/u-button",
+    "view-icon": "/components/view/view-icon"
+  }
+}

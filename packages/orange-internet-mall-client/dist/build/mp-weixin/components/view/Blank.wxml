@@ -1,0 +1,1 @@
+<view style="{{'height:'+(option.height*2+'rpx')+';'+('background-color:'+(option.background)+';')}}" class="_div"></view>

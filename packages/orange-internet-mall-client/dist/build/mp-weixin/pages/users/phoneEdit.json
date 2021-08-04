@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "修改手机号",
+  "usingComponents": {
+    "u-field": "/node-modules/uview-ui/components/u-field/u-field",
+    "custom-code-input": "/components/customs/custom-code-input",
+    "custom-fixed-footer": "/components/customs/custom-fixed-footer",
+    "u-button": "/node-modules/uview-ui/components/u-button/u-button"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "登录",
+  "usingComponents": {
+    "u-card": "/node-modules/uview-ui/components/u-card/u-card",
+    "u-tabs": "/node-modules/uview-ui/components/u-tabs/u-tabs",
+    "u-field": "/node-modules/uview-ui/components/u-field/u-field",
+    "view-icon": "/components/view/view-icon",
+    "u-button": "/node-modules/uview-ui/components/u-button/u-button",
+    "common-copyright": "/components/commons/common-copyright"
+  }
+}

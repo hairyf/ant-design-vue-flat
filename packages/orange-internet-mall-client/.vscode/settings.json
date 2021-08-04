@@ -1,0 +1,14 @@
+{
+  "eslint.validate": [
+    "javascirpt",
+    "typescript"
+  ],
+  "editor.tabSize": 2,
+  "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+  "volar.tsPlugin": true,
+  // 保存时调用 eslint|stylelint 的自动修复
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+}

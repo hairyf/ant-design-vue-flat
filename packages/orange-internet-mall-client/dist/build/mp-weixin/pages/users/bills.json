@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "账单明细",
+  "usingComponents": {
+    "u-dropdown": "/node-modules/uview-ui/components/u-dropdown/u-dropdown",
+    "u-dropdown-item": "/node-modules/uview-ui/components/u-dropdown-item/u-dropdown-item",
+    "u-empty": "/node-modules/uview-ui/components/u-empty/u-empty"
+  }
+}

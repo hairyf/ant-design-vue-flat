@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "link-controller": "/components/controllers/link-controller",
+    "view-icon": "/components/view/view-icon"
+  }
+}

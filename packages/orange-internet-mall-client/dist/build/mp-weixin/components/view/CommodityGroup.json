@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "view-image": "/components/view/view-image",
+    "corner-markersetting": "/components/view/CommodityGroup/CornerMarkersetting",
+    "commodity-title": "/components/view/CommodityGroup/CommodityTitle",
+    "commodity-price": "/components/view/CommodityGroup/CommodityPrice",
+    "buy-button-style": "/components/view/CommodityGroup/BuyButtonStyle"
+  }
+}

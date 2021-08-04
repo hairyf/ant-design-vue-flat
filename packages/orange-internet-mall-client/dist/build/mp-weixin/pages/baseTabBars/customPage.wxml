@@ -1,0 +1,1 @@
+<view-controller vue-id="2acb3aa2-1" type="customPage" bind:__l="__l" vue-slots="{{['default','sticky']}}"><view-distribution vue-id="{{('2acb3aa2-2')+','+('2acb3aa2-1')}}" bind:__l="__l"></view-distribution><common-copyright vue-id="{{('2acb3aa2-3')+','+('2acb3aa2-1')}}" slot="sticky" bind:__l="__l"></common-copyright></view-controller>
