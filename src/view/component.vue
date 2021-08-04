@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-08-04 17:35:43
+ * @LastEditTime: 2021-08-04 17:44:17
  * @Description: 
  * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -13,8 +13,8 @@
     <cal-tag-sort-arrow />
   </cal-card>
   <cal-card class="mb-40">
-    <cal-more-switch-group v-model="current">
-      <cal-more-switch-item keyword="1" label="阿迪王" />
+    <cal-more-switch-group v-model="value">
+      <cal-more-switch-item keyword="二级" label="阿迪王" />
       <cal-more-switch-item keyword="2" label="大文档" />
       <cal-more-switch-item keyword="3" label="的哇大" />
       <cal-more-switch-item keyword="4" label="dwaa" />

@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-08-04 15:10:36
- * @LastEditTime: 2021-08-04 17:31:12
+ * @LastEditTime: 2021-08-04 17:49:10
  * @Description: 更多的切换项
  * @LastEditors: Zhilong
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
@@ -19,7 +19,7 @@
   </div>
 </template>
 <script lang="ts">
-  import { defineComponent, inject, onMounted, ref } from 'vue-demi'
+  import { defineComponent, inject, onMounted, ref, watch } from 'vue-demi'
   export default defineComponent({ name: 'CalMoreSwitchItem' })
 </script>
 <script lang="ts" setup>
@@ -33,6 +33,16 @@
   const div = ref<HTMLElement | null>()
   const onSelect = () => {
     value.modelValue = props.keyword
-    value.selectBoxRef = div.value
   }
+  onMounted(() => {
+    watch(
+      () => value.modelValue,
+      () => {
+        if (value.modelValue === props.keyword) value.selectBoxRef = div.value
+      },
+      {
+        immediate: true
+      }
+    )
+  })
 </script>
