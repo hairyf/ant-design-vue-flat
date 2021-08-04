@@ -1,0 +1,9 @@
+@import './style/mixin-adapt.scss';
+@import './style/mixin-utils.scss';
+@import './style/variables.scss';
+@import './style/reset-antdv.scss';
+
+/*! @import */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
