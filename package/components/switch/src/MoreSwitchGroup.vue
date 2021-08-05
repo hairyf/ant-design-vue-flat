@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-08-04 15:10:36
- * @LastEditTime: 2021-08-04 17:29:56
+ * @LastEditTime: 2021-08-05 09:50:59
  * @Description: 更多的切换组
  * @LastEditors: Zhilong
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
@@ -48,6 +48,11 @@
     modelValue: useVModel(props, 'modelValue'),
     selectBoxRef
   })
+  const emit = defineEmits<{ (event: 'change', keyword?: Key): void }>()
+  watch(
+    () => value.modelValue,
+    (value) => emit('change', value)
+  )
   provide(switchKey, value)
   useTheme('Common')
 </script>
