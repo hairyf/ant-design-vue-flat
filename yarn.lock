@@ -1513,12 +1513,13 @@
     eslint-plugin-prettier "^3.4.0"
     eslint-plugin-vue "^7.10.0"
 
-"@tuimao/tailwind-config-preset@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/@tuimao/tailwind-config-preset/-/tailwind-config-preset-1.1.0.tgz"
-  integrity sha512-URX5J6q1RCIuEPm1OEExOvmnCdF1+r/wsZIVI5ZTdhtGChHwJ1WZJ+mRGQlR+7TTTihQNal2LwrauwgWOyv4HA==
+"@tuimao/tailwind-config-preset@^1.2.7-alpha.0":
+  version "1.2.7-alpha.0"
+  resolved "https://registry.yarnpkg.com/@tuimao/tailwind-config-preset/-/tailwind-config-preset-1.2.7-alpha.0.tgz#909bdcf85a50cfd9f4c4717fa2913c646f2a8f17"
+  integrity sha512-pLsFRKoLV8Etg9uBOMuzGlPrZbtPkqFhB8CdggcScrqjshdi/uAvTAeE+gQHMhSq8xAuRyXBgu5MnLgixQCO2Q==
   dependencies:
-    lodash "^4.17.21"
+    "@types/tailwindcss" "2.0.0"
+    lodash-es "^4.17.21"
 
 "@tuimao/utils@^1.2.0":
   version "1.2.0"
@@ -1693,6 +1694,11 @@
   version "2.0.1"
   resolved "https://registry.nlark.com/@types/stack-utils/download/@types/stack-utils-2.0.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fstack-utils%2Fdownload%2F%40types%2Fstack-utils-2.0.1.tgz"
   integrity sha1-IPGClPeX8iCbX2XI47XI6CYdEnw=
+
+"@types/tailwindcss@2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@types/tailwindcss/-/tailwindcss-2.0.0.tgz#120afd115464794b7874f0d5a8b745089083e439"
+  integrity sha512-ky679uR9irzi0Z6E7iHbCFbPikhlWJXWOtlhzzC0PWlKK+KJMIc1TukGQXHwFJvc8TbVf3fz6SGgOcYGdS3pHg==
 
 "@types/unist@*", "@types/unist@^2.0.0", "@types/unist@^2.0.2":
   version "2.0.5"
@@ -3387,6 +3393,14 @@ es6-promisify@^5.0.0:
   integrity sha1-UQnWLz5W6pZ8S2NQWu8IKRyKUgM=
   dependencies:
     es6-promise "^4.0.3"
+
+esbuild-register@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/esbuild-register/-/esbuild-register-2.6.0.tgz#9f19a54c82be751dd87673d6a66d7b9e1cdd8498"
+  integrity sha512-2u4AtnCXP5nivtIxZryiZOUcEQkOzFS7UhAqibUEmaTAThJ48gDLYTBF/Fsz+5r0hbV1jrFE6PQvPDUrKZNt/Q==
+  dependencies:
+    esbuild "^0.12.8"
+    jsonc-parser "^3.0.0"
 
 esbuild@^0.12.15, esbuild@^0.12.8:
   version "0.12.15"

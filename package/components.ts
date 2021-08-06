@@ -1,7 +1,7 @@
 /*
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:12:41
- * @LastEditTime: 2021-08-04 15:53:19
+ * @LastEditTime: 2021-08-06 17:05:13
  * @LastEditTime: 2021-07-12 19:58:42
  * @Description:
  * @LastEditors: Zhilong
@@ -95,3 +95,4 @@ export { default as CalButtonTabs } from './components/button/src/ButtonTabs.vue
 export { default as CalPopoverExamples } from './components/popover/src/PopoverExamples.vue'
 export { default as CalMoreSwitchItem } from './components/switch/src/MoreSwitchItem.vue'
 export { default as CalMoreSwitchGroup } from './components/switch/src/MoreSwitchGroup.vue'
+export { default as CalTagCylindricalCount } from './components/_special/src/TagCylindricalCount.vue'

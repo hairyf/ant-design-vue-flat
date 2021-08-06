@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-08-05 09:52:39
+ * @LastEditTime: 2021-08-06 17:37:52
  * @Description: 
  * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -11,6 +11,7 @@
     <cal-tag-coupon />
     <cal-tag-offers />
     <cal-tag-sort-arrow />
+    <cal-tag-cylindrical-count :state="continuousChange" :size="[50, 80]" />
   </cal-card>
   <cal-card class="mb-40">
     <cal-more-switch-group v-model="value" @change="$outEvents">
@@ -134,6 +135,8 @@
       ]
     }
   ])
+  const continuousChange = ref(true)
+  setInterval(() => (continuousChange.value = !continuousChange.value), 1500)
   const select = ref([])
   import { onMounted, ref, watch, watchEffect } from 'vue'
   import { CalModel } from '~/components'
