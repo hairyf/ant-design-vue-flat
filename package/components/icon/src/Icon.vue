@@ -1,20 +1,17 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-12 14:04:45
- * @LastEditTime: 2021-07-25 11:23:03
+ * @LastEditTime: 2021-08-07 09:35:04
  * @Description: 
- * @LastEditors: Mr.Mao
+ * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <i
-    class="cal-icon"
-    v-html="svgTag"
-    :style="{ color, fontSize: analyUnit(size || ''), width, height }"
-  />
+  <n-icon class="cal-icon" v-bind="props" :size="size" v-html="svgCotnent" />
 </template>
 <script lang="ts">
   import { computed, defineComponent } from 'vue'
+  import { NIcon } from 'naive-ui'
   export default defineComponent({ name: 'CalIcon' })
 </script>
 <script lang="ts" setup>
@@ -44,17 +41,11 @@
     const value = svgCotnent.value?.match(/height="(?<height>\w*%?)"/)?.groups?.height || ''
     return (props.svgSize && analyUnit(value)) || ''
   })
-  const svgTag = computed(() => {
-    if (!props.svgSize) {
-      return removeHtmlStrTagAttr(svgCotnent.value || '', ['height', 'width'])
-    }
-    return svgCotnent.value
-  })
   const size = computed(() => {
     return props.svgSize ? width.value || props.size : props.size || width.value
   })
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
   .cal-icon {
     width: 1em;
     display: inline-block;

@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-08-06 17:37:52
+ * @LastEditTime: 2021-08-07 09:34:19
  * @Description: 
  * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -12,6 +12,7 @@
     <cal-tag-offers />
     <cal-tag-sort-arrow />
     <cal-tag-cylindrical-count :state="continuousChange" :size="[50, 80]" />
+    <cal-icon type="collapsed" svg-size />
   </cal-card>
   <cal-card class="mb-40">
     <cal-more-switch-group v-model="value" @change="$outEvents">
