@@ -1,9 +1,9 @@
 <!--
  * @Author: Mr.wang
  * @Date: 2021-07-13 10:49:30
- * @LastEditTime: 2021-07-30 10:47:02
+ * @LastEditTime: 2021-08-09 16:31:38
  * @Description: 选择状态框
- * @LastEditors: Mr.Mao
+ * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
@@ -29,21 +29,29 @@
         justify-center
       "
       :style="{
-        borderWidth: border && select ? '2px' : '0',
+        borderWidth: border && select ? analyUnit(borderWidth) : '0',
         borderRadius: analyUnit(borderRadius)
       }"
     >
-      <slot name="select" />
-      <div class="absolute text-right" :style="[positionStyle, tagBoxSize]">
+      <div style="z-index: 2">
+        <slot name="select" />
+      </div>
+      <div
+        class="absolute text-right"
+        :style="[positionStyle, tagBoxSize]"
+        style="z-index: 1"
+        @click="emit('tagClick', { type: 'tag' })"
+      >
         <div v-if="select" class="absolute border-solid" :style="[triangleStyle]" />
         <cal-icon
           v-if="select"
           class="absolute"
-          type="yes"
+          :type="tagType"
           color="#ffffff"
-          size="30"
-          style="zoom: 0.5"
+          :size="+tagSize * 0.8"
+          style="zoom: 0.5; z-index: 1"
           :style="iconStyle"
+          @click="emit('iconClick', { type: 'icon' })"
         />
       </div>
     </div>
@@ -59,11 +67,12 @@
 </script>
 <script lang="ts" setup>
   import { analyUnit } from '@tuimao/utils'
-  import { computed, defineProps } from 'vue'
+  import { computed, defineProps, defineEmit } from 'vue'
   import { useTheme } from '../../../utils/theme'
   import CalIcon from '../../icon/src/Icon.vue'
   import type { PropType } from 'vue'
   import type { AnalySizeOption } from '@tuimao/utils'
+  const emit = defineEmit(['tagClick', 'iconClick'])
   const props = defineProps({
     // 是否展示状态
     select: Boolean,
@@ -72,10 +81,20 @@
       type: Boolean,
       default: true
     },
+    // 边框宽度
+    borderWidth: {
+      type: [Number, String],
+      default: 2
+    },
     // 容器圆角
     borderRadius: {
       type: [Number, String],
       default: 20
+    },
+    // 标签图片名称
+    tagType: {
+      type: String as PropType<IconFontKey>,
+      default: 'yes'
     },
     // 标签大小
     tagSize: {

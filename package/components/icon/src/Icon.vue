@@ -1,7 +1,7 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-12 14:04:45
- * @LastEditTime: 2021-08-07 09:35:04
+ * @LastEditTime: 2021-08-09 16:02:29
  * @Description: 
  * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
@@ -11,6 +11,7 @@
 </template>
 <script lang="ts">
   import { computed, defineComponent } from 'vue'
+  import type { PropType } from 'vue'
   import { NIcon } from 'naive-ui'
   export default defineComponent({ name: 'CalIcon' })
 </script>
@@ -20,7 +21,7 @@
   import option from './iconfont.json'
   const props = defineProps({
     // 图标类型
-    type: String as () => keyof typeof option,
+    type: String as PropType<IconFontKey>,
     // 图标尺寸
     size: [String, Number],
     // 图标颜色
