@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-05-25 18:04:11
- * @LastEditTime: 2021-08-10 10:52:08
+ * @LastEditTime: 2021-08-10 11:05:53
  * @Description: 表格
  * @LastEditors: Zhilong
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
@@ -11,7 +11,7 @@
     <template v-for="(item, index) in fictitiousList" :key="item.CACHE_ID_TABLE">
       <div
         class="table-view"
-        :calss="{ 'left-edge-strip': decorate === 'leftEdgeStrip' }"
+        :class="{ 'left-edge-strip': decorate === 'leftEdgeStrip' }"
         :style="{ marginBottom: analyUnit(marginBottom) }"
         @click="emit('itemClick', item)"
       >
