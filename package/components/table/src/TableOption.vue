@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-05-26 10:05:03
- * @LastEditTime: 2021-08-10 10:25:28
+ * @LastEditTime: 2021-08-10 10:49:19
  * @Description: 表格配置
  * @LastEditors: Zhilong
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
@@ -67,8 +67,7 @@
   </div>
   <div
     v-else-if="slots['default']"
-    class="flex"
-    :class="{ 'border-style-release': decoration === 'leftEdgeStrip' }"
+    class="flex border-style-release"
     :style="{
       maxWidth: option?.syncSpace
         ? `calc(${analyUnit(maxWidth || '')} + (${analyUnit(option.space)} * 2))`
@@ -122,11 +121,6 @@
     borderLeft: Boolean,
     /** 开启右侧边框 */
     borderRight: Boolean,
-    /** 装饰类型 */
-    decoration: {
-      type: String as () => 'none' | 'leftEdgeStrip',
-      default: 'leftEdgeStrip'
-    },
     /** 类型 */
     type: {
       type: String as () => 'data' | 'list',

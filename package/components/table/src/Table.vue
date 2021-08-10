@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-05-25 18:04:11
- * @LastEditTime: 2021-08-04 18:26:15
+ * @LastEditTime: 2021-08-10 10:52:08
  * @Description: 表格
  * @LastEditors: Zhilong
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
@@ -11,6 +11,7 @@
     <template v-for="(item, index) in fictitiousList" :key="item.CACHE_ID_TABLE">
       <div
         class="table-view"
+        :calss="{ 'left-edge-strip': decorate === 'leftEdgeStrip' }"
         :style="{ marginBottom: analyUnit(marginBottom) }"
         @click="emit('itemClick', item)"
       >
@@ -72,6 +73,11 @@
     minWidth: {
       type: [String, Number],
       default: 'none'
+    },
+    /** 装饰类型 */
+    decorate: {
+      type: String as () => 'none' | 'leftEdgeStrip',
+      default: 'leftEdgeStrip'
     },
     /** 数据列表 */
     list: {
@@ -205,12 +211,14 @@
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05), 0px 0px 20px rgba(0, 0, 0, 0.02);
       border-radius: 10px;
       position: relative;
-      &::after {
-        content: '';
-        height: calc(100% - 48px);
-        transform: matrix(-1, 0, 0, 1, 0, 0);
-        background: var(--common-primary-color);
-        @apply top-0 left-0 bottom-0 w-4 rounded m-auto absolute;
+      &.left-edge-strip {
+        &::after {
+          content: '';
+          height: calc(100% - 48px);
+          transform: matrix(-1, 0, 0, 1, 0, 0);
+          background: var(--common-primary-color);
+          @apply top-0 left-0 bottom-0 w-4 rounded m-auto absolute;
+        }
       }
     }
   }
