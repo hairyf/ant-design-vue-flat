@@ -1,7 +1,7 @@
 <!--
  * @Author: Zhilong
  * @Date: 2021-05-26 10:05:03
- * @LastEditTime: 2021-08-10 10:49:19
+ * @LastEditTime: 2021-08-10 15:28:38
  * @Description: 表格配置
  * @LastEditors: Zhilong
  * @autograph: ⚠ warning!  ⚠ warning!  ⚠ warning!   ⚠野生的页面出现了!!
@@ -29,7 +29,7 @@
       :class="[option.textAlign === 'left' ? 'text-left' : 'text-center']"
     >
       <span v-if="!sort">{{ title }}</span>
-      <CalTagSortArrow v-else type="sortArrow" v-model="sortState">
+      <CalTagSortArrow v-else type="sortArrow" :size="15" v-model="sortState">
         <span>
           {{ title }}
         </span>

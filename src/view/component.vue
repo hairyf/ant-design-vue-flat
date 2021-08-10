@@ -1,26 +1,24 @@
 <!--
  * @Author: Mr.Mao
  * @Date: 2021-07-08 15:29:03
- * @LastEditTime: 2021-08-09 16:24:10
+ * @LastEditTime: 2021-08-10 15:29:42
  * @Description: 
  * @LastEditors: Zhilong
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
   <cal-card class="mb-40">
+    <cal-table :list="[{ a: 1 }]">
+      <cal-table-option title="a" sort />
+    </cal-table>
+  </cal-card>
+  <cal-card class="mb-40">
     <cal-tag-coupon />
     <cal-tag-offers />
-    <cal-tag-sort-arrow />
-    <cal-select-box
-      :select="true"
-      :tag-size="35"
-      tag-type="clone"
-      :border-width="10"
-      @tag-click="$outEvents"
-      @icon-click="$outEvents"
-    >
-      <cal-tag-cylindrical-count :state="continuousChange" :size="[50, 80]" />
-    </cal-select-box>
+    <div class='w-64 h-64 flex justify-center items-center'>
+      <cal-tag-sort-arrow size="50" />
+    </div>
+    <cal-tag-cylindrical-count :state="continuousChange" :size="[50, 80]" />
     <cal-icon type="collapsed" svg-size />
   </cal-card>
   <cal-card class="mb-40">
