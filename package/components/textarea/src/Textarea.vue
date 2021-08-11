@@ -7,7 +7,7 @@
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
-  <a-textarea class="cal-textarea" v-bind="props" v-model:value="inputValue" />
+  <a-textarea class="cal-textarea" v-bind="props" />
 </template>
 <script lang="ts">
   import { defineComponent } from 'vue'
@@ -19,10 +19,7 @@
   import Input from 'ant-design-vue/es/input'
   const ATextarea = Input.TextArea
   import { useVModel } from '@vueuse/core'
-  const props = defineProps({
-    modelValue: [String, Number]
-  })
-  const inputValue = useVModel(props, 'modelValue')
+  const props = defineProps()
   useTheme('Common')
 </script>
 <style lang="scss">
