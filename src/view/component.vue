@@ -7,6 +7,12 @@
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
+  <cal-textarea
+    v-model="form.norms_type"
+    class="w-128 h-64"
+    :maxlength="50"
+    showCount
+  ></cal-textarea>
   <cal-card class="mb-40">
     <cal-table :list="[{ a: 1 }]">
       <cal-table-option title="a" sort />
@@ -15,7 +21,7 @@
   <cal-card class="mb-40">
     <cal-tag-coupon />
     <cal-tag-offers />
-    <div class='w-64 h-64 flex justify-center items-center'>
+    <div class="w-64 h-64 flex justify-center items-center">
       <cal-tag-sort-arrow size="50" />
     </div>
     <cal-tag-cylindrical-count :state="continuousChange" :size="[50, 80]" />
