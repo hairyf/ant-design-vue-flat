@@ -1,16 +1,12 @@
 <!--
  * @Author: Pan.Yu.Lin
  * @Date: 2021-07-21 09:10:04
- * @LastEditTime: 2021-07-30 10:17:09
+ * @LastEditTime: 2021-08-17 09:04:09
  * @Description: 
- * @LastEditors: Mr.Mao
+ * @LastEditors: Pan.Yu.Lin
 -->
 <template>
-  <a-tree-select
-    class="cal-custom-tree-select"
-    v-bind="props"
-    :show-checked-strategy="SHOW_PARENT"
-  />
+  <a-tree-select class="cal-custom-tree-select" v-bind="props" :show-checked-strategy="SHOW_ALL" />
 </template>
 <script lang="ts">
   import { defineComponent } from 'vue'
@@ -20,7 +16,7 @@
   import ATreeSelect from 'ant-design-vue/es/tree-select'
   import { defineProps } from 'vue'
   import { useTheme } from '../../../utils/theme'
-  const SHOW_PARENT = ATreeSelect.SHOW_PARENT
+  const SHOW_ALL = ATreeSelect.SHOW_ALL
   const props = defineProps()
   useTheme('Input')
 </script>
