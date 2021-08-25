@@ -12,7 +12,7 @@
 <script lang="ts">
   import { computed, defineComponent } from 'vue'
   import type { PropType } from 'vue'
-  import { NIcon } from 'naive-ui'
+  import { NIcon } from 'naive-ui/es/icon'
   export default defineComponent({ name: 'CalIcon' })
 </script>
 <script lang="ts" setup>
