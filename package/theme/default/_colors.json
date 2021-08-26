@@ -19,7 +19,8 @@
     "primaryColorOpacity-2":"rgba(85,139,247,0.8)",
     "primaryColorOpacity-4":"rgba(85,139,247,0.6)",
     "primaryColorOpacity-6":"rgba(85,139,247,0.4)",
-    "primaryColorOpacity-8":"rgba(85,139,247,0.2)"
+    "primaryColorOpacity-8":"rgba(85,139,247,0.2)",
+    "primaryColorOpacity-9":"rgba(85,139,247,0.1)"
   },
   "Layout": {
     "siderColor": "var(--common-primary-color-dark-8)"
