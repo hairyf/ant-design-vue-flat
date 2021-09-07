@@ -7,6 +7,7 @@
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
+<cal-editor v-model="form.norms_type"></cal-editor>
   <cal-textarea
     v-model="form.norms_type"
     class="w-128 h-64"
@@ -226,4 +227,6 @@
   })
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+</style>

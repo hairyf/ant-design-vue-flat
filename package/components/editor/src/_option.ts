@@ -8,8 +8,8 @@
  */
 
 const option = {
-  skin: false,
-  content_css: false,
+  skin: '/node_modules/tinymce/skins',
+  content_css: '/node_modules/tinymce/skins/ui/oxide/content.css',
   language_url:
     'https://client-static-1254212114.cos.ap-guangzhou.myqcloud.com/script/tinymce_zh_CN.js',
   language: 'zh_CN',
@@ -18,7 +18,7 @@ const option = {
   // 插件列表
   plugins: [
     // 高级列表 描点 自动链接 自动存稿 源码编辑 代码示例 颜色选择 右键菜单 文字方向 emoji标签 全屏编辑 分割线 图片
-    'advlist anchor autolink autosave code codesample colorpicker contextmenu directionality fullscreen hr',
+    'advlist anchor autolink autosave code codesample colorpicker contextmenu directionality fullscreen hr ',
     // 图片工具 插入日期 超链接 列表 媒体 不间断空格 不可编辑 分页符 粘贴 浏览 打印 保存 查找替换
     'imagetools insertdatetime link lists nonbreaking noneditable pagebreak paste preview print save searchreplace',
     // 拼音查找 tab切入切出 表格 模板 文字颜色 快速排版 显示元素范围 显示不可见字符 字数统计 百度地图(保存出现异常)
@@ -29,7 +29,7 @@ const option = {
   // 工具菜单列表
   toolbar: [
     // 查找替换 字体加粗 字体倾斜 下划线 删除线 左对齐 中间对齐 右对齐 减少缩进 增加缩进 引文区块 撤回 重做 清楚格式 下标 上标 源代码 代码块
-    'searchreplace bold italic underline strikethrough alignleft aligncenter alignright outdent indent blockquote undo redo removeformat subscript superscript code codesample',
+    'searchreplace bold italic underline strikethrough alignleft aligncenter alignright outdent indent blockquote undo redo removeformat subscript superscript code codesample ',
     // 水平分割线 项目符号 排序符号 插入链接 浏览窗口 描点 分页符 插入时间 表格 标签 文字颜色 背景颜色 全屏 百度地图
     'hr bullist numlist link charmap preview anchor pagebreak insertdatetime table forecolor backcolor fullscreen'
     // 媒体

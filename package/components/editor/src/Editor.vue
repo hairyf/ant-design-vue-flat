@@ -43,8 +43,8 @@
   const content = useVModel(props, 'modelValue')
   const option = computed(() => {
     const required = {
-      skin: false,
-      content_css: false,
+      skin: '/node_modules/tinymce/skins',
+      content_css: '/node_modules/tinymce/skins/ui/oxide/content.css',
       language_url:
         'https://client-static-1254212114.cos.ap-guangzhou.myqcloud.com/script/tinymce_zh_CN.js',
       language: 'zh_CN'
@@ -53,4 +53,7 @@
   })
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" >
+
+
+</style>
