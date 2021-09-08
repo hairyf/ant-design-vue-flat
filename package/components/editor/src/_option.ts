@@ -8,8 +8,8 @@
  */
 
 const option = {
-  skin: '/node_modules/tinymce/skins',
-  content_css: '/node_modules/tinymce/skins/ui/oxide/content.css',
+  skin: 'https://client-static-1254212114.cos.ap-guangzhou.myqcloud.com/tinymce/skins',
+  content_css: 'https://client-static-1254212114.cos.ap-guangzhou.myqcloud.com/tinymce/skins/ui/oxide/content.css',
   language_url:
     'https://client-static-1254212114.cos.ap-guangzhou.myqcloud.com/script/tinymce_zh_CN.js',
   language: 'zh_CN',
