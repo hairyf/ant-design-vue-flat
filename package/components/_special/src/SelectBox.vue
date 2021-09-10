@@ -44,7 +44,7 @@
       >
         <div v-if="select" class="absolute border-solid" :style="[triangleStyle]" />
         <cal-icon
-          v-if="select"
+          v-if="select&&!multiple"
           class="absolute"
           :type="tagType"
           color="#ffffff"
@@ -53,6 +53,9 @@
           :style="iconStyle"
           @click="emit('iconClick', { type: 'icon' })"
         />
+        <div v-else  class="absolute text-white text-xs"   style=" z-index: 1;left:50%">
+          {{index}}
+        </div>
       </div>
     </div>
     <!-- hover 效果盒子 -->
@@ -113,6 +116,14 @@
         | 'bottomLeft'
         | 'bottomRight',
       default: 'rightTop'
+    },
+    index:{
+      type:Number
+    },
+    // 图片选择器多选的情况
+    multiple:{
+      type:Boolean,
+      default: false
     }
   })
   // 标签盒子尺寸
