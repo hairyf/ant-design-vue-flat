@@ -18,7 +18,11 @@
     <cal-button v-else class="w-176 h-48 mr-56 text-base" @click="current--, emit('prev')">
       上一步
     </cal-button>
-    <cal-button v-if="middleShow&&max-modelValue!=max&&max-modelValue!=0" class="w-176 h-48 mr-56 text-base"     @click="onNextTick" >
+    <cal-button
+      v-if="middleShow && max - modelValue != max && max - modelValue != 0"
+      class="w-176 h-48 mr-56 text-base"
+      @click="emit('complete')"
+    >
       保存
     </cal-button>
     <cal-button
@@ -65,11 +69,11 @@
       type: Boolean,
       default: true
     },
-      /** 中间为保存按钮 */
-      middleShow:{
-        type: Boolean,
+    /** 中间为保存按钮 */
+    middleShow: {
+      type: Boolean,
       default: false
-      }
+    }
   })
   const emit = defineEmit(['prev', 'next', 'cancel', 'complete'])
   // 当前步骤所在标识
