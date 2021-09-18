@@ -8,7 +8,7 @@
 -->
 <template>
   <div class="offers-container">
-    <div class="offers-view"> 满减卷 </div>
+    <div class="offers-view"> 满减券 </div>
   </div>
 </template>
 <script lang="ts">
