@@ -75,14 +75,14 @@
       border-radius: 0 !important;
 
       &:hover {
-        border-color: var(--common-primary-color) !important;
+        border-color: var(--common-primary-color-light-8) !important;
       }
     }
 
     // 选择后的样式
     &.ant-select-focused {
       .ant-select-selector {
-        border-color: var(--common-primary-color) !important;
+        border-color: var(--common-primary-color-light-8) !important;
         box-shadow: 0 2px 0 0 var(--common-primary-color-light-8) !important;
       }
     }
@@ -129,8 +129,8 @@
       font-weight: 400 !important;
     }
     .ant-select-item-option-active {
-      background-color: var(--common-primary-color) !important;
-      color: var(--input-solid-color) !important;
+      background-color: var(--common-primary-color-light-8) !important;
+      color: #000 !important;
     }
   }
 </style>

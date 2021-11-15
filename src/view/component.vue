@@ -7,6 +7,11 @@
  * @autograph: 任何一个傻子都能写出让电脑能懂的代码，而只有好的程序员可以写出让人能看懂的代码
 -->
 <template>
+ <cal-input-select placeholder="模板类型" v-model="form.norms_type" class="mx-40" >
+        <a-select-option value=" ">全部</a-select-option>
+        <a-select-option value="WxPay"> <re-icon type="ad-wechatPayment" size="16"> </re-icon>微信支付</a-select-option>
+        <a-select-option value="AliPay"> <re-icon type="ad-alipay" size="16"> </re-icon>支付宝支付</a-select-option>
+      </cal-input-select>
 <cal-editor v-model="form.norms_type"></cal-editor>
   <cal-textarea
     v-model="form.norms_type"
